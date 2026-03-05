@@ -19,8 +19,7 @@ function Onboarding({ onDone }) {
     <div className="ob-wrapper">
       <div className="ob-welcome">
         <div className="ob-logo-wrap">
-          <div className="ob-logo">H</div>
-          <div className="ob-logo-name">HERMIONE</div>
+          <img src="/logo-hermione.webp" alt="Hermione" className="ob-logo-img" />
           <div className="ob-logo-sub">La méthode pour réussir en PASS/LAS</div>
         </div>
         <div className="ob-tagline">Les méthodes des majors,<br/>dans ta poche.</div>
