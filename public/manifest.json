@@ -1,0 +1,8 @@
+{
+  "short_name": "Hermione",
+  "name": "Hermione Médecine",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a1f2e",
+  "theme_color": "#1a1f2e"
+}
