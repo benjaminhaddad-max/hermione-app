@@ -5,7 +5,7 @@ import FichePage3Schemas from "./FichePage3Schemas";
 import FichePage4Formules from "./FichePage4Formules";
 import FichePage5Resume from "./FichePage5Resume";
 
-const PAGE_LABELS = ["Intro", "Concepts", "Schémas", "Formules", "Résumé"];
+const PAGE_LABELS = ["Intro", "Notions", "Schémas", "Chiffres", "Résumé"];
 
 export default function FicheCoursViewer({ cours, onBack, onSaveProgress }) {
   const [page, setPage] = useState(0);
@@ -35,7 +35,7 @@ export default function FicheCoursViewer({ cours, onBack, onSaveProgress }) {
         <button className="back-btn" onClick={onBack}>←</button>
         <div className="fiche-header-info">
           <span className="fiche-header-titre">{cours.emoji} {cours.titre}</span>
-          <span className="fiche-header-sub">Fiche · Page {page + 1}/5</span>
+          <span className="fiche-header-sub">Fiche manuscrite · Page {page + 1}/5</span>
         </div>
       </div>
 
@@ -52,8 +52,8 @@ export default function FicheCoursViewer({ cours, onBack, onSaveProgress }) {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="fiche-content scroll-area">
+      {/* Content - paper background */}
+      <div className="fiche-content scroll-area fiche-paper">
         {pages[page]}
       </div>
 

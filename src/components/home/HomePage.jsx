@@ -1,43 +1,32 @@
 import { MATIERES } from "../../data/content";
 
 export default function HomePage({ user, storage, onGoTo }) {
-  const today = new Date();
-  const todayStr = today.toISOString().split("T")[0];
-
-  const sessionsAujourd = (storage.agenda?.sessions || []).filter(s => s.date === todayStr);
+  // Calcul rapide des stats
   const allScores = Object.values(storage.qcm_scores || {}).flat();
-  const scoreMoyen = allScores.length > 0
-    ? Math.round(allScores.reduce((a, s) => a + s.score / s.total * 100, 0) / allScores.length)
-    : null;
-  const totalFC = MATIERES.flatMap(m => m.cours).reduce((a, c) => a + (c.flashcardsData?.length || 0), 0);
-  const masteredFC = Object.values(storage.flashcards_progress || {}).reduce((a, p) => a + (p.mastered_count || 0), 0);
+  const fichesLues = Object.values(storage.fiches_lues || {}).filter(f => f.lue).length;
+  const totalCours = MATIERES.flatMap(m => m.cours).length;
 
   return (
     <div className="page">
       <div className="home-header">
         <div>
-          <h1 className="page-title">Bonjour {user.prenom} 👋</h1>
-          <p className="page-sub">{user.classe} · {user.fac}</p>
+          <h1 className="page-title">Salut {user.prenom} 👋</h1>
+          <p className="page-sub">Prêt(e) à réviser ?</p>
         </div>
         <img src="/logo-hermione.webp" alt="Hermione" style={{ height: 32, opacity: 0.9 }} />
       </div>
 
-      {/* KPIs rapides */}
-      <div className="stats-row">
-        <div className="stat-card">
-          <div className="stat-icon">✅</div>
-          <div className="stat-val">{scoreMoyen !== null ? scoreMoyen + "%" : "—"}</div>
-          <div className="stat-lbl">moy. QCM</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">🃏</div>
-          <div className="stat-val">{masteredFC}</div>
-          <div className="stat-lbl">maîtrisées</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">📅</div>
-          <div className="stat-val">{sessionsAujourd.length}</div>
-          <div className="stat-lbl">sessions auj.</div>
+      {/* Message d'accueil */}
+      <div className="home-welcome-card">
+        <span style={{ fontSize: 32 }}>📚</span>
+        <div>
+          <div className="home-welcome-title">Ton grand frère de médecine</div>
+          <div className="home-welcome-sub">
+            {fichesLues === 0
+              ? "Commence par consulter une fiche de cours !"
+              : `${fichesLues}/${totalCours} fiches consultées · Continue comme ça !`
+            }
+          </div>
         </div>
       </div>
 
@@ -50,30 +39,29 @@ export default function HomePage({ user, storage, onGoTo }) {
         <button className="content-tile tile-gold" onClick={() => onGoTo("flashcards")}>
           🃏<br />Flashcards
         </button>
-        <button className="content-tile tile-blue" onClick={() => onGoTo("agenda")}>
-          📅<br />Mon agenda
-        </button>
-        <button className="content-tile tile-blue" onClick={() => onGoTo("stats")}>
-          📊<br />Mes stats
+        <button className="content-tile tile-blue" style={{ gridColumn: "1 / -1" }} onClick={() => onGoTo("coaching")}>
+          🎓 Prendre RDV avec un coach · Gratuit
         </button>
       </div>
 
-      {/* Sessions du jour */}
-      {sessionsAujourd.length > 0 && (
-        <>
-          <p className="section-title">Aujourd'hui</p>
-          {sessionsAujourd.map(s => (
-            <div key={s.id} className={`session-card ${s.faite ? "faite" : ""}`}>
-              <span className="session-type-icon">{s.type === "flashcards" ? "🃏" : s.type === "qcm" ? "✅" : "📖"}</span>
-              <div className="session-info">
-                <div className="session-label">{s.label}</div>
-                <div className="session-meta">{s.heure} · {s.duree_min} min</div>
+      {/* Matières disponibles */}
+      <p className="section-title" style={{ marginTop: 24 }}>Matières disponibles</p>
+      <div className="home-matieres">
+        {MATIERES.map(m => {
+          const nbCours = m.cours.length;
+          const nbLues = m.cours.filter(c => storage.fiches_lues?.[c.id]?.lue).length;
+          return (
+            <button key={m.id} className="home-matiere-row" onClick={() => onGoTo("cours")}>
+              <span className="home-matiere-emoji">{m.emoji}</span>
+              <div className="home-matiere-info">
+                <span className="home-matiere-nom">{m.nom}</span>
+                <span className="home-matiere-meta">{nbCours} chapitres · {nbLues} lus</span>
               </div>
-              {s.faite && <span style={{ color: "var(--green)", fontSize: 18 }}>✓</span>}
-            </div>
-          ))}
-        </>
-      )}
+              <span className="list-chevron">›</span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

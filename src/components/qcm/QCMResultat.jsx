@@ -1,3 +1,5 @@
+const LABELS = ["A", "B", "C", "D", "E"];
+
 export default function QCMResultat({ cours, answers, score, onBack }) {
   const total = answers.length;
   const pct = Math.round(score / total * 100);
@@ -12,7 +14,6 @@ export default function QCMResultat({ cours, answers, score, onBack }) {
         <div style={{ width: 32 }} />
       </div>
 
-      {/* Score */}
       <div className="resultat-score-card">
         <span style={{ fontSize: 48 }}>{emoji}</span>
         <div className="resultat-score-val" style={{ color }}>{score}/{total}</div>
@@ -22,7 +23,6 @@ export default function QCMResultat({ cours, answers, score, onBack }) {
         </p>
       </div>
 
-      {/* Corrigé détaillé */}
       <p className="fiche-section-label" style={{ marginTop: 20 }}>Corrigé détaillé</p>
       {answers.map((a, i) => (
         <div key={i} className={`correction-card ${a.correct ? "correct" : "wrong"}`}>
@@ -32,11 +32,12 @@ export default function QCMResultat({ cours, answers, score, onBack }) {
           </div>
           {!a.correct && (
             <div className="correction-wrong-ans">
-              Ta réponse : <b>{a.selected}</b> · Bonne réponse : <b>{a.question.reponse_correcte}</b>
+              Ta réponse : <b>{LABELS[a.selected]}. {a.question.options[a.selected]}</b>
+              <br />Bonne réponse : <b>{LABELS[a.question.correct]}. {a.question.options[a.question.correct]}</b>
             </div>
           )}
           <div className="qcm-explication">
-            <div className="qcm-explication-titre">💡 Explication</div>
+            <div className="qcm-explication-titre">Explication</div>
             <div className="qcm-explication-texte">{a.question.explication}</div>
           </div>
         </div>

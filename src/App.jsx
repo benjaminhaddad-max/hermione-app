@@ -11,15 +11,11 @@ import QCMChapitreSession from "./components/qcm/QCMChapitreSession";
 import FlashcardsListPage from "./components/flashcards/FlashcardsListPage";
 import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage";
 import FlashcardSession from "./components/flashcards/FlashcardSession";
-import AgendaPage from "./components/agenda/AgendaPage";
-import StatsPage from "./components/stats/StatsPage";
-
-const FACS = ["A l'étranger","Amiens","Angers","Antilles","Besançon","Bordeaux","Brest","Caen","Clermont-Ferrand","Dijon","Grenoble","Lille","Lyon Est","Lyon Sud","Marseille","Montpellier","Nancy","Nantes","Nice","Paris Cité","Paris-Saclay","Poitiers","Reims","Rennes","Rouen","Sorbonne","Strasbourg","Toulouse","Tours"];
+import CoachingPage from "./components/coaching/CoachingPage";
 
 function Onboarding({ onDone }) {
   const [step, setStep] = useState(0);
   const [prenom, setPrenom] = useState("");
-  const [voie, setVoie] = useState("");
 
   if (step === 0) return (
     <div className="ob-wrapper">
@@ -28,14 +24,14 @@ function Onboarding({ onDone }) {
           <img src="/logo-hermione.webp" alt="Hermione" className="ob-logo-img" />
           <div className="ob-logo-sub">La méthode pour réussir en PASS/LAS</div>
         </div>
-        <div className="ob-tagline">Les fiches des majors,<br />dans ta poche.</div>
+        <div className="ob-tagline">Ton grand frère<br />de médecine.</div>
         <div className="ob-benefits">
-          {[["📖","Fiches de cours structurées 5 pages"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards par répétition espacée"],["📅","Calendrier de révisions personnalisé"]].map(([icon,txt],i)=>(
+          {[["📖","Fiches de cours visuelles style manuscrit"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards par matière"],["🎓","Coaching gratuit avec un étudiant en médecine"]].map(([icon,txt],i)=>(
             <div key={i} className="ob-benefit"><span className="ob-benefit-icon">{icon}</span><span>{txt}</span></div>
           ))}
         </div>
         <button className="ob-start-btn" onClick={() => setStep(1)}>COMMENCER GRATUITEMENT →</button>
-        <p className="ob-free-label">100% gratuit · Aucune carte bancaire</p>
+        <p className="ob-free-label">100% gratuit · Pour toujours · Aucune carte bancaire</p>
       </div>
     </div>
   );
@@ -46,7 +42,7 @@ function Onboarding({ onDone }) {
         <div style={{fontSize:64,marginBottom:16}}>🎉</div>
         <div style={{fontFamily:"var(--font-display)",fontSize:22,fontWeight:900,marginBottom:8}}>Bienvenue {prenom} !</div>
         <p style={{fontSize:14,color:"var(--gray)",marginBottom:32}}>Ton espace Hermione est prêt.</p>
-        <button className="ob-start-btn" onClick={() => onDone({ prenom, classe: voie, fac: "" })}>
+        <button className="ob-start-btn" onClick={() => onDone({ prenom })}>
           ACCÉDER À MON ESPACE →
         </button>
       </div>
@@ -56,9 +52,9 @@ function Onboarding({ onDone }) {
   return (
     <div className="ob-wrapper">
       <button className="ob-back" onClick={() => step > 1 && setStep(step - 1)}>{step > 1 ? "←" : ""}</button>
-      <div className="ob-title-bar">{["","Ton prénom","Ta voie"][step]}</div>
+      <div className="ob-title-bar">{["","Ton prénom"][step]}</div>
       <div className="ob-screen">
-        <div className="ob-progress"><div className="ob-bar" style={{ width: ["0%","50%","100%"][step] }} /></div>
+        <div className="ob-progress"><div className="ob-bar" style={{ width: step === 1 ? "50%" : "100%" }} /></div>
 
         {step === 1 && <>
           <h2>Comment tu t'appelles ?</h2>
@@ -74,10 +70,9 @@ function Onboarding({ onDone }) {
 function BottomNav({ active, onChange }) {
   const tabs = [
     { id:"home",       icon:"🏠", label:"Accueil" },
-    { id:"cours",      icon:"📖", label:"Cours" },
+    { id:"cours",      icon:"📖", label:"Fiches" },
     { id:"flashcards", icon:"🃏", label:"Flashcards" },
-    { id:"agenda",     icon:"📅", label:"Agenda" },
-    { id:"stats",      icon:"📊", label:"Stats" },
+    { id:"coaching",   icon:"🎓", label:"Coaching" },
   ];
   return (
     <nav className="bottom-nav">
@@ -99,8 +94,8 @@ export default function App() {
   const [view, setView] = useState(null); // "fiche" | "qcm" | "fc-session"
 
   if (!storage.user.onboarded) {
-    return <Onboarding onDone={({ prenom, classe, fac }) => {
-      updateStorage(prev => ({ ...prev, user: { prenom, classe, fac, onboarded: true } }));
+    return <Onboarding onDone={({ prenom }) => {
+      updateStorage(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true } }));
     }} />;
   }
 
@@ -160,7 +155,7 @@ export default function App() {
     </div>
   );
 
-  // Onglet Cours
+  // Onglet Cours (Fiches)
   if (tab === "cours") {
     if (cours) return wrap(
       <ChapitreDetailPage cours={cours} storage={storage}
@@ -176,7 +171,7 @@ export default function App() {
   // Onglet Flashcards
   if (tab === "flashcards") {
     if (matiere && cours) {
-      setView("fc-session"); // handled above
+      setView("fc-session");
     }
     if (matiere) return wrap(
       <MatiereFlashcardsPage matiere={matiere} storage={storage}
@@ -187,9 +182,8 @@ export default function App() {
   }
 
   const pages = {
-    home:   <HomePage user={storage.user} storage={storage} onGoTo={resetTab} />,
-    agenda: <AgendaPage storage={storage} updateStorage={updateStorage} />,
-    stats:  <StatsPage storage={storage} />,
+    home:     <HomePage user={storage.user} storage={storage} onGoTo={resetTab} />,
+    coaching: <CoachingPage />,
   };
   return wrap(pages[tab] || pages.home);
 }

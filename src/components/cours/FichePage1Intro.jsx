@@ -1,14 +1,16 @@
 export default function FichePage1Intro({ data }) {
   return (
-    <div className="fiche-page">
-      <h2 className="fiche-page-titre">{data.titre}</h2>
-      <p className="fiche-intro-texte">{data.texte}</p>
-      <div className="fiche-points-cles">
-        <p className="fiche-section-label">Points clés</p>
+    <div className="fiche-page fiche-manuscrite">
+      <h2 className="fiche-titre-manuscrit">
+        <span className="fiche-souligne-rose">{data.titre}</span>
+      </h2>
+      <p className="fiche-texte-manuscrit">{data.texte}</p>
+      <div className="fiche-encadre-jaune">
+        <p className="fiche-encadre-label">A retenir !</p>
         {data.points_cles.map((p, i) => (
-          <div key={i} className="fiche-point-item">
-            <span className="fiche-point-bullet">◆</span>
-            <span>{p}</span>
+          <div key={i} className="fiche-point-manuscrit">
+            <span className="fiche-fleche">→</span>
+            <span className="fiche-surligne-jaune">{p}</span>
           </div>
         ))}
       </div>
