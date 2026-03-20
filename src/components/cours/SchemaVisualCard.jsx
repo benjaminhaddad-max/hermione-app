@@ -1,134 +1,96 @@
-/**
- * Transforme une description textuelle de schéma (issue du pipeline)
- * en carte visuelle structurée + mini infographie SVG.
- */
-function parseSchemaText(raw) {
-  if (!raw || typeof raw !== "string") {
-    return { titre: "Schéma", bullets: [] };
+const NODE_PALETTE = [
+  "#5B4FD9", "#7c6ae8", "#C9A84C",
+  "#2ecc71", "#e74c3c", "#3498db", "#9b59b6", "#e67e22",
+];
+
+function parseSchema(raw) {
+  if (!raw || typeof raw !== "string") return null;
+  const colonIdx = raw.indexOf(":");
+  let title = "";
+  let body = raw.trim();
+
+  if (colonIdx > 2 && colonIdx < 120) {
+    title = raw
+      .slice(0, colonIdx)
+      .replace(/^[Ss]chéma\s+(d[eu']?|du|de la|des|de l[''])\s+/i, "")
+      .trim();
+    body = raw.slice(colonIdx + 1).trim();
   }
-  const t = raw.trim();
-  const colon = t.indexOf(":");
-  let titre = "Schéma";
-  let body = t;
-  if (colon > 2 && colon < 120) {
-    titre = t.slice(0, colon).trim();
-    body = t.slice(colon + 1).trim();
+
+  if (body.includes("→")) {
+    const steps = body
+      .split(/\s*→\s*/)
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .slice(0, 8);
+    return { type: "flow", title, steps };
   }
-  // Étapes séparées par flèches ou barres (piles, flux…)
-  let steps = body
-    .split(/\s*(?:→|\u2192|➜|⇒)\s*/g)
+
+  const items = body
+    .split(/[,;]/)
     .map((s) => s.trim())
-    .filter(Boolean);
-  if (steps.length <= 1) {
-    steps = body
-      .split(/\s*\|\s*/)
-      .map((s) => s.trim())
-      .filter(Boolean);
+    .filter((s) => s.length > 2 && s.length < 90);
+  if (items.length >= 3) {
+    return { type: "list", title, items: items.slice(0, 10) };
   }
-  if (steps.length <= 1) {
-    steps = body
-      .split(/[,;]/)
-      .map((s) => s.trim())
-      .filter(Boolean);
-  }
-  if (steps.length === 0) steps = [body];
-  return { titre, bullets: steps.slice(0, 8) };
+
+  return { type: "text", title, body };
 }
 
-function MiniFlowSvg({ n }) {
-  const count =
-    n <= 1 ? 1 : Math.min(Math.max(n, 2), 6);
-  const w = 280;
-  const h = 72;
-  const pad = 16;
-  const usable = w - pad * 2;
-  const step = count > 1 ? usable / (count - 1) : 0;
-  const nodes = [];
-  for (let i = 0; i < count; i++) {
-    const x = count === 1 ? w / 2 : pad + i * step;
-    nodes.push({ x, y: h / 2 });
-  }
+function FlowNode({ step, idx }) {
+  const bg = NODE_PALETTE[idx % NODE_PALETTE.length];
+  const main = step.replace(/\s*\([^)]+\)/g, "").trim() || step;
+  const sub = (step.match(/\(([^)]+)\)/) || [])[1] || "";
   return (
-    <svg
-      className="fiche-schema-svg"
-      viewBox={`0 0 ${w} ${h}`}
-      aria-hidden
-    >
-      <defs>
-        <linearGradient id="schemaLine" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="rgba(201,168,76,0.9)" />
-          <stop offset="100%" stopColor="rgba(100,80,200,0.75)" />
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="1.2" result="b" />
-          <feMerge>
-            <feMergeNode in="b" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-      {nodes.slice(0, -1).map((_, i) => {
-        const a = nodes[i];
-        const b = nodes[i + 1];
-        return (
-          <path
-            key={`l-${i}`}
-            d={`M ${a.x} ${a.y} L ${b.x} ${b.y}`}
-            stroke="url(#schemaLine)"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            fill="none"
-            opacity={0.85}
-          />
-        );
-      })}
-      {nodes.map((p, i) => (
-        <g key={`n-${i}`} filter="url(#glow)">
-          <circle
-            cx={p.x}
-            cy={p.y}
-            r={i === 0 ? 9 : i === nodes.length - 1 ? 9 : 7}
-            fill={i === 0 ? "#2ecc71" : i === nodes.length - 1 ? "#e74c3c" : "#5B4FD9"}
-            stroke="rgba(255,255,255,0.9)"
-            strokeWidth="2"
-          />
-          <text
-            x={p.x}
-            y={p.y + 4}
-            textAnchor="middle"
-            fill="#fff"
-            fontSize="11"
-            fontFamily="Montserrat, sans-serif"
-            fontWeight="800"
-          >
-            {i + 1}
-          </text>
-        </g>
-      ))}
-    </svg>
+    <div className="sfv-node" style={{ background: bg }}>
+      <span className="sfv-node-num">{idx + 1}</span>
+      <span className="sfv-node-main">{main.length > 28 ? main.slice(0, 28) + "…" : main}</span>
+      {sub && (
+        <span className="sfv-node-sub">{sub.length > 32 ? sub.slice(0, 32) + "…" : sub}</span>
+      )}
+    </div>
   );
 }
 
 export default function SchemaVisualCard({ texte, index }) {
-  const { titre, bullets } = parseSchemaText(texte);
+  const parsed = parseSchema(texte);
+  if (!parsed) return null;
+
   return (
-    <div className="fiche-schema-visual-card" style={{ animationDelay: `${index * 0.06}s` }}>
-      <div className="fiche-schema-visual-glow" />
-      <div className="fiche-schema-visual-top">
-        <span className="fiche-schema-pill">Schéma {index + 1}</span>
-        <h3 className="fiche-schema-visual-titre">{titre}</h3>
+    <div className="sfv-card" style={{ "--idx": index }}>
+      <div className="sfv-card-head">
+        <span className="sfv-badge">Schéma {index + 1}</span>
+        {parsed.title && <h3 className="sfv-card-title">{parsed.title}</h3>}
       </div>
-      <div className="fiche-schema-visual-diagram">
-        <MiniFlowSvg n={bullets.length} />
-      </div>
-      <ul className="fiche-schema-bullet-list">
-        {bullets.map((b, i) => (
-          <li key={i} className="fiche-schema-bullet-item">
-            <span className="fiche-schema-bullet-num">{i + 1}</span>
-            <span className="fiche-schema-bullet-txt">{b}</span>
-          </li>
-        ))}
-      </ul>
+
+      {parsed.type === "flow" && (
+        <div className="sfv-flow">
+          {parsed.steps.map((step, i) => (
+            <div key={i} className="sfv-flow-unit">
+              <FlowNode step={step} idx={i} />
+              {i < parsed.steps.length - 1 && (
+                <span className="sfv-arrow" aria-hidden>›</span>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {parsed.type === "list" && (
+        <ul className="sfv-list">
+          {parsed.items.map((item, i) => (
+            <li key={i} className="sfv-list-row">
+              <span
+                className="sfv-dot"
+                style={{ background: NODE_PALETTE[i % NODE_PALETTE.length] }}
+              />
+              <span className="sfv-list-text">{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {parsed.type === "text" && <p className="sfv-text">{parsed.body}</p>}
     </div>
   );
 }

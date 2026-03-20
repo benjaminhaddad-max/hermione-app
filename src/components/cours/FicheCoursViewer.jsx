@@ -14,7 +14,7 @@ export default function FicheCoursViewer({ cours, onBack, onSaveProgress }) {
   const pages = [
     <FichePage1Intro data={f.page1_intro} />,
     <FichePage2Concepts data={f.page2_concepts} />,
-    <FichePage3Schemas data={f.page3_schemas} />,
+    <FichePage3Schemas data={f.page3_schemas} concepts={f.page2_concepts?.concepts || []} />,
     <FichePage4Formules data={f.page4_formules} />,
     <FichePage5Resume data={f.page5_resume} />,
   ];
