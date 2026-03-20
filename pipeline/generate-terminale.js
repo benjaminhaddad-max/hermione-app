@@ -5,9 +5,10 @@
  * génère fiches + flashcards + QCM pour chaque cours via Claude,
  * et ajoute les matières Terminale au content.js en préservant le PASS/LAS.
  *
- * Usage : node pipeline/generate-terminale.js [--concurrency=4]
+ * Usage : node pipeline/generate-terminale.js [--concurrency=12]
  *
- * Plusieurs PDFs sont traités en parallèle (défaut : 3) pour aller plus vite.
+ * Mode rapide : Haiku + haute concurrence (défaut 10, max 16).
+ * ANTHROPIC_MODEL=claude-sonnet-4-20250514 pour qualité max (plus lent).
  */
 
 const fs   = require("fs");
@@ -35,6 +36,9 @@ const SCOPES           = ["https://www.googleapis.com/auth/drive.readonly"];
 const TERMINALE_FOLDER_ID = "1K2aorrFOUZlGAMqYhknFnd7GjrvQfrom";
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+/** Haiku = beaucoup plus rapide que Sonnet pour du JSON structuré */
+const CLAUDE_MODEL =
+  process.env.ANTHROPIC_MODEL || "claude-3-5-haiku-20241022";
 
 // ── Mapping matières Terminale ────────────────────────────────────────────────
 const MATIERE_MAP = {
@@ -181,10 +185,10 @@ function dedupePdfs(pdfs) {
 
 function parseConcurrency() {
   const arg = process.argv.find((a) => /^--concurrency=\d+/.test(a));
-  if (arg) return Math.min(8, Math.max(1, parseInt(arg.split("=")[1], 10)));
+  if (arg) return Math.min(16, Math.max(1, parseInt(arg.split("=")[1], 10)));
   const env = parseInt(process.env.TERMINALE_CONCURRENCY || "", 10);
-  if (!Number.isNaN(env) && env > 0) return Math.min(8, env);
-  return 3;
+  if (!Number.isNaN(env) && env > 0) return Math.min(16, env);
+  return 10;
 }
 
 // ── Générer le contenu avec Claude ───────────────────────────────────────────
@@ -197,15 +201,15 @@ MATIÈRE : ${matiere}
 COURS : "${titrePdf}"
 
 CONTENU DU COURS :
-${texte.slice(0, 14000)}
+${texte.slice(0, 9000)}
 
-INSTRUCTIONS :
-1. "titrePropre" = titre court et clair du cours (ex: "Les suites numériques", "La membrane plasmique")
-2. Flashcards : 10-14 cartes couvrant les points essentiels
-3. Concepts : 6-10 définitions précises de termes clés
-4. QCM : 8 questions de difficulté variée
-5. Résumé : les 5-6 points les plus importants
-6. Mnémo : un moyen mnémotechnique mémorable
+INSTRUCTIONS (réponses compactes pour aller vite) :
+1. "titrePropre" = titre court et clair
+2. Flashcards : exactement 10 cartes
+3. Concepts : 6 définitions courtes
+4. QCM : 6 questions (4 options chacune)
+5. Résumé : 5 points max
+6. Mnémo : 1 phrase
 
 Génère exactement ce JSON (sans markdown, juste le JSON brut) :
 {
@@ -251,14 +255,14 @@ Génère exactement ce JSON (sans markdown, juste le JSON brut) :
       "options": ["A", "B", "C", "D"],
       "correct": 0,
       "difficulte": "facile|moyen|difficile",
-      "explication": "explication de la bonne réponse"
+      "explication": "explication courte"
     }
   ]
 }`;
 
   const message = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 8192,
+    model: CLAUDE_MODEL,
+    max_tokens: 6000,
     messages: [{ role: "user", content: prompt }],
   });
 
@@ -322,8 +326,7 @@ async function main() {
   const CONCURRENCY = parseConcurrency();
   console.log("🚀 Pipeline Terminale — Hermione\n");
   console.log(
-    `⚡ Jusqu'à ${CONCURRENCY} fiches en parallèle (×${CONCURRENCY} plus vite qu’un PDF à la fois). ` +
-      `Plus : --concurrency=4\n`
+    `⚡ ${CONCURRENCY} PDF en parallèle · modèle ${CLAUDE_MODEL}\n`
   );
 
   if (!process.env.ANTHROPIC_API_KEY) {

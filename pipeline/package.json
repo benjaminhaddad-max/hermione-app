@@ -4,7 +4,9 @@
   "description": "Pipeline Drive → Claude → content.js",
   "main": "generate-content.js",
   "scripts": {
-    "generate": "node generate-content.js"
+    "generate": "node generate-content.js",
+    "terminale": "node generate-terminale.js --concurrency=12",
+    "terminale:turbo": "node generate-terminale.js --concurrency=16"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.0",
