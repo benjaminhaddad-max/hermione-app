@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "terminale:auto": "bash pipeline/run-terminale-auto.sh"
   },
   "browserslist": {
     "production": [">0.2%", "not dead"],
