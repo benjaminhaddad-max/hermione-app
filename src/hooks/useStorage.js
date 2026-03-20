@@ -3,6 +3,10 @@ const KEY = "hermione_v2";
 function getDefaultState() {
   return {
     user: { prenom: "", classe: "", fac: "", onboarded: false },
+    pseudo: "",
+    xp: 0,
+    streak: 0,
+    last_active: null,
     flashcards_progress: {},
     qcm_scores: {},
     fiches_lues: {},

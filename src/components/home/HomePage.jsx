@@ -1,10 +1,12 @@
 import { MATIERES } from "../../data/content";
+import { getLevel, getRank } from "../../data/leaderboard";
 
 export default function HomePage({ user, storage, onGoTo }) {
-  // Calcul rapide des stats
-  const allScores = Object.values(storage.qcm_scores || {}).flat();
   const fichesLues = Object.values(storage.fiches_lues || {}).filter(f => f.lue).length;
   const totalCours = MATIERES.flatMap(m => m.cours).length;
+  const userXP = storage.xp || 0;
+  const { current } = getLevel(userXP);
+  const rank = getRank(userXP);
 
   return (
     <div className="page">
@@ -15,6 +17,21 @@ export default function HomePage({ user, storage, onGoTo }) {
         </div>
         <img src="/logo-hermione.webp" alt="Hermione" style={{ height: 32, opacity: 0.9 }} />
       </div>
+
+      {/* XP & Rank teaser */}
+      <button className="home-xp-card" onClick={() => onGoTo("classement")}>
+        <div className="home-xp-left">
+          <span style={{ fontSize: 28 }}>{current.emoji}</span>
+          <div>
+            <div className="home-xp-level">{current.name}</div>
+            <div className="home-xp-val">{userXP.toLocaleString()} XP</div>
+          </div>
+        </div>
+        <div className="home-xp-right">
+          <span className="home-xp-rank">#{rank.toLocaleString()}</span>
+          <span className="home-xp-rank-label">Classement</span>
+        </div>
+      </button>
 
       {/* Message d'accueil */}
       <div className="home-welcome-card">
@@ -34,10 +51,10 @@ export default function HomePage({ user, storage, onGoTo }) {
       <p className="section-title">Accès rapide</p>
       <div className="content-grid">
         <button className="content-tile tile-blue" onClick={() => onGoTo("cours")}>
-          📖<br />Fiches de cours
+          📖<br />Réviser
         </button>
-        <button className="content-tile tile-gold" onClick={() => onGoTo("flashcards")}>
-          🃏<br />Flashcards
+        <button className="content-tile tile-gold" onClick={() => onGoTo("classement")}>
+          🏆<br />Classement
         </button>
         <button
           className="content-tile tile-blue"

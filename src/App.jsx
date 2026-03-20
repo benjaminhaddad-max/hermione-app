@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import useStorage from "./hooks/useStorage";
+import { XP_REWARDS } from "./data/leaderboard";
 
 import HomePage from "./components/home/HomePage";
 import CoursListPage from "./components/cours/CoursListPage";
@@ -12,10 +13,12 @@ import FlashcardsListPage from "./components/flashcards/FlashcardsListPage";
 import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage";
 import FlashcardSession from "./components/flashcards/FlashcardSession";
 import CoachingPage from "./components/coaching/CoachingPage";
+import ClassementPage from "./components/classement/ClassementPage";
 
 function Onboarding({ onDone }) {
   const [step, setStep] = useState(0);
   const [prenom, setPrenom] = useState("");
+  const [pseudo, setPseudo] = useState("");
 
   if (step === 0) return (
     <div className="ob-wrapper">
@@ -24,9 +27,9 @@ function Onboarding({ onDone }) {
           <img src="/logo-hermione.webp" alt="Hermione" className="ob-logo-img" />
           <div className="ob-logo-sub">La méthode pour réussir en PASS/LAS</div>
         </div>
-        <div className="ob-tagline">Ton grand frère<br />de médecine.</div>
+        <div className="ob-tagline">Ton coach digital<br />Hermione.</div>
         <div className="ob-benefits">
-          {[["📖","Fiches de cours visuelles style manuscrit"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards par matière"],["🎓","Coaching gratuit avec un étudiant en médecine"]].map(([icon,txt],i)=>(
+          {[["📖","Fiches de cours visuelles style manuscrit"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards par matière"],["🏆","Classement & XP pour te motiver"]].map(([icon,txt],i)=>(
             <div key={i} className="ob-benefit"><span className="ob-benefit-icon">{icon}</span><span>{txt}</span></div>
           ))}
         </div>
@@ -36,31 +39,42 @@ function Onboarding({ onDone }) {
     </div>
   );
 
-  if (step === 2) return (
+  if (step === 3) return (
     <div className="ob-wrapper">
       <div className="ob-welcome ob-final">
         <div style={{fontSize:64,marginBottom:16}}>🎉</div>
         <div style={{fontFamily:"var(--font-display)",fontSize:22,fontWeight:900,marginBottom:8}}>Bienvenue {prenom} !</div>
-        <p style={{fontSize:14,color:"var(--gray)",marginBottom:32}}>Ton espace Hermione est prêt.</p>
-        <button className="ob-start-btn" onClick={() => onDone({ prenom })}>
+        <p style={{fontSize:14,color:"var(--gray)",marginBottom:32}}>Ton espace Hermione est prêt.<br/>Gagne des XP et grimpe dans le classement !</p>
+        <button className="ob-start-btn" onClick={() => onDone({ prenom, pseudo })}>
           ACCÉDER À MON ESPACE →
         </button>
       </div>
     </div>
   );
 
+  const titles = ["", "Ton prénom", "Ton pseudo"];
+  const progress = step === 1 ? "33%" : step === 2 ? "66%" : "100%";
+
   return (
     <div className="ob-wrapper">
       <button className="ob-back" onClick={() => step > 1 && setStep(step - 1)}>{step > 1 ? "←" : ""}</button>
-      <div className="ob-title-bar">{["","Ton prénom"][step]}</div>
+      <div className="ob-title-bar">{titles[step] || ""}</div>
       <div className="ob-screen">
-        <div className="ob-progress"><div className="ob-bar" style={{ width: step === 1 ? "50%" : "100%" }} /></div>
+        <div className="ob-progress"><div className="ob-bar" style={{ width: progress }} /></div>
 
         {step === 1 && <>
           <h2>Comment tu t'appelles ?</h2>
           <input className="ob-input" placeholder="Ton prénom" value={prenom} onChange={e => setPrenom(e.target.value)} autoFocus />
           <div style={{flex:1}} />
           <button className="ob-next" disabled={!prenom.trim()} onClick={() => setStep(2)}>SUIVANT</button>
+        </>}
+
+        {step === 2 && <>
+          <h2>Choisis un pseudo pour le classement</h2>
+          <p style={{fontSize:13,color:"var(--gray)",marginBottom:16}}>Visible par les autres étudiants</p>
+          <input className="ob-input" placeholder="Ex: emma_med26" value={pseudo} onChange={e => setPseudo(e.target.value)} autoFocus />
+          <div style={{flex:1}} />
+          <button className="ob-next" disabled={!pseudo.trim()} onClick={() => setStep(3)}>SUIVANT</button>
         </>}
       </div>
     </div>
@@ -69,9 +83,9 @@ function Onboarding({ onDone }) {
 
 function BottomNav({ active, onChange }) {
   const tabs = [
-    { id:"home",       icon:"🏠", label:"Accueil" },
-    { id:"cours",      icon:"📖", label:"Fiches" },
-    { id:"flashcards", icon:"🃏", label:"Flashcards" },
+    { id:"home",       icon:"🏠", label:"Home" },
+    { id:"cours",      icon:"📖", label:"Réviser" },
+    { id:"classement", icon:"🏆", label:"Classement" },
     { id:"coaching",   icon:"🎓", label:"Coaching" },
   ];
   return (
@@ -94,18 +108,34 @@ export default function App() {
   const [view, setView] = useState(null); // "fiche" | "qcm" | "fc-session"
 
   if (!storage.user.onboarded) {
-    return <Onboarding onDone={({ prenom }) => {
-      updateStorage(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true } }));
+    return <Onboarding onDone={({ prenom, pseudo }) => {
+      updateStorage(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true }, pseudo, xp: 0, streak: 0, last_active: new Date().toISOString().split("T")[0] }));
     }} />;
+  }
+
+  function addXP(amount) {
+    updateStorage(prev => {
+      const today = new Date().toISOString().split("T")[0];
+      const wasYesterday = prev.last_active && (() => {
+        const d = new Date(prev.last_active);
+        d.setDate(d.getDate() + 1);
+        return d.toISOString().split("T")[0] === today;
+      })();
+      const newStreak = prev.last_active === today ? (prev.streak || 0) : wasYesterday ? (prev.streak || 0) + 1 : 1;
+      const streakBonus = prev.last_active !== today && newStreak > 1 ? XP_REWARDS.STREAK_BONUS : 0;
+      return { ...prev, xp: (prev.xp || 0) + amount + streakBonus, streak: newStreak, last_active: today };
+    });
   }
 
   function resetTab(newTab) { setTab(newTab); setMatiere(null); setCours(null); setView(null); }
 
   function saveFicheLue(coursId) {
+    const alreadyRead = storage.fiches_lues?.[coursId]?.lue;
     updateStorage(prev => ({
       ...prev,
       fiches_lues: { ...prev.fiches_lues, [coursId]: { lue: true, date: new Date().toISOString().split("T")[0] } }
     }));
+    if (!alreadyRead) addXP(XP_REWARDS.FICHE_LUE);
   }
 
   function saveQCMScore(coursId, score, total, duree) {
@@ -116,6 +146,8 @@ export default function App() {
         [coursId]: [...(prev.qcm_scores?.[coursId] || []), { date: new Date().toISOString().split("T")[0], score, total, duree_sec: duree }]
       }
     }));
+    if (score === total) addXP(XP_REWARDS.QCM_PERFECT);
+    else addXP(XP_REWARDS.QCM_COMPLETE);
   }
 
   function saveFCProgress(coursId, mastered) {
@@ -131,6 +163,7 @@ export default function App() {
         }
       }
     }));
+    addXP(XP_REWARDS.FLASHCARD_SESSION);
   }
 
   // Vues plein écran
@@ -165,10 +198,10 @@ export default function App() {
     if (matiere) return wrap(
       <MatiereCoursPage matiere={matiere} storage={storage} onSelectCours={setCours} onBack={() => setMatiere(null)} />
     );
-    return wrap(<CoursListPage onSelectMatiere={setMatiere} />);
+    return wrap(<CoursListPage onSelectMatiere={setMatiere} onGoFlashcards={() => resetTab("flashcards")} />);
   }
 
-  // Onglet Flashcards
+  // Onglet Flashcards (accessible via sous-nav dans Réviser)
   if (tab === "flashcards") {
     if (matiere && cours) {
       setView("fc-session");
@@ -179,6 +212,11 @@ export default function App() {
         onBack={() => setMatiere(null)} />
     );
     return wrap(<FlashcardsListPage storage={storage} onSelectMatiere={setMatiere} />);
+  }
+
+  // Onglet Classement
+  if (tab === "classement") {
+    return wrap(<ClassementPage storage={storage} onAddXP={addXP} />);
   }
 
   const pages = {

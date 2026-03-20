@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { MATIERES } from "../../data/content";
 
-export default function CoursListPage({ onSelectMatiere }) {
+export default function CoursListPage({ onSelectMatiere, onGoFlashcards }) {
+  const [mode, setMode] = useState("fiches");
   const anticipation = MATIERES.filter(m => m.categorie === "anticipation");
   const terminale = MATIERES.filter(m => m.categorie === "terminale");
 
@@ -8,12 +10,18 @@ export default function CoursListPage({ onSelectMatiere }) {
     <div className="page">
       <div className="page-header">
         <div>
-          <h1 className="page-title">Fiches de cours</h1>
-          <p className="page-sub">Fiches manuscrites + QCM</p>
+          <h1 className="page-title">Réviser</h1>
+          <p className="page-sub">Fiches, QCM & Flashcards</p>
         </div>
       </div>
 
-      <p className="section-title">Anticipation Programme PASS/LAS</p>
+      {/* Sous-navigation */}
+      <div className="sub-tabs">
+        <button className={`sub-tab ${mode === "fiches" ? "active" : ""}`} onClick={() => setMode("fiches")}>📖 Fiches & QCM</button>
+        <button className={`sub-tab ${mode === "flashcards" ? "active" : ""}`} onClick={() => { setMode("flashcards"); onGoFlashcards?.(); }}>🃏 Flashcards</button>
+      </div>
+
+      <p className="section-title" style={{ marginTop: 16 }}>Anticipation Programme PASS/LAS</p>
       <div className="matiere-grid">
         {anticipation.map(m => (
           <button key={m.id} className="matiere-tile" style={{ background: m.color }} onClick={() => onSelectMatiere(m)}>
