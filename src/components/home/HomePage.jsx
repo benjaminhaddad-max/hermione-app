@@ -20,7 +20,7 @@ export default function HomePage({ user, storage, onGoTo }) {
       <div className="home-welcome-card">
         <span style={{ fontSize: 32 }}>📚</span>
         <div>
-          <div className="home-welcome-title">Ton grand frère de médecine</div>
+          <div className="home-welcome-title">Ton coach digital Hermione</div>
           <div className="home-welcome-sub">
             {fichesLues === 0
               ? "Commence par consulter une fiche de cours !"

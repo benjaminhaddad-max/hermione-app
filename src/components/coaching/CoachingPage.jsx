@@ -11,7 +11,7 @@ export default function CoachingPage() {
       {/* Présentation */}
       <div className="coaching-intro">
         <div className="coaching-emoji">🎓</div>
-        <h2 className="coaching-headline">Ton grand frère de médecine</h2>
+        <h2 className="coaching-headline">Ton coach digital Hermione</h2>
         <p className="coaching-desc">
           Nos coachs sont des étudiants en médecine qui sont passés par là.
           Ils t'aident à organiser tes révisions, comprendre les cours difficiles
