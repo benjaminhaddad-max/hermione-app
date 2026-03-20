@@ -375,7 +375,7 @@ async function main() {
     const matiereInfo = resolveMatiere(dossier.name);
     console.log(`\n📂 Traitement : "${matiereInfo.nom}" (dossier: "${dossier.name}")`);
 
-    const pdfs = await listerFichesDeCoursFolder(drive, dossier.id);
+    let pdfs = await listerFichesDeCoursFolder(drive, dossier.id);
 
     if (pdfs.length === 0) {
       console.log(`  ⚠️  Aucune fiche de cours trouvée, ignoré.`);
