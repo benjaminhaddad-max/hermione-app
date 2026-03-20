@@ -16,7 +16,7 @@ function normalizeLocalRows(rows) {
 export default function BackofficePage() {
   const [session, setSession] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
-  const [password, setPassword] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
   const [authError, setAuthError] = useState("");
 
   const [schemas, setSchemas] = useState([]);
@@ -80,12 +80,15 @@ export default function BackofficePage() {
   async function signIn() {
     if (!supabase) return;
     setAuthError("");
-    const { error } = await supabase.auth.signInWithPassword({
+    setEmailSent(false);
+    const { error } = await supabase.auth.signInWithOtp({
       email: ADMIN_EMAIL,
-      password,
+      options: {
+        emailRedirectTo: window.location.origin,
+      },
     });
     if (error) setAuthError(error.message || "Connexion impossible.");
-    setPassword("");
+    else setEmailSent(true);
   }
 
   async function signOut() {
@@ -158,19 +161,13 @@ export default function BackofficePage() {
           </div>
         ) : (
           <div className="bo-login">
-            <input
-              className="ob-input"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Mot de passe Supabase"
-            />
-            <button className="bo-btn bo-btn-primary" onClick={signIn} disabled={!password.trim() || !SUPABASE_READY}>
-              Se connecter
+            <button className="bo-btn bo-btn-primary" onClick={signIn} disabled={!SUPABASE_READY}>
+              Recevoir un lien de connexion
             </button>
           </div>
         )}
 
+        {emailSent && <p className="bo-muted">Lien magique envoyé à {ADMIN_EMAIL}. Ouvre l’email puis reviens ici.</p>}
         {authError && <p className="bo-error">{authError}</p>}
       </div>
 
