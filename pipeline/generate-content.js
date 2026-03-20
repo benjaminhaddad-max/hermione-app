@@ -13,6 +13,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { parseMatieresFromContentFile } = require("./extractMatieresFromContent");
 const { google } = require("googleapis");
 const Anthropic = require("@anthropic-ai/sdk");
 const pdfParse = require("pdf-parse");
@@ -300,18 +301,8 @@ Génère exactement ce JSON (sans markdown, juste le JSON brut) :
 
 // ── Charger les matières Terminale existantes ─────────────────────────────────
 function chargerMatieresTerminale() {
-  if (!fs.existsSync(OUTPUT_PATH)) return [];
-
-  try {
-    const content = fs.readFileSync(OUTPUT_PATH, "utf8");
-    const match = content.match(/export const MATIERES = (\[[\s\S]*\]);/);
-    if (!match) return [];
-
-    const matieres = JSON.parse(match[1]);
-    return matieres.filter(m => m.categorie === "terminale");
-  } catch {
-    return [];
-  }
+  const matieres = parseMatieresFromContentFile(OUTPUT_PATH);
+  return matieres.filter((m) => m.categorie === "terminale");
 }
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
