@@ -39,7 +39,21 @@ export default function HomePage({ user, storage, onGoTo }) {
         <button className="content-tile tile-gold" onClick={() => onGoTo("flashcards")}>
           🃏<br />Flashcards
         </button>
-        <button className="content-tile tile-blue" style={{ gridColumn: "1 / -1" }} onClick={() => onGoTo("coaching")}>
+        <button
+          className="content-tile tile-blue"
+          style={{
+            gridColumn: "1 / -1",
+            textAlign: "center",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "row",
+            gap: 10,
+            minHeight: 60,
+            fontSize: 14,
+            letterSpacing: 0.5,
+          }}
+          onClick={() => onGoTo("coaching")}
+        >
           🎓 Prendre RDV avec un coach · Gratuit
         </button>
       </div>
