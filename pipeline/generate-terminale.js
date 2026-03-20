@@ -5,7 +5,9 @@
  * génère fiches + flashcards + QCM pour chaque cours via Claude,
  * et ajoute les matières Terminale au content.js en préservant le PASS/LAS.
  *
- * Usage : node pipeline/generate-terminale.js
+ * Usage : node pipeline/generate-terminale.js [--concurrency=4]
+ *
+ * Plusieurs PDFs sont traités en parallèle (défaut : 3) pour aller plus vite.
  */
 
 const fs   = require("fs");
@@ -161,6 +163,30 @@ function slugify(str) {
     .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+/** Évite les doublons (ex. 2× « Géométrie dans l'espace ») → 1 seul appel Claude. */
+function dedupePdfs(pdfs) {
+  const seen = new Set();
+  const out = [];
+  for (const p of pdfs) {
+    const key = p.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, " ").trim();
+    if (seen.has(key)) {
+      console.log(`  ⏭️  Doublon ignoré : "${p.name}"`);
+      continue;
+    }
+    seen.add(key);
+    out.push(p);
+  }
+  return out;
+}
+
+function parseConcurrency() {
+  const arg = process.argv.find((a) => /^--concurrency=\d+/.test(a));
+  if (arg) return Math.min(8, Math.max(1, parseInt(arg.split("=")[1], 10)));
+  const env = parseInt(process.env.TERMINALE_CONCURRENCY || "", 10);
+  if (!Number.isNaN(env) && env > 0) return Math.min(8, env);
+  return 3;
+}
+
 // ── Générer le contenu avec Claude ───────────────────────────────────────────
 async function genererContenu(texte, titrePdf, matiere) {
   const prompt = `Tu es un assistant pédagogique expert pour les lycéens en Terminale (niveau Bac).
@@ -241,15 +267,64 @@ Génère exactement ce JSON (sans markdown, juste le JSON brut) :
   return JSON.parse(cleaned);
 }
 
+/** Un PDF → un chapitre (appelé en parallèle par paquets). */
+async function traiterUnPdf(drive, pdf, idx, total, matiereId, nomMatiere) {
+  console.log(`\n  📖 [${idx}/${total}] "${pdf.name}"`);
+  try {
+    const buffer = await telechargerPDF(drive, pdf.id);
+    const texte = await extraireTexte(buffer);
+    console.log(`     📝 ${texte.length} caractères`);
+    if (texte.trim().length < 100) {
+      console.log(`     ⚠️  PDF vide ou illisible, ignoré.`);
+      return null;
+    }
+    console.log(`     🤖 Claude…`);
+    const contenu = await genererContenu(texte, pdf.name.replace(/\.pdf$/i, ""), nomMatiere);
+    console.log(`     ✅ "${contenu.titrePropre}" — ${contenu.flashcardsData?.length || 0} flashcards, ${contenu.qcm?.length || 0} QCM`);
+    return {
+      id: `${matiereId}-ch${idx}`,
+      titre: contenu.titrePropre || pdf.name.replace(/\.pdf$/i, ""),
+      emoji: contenu.emoji || CHAPITRE_EMOJIS[idx % CHAPITRE_EMOJIS.length],
+      nouveau: false,
+      flashcardsData: contenu.flashcardsData || [],
+      fiche: contenu.fiche || {},
+      qcm: contenu.qcm || [],
+    };
+  } catch (err) {
+    console.error(`  ❌ Erreur sur "${pdf.name}":`, err.message);
+    return null;
+  }
+}
+
 // ── Charger les matières PASS/LAS existantes (extraction JSON robuste) ───────
 function chargerMatieresPassLas() {
   const matieres = parseMatieresFromContentFile(OUTPUT_PATH);
   return matieres.filter((m) => m.categorie !== "terminale");
 }
 
+/** Écrit content.js tout de suite pour ne pas tout perdre si le script est interrompu. */
+function ecrireContentJs(matieresPassLas, matieresTerminale, { final = false } = {}) {
+  const toutesLesMatieres = [...matieresPassLas, ...matieresTerminale];
+  const note = final
+    ? ""
+    : "\n// ⚠️ Sauvegarde intermédiaire — laisse tourner jusqu’à la fin pour Physique-Chimie + Chimie.";
+  const output = `// Généré par le pipeline Hermione — ${new Date().toLocaleDateString("fr-FR")}
+// PASS/LAS : préservées | Terminale : générées depuis Google Drive${note}
+
+export const MATIERES = ${JSON.stringify(toutesLesMatieres, null, 2)};
+`;
+  fs.writeFileSync(OUTPUT_PATH, output);
+  console.log(`💾 content.js sauvegardé — PASS/LAS + ${matieresTerminale.length} matière(s) Terminale\n`);
+}
+
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 async function main() {
+  const CONCURRENCY = parseConcurrency();
   console.log("🚀 Pipeline Terminale — Hermione\n");
+  console.log(
+    `⚡ Jusqu'à ${CONCURRENCY} fiches en parallèle (×${CONCURRENCY} plus vite qu’un PDF à la fois). ` +
+      `Plus : --concurrency=4\n`
+  );
 
   if (!process.env.ANTHROPIC_API_KEY) {
     console.log("❌ ANTHROPIC_API_KEY manquant dans .env"); process.exit(1);
@@ -309,43 +384,22 @@ async function main() {
 
     // Trier par nom (FC1, FC2... ou 1-Les suites, 2-Dérivation...)
     pdfs.sort((a, b) => a.name.localeCompare(b.name, "fr", { numeric: true }));
-    console.log(`  📄 ${pdfs.length} fiche(s) : ${pdfs.map(p => p.name.replace(/\.pdf$/i, "")).join(" | ")}`);
+    pdfs = dedupePdfs(pdfs);
+    console.log(`  📄 ${pdfs.length} fiche(s) — ⚡ ${CONCURRENCY} PDF en parallèle max`);
+    console.log(`     ${pdfs.map((p) => p.name.replace(/\.pdf$/i, "")).join(" | ")}`);
 
     const matiereId = "term-" + slugify(matiereInfo.nom);
     const matiereCours = [];
-    let idx = 0;
 
-    for (const pdf of pdfs) {
-      idx++;
-      console.log(`\n  📖 [${idx}/${pdfs.length}] "${pdf.name}"`);
-
-      try {
-        const buffer = await telechargerPDF(drive, pdf.id);
-        const texte = await extraireTexte(buffer);
-        console.log(`     📝 ${texte.length} caractères`);
-
-        if (texte.trim().length < 100) {
-          console.log(`     ⚠️  PDF vide ou illisible, ignoré.`);
-          continue;
-        }
-
-        console.log(`     🤖 Génération avec Claude...`);
-        const contenu = await genererContenu(texte, pdf.name.replace(/\.pdf$/i, ""), matiereInfo.nom);
-
-        matiereCours.push({
-          id: `${matiereId}-ch${idx}`,
-          titre: contenu.titrePropre || pdf.name.replace(/\.pdf$/i, ""),
-          emoji: contenu.emoji || CHAPITRE_EMOJIS[idx % CHAPITRE_EMOJIS.length],
-          nouveau: false,
-          flashcardsData: contenu.flashcardsData || [],
-          fiche: contenu.fiche || {},
-          qcm: contenu.qcm || [],
-        });
-
-        console.log(`     ✅ "${contenu.titrePropre}" — ${contenu.flashcardsData?.length || 0} flashcards, ${contenu.qcm?.length || 0} QCM`);
-
-      } catch (err) {
-        console.error(`  ❌ Erreur sur "${pdf.name}":`, err.message);
+    for (let i = 0; i < pdfs.length; i += CONCURRENCY) {
+      const slice = pdfs.slice(i, i + CONCURRENCY);
+      const batch = await Promise.all(
+        slice.map((pdf, j) =>
+          traiterUnPdf(drive, pdf, i + j + 1, pdfs.length, matiereId, matiereInfo.nom)
+        )
+      );
+      for (const cours of batch) {
+        if (cours) matiereCours.push(cours);
       }
     }
 
@@ -360,6 +414,7 @@ async function main() {
         cours: matiereCours,
       });
       console.log(`\n  ✅ ${matiereInfo.nom} : ${matiereCours.length} cours générés`);
+      ecrireContentJs(matieresPassLas, matieresTerminale, { final: false });
     }
   }
 
@@ -373,13 +428,7 @@ async function main() {
   matieresTerminale.forEach(m => console.log(`     • ${m.nom} : ${m.cours.length} cours`));
   console.log(`═══════════════════════════════════════\n`);
 
-  const output = `// Généré par le pipeline Hermione — ${new Date().toLocaleDateString("fr-FR")}
-// PASS/LAS : préservées | Terminale : générées depuis Google Drive
-
-export const MATIERES = ${JSON.stringify(toutesLesMatieres, null, 2)};
-`;
-
-  fs.writeFileSync(OUTPUT_PATH, output);
+  ecrireContentJs(matieresPassLas, matieresTerminale, { final: true });
   console.log(`🎉 Fichier écrit : src/data/content.js`);
   console.log(`📦 Lance maintenant : npm run build\n`);
   process.exit(0);
