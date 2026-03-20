@@ -7,8 +7,8 @@
  *
  * Usage : node pipeline/generate-terminale.js [--concurrency=12]
  *
- * Mode rapide : Haiku + haute concurrence (défaut 10, max 16).
- * ANTHROPIC_MODEL=claude-sonnet-4-20250514 pour qualité max (plus lent).
+ * Concurrence élevée par défaut (10, max 16). Modèle : Sonnet par défaut.
+ * ANTHROPIC_MODEL=claude-3-5-haiku-20241022 si ton compte l’expose (sinon 404).
  */
 
 const fs   = require("fs");
@@ -36,9 +36,9 @@ const SCOPES           = ["https://www.googleapis.com/auth/drive.readonly"];
 const TERMINALE_FOLDER_ID = "1K2aorrFOUZlGAMqYhknFnd7GjrvQfrom";
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-/** Haiku = beaucoup plus rapide que Sonnet pour du JSON structuré */
+/** Sonnet = fiable sur l’API actuelle. Haiku : définir ANTHROPIC_MODEL si ton compte le supporte. */
 const CLAUDE_MODEL =
-  process.env.ANTHROPIC_MODEL || "claude-3-5-haiku-20241022";
+  process.env.ANTHROPIC_MODEL || "claude-sonnet-4-20250514";
 
 // ── Mapping matières Terminale ────────────────────────────────────────────────
 const MATIERE_MAP = {
