@@ -58,10 +58,29 @@ export default function HomePage({ user, storage, onGoTo }) {
         </button>
       </div>
 
-      {/* Matières disponibles */}
-      <p className="section-title" style={{ marginTop: 24 }}>Matières disponibles</p>
+      {/* Anticipation PASS/LAS */}
+      <p className="section-title" style={{ marginTop: 24 }}>🎯 Anticipation Programme PASS/LAS</p>
       <div className="home-matieres">
-        {MATIERES.map(m => {
+        {MATIERES.filter(m => m.categorie === "anticipation").map(m => {
+          const nbCours = m.cours.length;
+          const nbLues = m.cours.filter(c => storage.fiches_lues?.[c.id]?.lue).length;
+          return (
+            <button key={m.id} className="home-matiere-row" onClick={() => onGoTo("cours")}>
+              <span className="home-matiere-emoji">{m.emoji}</span>
+              <div className="home-matiere-info">
+                <span className="home-matiere-nom">{m.nom}</span>
+                <span className="home-matiere-meta">{nbCours} chapitres · {nbLues} lus</span>
+              </div>
+              <span className="list-chevron">›</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Notions de Terminale */}
+      <p className="section-title" style={{ marginTop: 24 }}>📘 Notions de Terminale utiles pour PASS/LAS</p>
+      <div className="home-matieres">
+        {MATIERES.filter(m => m.categorie === "terminale").map(m => {
           const nbCours = m.cours.length;
           const nbLues = m.cours.filter(c => storage.fiches_lues?.[c.id]?.lue).length;
           return (
