@@ -11,8 +11,8 @@ const SURLIGNES = ["jaune","rose","vert","bleu","violet","jaune"];
 
 export default function FichePage2Concepts({ data }) {
   return (
-    <div className="fiche-page fiche-manuscrite">
-      <h2 className="fiche-titre-manuscrit">
+    <div className="fiche-page fiche-page-modern">
+      <h2 className="fiche-titre-modern">
         <span className="fiche-souligne-bleu">{data.titre}</span>
       </h2>
 

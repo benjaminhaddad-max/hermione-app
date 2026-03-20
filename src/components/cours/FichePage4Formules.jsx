@@ -1,7 +1,7 @@
 export default function FichePage4Formules({ data }) {
   return (
-    <div className="fiche-page fiche-manuscrite">
-      <h2 className="fiche-titre-manuscrit">
+    <div className="fiche-page fiche-page-modern">
+      <h2 className="fiche-titre-modern">
         <span className="fiche-souligne-violet">{data.titre}</span>
       </h2>
 

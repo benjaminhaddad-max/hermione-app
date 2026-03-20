@@ -186,6 +186,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 .fiche-tabs::-webkit-scrollbar{display:none}
 .fiche-tab{background:rgba(255,255,255,0.04);border:1px solid var(--border-sub);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:600;font-family:var(--font-display);color:var(--gray);cursor:pointer;white-space:nowrap;letter-spacing:.5px;transition:all .2s;flex-shrink:0}
 .fiche-tab.active{background:var(--gold);border-color:var(--gold);color:#0D0721}
+.fiche-tab-long{font-size:10px;padding:6px 10px;letter-spacing:.2px}
 .fiche-content{flex:1;overflow-y:auto;padding:0 0 16px}
 .fiche-nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--border-sub);flex-shrink:0;gap:8px}
 .fiche-nav-btn{padding:12px 20px;border-radius:10px;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:1px;cursor:pointer;border:none;transition:all .2s}
@@ -387,6 +388,309 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 .fiche-mnemo-icon{font-size:26px;flex-shrink:0;margin-top:2px}
 .fiche-mnemo-label{font-family:var(--font-hand);font-size:19px;font-weight:700;color:#9a6f00;margin-bottom:4px}
 .fiche-mnemo-texte{font-family:var(--font-hand);font-size:18px;color:#333;line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════════════
+   FICHE MODERNE — lisibilité + effet WOW
+   ══════════════════════════════════════════════ */
+
+.fiche-page-modern{
+  color:var(--ink);
+  animation:ficheFadeIn .45s ease-out both;
+}
+@keyframes ficheFadeIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.fiche-titre-modern{
+  font-family:var(--font-display);
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.3px;
+  line-height:1.25;
+  margin-bottom:14px;
+  color:#12122a;
+}
+
+/* Intro — hero + bullets */
+.fiche-intro-wow{
+  position:relative;
+}
+.fiche-intro-wow::before{
+  content:'';
+  position:absolute;inset:-2px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(201,168,76,0.45),rgba(91,79,217,0.35),rgba(46,204,113,0.25));
+  z-index:0;opacity:.55;
+  filter:blur(12px);
+}
+.fiche-intro-hero,.fiche-intro-body,.fiche-encadre-wow{position:relative;z-index:1}
+.fiche-intro-hero{
+  background:linear-gradient(180deg,rgba(255,255,255,0.94),rgba(255,254,248,0.88));
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:14px;
+  padding:14px 16px 12px;
+  margin-bottom:14px;
+  box-shadow:0 8px 32px rgba(16,8,32,0.08);
+}
+.fiche-intro-kicker{
+  display:inline-block;
+  font-family:var(--font-display);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#5B4FD9;
+  margin-bottom:6px;
+}
+.fiche-intro-body{
+  background:rgba(255,255,255,0.55);
+  border-radius:12px;
+  padding:4px 4px 8px;
+  margin-bottom:14px;
+}
+.fiche-intro-bullets{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:0 4px 0 0;
+}
+.fiche-intro-bullet{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  font-family:var(--font-body);
+  font-size:15px;
+  line-height:1.65;
+  color:#2a2a38;
+}
+.fiche-intro-bullet-mark{
+  flex-shrink:0;
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:10px;
+  background:linear-gradient(145deg,rgba(201,168,76,0.35),rgba(91,79,217,0.2));
+  color:#4a3a9a;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.fiche-encadre-wow{
+  background:linear-gradient(135deg,rgba(255,243,180,0.5),rgba(255,255,255,0.75));
+  border:1px solid rgba(201,168,76,0.45);
+  border-radius:14px;
+  padding:14px 16px;
+  box-shadow:0 4px 20px rgba(201,168,76,0.12);
+}
+.fiche-encadre-wow-label{
+  font-family:var(--font-display);
+  font-size:13px;
+  font-weight:800;
+  color:#7a5c00;
+  margin-bottom:12px;
+  letter-spacing:.3px;
+}
+.fiche-encadre-wow-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.fiche-encadre-wow-item{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.55;
+  color:#333;
+}
+.fiche-check{
+  flex-shrink:0;
+  color:#27ae60;
+  font-weight:800;
+  font-size:15px;
+  margin-top:1px;
+}
+
+/* Pages 2–5 : texte courant lisible */
+.fiche-page-modern .fiche-concept-terme{
+  font-family:var(--font-display);
+  font-size:16px;
+  font-weight:800;
+}
+.fiche-page-modern .fiche-concept-def{
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.6;
+}
+.fiche-page-modern .fiche-formule-label{
+  font-family:var(--font-body);
+  font-size:13px;
+  font-weight:600;
+}
+.fiche-page-modern .fiche-formule-math{
+  font-family:var(--font-display);
+  font-size:22px;
+}
+.fiche-page-modern .fiche-formule-unite{
+  font-family:var(--font-body);
+  font-size:13px;
+}
+.fiche-page-modern .fiche-donnee-row{
+  font-family:var(--font-body);
+  font-size:14px;
+}
+.fiche-page-modern .fiche-encadre-label{
+  font-family:var(--font-display);
+  font-size:13px;
+  font-weight:800;
+}
+.fiche-page-modern .fiche-resume-point{
+  font-family:var(--font-body);
+  font-size:14px;
+}
+.fiche-page-modern .fiche-resume-num{
+  font-family:var(--font-display);
+  font-size:15px;
+}
+.fiche-page-modern .fiche-mnemo-label,
+.fiche-page-modern .fiche-mnemo-texte{
+  font-family:var(--font-body);
+  font-style:normal;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* Schémas — cartes visuelles */
+.fiche-schema-intro{
+  font-family:var(--font-body);
+  font-size:13px;
+  line-height:1.55;
+  color:#555;
+  margin-bottom:16px;
+  padding:10px 12px;
+  background:rgba(91,79,217,0.06);
+  border-radius:10px;
+  border-left:4px solid rgba(91,79,217,0.5);
+}
+
+.fiche-schema-visual-card{
+  position:relative;
+  margin-bottom:20px;
+  padding:16px 14px 18px;
+  border-radius:16px;
+  background:linear-gradient(165deg,rgba(255,255,255,0.95),rgba(248,246,255,0.92));
+  border:1px solid rgba(0,0,0,0.07);
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.8) inset,
+    0 12px 40px rgba(16,8,40,0.1);
+  overflow:hidden;
+  animation:ficheFadeIn .5s ease-out both;
+}
+.fiche-schema-visual-glow{
+  position:absolute;
+  top:-40%;right:-20%;
+  width:180px;height:180px;
+  background:radial-gradient(circle,rgba(201,168,76,0.35),transparent 70%);
+  pointer-events:none;
+}
+.fiche-schema-visual-top{margin-bottom:8px;position:relative;z-index:1}
+.fiche-schema-pill{
+  display:inline-block;
+  font-family:var(--font-display);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#6b5c2e;
+  background:rgba(201,168,76,0.2);
+  padding:4px 10px;
+  border-radius:100px;
+  margin-bottom:8px;
+}
+.fiche-schema-visual-titre{
+  font-family:var(--font-display);
+  font-size:16px;
+  font-weight:800;
+  line-height:1.35;
+  color:#1a1a2e;
+  margin:0;
+}
+.fiche-schema-visual-diagram{
+  position:relative;
+  z-index:1;
+  margin:10px 0 12px;
+  padding:8px 0;
+  background:rgba(255,255,255,0.5);
+  border-radius:12px;
+}
+.fiche-schema-svg{width:100%;height:auto;display:block}
+.fiche-schema-bullet-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  position:relative;
+  z-index:1;
+}
+.fiche-schema-bullet-item{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-family:var(--font-body);
+  font-size:13px;
+  line-height:1.55;
+  color:#333;
+}
+.fiche-schema-bullet-num{
+  flex-shrink:0;
+  min-width:24px;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  background:linear-gradient(145deg,#5B4FD9,#7c6ae8);
+  color:#fff;
+  font-family:var(--font-display);
+  font-size:11px;
+  font-weight:800;
+}
+.fiche-schema-bullet-txt{flex:1;padding-top:1px}
+
+.fiche-schema-empty{
+  text-align:center;
+  padding:28px 16px;
+  border-radius:14px;
+  border:2px dashed rgba(91,79,217,0.25);
+  background:rgba(91,79,217,0.04);
+}
+.fiche-schema-empty-icon{font-size:40px;display:block;margin-bottom:10px}
+.fiche-schema-empty-titre{
+  font-family:var(--font-display);
+  font-size:15px;
+  font-weight:800;
+  color:#333;
+  margin-bottom:8px;
+}
+.fiche-schema-empty-txt{
+  font-family:var(--font-body);
+  font-size:13px;
+  line-height:1.55;
+  color:#666;
+  max-width:280px;
+  margin:0 auto;
+}
+.fiche-schema-legende-modern{
+  text-align:center;
+  font-family:var(--font-body);
+  font-size:13px;
+  color:#666;
+  margin-top:10px;
+  font-style:italic;
+}
 
 /* ── QCM ── */
 .qcm-question-block{display:flex;flex-direction:column;gap:12px}

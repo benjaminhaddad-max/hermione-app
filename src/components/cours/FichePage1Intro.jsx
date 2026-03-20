@@ -1,23 +1,51 @@
+function splitIntroText(texte) {
+  if (!texte || typeof texte !== "string") return [];
+  const t = texte.replace(/\s+/g, " ").trim();
+  const rough = t.split(/\.\s+/).filter(Boolean);
+  if (rough.length >= 2) {
+    return rough.map((c, i) =>
+      i < rough.length - 1 ? `${c.trim()}.` : c.trim()
+    );
+  }
+  return [t];
+}
+
 export default function FichePage1Intro({ data }) {
+  const paragraphes = splitIntroText(data?.texte);
+  const points = Array.isArray(data?.points_cles) ? data.points_cles : [];
+
   return (
-    <div className="fiche-page fiche-manuscrite">
-      {/* Titre */}
-      <h2 className="fiche-titre-manuscrit">
-        <span className="fiche-souligne-rose">{data.titre}</span>
-      </h2>
+    <div className="fiche-page fiche-page-modern fiche-intro-wow">
+      <div className="fiche-intro-hero">
+        <span className="fiche-intro-kicker">Fiche de cours</span>
+        <h2 className="fiche-titre-modern">
+          <span className="fiche-souligne-rose">{data?.titre || "Introduction"}</span>
+        </h2>
+      </div>
 
-      {/* Texte intro */}
-      <p className="fiche-texte-manuscrit">{data.texte}</p>
+      <div className="fiche-intro-body">
+        <ul className="fiche-intro-bullets">
+          {paragraphes.map((p, i) => (
+            <li key={i} className="fiche-intro-bullet">
+              <span className="fiche-intro-bullet-mark" aria-hidden>
+                ✦
+              </span>
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      {/* Encadré "À retenir" */}
-      <div className="fiche-encadre-jaune">
-        <p className="fiche-encadre-label">⭐ À retenir !</p>
-        {data.points_cles.map((p, i) => (
-          <div key={i} className="fiche-point-manuscrit">
-            <span className="fiche-fleche">→</span>
-            <span className="fiche-surligne-jaune">{p}</span>
-          </div>
-        ))}
+      <div className="fiche-encadre-wow">
+        <p className="fiche-encadre-wow-label">⭐ À retenir</p>
+        <ul className="fiche-encadre-wow-list">
+          {points.map((p, i) => (
+            <li key={i} className="fiche-encadre-wow-item">
+              <span className="fiche-check">✓</span>
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

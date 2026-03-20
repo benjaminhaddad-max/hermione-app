@@ -9,8 +9,8 @@ const NUM_COLORS = [
 
 export default function FichePage5Resume({ data }) {
   return (
-    <div className="fiche-page fiche-manuscrite">
-      <h2 className="fiche-titre-manuscrit">
+    <div className="fiche-page fiche-page-modern">
+      <h2 className="fiche-titre-modern">
         <span className="fiche-souligne-rose">{data.titre}</span>
       </h2>
 

@@ -4,3 +4,9 @@ build/
 .DS_Store
 hermione-deploy.zip
 .claude/
+.vercel
+# Secrets & déploiements locaux
+credentials.json
+pipeline/token.json
+pipeline/.env
+hermione-deploy/

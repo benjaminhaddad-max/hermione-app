@@ -1,0 +1,15 @@
+{
+  "name": "hermione-pipeline",
+  "version": "1.0.0",
+  "description": "Pipeline Drive → Claude → content.js",
+  "main": "generate-content.js",
+  "scripts": {
+    "generate": "node generate-content.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.0",
+    "dotenv": "^16.0.0",
+    "googleapis": "^140.0.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
