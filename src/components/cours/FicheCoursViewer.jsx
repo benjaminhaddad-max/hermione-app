@@ -12,7 +12,7 @@ export default function FicheCoursViewer({ cours, onBack, onSaveProgress }) {
   const f = cours.fiche;
 
   const pages = [
-    <FichePage1Intro data={f.page1_intro} />,
+    <FichePage1Intro fiche={f} />,
     <FichePage2Concepts data={f.page2_concepts} />,
     <FichePage3Schemas data={f.page3_schemas} concepts={f.page2_concepts?.concepts || []} />,
     <FichePage4Formules data={f.page4_formules} />,
