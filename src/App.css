@@ -1664,3 +1664,94 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   font-size:17px;
   margin-bottom:8px;
 }
+
+/* ── BACKOFFICE ── */
+.bo-page{padding-bottom:28px}
+.bo-alert{
+  background:rgba(224,90,43,0.14);
+  border:1px solid rgba(224,90,43,0.35);
+  color:#ffb8a0;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:12px;
+  margin-bottom:12px;
+}
+.bo-auth-card,.bo-sync-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border-sub);
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:12px;
+}
+.bo-auth-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.bo-auth-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.bo-auth-email{font-size:12px;font-weight:700;color:var(--gold-light)}
+.bo-login{display:flex;gap:8px;align-items:center}
+.bo-auth-ok{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#9fe7ba}
+.bo-btn{
+  border:none;
+  border-radius:10px;
+  padding:10px 12px;
+  font-family:var(--font-display);
+  font-weight:700;
+  letter-spacing:.5px;
+  cursor:pointer;
+  background:rgba(255,255,255,0.08);
+  color:var(--white);
+}
+.bo-btn-primary{background:var(--gold);color:#0D0721}
+.bo-muted{font-size:12px;color:var(--gray);margin-top:8px}
+.bo-error{font-size:12px;color:#ff9a9a;margin-top:8px}
+.bo-toolbar{
+  display:grid;
+  grid-template-columns:1fr 1fr 1.4fr;
+  gap:8px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.bo-chip{
+  background:rgba(201,168,76,0.14);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:11px;
+  text-align:center;
+  color:var(--gold-light);
+}
+.bo-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.bo-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border-sub);
+  border-radius:12px;
+  padding:10px;
+}
+.bo-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bo-tag{
+  background:rgba(91,79,217,0.25);
+  color:#d9d2ff;
+  padding:3px 8px;
+  border-radius:999px;
+  font-size:10px;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.bo-page-num{font-size:11px;color:var(--gray)}
+.bo-img{
+  width:100%;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:#fff;
+}
+.bo-source{
+  margin-top:8px;
+  font-size:11px;
+  color:var(--gray);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

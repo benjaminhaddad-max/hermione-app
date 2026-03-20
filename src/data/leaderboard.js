@@ -9,9 +9,38 @@ const PRENOMS = [
   "Célia","Dorian","Emilie","Killian","Noémie","Thibault","Salomé","Adrien","Mila","Gabin",
   "Lilou","Erwan","Capucine","Loïc","Héloïse","Maxence","Constance","Aurélien","Apolline","Kévin",
   "Solène","Matthieu","Victoire","Jérémy","Alix","Damien","Margaux","Fabien","Iris","Sébastien",
+  "Amine","Yasmine","Mehdi","Imane","Karim","Nadia","Rayan","Sonia","Ilyès","Dounia",
+  "Hamza","Lyna","Omar","Sabrina","Bilal","Amina","Ayoub","Nora","Sofiane","Lilia",
+  "Axelle","Théodore","Eléonore","Raphaëlle","Thibaud","Sixtine","Gaspard","Blanche","Côme","Diane",
 ];
 
-const SUFFIXES = ["","_med","_pass","_las",".study","_2026","_fac","_prepa","",""];
+// Flags & identités créatives
+const FLAGS = ["🇫🇷","🇩🇿","🇲🇦","🇹🇳","🇸🇳","🇨🇮","🇧🇪","🇨🇭","🇱🇧","🇨🇲","🇬🇳","🇲🇱","🇲🇺"];
+const EMOJIS_MED = ["🩺","💊","🧬","🔬","🫀","🧠","⚕️","🩻","💉","🏥"];
+
+// Formats de pseudos variés
+const PATTERNS = [
+  (p, n, flag) => `${p.toLowerCase()}${flag}`,
+  (p, n, flag) => `${flag}${p.toLowerCase()}`,
+  (p, n)       => `dr.${p.toLowerCase()}`,
+  (p, n)       => `futur_dr_${p.toLowerCase()}`,
+  (p, n, flag) => `${p.toLowerCase()}_${flag}`,
+  (p, n)       => `${p.toLowerCase()}${n > 10 ? n : ""}`,
+  (p, n)       => `${p.toLowerCase()}_pass${new Date().getFullYear() % 100 + 1}`,
+  (p, n, flag) => `${p.toLowerCase()}${n}_${flag}`,
+  (p, n)       => `${p.toLowerCase()}.med`,
+  (p, n)       => `${p.toLowerCase()}_studi`,
+  (p, n, flag) => `med_${p.toLowerCase()}${flag}`,
+  (p, n)       => `${p.toLowerCase()}${n > 30 ? n : ""}`,
+  (p, n)       => `the_${p.toLowerCase()}`,
+  (p, n, flag) => `${p.toLowerCase()}${n > 50 ? n : ""}_${flag}`,
+  (p, n)       => `${p.toLowerCase()}_bio`,
+  (p, n)       => `${p.toLowerCase()}_las`,
+  (p, n, flag) => `${flag}_${p.toLowerCase()}${n > 40 ? n : ""}`,
+  (p, n)       => `${p.toLowerCase()}${n}`,
+  (p, n)       => `carabin_${p.toLowerCase()}`,
+  (p, n, flag) => `${p.toLowerCase()}${flag}🩺`,
+];
 
 function seededRandom(seed) {
   let s = seed;
@@ -24,12 +53,18 @@ function seededRandom(seed) {
 function generateFakeUsers(count = 200) {
   const rng = seededRandom(42);
   const users = [];
+  const seen = new Set();
 
   for (let i = 0; i < count; i++) {
-    const prenom = PRENOMS[Math.floor(rng() * PRENOMS.length)];
-    const suffix = SUFFIXES[Math.floor(rng() * SUFFIXES.length)];
-    const num = Math.floor(rng() * 99);
-    const pseudo = prenom.toLowerCase() + (num > 50 ? num : "") + suffix;
+    const prenom  = PRENOMS[Math.floor(rng() * PRENOMS.length)];
+    const flag    = FLAGS[Math.floor(rng() * FLAGS.length)];
+    const num     = Math.floor(rng() * 99);
+    const pattern = PATTERNS[Math.floor(rng() * PATTERNS.length)];
+
+    let pseudo = pattern(prenom, num, flag);
+    // Éviter les doublons
+    if (seen.has(pseudo)) pseudo = pseudo + num;
+    seen.add(pseudo);
 
     const tier = rng();
     let xp;

@@ -6,12 +6,15 @@
   "scripts": {
     "generate": "node generate-content.js",
     "terminale": "node generate-terminale.js --concurrency=12",
-    "terminale:turbo": "node generate-terminale.js --concurrency=16"
+    "terminale:turbo": "node generate-terminale.js --concurrency=16",
+    "schemas:extract": "node extract-drive-schemas.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.0",
     "dotenv": "^16.0.0",
     "googleapis": "^140.0.0",
-    "pdf-parse": "^1.1.1"
+    "mupdf": "^1.27.0",
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.34.5"
   }
 }

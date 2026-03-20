@@ -14,6 +14,7 @@ import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage
 import FlashcardSession from "./components/flashcards/FlashcardSession";
 import CoachingPage from "./components/coaching/CoachingPage";
 import ClassementPage from "./components/classement/ClassementPage";
+import BackofficePage from "./components/admin/BackofficePage";
 
 function Onboarding({ onDone }) {
   const [step, setStep] = useState(0);
@@ -87,6 +88,7 @@ function BottomNav({ active, onChange }) {
     { id:"cours",      icon:"📖", label:"Réviser" },
     { id:"classement", icon:"🏆", label:"Classement" },
     { id:"coaching",   icon:"🎓", label:"Coaching" },
+    { id:"admin",      icon:"🛠️", label:"Backoffice" },
   ];
   return (
     <nav className="bottom-nav">
@@ -217,6 +219,9 @@ export default function App() {
   // Onglet Classement
   if (tab === "classement") {
     return wrap(<ClassementPage storage={storage} onAddXP={addXP} />);
+  }
+  if (tab === "admin") {
+    return wrap(<BackofficePage />);
   }
 
   const pages = {

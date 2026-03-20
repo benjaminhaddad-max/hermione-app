@@ -1,0 +1,86 @@
+[
+  {
+    "id": "biochimie-fcds-structures-secondaires-p5-s1",
+    "matiere": "Biochimie",
+    "sourcePdf": "FCDS_Structures secondaires.pdf",
+    "page": 5,
+    "image": "/schema-library/biochimie/fcds-structures-secondaires-p05-s01.webp"
+  },
+  {
+    "id": "biochimie-fcds-variations-du-genome-et-reparation-adn-p2-s1",
+    "matiere": "Biochimie",
+    "sourcePdf": "FCDS_Variations du génome et réparation ADN.pdf",
+    "page": 2,
+    "image": "/schema-library/biochimie/fcds-variations-du-genome-et-reparation-adn-p02-s01.webp"
+  },
+  {
+    "id": "biochimie-fcds-transcription-et-traduction-p3-s1",
+    "matiere": "Biochimie",
+    "sourcePdf": "FCDS_Transcription et traduction.pdf",
+    "page": 3,
+    "image": "/schema-library/biochimie/fcds-transcription-et-traduction-p03-s01.webp"
+  },
+  {
+    "id": "biologie-cellulaire-fcds-le-noyau-p2-s1",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "FCDS_Le noyau.pdf",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/fcds-le-noyau-p02-s01.webp"
+  },
+  {
+    "id": "biologie-cellulaire-fcds-organisation-cellule-eucaryote-p3-s1",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "FCDS_Organisation cellule eucaryote.pdf",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/fcds-organisation-cellule-eucaryote-p03-s01.webp"
+  },
+  {
+    "id": "physique-fcds-onde-et-echographie-p3-s1",
+    "matiere": "Physique",
+    "sourcePdf": "FCDS_Onde et échographie.pdf",
+    "page": 3,
+    "image": "/schema-library/physique/fcds-onde-et-echographie-p03-s01.webp"
+  },
+  {
+    "id": "sante-publique-fcds-demandes-et-offres-de-soins-p2-s1",
+    "matiere": "Santé Publique",
+    "sourcePdf": "FCDS_Demandes et offres de soins.pdf",
+    "page": 2,
+    "image": "/schema-library/sante-publique/fcds-demandes-et-offres-de-soins-p02-s01.webp"
+  },
+  {
+    "id": "sante-publique-fcds-epidemiologie-descriptive-p4-s1",
+    "matiere": "Santé Publique",
+    "sourcePdf": "FCDS_Épidémiologie descriptive.pdf",
+    "page": 4,
+    "image": "/schema-library/sante-publique/fcds-epidemiologie-descriptive-p04-s01.webp"
+  },
+  {
+    "id": "sante-publique-fcds-grands-principes-de-prevention-p5-s1",
+    "matiere": "Santé Publique",
+    "sourcePdf": "FCDS_Grands principes de prévention.pdf",
+    "page": 5,
+    "image": "/schema-library/sante-publique/fcds-grands-principes-de-prevention-p05-s01.webp"
+  },
+  {
+    "id": "histologie-fcds-tissu-sanguin-p3-s1",
+    "matiere": "Histologie",
+    "sourcePdf": "FCDS_Tissu sanguin.pdf",
+    "page": 3,
+    "image": "/schema-library/histologie/fcds-tissu-sanguin-p03-s01.webp"
+  },
+  {
+    "id": "histologie-fcds-tissu-sanguin-p5-s2",
+    "matiere": "Histologie",
+    "sourcePdf": "FCDS_Tissu sanguin.pdf",
+    "page": 5,
+    "image": "/schema-library/histologie/fcds-tissu-sanguin-p05-s02.webp"
+  },
+  {
+    "id": "histologie-polycopie-methode-d-etude-en-histologie-p2-s1",
+    "matiere": "Histologie",
+    "sourcePdf": "Polycopié_Méthode d'étude en histologie.pdf",
+    "page": 2,
+    "image": "/schema-library/histologie/polycopie-methode-d-etude-en-histologie-p02-s01.webp"
+  }
+]
