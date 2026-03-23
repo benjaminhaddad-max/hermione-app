@@ -1959,9 +1959,53 @@ select.ob-input{appearance:none;-webkit-appearance:none}
 .bo-btn-primary{background:var(--gold);color:#0D0721}
 .bo-muted{font-size:12px;color:var(--gray);margin-top:8px}
 .bo-error{font-size:12px;color:#ff9a9a;margin-top:8px}
+.bo-matiere-tabs{
+  display:flex;
+  gap:6px;
+  overflow-x:auto;
+  padding-bottom:4px;
+  margin-bottom:12px;
+  -webkit-overflow-scrolling:touch;
+}
+.bo-matiere-tab{
+  flex-shrink:0;
+  padding:10px 16px;
+  border-radius:12px;
+  border:1.5px solid var(--border);
+  background:rgba(255,255,255,0.03);
+  color:var(--text-sub);
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .2s;
+  white-space:nowrap;
+}
+.bo-matiere-tab.active{
+  background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.08));
+  border-color:var(--gold);
+  color:var(--gold-light);
+  box-shadow:0 0 12px rgba(201,168,76,0.15);
+}
+.bo-matiere-tab:hover:not(.active){
+  border-color:var(--gold);
+  color:var(--text);
+}
+.bo-chapter-bar{
+  margin-bottom:12px;
+}
+.bo-chapter-select{
+  width:100%;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.04);
+  color:var(--text);
+  font-size:13px;
+  font-weight:500;
+  appearance:auto;
+}
 .bo-toolbar{
-  display:grid;
-  grid-template-columns:1fr 1fr 1.4fr;
+  display:flex;
   gap:8px;
   align-items:center;
   margin-bottom:12px;

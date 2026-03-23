@@ -97,6 +97,7 @@ export default function BackofficePage() {
   const [schemaError, setSchemaError] = useState("");
   const [source, setSource] = useState("local");
   const [matiereFilter, setMatiereFilter] = useState("all");
+  const [chapterFilter, setChapterFilter] = useState("all");
   const [syncMessage, setSyncMessage] = useState("");
   const [showSqlHelp, setShowSqlHelp] = useState(false);
 
@@ -204,10 +205,19 @@ export default function BackofficePage() {
     );
   }, [schemas]);
 
-  const filtered = useMemo(() => {
-    if (matiereFilter === "all") return schemas;
-    return schemas.filter((s) => s.matiere === matiereFilter);
+  const chapters = useMemo(() => {
+    const src = matiereFilter === "all" ? schemas : schemas.filter((s) => s.matiere === matiereFilter);
+    return Array.from(new Set(src.map((s) => s.chapter || cleanChapterName(s.source_pdf)).filter(Boolean))).sort((a, b) =>
+      a.localeCompare(b, "fr")
+    );
   }, [schemas, matiereFilter]);
+
+  const filtered = useMemo(() => {
+    let result = schemas;
+    if (matiereFilter !== "all") result = result.filter((s) => s.matiere === matiereFilter);
+    if (chapterFilter !== "all") result = result.filter((s) => (s.chapter || cleanChapterName(s.source_pdf)) === chapterFilter);
+    return result;
+  }, [schemas, matiereFilter, chapterFilter]);
 
   async function copySqlSetup() {
     try {
@@ -302,20 +312,48 @@ export default function BackofficePage() {
       {isAdmin && boTab === "conversations" && <ConversationViewer />}
 
       {boTab === "schemas" && (<>
+        {/* Onglets matière */}
+        <div className="bo-matiere-tabs">
+          <button
+            className={`bo-matiere-tab ${matiereFilter === "all" ? "active" : ""}`}
+            onClick={() => { setMatiereFilter("all"); setChapterFilter("all"); }}
+          >
+            Toutes ({schemas.length})
+          </button>
+          {matieres.map((m) => {
+            const count = schemas.filter((s) => s.matiere === m).length;
+            return (
+              <button
+                key={m}
+                className={`bo-matiere-tab ${matiereFilter === m ? "active" : ""}`}
+                onClick={() => { setMatiereFilter(m); setChapterFilter("all"); }}
+              >
+                {m === "Biochimie" ? "🧬" : m === "Biologie Cellulaire" ? "🦠" : "📚"} {m} ({count})
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Filtre chapitre */}
+        {matiereFilter !== "all" && chapters.length > 1 && (
+          <div className="bo-chapter-bar">
+            <select
+              className="bo-chapter-select"
+              value={chapterFilter}
+              onChange={(e) => setChapterFilter(e.target.value)}
+            >
+              <option value="all">Tous les chapitres ({filtered.length} schémas)</option>
+              {chapters.map((c) => {
+                const cnt = schemas.filter((s) => s.matiere === matiereFilter && (s.chapter || cleanChapterName(s.source_pdf)) === c).length;
+                return <option key={c} value={c}>{c} ({cnt})</option>;
+              })}
+            </select>
+          </div>
+        )}
+
         <div className="bo-toolbar">
           <div className="bo-chip">Source: {source}</div>
-          <div className="bo-chip">{schemas.length} schémas</div>
-          <select
-            className="ob-input"
-            style={{ marginBottom: 0, height: 40 }}
-            value={matiereFilter}
-            onChange={(e) => setMatiereFilter(e.target.value)}
-          >
-            <option value="all">Toutes les matières</option>
-            {matieres.map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
-          </select>
+          <div className="bo-chip">{filtered.length} schéma{filtered.length > 1 ? "s" : ""}</div>
         </div>
 
         {isAdmin && (

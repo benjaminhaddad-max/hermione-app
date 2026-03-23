@@ -5695,5 +5695,4514 @@
     "page": null,
     "image": "/schema-library/biochimie/variations-du-genome-et-reparation-adn-illus-26.webp",
     "legende": "Mécanismes de réparation ADN et devenir cellulaire — Les cassures double-brin de l'ADN peuvent être réparées par recombinaison homologue fonctionnelle (voie normale) · En cas de défaut des gènes BRCA1/2, les cassures persistent et activent soit l'apoptose soit des voies de réparation alternatives · Le choix entre survie cellulaire et mort programmée dépend de l'efficacité des mécanismes de réparation (NER, RH)"
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-35",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-35.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-36",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-36.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-40",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-40.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-41",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-41.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-42",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-42.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-apoptose-illus-43",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Apoptose",
+    "chapter": "Apoptose",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/apoptose-illus-43.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-35",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-35.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-40",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-40.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-41",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-41.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-42",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-42.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-43",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-43.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-44",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-44.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-45",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-45.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-46",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-46.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-47",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-47.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-48",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-48.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-49",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-49.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-50",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-50.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-51",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-51.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-52",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-52.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-53",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-53.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-54",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-54.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-55",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-55.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-56",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-56.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-57",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-57.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-58",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-58.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-60",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-60.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-61",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-61.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-62",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-62.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-63",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-63.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-64",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-64.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-65",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-65.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-66",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-66.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-67",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-67.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-68",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-68.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-69",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-69.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-70",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-70.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-71",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-71.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-72",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-72.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-73",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-73.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-74",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-74.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-75",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-75.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-76",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-76.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-77",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-77.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-80",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-80.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-81",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-81.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-84",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-84.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-85",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-85.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-86",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-86.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-91",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-91.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-92",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-92.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-93",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-93.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-95",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-95.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-96",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-96.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-97",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-97.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-98",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-98.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-101",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-101.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-102",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-102.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-106",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-106.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-107",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-107.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-108",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-108.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-111",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-111.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-112",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-112.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-113",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-113.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-116",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-116.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-bases-mol-culaires-d-veloppement-embryonnaire-illus-117",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Bases moléculaires développement embryonnaire",
+    "chapter": "Bases moléculaires développement embryonnaire",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/bases-mol-culaires-d-veloppement-embryonnaire-illus-117.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-communication-cellulaire-partie-1-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Communication cellulaire (partie 1)",
+    "chapter": "Communication cellulaire (partie 1)",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/communication-cellulaire-partie-1-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-36",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-36.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-40",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-40.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-41",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-41.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-42",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-42.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-43",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-43.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-44",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-44.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-45",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-45.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-46",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-46.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-47",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-47.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-48",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-48.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-49",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-49.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-50",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-50.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-51",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-51.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-52",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-52.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-1-illus-53",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 1)",
+    "chapter": "Cycle cellulaire (Partie 1)",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-1-illus-53.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-35",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-35.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-36",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-36.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-40",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-40.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-41",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-41.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-42",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-42.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-43",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-43.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-44",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-44.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-45",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-45.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-46",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-46.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-47",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-47.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-48",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-48.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-49",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-49.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-50",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-50.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-51",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-51.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-52",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-52.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-53",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-53.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-54",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-54.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-55",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-55.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-57",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-57.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-59",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-59.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-60",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-60.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cycle-cellulaire-partie-2-illus-61",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cycle cellulaire (Partie 2)",
+    "chapter": "Cycle cellulaire (Partie 2)",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/cycle-cellulaire-partie-2-illus-61.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-cytosquelette-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Cytosquelette",
+    "chapter": "Cytosquelette",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/cytosquelette-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-35",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-35.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-36",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-36.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-40",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-40.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-41",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-41.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-42",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-42.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-43",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 25,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-43.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-44",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 25,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-44.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-endocytose-et-exocytose-illus-45",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Endocytose et exocytose",
+    "chapter": "Endocytose et exocytose",
+    "page": 26,
+    "image": "/schema-library/biologie-cellulaire/endocytose-et-exocytose-illus-45.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-jonctions-cellulaires-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Jonctions cellulaires",
+    "chapter": "Jonctions cellulaires",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/jonctions-cellulaires-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-le-noyau-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Le noyau",
+    "chapter": "Le noyau",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/le-noyau-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mec-et-int-grines-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "MEC et intégrines",
+    "chapter": "MEC et intégrines",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/mec-et-int-grines-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 5,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 24,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-membrane-plasmique-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Membrane plasmique",
+    "chapter": "Membrane plasmique",
+    "page": 27,
+    "image": "/schema-library/biologie-cellulaire/membrane-plasmique-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 17,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 18,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 19,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 20,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-35",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-35.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-36",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-36.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-37",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-37.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-38",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-38.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-mitochondries-et-peroxysomes-illus-39",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Mitochondries et peroxysomes",
+    "chapter": "Mitochondries et peroxysomes",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/mitochondries-et-peroxysomes-illus-39.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-1-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 1)",
+    "chapter": "Méthode d'étude (Partie 1)",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-1-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 2,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-m-thode-d-tude-partie-2-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Méthode d'étude (Partie 2)",
+    "chapter": "Méthode d'étude (Partie 2)",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/m-thode-d-tude-partie-2-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 6,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 7,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 8,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-22",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 12,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-22.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-23",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-23.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-24",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-24.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-25",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-25.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-26",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-26.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-27",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-27.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-28",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-28.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-29",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-29.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-30",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 15,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-30.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-31",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-31.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-32",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-32.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-33",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-33.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-organisation-cellule-eucaryote-illus-34",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Organisation cellule eucaryote",
+    "chapter": "Organisation cellule eucaryote",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/organisation-cellule-eucaryote-illus-34.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 3,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-04.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-05",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-05.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-06",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-06.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-07",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-07.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-08",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-08.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-09",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-09.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-10",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 10,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-10.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-11",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-11.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-12",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 11,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-12.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-13",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 13,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-13.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-14",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-14.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-15",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-15.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-16",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 16,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-16.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-17",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 21,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-17.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-18",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 22,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-18.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-19",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 23,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-19.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-20",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 26,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-20.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-syst-me-endomembranaire-illus-21",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Système endomembranaire",
+    "chapter": "Système endomembranaire",
+    "page": 26,
+    "image": "/schema-library/biologie-cellulaire/syst-me-endomembranaire-illus-21.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-transduction-du-signal-partie-2-illus-01",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Transduction du signal (partie 2)",
+    "chapter": "Transduction du signal (partie 2)",
+    "page": 1,
+    "image": "/schema-library/biologie-cellulaire/transduction-du-signal-partie-2-illus-01.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-transduction-du-signal-partie-2-illus-02",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Transduction du signal (partie 2)",
+    "chapter": "Transduction du signal (partie 2)",
+    "page": 4,
+    "image": "/schema-library/biologie-cellulaire/transduction-du-signal-partie-2-illus-02.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-transduction-du-signal-partie-2-illus-03",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Transduction du signal (partie 2)",
+    "chapter": "Transduction du signal (partie 2)",
+    "page": 9,
+    "image": "/schema-library/biologie-cellulaire/transduction-du-signal-partie-2-illus-03.webp",
+    "legende": ""
+  },
+  {
+    "id": "biologie-cellulaire-transduction-du-signal-partie-2-illus-04",
+    "matiere": "Biologie Cellulaire",
+    "sourcePdf": "Transduction du signal (partie 2)",
+    "chapter": "Transduction du signal (partie 2)",
+    "page": 14,
+    "image": "/schema-library/biologie-cellulaire/transduction-du-signal-partie-2-illus-04.webp",
+    "legende": ""
   }
 ]
