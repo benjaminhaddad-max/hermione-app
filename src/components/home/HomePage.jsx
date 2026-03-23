@@ -31,6 +31,7 @@ export default function HomePage({ user, storage, onGoTo }) {
   const totalCours = MATIERES.flatMap(m => m.cours).length;
   const userXP = storage.xp || 0;
   const streak = storage.streak || 0;
+  const totalMatieres = MATIERES.length;
   const { current, nextLevel } = getLevel(userXP);
   const rank = getRank(userXP);
 
@@ -109,25 +110,54 @@ export default function HomePage({ user, storage, onGoTo }) {
         <div className="hp-aventure-top">
           <span className="hp-aventure-badge">🗺️ MODE AVENTURE</span>
         </div>
-        <h3 className="hp-aventure-title">Anticipe ta 1re année de médecine en passant des niveaux</h3>
-        <div className="hp-aventure-features">
-          <div className="hp-aventure-feat">
-            <span>📖</span>
-            <span>Lis les fiches de cours par chapitre</span>
+        <h3 className="hp-aventure-title">Révise tout le programme PASS/LAS comme un jeu vidéo</h3>
+        <p className="hp-aventure-pitch">
+          Chaque matière est un <strong>monde</strong> à conquérir. Chaque chapitre est un <strong>niveau</strong>. 
+          Lis la fiche, réussis le QCM, valide les flashcards — et passe au suivant.
+        </p>
+
+        <div className="hp-aventure-steps">
+          <div className="hp-aventure-step">
+            <div className="hp-aventure-step-num">1</div>
+            <div>
+              <strong>Lis la fiche de cours</strong>
+              <span>Comprends les notions du chapitre</span>
+            </div>
           </div>
-          <div className="hp-aventure-feat">
-            <span>✅</span>
-            <span>Réussis les QCM pour avancer (≥ 70%)</span>
+          <div className="hp-aventure-step-arrow">↓</div>
+          <div className="hp-aventure-step">
+            <div className="hp-aventure-step-num">2</div>
+            <div>
+              <strong>Réussis le QCM (≥ 70%)</strong>
+              <span>Prouve que tu maîtrises pour débloquer la suite</span>
+            </div>
           </div>
-          <div className="hp-aventure-feat">
-            <span>⭐</span>
-            <span>Gagne des étoiles et débloque des mondes</span>
+          <div className="hp-aventure-step-arrow">↓</div>
+          <div className="hp-aventure-step">
+            <div className="hp-aventure-step-num">3</div>
+            <div>
+              <strong>Valide les flashcards</strong>
+              <span>Mémorise durablement pour décrocher les 3 étoiles</span>
+            </div>
           </div>
-          <div className="hp-aventure-feat">
-            <span>💬</span>
-            <span>Débloque des mentors PASS pour chatter</span>
+          <div className="hp-aventure-step-arrow">↓</div>
+          <div className="hp-aventure-step hp-aventure-step-reward">
+            <div className="hp-aventure-step-num">🎁</div>
+            <div>
+              <strong>Débloque un mentor PASS</strong>
+              <span>Finis un monde = accès chat avec un étudiant en médecine</span>
+            </div>
           </div>
         </div>
+
+        <div className="hp-aventure-bottom">
+          <span>🏰 {totalMatieres} mondes</span>
+          <span className="hp-aventure-dot">·</span>
+          <span>📚 {totalCours} niveaux</span>
+          <span className="hp-aventure-dot">·</span>
+          <span>💬 4 mentors à débloquer</span>
+        </div>
+
         <button className="hp-aventure-btn" onClick={() => onGoTo("aventure")}>
           COMMENCER L'AVENTURE →
         </button>

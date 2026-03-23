@@ -142,7 +142,32 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
   background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);
   border-radius:6px;padding:4px 10px;
 }
-.hp-aventure-title{font-family:var(--font-display);font-size:16px;font-weight:700;line-height:1.4;margin-bottom:16px;color:var(--white)}
+.hp-aventure-title{font-family:var(--font-display);font-size:16px;font-weight:700;line-height:1.4;margin-bottom:8px;color:var(--white)}
+.hp-aventure-pitch{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.5;margin-bottom:18px}
+.hp-aventure-pitch strong{color:var(--gold-light);font-weight:700}
+.hp-aventure-steps{display:flex;flex-direction:column;gap:0;margin-bottom:18px}
+.hp-aventure-step{
+  display:flex;align-items:flex-start;gap:12px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:12px 14px;
+}
+.hp-aventure-step div:last-child{display:flex;flex-direction:column;gap:2px}
+.hp-aventure-step strong{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--white)}
+.hp-aventure-step span{font-size:11px;color:var(--gray);line-height:1.3}
+.hp-aventure-step-num{
+  width:28px;height:28px;border-radius:50%;flex-shrink:0;
+  background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:12px;font-weight:800;color:var(--gold-light);
+}
+.hp-aventure-step-reward{background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.2)}
+.hp-aventure-step-reward .hp-aventure-step-num{background:rgba(201,168,76,0.25);font-size:14px}
+.hp-aventure-step-arrow{text-align:center;font-size:14px;color:rgba(255,255,255,0.15);padding:2px 0;line-height:1}
+.hp-aventure-bottom{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;
+  font-size:12px;color:var(--gray);margin-bottom:16px;
+}
+.hp-aventure-dot{color:rgba(255,255,255,0.15)}
 .hp-aventure-features{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
 .hp-aventure-feat{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.8)}
 .hp-aventure-feat span:first-child{font-size:16px;flex-shrink:0}
