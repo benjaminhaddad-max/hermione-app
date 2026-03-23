@@ -1,6 +1,6 @@
 import { MATIERES } from "../../data/content";
 
-export default function FlashcardsListPage({ storage, onSelectMatiere }) {
+export default function FlashcardsListPage({ storage, onSelectMatiere, onGoFiches }) {
   const anticipation = MATIERES.filter(m => m.categorie === "anticipation");
   const terminale = MATIERES.filter(m => m.categorie === "terminale");
 
@@ -26,12 +26,17 @@ export default function FlashcardsListPage({ storage, onSelectMatiere }) {
     <div className="page">
       <div className="page-header">
         <div>
-          <h1 className="page-title">Flashcards</h1>
-          <p className="page-sub">Révise par répétition espacée</p>
+          <h1 className="page-title">Réviser</h1>
+          <p className="page-sub">Fiches, QCM & Flashcards</p>
         </div>
       </div>
 
-      <p className="section-title">Anticipation Programme PASS/LAS</p>
+      <div className="sub-tabs">
+        <button className="sub-tab" onClick={() => onGoFiches?.()}>📖 Fiches & QCM</button>
+        <button className="sub-tab active">🃏 Flashcards</button>
+      </div>
+
+      <p className="section-title" style={{ marginTop: 16 }}>Anticipation Programme PASS/LAS</p>
       {renderGrid(anticipation)}
 
       <p className="section-title" style={{ marginTop: 24 }}>Notions de Terminale utiles pour PASS/LAS</p>

@@ -224,7 +224,7 @@ export default function App() {
         onSelectCours={c => { setCours(c); setView("fc-session"); }}
         onBack={() => setMatiere(null)} />
     );
-    return wrap(<FlashcardsListPage storage={storage} onSelectMatiere={setMatiere} />);
+    return wrap(<FlashcardsListPage storage={storage} onSelectMatiere={setMatiere} onGoFiches={() => resetTab("cours")} />);
   }
 
   // Onglet Classement
