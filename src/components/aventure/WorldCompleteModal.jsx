@@ -14,19 +14,19 @@ export default function WorldCompleteModal({ world, unlockedMentor, onDiscover, 
 
         <div className="world-complete-icon">🏆</div>
         <h2 className="world-complete-titre">
-          Cours maîtrisé !
+          Matière terminée !
         </h2>
         <p className="world-complete-world">
           {world.emoji} {world.nom}
         </p>
         <p className="world-complete-stats">
-          {world.totalLevels} sortilèges complétés &middot;{" "}
+          {world.totalLevels} chapitres complétés &middot;{" "}
           {world.levels.reduce((s, l) => s + l.starCount, 0)}/{world.totalLevels * 3} étoiles
         </p>
 
         {unlockedMentor && (
           <div className="world-complete-mentor">
-            <div className="mentor-unlock-badge">🧙 NOUVEAU MENTOR DÉBLOQUÉ</div>
+            <div className="mentor-unlock-badge">🔓 NOUVEAU MENTOR</div>
             <div className="mentor-unlock-card">
               <span className="mentor-unlock-emoji">{unlockedMentor.emoji}</span>
               <div>

@@ -169,36 +169,36 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
         <div className="aventure-intro">
           <div className="aventure-intro-glow" />
           <img src="/logo-hermione.webp" alt="Hermione" className="aventure-intro-logo" />
-          <h2 className="aventure-intro-title">🧙 Bienvenue à Poudlard Médecine</h2>
-          <p className="aventure-intro-tagline">Ta lettre d'admission est arrivée !<br/>Explore les cours de Poudlard pour anticiper PASS/LAS.</p>
+          <h2 className="aventure-intro-title">🏰 Mode Aventure</h2>
+          <p className="aventure-intro-tagline">Anticipe ta 1re année de médecine<br/>en passant des niveaux !</p>
 
           <div className="aventure-intro-steps">
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">📜</span>
+              <span className="aventure-intro-step-icon">📖</span>
               <div>
-                <strong>Étudie le grimoire</strong>
-                <p>Chaque fiche de cours est un sortilège à maîtriser</p>
+                <strong>Lis la fiche de cours</strong>
+                <p>Découvre les notions essentielles de chaque chapitre</p>
               </div>
             </div>
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">⚗️</span>
+              <span className="aventure-intro-step-icon">✅</span>
               <div>
-                <strong>Réussis l'épreuve (≥ 70%)</strong>
-                <p>Prouve ta maîtrise au QCM pour avancer dans le château</p>
+                <strong>Réussis le QCM (≥ 70%)</strong>
+                <p>Prouve que tu maîtrises le chapitre pour passer au suivant</p>
               </div>
             </div>
             <div className="aventure-intro-step">
               <span className="aventure-intro-step-icon">🃏</span>
               <div>
-                <strong>Maîtrise les cartes magiques</strong>
-                <p>Les flashcards t'aident à mémoriser durablement</p>
+                <strong>Domine les Flashcards</strong>
+                <p>Mémorise durablement en maîtrisant 80% des cartes</p>
               </div>
             </div>
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">🧙</span>
+              <span className="aventure-intro-step-icon">💬</span>
               <div>
-                <strong>Débloque des mentors légendaires</strong>
-                <p>De Neville à Dumbledore, chaque mentor t'accompagne !</p>
+                <strong>Débloque des mentors</strong>
+                <p>De Neville à Dumbledore, progresse pour chatter avec eux !</p>
               </div>
             </div>
           </div>
@@ -206,13 +206,13 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
           <div className="aventure-intro-rewards">
             <span>⭐ 3 étoiles par niveau</span>
             <span>·</span>
-            <span>🏰 {stats.totalWorlds} cours à Poudlard</span>
+            <span>🏰 {stats.totalWorlds} matières</span>
             <span>·</span>
-            <span>🧙 4 mentors à débloquer</span>
+            <span>💬 4 mentors à débloquer</span>
           </div>
 
           <button className="aventure-intro-btn" onClick={dismissIntro}>
-            ENTRER À POUDLARD →
+            C'EST PARTI →
           </button>
         </div>
       )}
@@ -223,8 +223,8 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
           <div className="aventure-header">
             <div className="aventure-header-top">
               <div>
-                <h2 className="aventure-header-title">🏰 Poudlard Médecine</h2>
-                <p className="aventure-header-sub">Explore les cours et débloque des mentors</p>
+                <h2 className="aventure-header-title">🏰 Mode Aventure</h2>
+                <p className="aventure-header-sub">Progresse par matière et débloque des mentors</p>
               </div>
               <div className="aventure-stats-mini">
                 <span>⭐ {stats.totalStars}/{stats.maxStars}</span>

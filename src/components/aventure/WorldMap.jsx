@@ -37,11 +37,11 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
           <div className="map-onboard-tip-arrow">👇</div>
           <div className="map-onboard-tip-content">
             <strong>Comment ça marche ?</strong>
-            <p>Chaque bulle = un sortilège de <strong>{world.nom}</strong> à maîtriser. Tape dessus !</p>
+            <p>Chaque bulle = un chapitre de <strong>{world.nom}</strong>. Tape dessus pour commencer !</p>
             <div className="map-onboard-steps">
-              <span>📜 Étudie le grimoire</span>
+              <span>📖 Lis la fiche</span>
               <span className="map-onboard-arrow">→</span>
-              <span>⚗️ Réussis l'épreuve</span>
+              <span>✅ Réussis le QCM</span>
               <span className="map-onboard-arrow">→</span>
               <span>🔓 Niveau suivant</span>
             </div>
@@ -54,7 +54,7 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
         <span className="world-map-emoji">{world.emoji}</span>
         <div style={{ flex: 1 }}>
           <h3 className="world-map-nom">{world.nom}</h3>
-          <p className="world-map-desc">{world.levels.length} sortilèges à maîtriser</p>
+          <p className="world-map-desc">{world.levels.length} chapitres à maîtriser</p>
           <div className="world-map-prog">
             <div className="world-map-prog-bar">
               <div className="world-map-prog-fill" style={{ width: `${world.progressPct}%`, background: world.color }} />
@@ -76,8 +76,8 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
             <p className="map-reward-desc">{nextMentor.mentor.specialty}</p>
             <p className="map-reward-how">
               {nextMentor.worldsNeeded === 1
-                ? "✨ Termine ce cours pour débloquer ce mentor !"
-                : `📚 Termine ${nextMentor.worldsNeeded} cours pour débloquer ce mentor`}
+                ? "✨ Termine cette matière pour débloquer ce mentor !"
+                : `📚 Termine ${nextMentor.worldsNeeded} matières pour débloquer ce mentor`}
             </p>
             <div className="map-reward-progress">
               {MENTORS.map((m) => (
@@ -133,13 +133,13 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
         {world.isComplete ? (
           <div className="map-gate unlocked">
             <span className="map-gate-icon">🏆</span>
-            <span className="map-gate-label">Cours maîtrisé ! Mischief managed !</span>
+            <span className="map-gate-label">Matière terminée ! Bravo !</span>
           </div>
         ) : (
           <div className="map-gate locked">
             <span className="map-gate-icon">🔮</span>
             <span className="map-gate-label">
-              Encore {world.totalLevels - world.completedCount} sortilège{world.totalLevels - world.completedCount > 1 ? "s" : ""} à maîtriser !
+              Encore {world.totalLevels - world.completedCount} chapitre{world.totalLevels - world.completedCount > 1 ? "s" : ""} à terminer !
             </span>
           </div>
         )}

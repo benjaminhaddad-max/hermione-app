@@ -14,18 +14,18 @@ export default function LevelDetailModal({ level, onClose, onFiche, onQcm, onFla
         <div className="level-modal-stars">
           <div className={`level-star-row ${level.stars[0] ? "earned" : ""}`}>
             <span>{level.stars[0] ? "⭐" : "☆"}</span>
-            <span>Étudier le grimoire</span>
+            <span>Lire la fiche de cours</span>
           </div>
           <div className={`level-star-row ${level.stars[1] ? "earned" : ""}`}>
             <span>{level.stars[1] ? "⭐" : "☆"}</span>
-            <span>Réussir l'épreuve (≥ 70%)</span>
+            <span>QCM réussi (≥ 70%)</span>
             {level.bestQcmPct > 0 && (
               <span className="level-star-score">{level.bestQcmPct}%</span>
             )}
           </div>
           <div className={`level-star-row ${level.stars[2] ? "earned" : ""}`}>
             <span>{level.stars[2] ? "⭐" : "☆"}</span>
-            <span>Maîtriser les cartes magiques (≥ 80%)</span>
+            <span>Flashcards maîtrisées (≥ 80%)</span>
           </div>
         </div>
 
@@ -37,14 +37,14 @@ export default function LevelDetailModal({ level, onClose, onFiche, onQcm, onFla
 
         <div className="level-modal-actions">
           <button className="level-action-btn fiche" onClick={onFiche}>
-            <span>📜</span> Lire le grimoire
+            <span>📖</span> Lire la fiche
           </button>
           <button
             className={`level-action-btn qcm ${!level.stars[1] ? "primary" : ""}`}
             onClick={onQcm}
             disabled={!level.hasQcm}
           >
-            <span>⚗️</span> Épreuve QCM
+            <span>✅</span> Lancer le QCM
             {!level.hasQcm && <small>(indisponible)</small>}
           </button>
           <button
@@ -52,7 +52,7 @@ export default function LevelDetailModal({ level, onClose, onFiche, onQcm, onFla
             onClick={onFlashcards}
             disabled={!level.hasFlashcards}
           >
-            <span>🃏</span> Cartes magiques
+            <span>🃏</span> Flashcards
             {!level.hasFlashcards && <small>(indisponible)</small>}
           </button>
         </div>
