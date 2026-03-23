@@ -1195,6 +1195,103 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   line-height:1.75;
   color:#2d3345;
 }
+
+/* ── FICHE RICH (Page 1 enrichie) ── */
+.fc-rich{padding-bottom:24px}
+.fc-section{
+  background:rgba(255,255,255,0.78);
+  border-radius:14px;
+  padding:16px 16px 14px;
+  margin-bottom:14px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+  border:1px solid rgba(91,79,217,0.08);
+}
+.fc-section-title{
+  font-family:var(--font-display);
+  font-size:15px;
+  font-weight:800;
+  color:#20253a;
+  margin-bottom:10px;
+}
+.fc-text{
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.8;
+  color:#2d3345;
+  margin-bottom:10px;
+}
+.fc-text:last-child{margin-bottom:0}
+.fc-points{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.fc-point{
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.65;
+  color:#2d3345;
+  background:rgba(91,79,217,0.06);
+  border-radius:10px;
+  padding:10px 14px;
+  border-left:3px solid #5B4FD9;
+}
+.fc-illus{
+  margin:12px 0 14px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 3px 16px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.fc-illus img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.fc-concepts-grid{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.fc-footer{
+  text-align:center;
+  padding:16px 12px;
+  opacity:0.5;
+}
+.fc-footer p{
+  font-family:var(--font-body);
+  font-size:11px;
+  line-height:1.5;
+  color:#444;
+}
+
+/* ── SCHEMAS PAGE (vrais schémas) ── */
+.fc-schemas-count{
+  font-family:var(--font-body);
+  font-size:13px;
+  color:#5a6072;
+  margin:-4px 0 14px;
+}
+.fc-schemas-list{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.fc-schema-item{
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 3px 16px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.06);
+  background:#fff;
+}
+.fc-schema-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
 /* Divider de section */
 .fc-divider{
   display:flex;
