@@ -1687,6 +1687,23 @@ select.ob-input{appearance:none;-webkit-appearance:none}
 .bo-auth-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
 .bo-auth-email{font-size:12px;font-weight:700;color:var(--gold-light)}
 .bo-login{display:flex;gap:8px;align-items:center}
+.bo-login-form{
+  display:grid;
+  grid-template-columns:1fr 1fr auto;
+  gap:8px;
+  align-items:center;
+}
+.bo-input{
+  width:100%;
+  height:42px;
+  border-radius:10px;
+  border:1px solid var(--border-sub);
+  background:rgba(255,255,255,0.04);
+  color:var(--white);
+  padding:0 12px;
+  font-size:13px;
+}
+.bo-input::placeholder{color:#9f98bf}
 .bo-auth-ok{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#9fe7ba}
 .bo-btn{
   border:none;
@@ -1755,3 +1772,318 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   text-overflow:ellipsis;
   white-space:nowrap;
 }
+.bo-legend{
+  margin-top:10px;
+  margin-bottom:4px;
+  font-size:12px;
+  color:#f5f2ff;
+  font-weight:700;
+  line-height:1.45;
+}
+.bo-sql-help{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px dashed rgba(255,255,255,0.14);
+}
+.bo-muted-strong{
+  color:#f7f0c1;
+  margin-bottom:8px;
+}
+.bo-sql-block{
+  margin-top:10px;
+  background:#120a2e;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;
+  padding:10px;
+  font-size:11px;
+  line-height:1.45;
+  white-space:pre-wrap;
+  color:#d8d2ff;
+}
+@media (max-width: 780px){
+  .bo-login-form{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   MODE AVENTURE — Candy Crush Style
+   ══════════════════════════════════════════════════ */
+
+/* ── Hero Intro Aventure ── */
+.aventure-intro{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:32px 20px 24px;
+  background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(201,168,76,0.12) 0%,transparent 70%);
+  position:relative;overflow:hidden;
+}
+.aventure-intro-glow{
+  position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.aventure-intro-logo{width:80px;height:80px;object-fit:contain;margin-bottom:16px;filter:drop-shadow(0 4px 20px rgba(201,168,76,0.4));position:relative;z-index:1}
+.aventure-intro-title{font-family:var(--font-display);font-size:28px;font-weight:900;margin-bottom:6px;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative;z-index:1}
+.aventure-intro-tagline{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:24px;position:relative;z-index:1}
+
+.aventure-intro-steps{width:100%;display:flex;flex-direction:column;gap:10px;margin-bottom:20px;text-align:left}
+.aventure-intro-step{display:flex;gap:14px;align-items:flex-start;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--border-sub);border-radius:14px}
+.aventure-intro-step-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.aventure-intro-step strong{font-size:14px;display:block;margin-bottom:2px;color:var(--white)}
+.aventure-intro-step p{font-size:12px;color:var(--gray);line-height:1.4;margin:0}
+
+.aventure-intro-rewards{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-size:12px;color:var(--gold);font-weight:600}
+
+.aventure-intro-btn{
+  width:100%;padding:16px;
+  background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));
+  border:none;border-radius:14px;
+  color:#0D0721;font-family:var(--font-display);font-size:14px;font-weight:900;
+  letter-spacing:2px;text-transform:uppercase;cursor:pointer;
+  box-shadow:0 6px 24px rgba(201,168,76,0.35);
+  transition:all .2s;
+}
+.aventure-intro-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.5)}
+
+/* ── Page Aventure ── */
+.aventure-page{padding-top:12px}
+.aventure-header{padding:0 16px 8px}
+.aventure-header-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.aventure-header-title{font-family:var(--font-display);font-size:22px;font-weight:800;margin-bottom:2px}
+.aventure-header-sub{font-size:12px;color:var(--gray);font-weight:500}
+.aventure-stats-mini{display:flex;gap:12px;font-size:13px;color:var(--gold);font-weight:600;margin-top:4px}
+
+/* Global progress bar */
+.aventure-global-prog{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.aventure-global-prog-bar{flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden}
+.aventure-global-prog-fill{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light));border-radius:3px;transition:width .5s}
+.aventure-global-prog-txt{font-size:11px;color:var(--gray);font-weight:600;white-space:nowrap}
+
+/* Sub-nav Carte/Mentors */
+.aventure-sub-nav{display:flex;gap:8px;margin-bottom:8px}
+.aventure-sub-btn{padding:8px 16px;border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid var(--border-sub);color:var(--gray);font-family:var(--font-body);font-size:13px;cursor:pointer;transition:all .2s}
+.aventure-sub-btn.active{background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold)}
+
+/* World selector chips (horizontal scroll) */
+.aventure-worlds-scroll{display:flex;gap:8px;overflow-x:auto;padding:0 16px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.aventure-worlds-scroll::-webkit-scrollbar{display:none}
+.aventure-world-chip{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:20px;background:rgba(255,255,255,0.04);border:2px solid transparent;color:var(--white);font-family:var(--font-body);font-size:12px;white-space:nowrap;cursor:pointer;transition:all .2s;flex-shrink:0}
+.aventure-world-chip.active{background:rgba(201,168,76,0.1);border-color:var(--gold)}
+.aventure-world-chip-name{font-weight:600}
+.aventure-world-check{color:var(--green);font-size:14px}
+
+/* ── World Map ── */
+.world-map{padding:0 16px 40px}
+.world-map-header{display:flex;gap:14px;align-items:center;padding:16px;background:var(--bg2);border-radius:16px;border-left:4px solid var(--gold);margin-bottom:20px}
+.world-map-emoji{font-size:36px}
+.world-map-nom{font-family:var(--font-display);font-size:18px;font-weight:800;margin-bottom:6px}
+.world-map-prog{display:flex;align-items:center;gap:10px}
+.world-map-prog-bar{flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden}
+.world-map-prog-fill{height:100%;border-radius:3px;transition:width .5s}
+.world-map-prog-txt{font-size:12px;color:var(--gray);font-weight:600;white-space:nowrap}
+
+/* ── Onboarding Tip (premiere visite) ── */
+.map-onboard-tip{
+  background:linear-gradient(135deg,rgba(66,165,245,0.1),rgba(66,165,245,0.03));
+  border:1px solid rgba(66,165,245,0.3);border-radius:16px;
+  padding:16px;margin-bottom:14px;position:relative;
+}
+.map-onboard-tip-arrow{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:20px;animation:bounce 1.5s infinite}
+.map-onboard-tip-content strong{font-size:15px;display:block;margin-bottom:6px;color:var(--white)}
+.map-onboard-tip-content p{font-size:13px;color:rgba(255,255,255,0.75);margin:0 0 10px;line-height:1.5}
+.map-onboard-steps{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gold);font-weight:600;flex-wrap:wrap}
+.map-onboard-arrow{color:var(--gray);font-size:10px}
+
+/* ── World header desc ── */
+.world-map-desc{font-size:12px;color:var(--gray);margin-bottom:6px}
+
+/* ── Reward Teaser (carotte mentor) ── */
+.map-reward-teaser{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:16px;margin-bottom:16px;
+  background:linear-gradient(135deg,rgba(201,168,76,0.08) 0%,rgba(201,168,76,0.02) 100%);
+  border:1px solid rgba(201,168,76,0.2);border-radius:16px;
+  position:relative;overflow:hidden;
+}
+.map-reward-left{flex-shrink:0}
+.map-reward-avatar{font-size:36px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,0.1);border-radius:14px;border:1px solid rgba(201,168,76,0.2)}
+.map-reward-right{flex:1;min-width:0}
+.map-reward-badge{font-size:10px;font-weight:700;color:var(--gold);margin-bottom:4px}
+.map-reward-title{font-size:14px;display:block;margin-bottom:2px;color:var(--white)}
+.map-reward-desc{font-size:12px;color:var(--gray);margin:0 0 4px;line-height:1.4}
+.map-reward-how{font-size:12px;color:rgba(255,255,255,0.7);margin:0 0 8px;line-height:1.4}
+.map-reward-progress{display:flex;gap:6px}
+.map-reward-step{display:flex;flex-direction:column;align-items:center;gap:2px}
+.map-reward-step-icon{font-size:16px}
+.map-reward-step-label{font-size:8px;color:var(--gray);font-weight:600;white-space:nowrap}
+.map-reward-step.done .map-reward-step-label{color:var(--green)}
+.map-reward-step.current .map-reward-step-icon{animation:pulse-gold 2s infinite}
+.map-reward-step.current .map-reward-step-label{color:var(--gold)}
+.map-reward-complete{border-color:rgba(46,204,113,0.25);background:linear-gradient(135deg,rgba(46,204,113,0.06),transparent)}
+
+/* Path layout */
+.world-map-path{display:flex;flex-direction:column;align-items:center;gap:0;position:relative;padding:0 20px}
+
+/* Map row — alternating left/right */
+.map-row{width:100%;display:flex;position:relative;padding:12px 0}
+.map-row.left{justify-content:flex-start;padding-left:20px}
+.map-row.right{justify-content:flex-end;padding-right:20px}
+
+/* Connector SVG */
+.map-connector{width:100%;height:50px;position:relative;margin:-8px 0}
+.map-connector-svg{width:100%;height:100%}
+
+/* ── Level Node ── */
+.map-node-wrapper{position:relative;display:flex;flex-direction:column;align-items:center}
+
+.map-node{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;transition:all .2s}
+.map-node.locked{opacity:0.35;cursor:not-allowed}
+.map-node.locked .map-node-circle{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)}
+
+.map-node-circle{width:56px;height:56px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,0.08);border:3px solid rgba(255,255,255,0.15);transition:all .3s;position:relative}
+.map-node.current .map-node-circle{border-color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,0.4);animation:pulse-gold 2s infinite}
+.map-node.completed .map-node-circle{background:rgba(46,204,113,0.15);border-color:var(--green)}
+.map-node.unlocked .map-node-circle{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.08)}
+
+.map-node-icon{font-size:22px;line-height:1}
+.map-node-num{font-size:9px;font-weight:800;color:var(--gray);font-family:var(--font-display)}
+
+.map-node-title{font-size:10px;color:var(--gray);text-align:center;max-width:100px;line-height:1.3;margin-top:2px}
+
+/* Stars */
+.map-stars{display:flex;gap:2px;font-size:12px}
+.map-star{opacity:0.3;transition:opacity .3s}
+.map-star.earned{opacity:1}
+
+/* Gate between worlds */
+.map-gate{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:24px;padding:16px;border-radius:16px;background:var(--bg2);border:2px dashed rgba(255,255,255,0.1)}
+.map-gate.unlocked{border-color:var(--gold);background:rgba(201,168,76,0.06)}
+.map-gate-icon{font-size:32px}
+.map-gate-label{font-size:12px;color:var(--gray);font-weight:600}
+
+/* Hermione Character */
+.map-character{position:absolute;top:-44px;left:50%;transform:translateX(-50%);z-index:5;animation:bounce 2s infinite}
+.map-character-img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(201,168,76,0.5))}
+
+@keyframes pulse-gold{
+  0%,100%{box-shadow:0 0 12px rgba(201,168,76,0.3)}
+  50%{box-shadow:0 0 24px rgba(201,168,76,0.6)}
+}
+@keyframes bounce{
+  0%,100%{transform:translateX(-50%) translateY(0)}
+  50%{transform:translateX(-50%) translateY(-6px)}
+}
+
+/* ── Level Detail Modal ── */
+.level-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:100;display:flex;align-items:flex-end;justify-content:center;animation:fadeIn .2s}
+.level-modal{width:100%;max-width:430px;background:var(--bg2);border-radius:24px 24px 0 0;padding:20px 20px 32px;animation:slideUp .3s}
+.level-modal-handle{width:40px;height:4px;background:rgba(255,255,255,0.15);border-radius:2px;margin:0 auto 16px}
+.level-modal-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.level-modal-emoji{font-size:36px}
+.level-modal-titre{font-family:var(--font-display);font-size:18px;font-weight:800}
+
+.level-modal-stars{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.level-star-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.03);font-size:14px;color:var(--gray)}
+.level-star-row.earned{background:rgba(201,168,76,0.08);color:var(--white)}
+.level-star-score{margin-left:auto;font-weight:700;color:var(--gold)}
+
+.level-modal-stats{font-size:12px;color:var(--gray);margin-bottom:16px;text-align:center}
+
+.level-modal-actions{display:flex;flex-direction:column;gap:8px}
+.level-action-btn{display:flex;align-items:center;gap:10px;width:100%;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid var(--border-sub);color:var(--white);font-family:var(--font-body);font-size:14px;cursor:pointer;transition:all .2s;font-weight:500}
+.level-action-btn:hover{border-color:var(--border)}
+.level-action-btn.primary{background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold);font-weight:700}
+.level-action-btn:disabled{opacity:0.4;cursor:not-allowed}
+.level-action-btn small{color:var(--gray);font-size:11px;margin-left:auto}
+
+.level-modal-close{width:100%;padding:12px;margin-top:12px;background:none;border:1px solid var(--border-sub);border-radius:12px;color:var(--gray);font-family:var(--font-body);font-size:13px;cursor:pointer}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+
+/* ── Fail Modal ── */
+.fail-modal{width:90%;max-width:380px;margin:auto;background:var(--bg2);border-radius:20px;padding:28px 24px;text-align:center;animation:slideUp .3s;border:1px solid rgba(224,90,43,0.3)}
+.fail-modal-icon{font-size:56px;margin-bottom:8px}
+.fail-modal-titre{font-family:var(--font-display);font-size:22px;font-weight:800;margin-bottom:8px;color:var(--red)}
+.fail-modal-score{font-size:14px;color:var(--gray);margin-bottom:12px;line-height:1.6}
+.fail-modal-msg{font-size:13px;color:var(--gray);margin-bottom:20px;line-height:1.6}
+.fail-modal-actions{display:flex;flex-direction:column;gap:8px}
+.fail-btn{padding:14px;border-radius:12px;border:none;font-family:var(--font-display);font-size:13px;font-weight:700;cursor:pointer;letter-spacing:1px}
+.fail-btn.relire{background:rgba(255,255,255,0.06);color:var(--white);border:1px solid var(--border-sub)}
+.fail-btn.retry{background:var(--gold);color:#0D0721}
+
+/* ── World Complete Modal ── */
+.world-complete-modal{width:90%;max-width:380px;margin:auto;background:var(--bg2);border-radius:20px;padding:28px 24px;text-align:center;animation:slideUp .3s;border:1px solid rgba(201,168,76,0.3);overflow:hidden;position:relative}
+.world-complete-icon{font-size:64px;margin-bottom:8px}
+.world-complete-titre{font-family:var(--font-display);font-size:24px;font-weight:900;color:var(--gold);margin-bottom:6px}
+.world-complete-world{font-size:16px;margin-bottom:4px}
+.world-complete-stats{font-size:13px;color:var(--gray);margin-bottom:20px}
+
+/* Confetti */
+.confetti-container{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti-piece{position:absolute;top:-10px;width:8px;height:14px;border-radius:2px;animation:confetti-fall 3s linear infinite}
+@keyframes confetti-fall{
+  0%{transform:translateY(-10px) rotate(0);opacity:1}
+  100%{transform:translateY(400px) rotate(720deg);opacity:0}
+}
+
+/* Mentor unlock */
+.world-complete-mentor{margin-top:16px;padding:16px;background:rgba(201,168,76,0.06);border:1px solid var(--border);border-radius:14px}
+.mentor-unlock-badge{font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px;text-transform:uppercase}
+.mentor-unlock-card{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.mentor-unlock-emoji{font-size:36px}
+.mentor-unlock-rank{display:block;font-size:12px;color:var(--gold)}
+.mentor-unlock-bio{font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:12px}
+.mentor-discover-btn{width:100%;padding:12px;background:var(--gold);border:none;border-radius:12px;color:#0D0721;font-family:var(--font-display);font-size:13px;font-weight:800;letter-spacing:1px;cursor:pointer}
+
+/* ══════════════════════════════════════════════════
+   CHAT SYSTEM
+   ══════════════════════════════════════════════════ */
+
+/* Mentor list */
+.mentor-list{display:flex;flex-direction:column;gap:10px;padding:0 0 20px}
+.mentor-card{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--bg2);border:1px solid var(--border-sub);border-radius:14px;cursor:pointer;transition:all .2s}
+.mentor-card:hover{border-color:var(--border)}
+.mentor-card-avatar{font-size:36px;flex-shrink:0}
+.mentor-card-info{flex:1;min-width:0}
+.mentor-card-top{display:flex;align-items:center;gap:8px;margin-bottom:2px}
+.mentor-card-name{font-size:15px}
+.mentor-card-rank{font-size:11px;color:var(--gold);background:rgba(201,168,76,0.12);padding:2px 8px;border-radius:10px}
+.mentor-card-specialty{font-size:12px;color:var(--gray);margin-bottom:4px}
+.mentor-card-last{font-size:12px;color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mentor-card-new{color:var(--gold);font-style:italic}
+.mentor-card-arrow{font-size:22px;color:var(--gray);flex-shrink:0}
+
+/* Chat page */
+.chat-page{display:flex;flex-direction:column;height:100vh;max-width:430px;margin:0 auto;background:var(--bg)}
+.chat-header{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--border-sub);flex-shrink:0}
+.chat-header-emoji{font-size:28px}
+.chat-header-info{flex:1}
+.chat-header-info strong{font-size:15px;display:block}
+.chat-header-rank{font-size:11px;color:var(--gold)}
+
+.chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:8px}
+.chat-loading{text-align:center;color:var(--gray);padding:40px 0}
+
+.chat-welcome{text-align:center;padding:40px 20px;color:var(--gray)}
+.chat-welcome-emoji{font-size:48px;display:block;margin-bottom:12px}
+.chat-welcome-text{font-size:13px;line-height:1.7}
+
+/* Bubbles */
+.chat-bubble{display:flex;flex-direction:column;max-width:80%}
+.chat-bubble.student{align-self:flex-end}
+.chat-bubble.mentor{align-self:flex-start}
+.chat-bubble-content{padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.5}
+.chat-bubble.student .chat-bubble-content{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:var(--white);border-bottom-right-radius:4px}
+.chat-bubble.mentor .chat-bubble-content{background:rgba(66,165,245,0.1);border:1px solid rgba(66,165,245,0.25);color:var(--white);border-bottom-left-radius:4px}
+.chat-bubble-time{font-size:10px;color:var(--gray);margin-top:3px;padding:0 4px}
+.chat-bubble.student .chat-bubble-time{text-align:right}
+
+/* Chat input */
+.chat-input-bar{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--border-sub);flex-shrink:0;background:var(--bg)}
+.chat-input{flex:1;padding:10px 14px;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid var(--border-sub);color:var(--white);font-family:var(--font-body);font-size:14px;outline:none}
+.chat-input:focus{border-color:var(--gold)}
+.chat-input::placeholder{color:var(--gray)}
+.chat-send-btn{width:40px;height:40px;border-radius:50%;background:var(--gold);border:none;color:#0D0721;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chat-send-btn:disabled{opacity:0.3;cursor:not-allowed}

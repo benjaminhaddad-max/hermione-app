@@ -12,3 +12,4 @@ pipeline/.env
 hermione-deploy/
 pipeline-terminale.log
 pipeline-auto.out
+.env*.local

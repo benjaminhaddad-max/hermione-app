@@ -12,8 +12,8 @@ import QCMChapitreSession from "./components/qcm/QCMChapitreSession";
 import FlashcardsListPage from "./components/flashcards/FlashcardsListPage";
 import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage";
 import FlashcardSession from "./components/flashcards/FlashcardSession";
-import CoachingPage from "./components/coaching/CoachingPage";
 import ClassementPage from "./components/classement/ClassementPage";
+import AventurePage from "./components/aventure/AventurePage";
 import BackofficePage from "./components/admin/BackofficePage";
 
 function Onboarding({ onDone }) {
@@ -87,8 +87,7 @@ function BottomNav({ active, onChange }) {
     { id:"home",       icon:"🏠", label:"Home" },
     { id:"cours",      icon:"📖", label:"Réviser" },
     { id:"classement", icon:"🏆", label:"Classement" },
-    { id:"coaching",   icon:"🎓", label:"Coaching" },
-    { id:"admin",      icon:"🛠️", label:"Backoffice" },
+    { id:"aventure",   icon:"🗺️", label:"Aventure" },
   ];
   return (
     <nav className="bottom-nav">
@@ -108,6 +107,18 @@ export default function App() {
   const [matiere, setMatiere] = useState(null);
   const [cours, setCours] = useState(null);
   const [view, setView] = useState(null); // "fiche" | "qcm" | "fc-session"
+  const isAdminRoute =
+    typeof window !== "undefined" && window.location.pathname.startsWith("/admin");
+
+  if (isAdminRoute) {
+    return (
+      <div className="app-shell">
+        <div className="scroll-area">
+          <BackofficePage />
+        </div>
+      </div>
+    );
+  }
 
   if (!storage.user.onboarded) {
     return <Onboarding onDone={({ prenom, pseudo }) => {
@@ -220,13 +231,22 @@ export default function App() {
   if (tab === "classement") {
     return wrap(<ClassementPage storage={storage} onAddXP={addXP} />);
   }
-  if (tab === "admin") {
-    return wrap(<BackofficePage />);
+  // Onglet Aventure
+  if (tab === "aventure") {
+    return wrap(
+      <AventurePage
+        storage={storage}
+        addXP={addXP}
+        saveFicheLue={saveFicheLue}
+        saveQCMScore={saveQCMScore}
+        saveFCProgress={saveFCProgress}
+        XP_REWARDS={XP_REWARDS}
+      />
+    );
   }
 
   const pages = {
-    home:     <HomePage user={storage.user} storage={storage} onGoTo={resetTab} />,
-    coaching: <CoachingPage />,
+    home: <HomePage user={storage.user} storage={storage} onGoTo={resetTab} />,
   };
   return wrap(pages[tab] || pages.home);
 }

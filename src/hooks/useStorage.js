@@ -11,6 +11,8 @@ function getDefaultState() {
     qcm_scores: {},
     fiches_lues: {},
     agenda: { sessions: [] },
+    aventure: { levels: {}, unlocked_mentors: [] },
+    device_id: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2),
   };
 }
 
