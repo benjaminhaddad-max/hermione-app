@@ -1095,6 +1095,7 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   text-overflow:ellipsis;
 }
 .lb-row-me .lb-pseudo{color:var(--gold-light)}
+.lb-separator{text-align:center;color:var(--gray);font-size:18px;letter-spacing:4px;padding:8px 0}
 .lb-level{font-size:11px;color:var(--gray)}
 .lb-xp{
   font-family:var(--font-display);

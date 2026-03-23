@@ -11,10 +11,7 @@ export default function ClassementPage({ storage, onAddXP }) {
     : 100;
 
   const top50 = FAKE_USERS.slice(0, 50);
-  const userEntry = { pseudo: pseudo || "Toi", xp: userXP, isUser: true };
-
-  const merged = [...top50, userEntry].sort((a, b) => b.xp - a.xp);
-  const displayList = merged.slice(0, 51);
+  const userInTop50 = rank <= 50;
 
   return (
     <div className="page">
@@ -84,10 +81,10 @@ export default function ClassementPage({ storage, onAddXP }) {
       {/* Leaderboard */}
       <p className="section-title" style={{ marginTop: 20 }}>Top 50</p>
       <div className="leaderboard">
-        {displayList.map((u, i) => {
+        {top50.map((u, i) => {
           const pos = i + 1;
           const medal = pos === 1 ? "🥇" : pos === 2 ? "🥈" : pos === 3 ? "🥉" : null;
-          const isMe = u.isUser;
+          const isMe = userInTop50 && pos === rank;
           const lvl = getLevel(u.xp);
           return (
             <div key={i} className={`lb-row ${isMe ? "lb-row-me" : ""} ${pos <= 3 ? "lb-row-top" : ""}`}>
@@ -100,6 +97,20 @@ export default function ClassementPage({ storage, onAddXP }) {
             </div>
           );
         })}
+
+        {!userInTop50 && (
+          <>
+            <div className="lb-separator">···</div>
+            <div className="lb-row lb-row-me">
+              <span className="lb-rank">{rank.toLocaleString()}</span>
+              <div className="lb-info">
+                <span className="lb-pseudo">{pseudo || "Toi"}</span>
+                <span className="lb-level">{current.emoji} {current.name}</span>
+              </div>
+              <span className="lb-xp">{userXP.toLocaleString()} XP</span>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
