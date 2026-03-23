@@ -1,9 +1,8 @@
-import FICHE_CURATED from "../../data/ficheCurated";
-
-const IMAGE_BASE = "/schema-library/biochimie/";
+import { getCurated, getImageBase } from "../../data/ficheCuratedAll";
 
 export default function FichePage3Schemas({ data, concepts, chapterTitle = "" }) {
-  const curated = FICHE_CURATED[chapterTitle];
+  const curated = getCurated(chapterTitle);
+  const IMAGE_BASE = getImageBase(chapterTitle);
 
   if (!curated || !curated.images?.length) {
     return (

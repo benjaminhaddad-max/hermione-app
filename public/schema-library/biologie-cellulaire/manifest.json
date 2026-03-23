@@ -1,0 +1,3093 @@
+{
+  "apoptose": {
+    "source": "Apoptose",
+    "images": [
+      {
+        "file": "apoptose-illus-02.webp",
+        "width": 250,
+        "height": 188,
+        "page": 2
+      },
+      {
+        "file": "apoptose-illus-05.webp",
+        "width": 1098,
+        "height": 703,
+        "page": 4
+      },
+      {
+        "file": "apoptose-illus-06.webp",
+        "width": 228,
+        "height": 228,
+        "page": 4
+      },
+      {
+        "file": "apoptose-illus-07.webp",
+        "width": 860,
+        "height": 786,
+        "page": 5
+      },
+      {
+        "file": "apoptose-illus-08.webp",
+        "width": 675,
+        "height": 507,
+        "page": 6
+      },
+      {
+        "file": "apoptose-illus-09.webp",
+        "width": 1102,
+        "height": 827,
+        "page": 6
+      },
+      {
+        "file": "apoptose-illus-10.webp",
+        "width": 889,
+        "height": 640,
+        "page": 7
+      },
+      {
+        "file": "apoptose-illus-11.webp",
+        "width": 480,
+        "height": 328,
+        "page": 7
+      },
+      {
+        "file": "apoptose-illus-12.webp",
+        "width": 406,
+        "height": 362,
+        "page": 8
+      },
+      {
+        "file": "apoptose-illus-13.webp",
+        "width": 795,
+        "height": 333,
+        "page": 8
+      },
+      {
+        "file": "apoptose-illus-14.webp",
+        "width": 1102,
+        "height": 827,
+        "page": 9
+      },
+      {
+        "file": "apoptose-illus-15.webp",
+        "width": 942,
+        "height": 475,
+        "page": 9
+      },
+      {
+        "file": "apoptose-illus-16.webp",
+        "width": 323,
+        "height": 254,
+        "page": 10
+      },
+      {
+        "file": "apoptose-illus-17.webp",
+        "width": 314,
+        "height": 184,
+        "page": 10
+      },
+      {
+        "file": "apoptose-illus-18.webp",
+        "width": 738,
+        "height": 555,
+        "page": 10
+      },
+      {
+        "file": "apoptose-illus-19.webp",
+        "width": 323,
+        "height": 254,
+        "page": 11
+      },
+      {
+        "file": "apoptose-illus-20.webp",
+        "width": 324,
+        "height": 257,
+        "page": 11
+      },
+      {
+        "file": "apoptose-illus-22.webp",
+        "width": 323,
+        "height": 254,
+        "page": 11
+      },
+      {
+        "file": "apoptose-illus-23.webp",
+        "width": 324,
+        "height": 257,
+        "page": 11
+      },
+      {
+        "file": "apoptose-illus-24.webp",
+        "width": 909,
+        "height": 492,
+        "page": 12
+      },
+      {
+        "file": "apoptose-illus-25.webp",
+        "width": 682,
+        "height": 728,
+        "page": 13
+      },
+      {
+        "file": "apoptose-illus-26.webp",
+        "width": 862,
+        "height": 639,
+        "page": 14
+      },
+      {
+        "file": "apoptose-illus-27.webp",
+        "width": 518,
+        "height": 397,
+        "page": 14
+      },
+      {
+        "file": "apoptose-illus-28.webp",
+        "width": 726,
+        "height": 526,
+        "page": 16
+      },
+      {
+        "file": "apoptose-illus-29.webp",
+        "width": 969,
+        "height": 650,
+        "page": 16
+      },
+      {
+        "file": "apoptose-illus-30.webp",
+        "width": 392,
+        "height": 591,
+        "page": 17
+      },
+      {
+        "file": "apoptose-illus-31.webp",
+        "width": 311,
+        "height": 415,
+        "page": 17
+      },
+      {
+        "file": "apoptose-illus-32.webp",
+        "width": 469,
+        "height": 296,
+        "page": 17
+      },
+      {
+        "file": "apoptose-illus-33.webp",
+        "width": 464,
+        "height": 631,
+        "page": 18
+      },
+      {
+        "file": "apoptose-illus-34.webp",
+        "width": 1006,
+        "height": 718,
+        "page": 18
+      },
+      {
+        "file": "apoptose-illus-35.webp",
+        "width": 585,
+        "height": 440,
+        "page": 19
+      },
+      {
+        "file": "apoptose-illus-36.webp",
+        "width": 1096,
+        "height": 648,
+        "page": 20
+      },
+      {
+        "file": "apoptose-illus-37.webp",
+        "width": 816,
+        "height": 718,
+        "page": 20
+      },
+      {
+        "file": "apoptose-illus-38.webp",
+        "width": 1098,
+        "height": 657,
+        "page": 21
+      },
+      {
+        "file": "apoptose-illus-39.webp",
+        "width": 729,
+        "height": 747,
+        "page": 21
+      },
+      {
+        "file": "apoptose-illus-40.webp",
+        "width": 1036,
+        "height": 777,
+        "page": 22
+      },
+      {
+        "file": "apoptose-illus-41.webp",
+        "width": 233,
+        "height": 319,
+        "page": 22
+      },
+      {
+        "file": "apoptose-illus-42.webp",
+        "width": 387,
+        "height": 374,
+        "page": 22
+      },
+      {
+        "file": "apoptose-illus-43.webp",
+        "width": 1102,
+        "height": 807,
+        "page": 23
+      }
+    ]
+  },
+  "bases-mol-culaires-d-veloppement-embryonnaire": {
+    "source": "Bases moléculaires développement embryonnaire",
+    "images": [
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-01.webp",
+        "width": 838,
+        "height": 416,
+        "page": 1
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-02.webp",
+        "width": 362,
+        "height": 481,
+        "page": 1
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-04.webp",
+        "width": 268,
+        "height": 484,
+        "page": 1
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-05.webp",
+        "width": 299,
+        "height": 395,
+        "page": 1
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-07.webp",
+        "width": 358,
+        "height": 337,
+        "page": 2
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-08.webp",
+        "width": 355,
+        "height": 345,
+        "page": 2
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-09.webp",
+        "width": 926,
+        "height": 377,
+        "page": 5
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-10.webp",
+        "width": 926,
+        "height": 377,
+        "page": 5
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-11.webp",
+        "width": 926,
+        "height": 210,
+        "page": 5
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-12.webp",
+        "width": 445,
+        "height": 784,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-13.webp",
+        "width": 445,
+        "height": 173,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-14.webp",
+        "width": 439,
+        "height": 198,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-15.webp",
+        "width": 439,
+        "height": 198,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-16.webp",
+        "width": 439,
+        "height": 198,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-17.webp",
+        "width": 439,
+        "height": 198,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-18.webp",
+        "width": 521,
+        "height": 670,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-19.webp",
+        "width": 521,
+        "height": 406,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-20.webp",
+        "width": 252,
+        "height": 1051,
+        "page": 6
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-21.webp",
+        "width": 374,
+        "height": 233,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-22.webp",
+        "width": 374,
+        "height": 233,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-23.webp",
+        "width": 374,
+        "height": 233,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-24.webp",
+        "width": 374,
+        "height": 233,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-25.webp",
+        "width": 374,
+        "height": 233,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-26.webp",
+        "width": 374,
+        "height": 218,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-27.webp",
+        "width": 371,
+        "height": 437,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-28.webp",
+        "width": 371,
+        "height": 461,
+        "page": 7
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-29.webp",
+        "width": 816,
+        "height": 383,
+        "page": 8
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-30.webp",
+        "width": 422,
+        "height": 206,
+        "page": 8
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-31.webp",
+        "width": 422,
+        "height": 206,
+        "page": 8
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-32.webp",
+        "width": 454,
+        "height": 515,
+        "page": 8
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-33.webp",
+        "width": 710,
+        "height": 240,
+        "page": 9
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-34.webp",
+        "width": 710,
+        "height": 310,
+        "page": 9
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-35.webp",
+        "width": 710,
+        "height": 176,
+        "page": 9
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-37.webp",
+        "width": 643,
+        "height": 542,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-38.webp",
+        "width": 643,
+        "height": 203,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-39.webp",
+        "width": 848,
+        "height": 412,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-40.webp",
+        "width": 848,
+        "height": 412,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-41.webp",
+        "width": 848,
+        "height": 412,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-42.webp",
+        "width": 848,
+        "height": 187,
+        "page": 10
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-43.webp",
+        "width": 1038,
+        "height": 335,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-44.webp",
+        "width": 1038,
+        "height": 336,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-45.webp",
+        "width": 1038,
+        "height": 336,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-46.webp",
+        "width": 1038,
+        "height": 336,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-47.webp",
+        "width": 1038,
+        "height": 221,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-48.webp",
+        "width": 791,
+        "height": 441,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-49.webp",
+        "width": 791,
+        "height": 441,
+        "page": 11
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-50.webp",
+        "width": 551,
+        "height": 633,
+        "page": 12
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-51.webp",
+        "width": 799,
+        "height": 436,
+        "page": 12
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-52.webp",
+        "width": 893,
+        "height": 391,
+        "page": 12
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-53.webp",
+        "width": 893,
+        "height": 258,
+        "page": 12
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-54.webp",
+        "width": 794,
+        "height": 439,
+        "page": 13
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-55.webp",
+        "width": 794,
+        "height": 439,
+        "page": 13
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-56.webp",
+        "width": 794,
+        "height": 323,
+        "page": 13
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-57.webp",
+        "width": 685,
+        "height": 510,
+        "page": 14
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-58.webp",
+        "width": 685,
+        "height": 222,
+        "page": 14
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-60.webp",
+        "width": 547,
+        "height": 478,
+        "page": 15
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-61.webp",
+        "width": 949,
+        "height": 368,
+        "page": 16
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-62.webp",
+        "width": 949,
+        "height": 161,
+        "page": 16
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-63.webp",
+        "width": 949,
+        "height": 368,
+        "page": 16
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-64.webp",
+        "width": 949,
+        "height": 199,
+        "page": 16
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-65.webp",
+        "width": 456,
+        "height": 766,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-66.webp",
+        "width": 456,
+        "height": 555,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-67.webp",
+        "width": 371,
+        "height": 234,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-68.webp",
+        "width": 371,
+        "height": 234,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-69.webp",
+        "width": 371,
+        "height": 234,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-70.webp",
+        "width": 371,
+        "height": 170,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-71.webp",
+        "width": 647,
+        "height": 539,
+        "page": 17
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-72.webp",
+        "width": 739,
+        "height": 472,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-73.webp",
+        "width": 739,
+        "height": 472,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-74.webp",
+        "width": 524,
+        "height": 500,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-75.webp",
+        "width": 524,
+        "height": 311,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-76.webp",
+        "width": 409,
+        "height": 408,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-77.webp",
+        "width": 462,
+        "height": 629,
+        "page": 18
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-80.webp",
+        "width": 387,
+        "height": 900,
+        "page": 19
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-81.webp",
+        "width": 387,
+        "height": 356,
+        "page": 19
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-84.webp",
+        "width": 712,
+        "height": 490,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-85.webp",
+        "width": 712,
+        "height": 490,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-86.webp",
+        "width": 712,
+        "height": 448,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-91.webp",
+        "width": 804,
+        "height": 326,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-92.webp",
+        "width": 804,
+        "height": 326,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-93.webp",
+        "width": 804,
+        "height": 326,
+        "page": 20
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-95.webp",
+        "width": 292,
+        "height": 525,
+        "page": 21
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-96.webp",
+        "width": 387,
+        "height": 516,
+        "page": 22
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-97.webp",
+        "width": 365,
+        "height": 952,
+        "page": 22
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-98.webp",
+        "width": 365,
+        "height": 208,
+        "page": 22
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-101.webp",
+        "width": 723,
+        "height": 362,
+        "page": 22
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-102.webp",
+        "width": 723,
+        "height": 362,
+        "page": 22
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-106.webp",
+        "width": 958,
+        "height": 273,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-107.webp",
+        "width": 958,
+        "height": 273,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-108.webp",
+        "width": 958,
+        "height": 247,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-111.webp",
+        "width": 913,
+        "height": 286,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-112.webp",
+        "width": 913,
+        "height": 286,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-113.webp",
+        "width": 913,
+        "height": 286,
+        "page": 23
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-116.webp",
+        "width": 659,
+        "height": 529,
+        "page": 24
+      },
+      {
+        "file": "bases-mol-culaires-d-veloppement-embryonnaire-illus-117.webp",
+        "width": 659,
+        "height": 529,
+        "page": 24
+      }
+    ]
+  },
+  "communication-cellulaire-partie-1": {
+    "source": "Communication cellulaire (partie 1)",
+    "images": [
+      {
+        "file": "communication-cellulaire-partie-1-illus-01.webp",
+        "width": 999,
+        "height": 844,
+        "page": 1
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-02.webp",
+        "width": 263,
+        "height": 181,
+        "page": 6
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-03.webp",
+        "width": 350,
+        "height": 223,
+        "page": 11
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-04.webp",
+        "width": 687,
+        "height": 185,
+        "page": 12
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-05.webp",
+        "width": 239,
+        "height": 263,
+        "page": 14
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-06.webp",
+        "width": 235,
+        "height": 263,
+        "page": 14
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-07.webp",
+        "width": 319,
+        "height": 183,
+        "page": 17
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-08.webp",
+        "width": 226,
+        "height": 169,
+        "page": 17
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-09.webp",
+        "width": 354,
+        "height": 212,
+        "page": 21
+      },
+      {
+        "file": "communication-cellulaire-partie-1-illus-10.webp",
+        "width": 349,
+        "height": 211,
+        "page": 22
+      }
+    ]
+  },
+  "cycle-cellulaire-partie-1": {
+    "source": "Cycle cellulaire (Partie 1)",
+    "images": [
+      {
+        "file": "cycle-cellulaire-partie-1-illus-01.webp",
+        "width": 283,
+        "height": 202,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-02.webp",
+        "width": 301,
+        "height": 452,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-03.webp",
+        "width": 350,
+        "height": 291,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-04.webp",
+        "width": 320,
+        "height": 240,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-05.webp",
+        "width": 363,
+        "height": 418,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-06.webp",
+        "width": 485,
+        "height": 501,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-07.webp",
+        "width": 600,
+        "height": 427,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-08.webp",
+        "width": 538,
+        "height": 453,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-09.webp",
+        "width": 500,
+        "height": 186,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-10.webp",
+        "width": 557,
+        "height": 387,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-11.webp",
+        "width": 375,
+        "height": 316,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-12.webp",
+        "width": 202,
+        "height": 262,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-13.webp",
+        "width": 514,
+        "height": 429,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-14.webp",
+        "width": 334,
+        "height": 316,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-15.webp",
+        "width": 456,
+        "height": 387,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-16.webp",
+        "width": 1749,
+        "height": 565,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-17.webp",
+        "width": 1478,
+        "height": 591,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-18.webp",
+        "width": 463,
+        "height": 346,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-20.webp",
+        "width": 380,
+        "height": 236,
+        "page": 5
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-27.webp",
+        "width": 740,
+        "height": 481,
+        "page": 6
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-28.webp",
+        "width": 602,
+        "height": 540,
+        "page": 6
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-29.webp",
+        "width": 602,
+        "height": 540,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-30.webp",
+        "width": 492,
+        "height": 425,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-31.webp",
+        "width": 256,
+        "height": 343,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-32.webp",
+        "width": 402,
+        "height": 302,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-33.webp",
+        "width": 290,
+        "height": 270,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-34.webp",
+        "width": 357,
+        "height": 257,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-36.webp",
+        "width": 246,
+        "height": 243,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-37.webp",
+        "width": 402,
+        "height": 318,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-38.webp",
+        "width": 361,
+        "height": 279,
+        "page": 10
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-39.webp",
+        "width": 602,
+        "height": 540,
+        "page": 11
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-40.webp",
+        "width": 602,
+        "height": 540,
+        "page": 12
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-41.webp",
+        "width": 202,
+        "height": 262,
+        "page": 12
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-42.webp",
+        "width": 1219,
+        "height": 597,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-43.webp",
+        "width": 1219,
+        "height": 596,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-44.webp",
+        "width": 255,
+        "height": 203,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-45.webp",
+        "width": 562,
+        "height": 416,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-46.webp",
+        "width": 459,
+        "height": 326,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-47.webp",
+        "width": 474,
+        "height": 387,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-48.webp",
+        "width": 602,
+        "height": 540,
+        "page": 15
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-49.webp",
+        "width": 296,
+        "height": 406,
+        "page": 15
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-50.webp",
+        "width": 271,
+        "height": 217,
+        "page": 15
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-51.webp",
+        "width": 361,
+        "height": 279,
+        "page": 16
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-52.webp",
+        "width": 293,
+        "height": 222,
+        "page": 16
+      },
+      {
+        "file": "cycle-cellulaire-partie-1-illus-53.webp",
+        "width": 356,
+        "height": 188,
+        "page": 16
+      }
+    ]
+  },
+  "cycle-cellulaire-partie-2": {
+    "source": "Cycle cellulaire (Partie 2)",
+    "images": [
+      {
+        "file": "cycle-cellulaire-partie-2-illus-01.webp",
+        "width": 602,
+        "height": 540,
+        "page": 1
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-02.webp",
+        "width": 1543,
+        "height": 561,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-03.webp",
+        "width": 1543,
+        "height": 560,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-04.webp",
+        "width": 498,
+        "height": 716,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-05.webp",
+        "width": 780,
+        "height": 700,
+        "page": 2
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-06.webp",
+        "width": 508,
+        "height": 368,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-07.webp",
+        "width": 600,
+        "height": 508,
+        "page": 3
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-08.webp",
+        "width": 390,
+        "height": 181,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-09.webp",
+        "width": 238,
+        "height": 171,
+        "page": 4
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-12.webp",
+        "width": 392,
+        "height": 186,
+        "page": 5
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-13.webp",
+        "width": 852,
+        "height": 721,
+        "page": 5
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-14.webp",
+        "width": 852,
+        "height": 720,
+        "page": 5
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-15.webp",
+        "width": 705,
+        "height": 240,
+        "page": 6
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-16.webp",
+        "width": 392,
+        "height": 186,
+        "page": 6
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-18.webp",
+        "width": 632,
+        "height": 320,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-19.webp",
+        "width": 344,
+        "height": 929,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-20.webp",
+        "width": 320,
+        "height": 414,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-21.webp",
+        "width": 285,
+        "height": 248,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-22.webp",
+        "width": 312,
+        "height": 264,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-23.webp",
+        "width": 394,
+        "height": 184,
+        "page": 7
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-24.webp",
+        "width": 300,
+        "height": 203,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-25.webp",
+        "width": 300,
+        "height": 200,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-26.webp",
+        "width": 500,
+        "height": 748,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-27.webp",
+        "width": 394,
+        "height": 190,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-28.webp",
+        "width": 1022,
+        "height": 596,
+        "page": 8
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-29.webp",
+        "width": 300,
+        "height": 200,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-30.webp",
+        "width": 388,
+        "height": 190,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-31.webp",
+        "width": 238,
+        "height": 171,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-32.webp",
+        "width": 464,
+        "height": 788,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-33.webp",
+        "width": 1071,
+        "height": 843,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-34.webp",
+        "width": 1071,
+        "height": 843,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-35.webp",
+        "width": 550,
+        "height": 516,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-36.webp",
+        "width": 508,
+        "height": 368,
+        "page": 9
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-37.webp",
+        "width": 602,
+        "height": 540,
+        "page": 10
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-38.webp",
+        "width": 696,
+        "height": 952,
+        "page": 10
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-39.webp",
+        "width": 492,
+        "height": 425,
+        "page": 11
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-40.webp",
+        "width": 310,
+        "height": 240,
+        "page": 11
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-41.webp",
+        "width": 271,
+        "height": 217,
+        "page": 11
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-42.webp",
+        "width": 361,
+        "height": 279,
+        "page": 11
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-43.webp",
+        "width": 366,
+        "height": 249,
+        "page": 12
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-44.webp",
+        "width": 602,
+        "height": 540,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-45.webp",
+        "width": 680,
+        "height": 379,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-46.webp",
+        "width": 288,
+        "height": 424,
+        "page": 13
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-47.webp",
+        "width": 320,
+        "height": 414,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-48.webp",
+        "width": 285,
+        "height": 248,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-49.webp",
+        "width": 492,
+        "height": 425,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-50.webp",
+        "width": 271,
+        "height": 217,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-51.webp",
+        "width": 361,
+        "height": 279,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-52.webp",
+        "width": 288,
+        "height": 424,
+        "page": 14
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-53.webp",
+        "width": 602,
+        "height": 540,
+        "page": 15
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-54.webp",
+        "width": 600,
+        "height": 475,
+        "page": 16
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-55.webp",
+        "width": 1069,
+        "height": 221,
+        "page": 17
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-57.webp",
+        "width": 336,
+        "height": 448,
+        "page": 17
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-59.webp",
+        "width": 332,
+        "height": 485,
+        "page": 17
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-60.webp",
+        "width": 1069,
+        "height": 326,
+        "page": 17
+      },
+      {
+        "file": "cycle-cellulaire-partie-2-illus-61.webp",
+        "width": 1069,
+        "height": 326,
+        "page": 17
+      }
+    ]
+  },
+  "cytosquelette": {
+    "source": "Cytosquelette",
+    "images": [
+      {
+        "file": "cytosquelette-illus-01.webp",
+        "width": 362,
+        "height": 231,
+        "page": 5
+      },
+      {
+        "file": "cytosquelette-illus-02.webp",
+        "width": 266,
+        "height": 193,
+        "page": 7
+      },
+      {
+        "file": "cytosquelette-illus-03.webp",
+        "width": 263,
+        "height": 266,
+        "page": 8
+      },
+      {
+        "file": "cytosquelette-illus-04.webp",
+        "width": 306,
+        "height": 193,
+        "page": 8
+      },
+      {
+        "file": "cytosquelette-illus-05.webp",
+        "width": 269,
+        "height": 237,
+        "page": 9
+      },
+      {
+        "file": "cytosquelette-illus-06.webp",
+        "width": 253,
+        "height": 164,
+        "page": 9
+      }
+    ]
+  },
+  "endocytose-et-exocytose": {
+    "source": "Endocytose et exocytose",
+    "images": [
+      {
+        "file": "endocytose-et-exocytose-illus-01.webp",
+        "width": 217,
+        "height": 192,
+        "page": 1
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-02.webp",
+        "width": 1063,
+        "height": 583,
+        "page": 2
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-03.webp",
+        "width": 672,
+        "height": 320,
+        "page": 2
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-04.webp",
+        "width": 716,
+        "height": 349,
+        "page": 3
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-05.webp",
+        "width": 456,
+        "height": 274,
+        "page": 4
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-06.webp",
+        "width": 738,
+        "height": 278,
+        "page": 4
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-07.webp",
+        "width": 881,
+        "height": 239,
+        "page": 5
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-08.webp",
+        "width": 881,
+        "height": 193,
+        "page": 5
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-09.webp",
+        "width": 340,
+        "height": 406,
+        "page": 6
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-10.webp",
+        "width": 688,
+        "height": 443,
+        "page": 6
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-11.webp",
+        "width": 915,
+        "height": 495,
+        "page": 7
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-12.webp",
+        "width": 880,
+        "height": 490,
+        "page": 7
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-13.webp",
+        "width": 833,
+        "height": 422,
+        "page": 8
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-14.webp",
+        "width": 350,
+        "height": 215,
+        "page": 8
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-15.webp",
+        "width": 698,
+        "height": 226,
+        "page": 9
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-16.webp",
+        "width": 225,
+        "height": 195,
+        "page": 9
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-17.webp",
+        "width": 970,
+        "height": 552,
+        "page": 11
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-18.webp",
+        "width": 943,
+        "height": 375,
+        "page": 11
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-19.webp",
+        "width": 864,
+        "height": 513,
+        "page": 12
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-20.webp",
+        "width": 864,
+        "height": 388,
+        "page": 13
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-21.webp",
+        "width": 830,
+        "height": 551,
+        "page": 13
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-22.webp",
+        "width": 590,
+        "height": 182,
+        "page": 14
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-23.webp",
+        "width": 1014,
+        "height": 318,
+        "page": 14
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-24.webp",
+        "width": 988,
+        "height": 572,
+        "page": 15
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-25.webp",
+        "width": 968,
+        "height": 388,
+        "page": 15
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-26.webp",
+        "width": 912,
+        "height": 526,
+        "page": 17
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-27.webp",
+        "width": 1063,
+        "height": 584,
+        "page": 17
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-28.webp",
+        "width": 374,
+        "height": 248,
+        "page": 18
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-29.webp",
+        "width": 974,
+        "height": 557,
+        "page": 18
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-30.webp",
+        "width": 386,
+        "height": 302,
+        "page": 19
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-31.webp",
+        "width": 371,
+        "height": 195,
+        "page": 19
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-32.webp",
+        "width": 283,
+        "height": 223,
+        "page": 19
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-33.webp",
+        "width": 880,
+        "height": 492,
+        "page": 19
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-34.webp",
+        "width": 785,
+        "height": 260,
+        "page": 20
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-35.webp",
+        "width": 945,
+        "height": 259,
+        "page": 20
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-36.webp",
+        "width": 603,
+        "height": 322,
+        "page": 20
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-37.webp",
+        "width": 258,
+        "height": 152,
+        "page": 22
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-38.webp",
+        "width": 948,
+        "height": 561,
+        "page": 23
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-39.webp",
+        "width": 731,
+        "height": 431,
+        "page": 23
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-40.webp",
+        "width": 451,
+        "height": 495,
+        "page": 24
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-41.webp",
+        "width": 354,
+        "height": 583,
+        "page": 24
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-42.webp",
+        "width": 375,
+        "height": 587,
+        "page": 24
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-43.webp",
+        "width": 358,
+        "height": 593,
+        "page": 25
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-44.webp",
+        "width": 358,
+        "height": 478,
+        "page": 25
+      },
+      {
+        "file": "endocytose-et-exocytose-illus-45.webp",
+        "width": 525,
+        "height": 480,
+        "page": 26
+      }
+    ]
+  },
+  "jonctions-cellulaires": {
+    "source": "Jonctions cellulaires",
+    "images": [
+      {
+        "file": "jonctions-cellulaires-illus-01.webp",
+        "width": 436,
+        "height": 401,
+        "page": 2
+      },
+      {
+        "file": "jonctions-cellulaires-illus-02.webp",
+        "width": 368,
+        "height": 171,
+        "page": 2
+      },
+      {
+        "file": "jonctions-cellulaires-illus-03.webp",
+        "width": 360,
+        "height": 189,
+        "page": 3
+      },
+      {
+        "file": "jonctions-cellulaires-illus-04.webp",
+        "width": 405,
+        "height": 322,
+        "page": 4
+      },
+      {
+        "file": "jonctions-cellulaires-illus-05.webp",
+        "width": 252,
+        "height": 235,
+        "page": 4
+      },
+      {
+        "file": "jonctions-cellulaires-illus-06.webp",
+        "width": 224,
+        "height": 198,
+        "page": 4
+      },
+      {
+        "file": "jonctions-cellulaires-illus-07.webp",
+        "width": 600,
+        "height": 270,
+        "page": 5
+      },
+      {
+        "file": "jonctions-cellulaires-illus-08.webp",
+        "width": 350,
+        "height": 244,
+        "page": 6
+      },
+      {
+        "file": "jonctions-cellulaires-illus-09.webp",
+        "width": 338,
+        "height": 190,
+        "page": 6
+      },
+      {
+        "file": "jonctions-cellulaires-illus-10.webp",
+        "width": 610,
+        "height": 494,
+        "page": 6
+      },
+      {
+        "file": "jonctions-cellulaires-illus-11.webp",
+        "width": 275,
+        "height": 176,
+        "page": 7
+      }
+    ]
+  },
+  "le-noyau": {
+    "source": "Le noyau",
+    "images": [
+      {
+        "file": "le-noyau-illus-01.webp",
+        "width": 397,
+        "height": 312,
+        "page": 1
+      },
+      {
+        "file": "le-noyau-illus-02.webp",
+        "width": 601,
+        "height": 425,
+        "page": 8
+      },
+      {
+        "file": "le-noyau-illus-03.webp",
+        "width": 576,
+        "height": 284,
+        "page": 8
+      },
+      {
+        "file": "le-noyau-illus-04.webp",
+        "width": 1416,
+        "height": 1574,
+        "page": 9
+      },
+      {
+        "file": "le-noyau-illus-05.webp",
+        "width": 409,
+        "height": 396,
+        "page": 10
+      },
+      {
+        "file": "le-noyau-illus-06.webp",
+        "width": 324,
+        "height": 218,
+        "page": 10
+      },
+      {
+        "file": "le-noyau-illus-07.webp",
+        "width": 245,
+        "height": 155,
+        "page": 10
+      },
+      {
+        "file": "le-noyau-illus-08.webp",
+        "width": 249,
+        "height": 479,
+        "page": 11
+      },
+      {
+        "file": "le-noyau-illus-09.webp",
+        "width": 255,
+        "height": 226,
+        "page": 12
+      },
+      {
+        "file": "le-noyau-illus-10.webp",
+        "width": 1921,
+        "height": 787,
+        "page": 12
+      },
+      {
+        "file": "le-noyau-illus-11.webp",
+        "width": 264,
+        "height": 262,
+        "page": 14
+      },
+      {
+        "file": "le-noyau-illus-12.webp",
+        "width": 422,
+        "height": 253,
+        "page": 15
+      },
+      {
+        "file": "le-noyau-illus-13.webp",
+        "width": 255,
+        "height": 230,
+        "page": 16
+      },
+      {
+        "file": "le-noyau-illus-14.webp",
+        "width": 240,
+        "height": 204,
+        "page": 16
+      },
+      {
+        "file": "le-noyau-illus-15.webp",
+        "width": 485,
+        "height": 276,
+        "page": 16
+      },
+      {
+        "file": "le-noyau-illus-16.webp",
+        "width": 448,
+        "height": 246,
+        "page": 17
+      },
+      {
+        "file": "le-noyau-illus-17.webp",
+        "width": 429,
+        "height": 316,
+        "page": 17
+      },
+      {
+        "file": "le-noyau-illus-18.webp",
+        "width": 630,
+        "height": 336,
+        "page": 17
+      }
+    ]
+  },
+  "mec-et-int-grines": {
+    "source": "MEC et intégrines",
+    "images": [
+      {
+        "file": "mec-et-int-grines-illus-01.webp",
+        "width": 200,
+        "height": 169,
+        "page": 1
+      },
+      {
+        "file": "mec-et-int-grines-illus-02.webp",
+        "width": 400,
+        "height": 258,
+        "page": 1
+      },
+      {
+        "file": "mec-et-int-grines-illus-03.webp",
+        "width": 500,
+        "height": 253,
+        "page": 2
+      },
+      {
+        "file": "mec-et-int-grines-illus-04.webp",
+        "width": 200,
+        "height": 262,
+        "page": 2
+      },
+      {
+        "file": "mec-et-int-grines-illus-05.webp",
+        "width": 238,
+        "height": 316,
+        "page": 5
+      },
+      {
+        "file": "mec-et-int-grines-illus-06.webp",
+        "width": 384,
+        "height": 210,
+        "page": 5
+      },
+      {
+        "file": "mec-et-int-grines-illus-07.webp",
+        "width": 285,
+        "height": 197,
+        "page": 5
+      },
+      {
+        "file": "mec-et-int-grines-illus-08.webp",
+        "width": 520,
+        "height": 172,
+        "page": 5
+      },
+      {
+        "file": "mec-et-int-grines-illus-09.webp",
+        "width": 512,
+        "height": 197,
+        "page": 6
+      },
+      {
+        "file": "mec-et-int-grines-illus-10.webp",
+        "width": 232,
+        "height": 224,
+        "page": 6
+      }
+    ]
+  },
+  "membrane-plasmique": {
+    "source": "Membrane plasmique",
+    "images": [
+      {
+        "file": "membrane-plasmique-illus-01.webp",
+        "width": 217,
+        "height": 192,
+        "page": 1
+      },
+      {
+        "file": "membrane-plasmique-illus-02.webp",
+        "width": 462,
+        "height": 348,
+        "page": 2
+      },
+      {
+        "file": "membrane-plasmique-illus-03.webp",
+        "width": 876,
+        "height": 455,
+        "page": 2
+      },
+      {
+        "file": "membrane-plasmique-illus-04.webp",
+        "width": 605,
+        "height": 298,
+        "page": 3
+      },
+      {
+        "file": "membrane-plasmique-illus-05.webp",
+        "width": 363,
+        "height": 249,
+        "page": 3
+      },
+      {
+        "file": "membrane-plasmique-illus-06.webp",
+        "width": 233,
+        "height": 258,
+        "page": 5
+      },
+      {
+        "file": "membrane-plasmique-illus-07.webp",
+        "width": 382,
+        "height": 197,
+        "page": 7
+      },
+      {
+        "file": "membrane-plasmique-illus-08.webp",
+        "width": 306,
+        "height": 299,
+        "page": 7
+      },
+      {
+        "file": "membrane-plasmique-illus-09.webp",
+        "width": 624,
+        "height": 210,
+        "page": 10
+      },
+      {
+        "file": "membrane-plasmique-illus-10.webp",
+        "width": 392,
+        "height": 276,
+        "page": 11
+      },
+      {
+        "file": "membrane-plasmique-illus-11.webp",
+        "width": 634,
+        "height": 265,
+        "page": 11
+      },
+      {
+        "file": "membrane-plasmique-illus-12.webp",
+        "width": 836,
+        "height": 361,
+        "page": 12
+      },
+      {
+        "file": "membrane-plasmique-illus-13.webp",
+        "width": 717,
+        "height": 537,
+        "page": 12
+      },
+      {
+        "file": "membrane-plasmique-illus-14.webp",
+        "width": 800,
+        "height": 327,
+        "page": 14
+      },
+      {
+        "file": "membrane-plasmique-illus-15.webp",
+        "width": 298,
+        "height": 176,
+        "page": 15
+      },
+      {
+        "file": "membrane-plasmique-illus-17.webp",
+        "width": 748,
+        "height": 238,
+        "page": 21
+      },
+      {
+        "file": "membrane-plasmique-illus-18.webp",
+        "width": 702,
+        "height": 392,
+        "page": 23
+      },
+      {
+        "file": "membrane-plasmique-illus-19.webp",
+        "width": 426,
+        "height": 359,
+        "page": 23
+      },
+      {
+        "file": "membrane-plasmique-illus-20.webp",
+        "width": 705,
+        "height": 388,
+        "page": 24
+      },
+      {
+        "file": "membrane-plasmique-illus-21.webp",
+        "width": 943,
+        "height": 291,
+        "page": 24
+      },
+      {
+        "file": "membrane-plasmique-illus-23.webp",
+        "width": 703,
+        "height": 633,
+        "page": 27
+      }
+    ]
+  },
+  "mitochondries-et-peroxysomes": {
+    "source": "Mitochondries et peroxysomes",
+    "images": [
+      {
+        "file": "mitochondries-et-peroxysomes-illus-01.webp",
+        "width": 304,
+        "height": 187,
+        "page": 2
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-02.webp",
+        "width": 568,
+        "height": 293,
+        "page": 2
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-03.webp",
+        "width": 510,
+        "height": 200,
+        "page": 2
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-04.webp",
+        "width": 933,
+        "height": 340,
+        "page": 2
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-05.webp",
+        "width": 941,
+        "height": 460,
+        "page": 3
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-06.webp",
+        "width": 989,
+        "height": 208,
+        "page": 3
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-07.webp",
+        "width": 663,
+        "height": 483,
+        "page": 7
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-08.webp",
+        "width": 862,
+        "height": 534,
+        "page": 7
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-09.webp",
+        "width": 778,
+        "height": 422,
+        "page": 8
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-12.webp",
+        "width": 502,
+        "height": 256,
+        "page": 9
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-13.webp",
+        "width": 562,
+        "height": 261,
+        "page": 9
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-14.webp",
+        "width": 1193,
+        "height": 693,
+        "page": 11
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-15.webp",
+        "width": 1193,
+        "height": 751,
+        "page": 11
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-16.webp",
+        "width": 1106,
+        "height": 827,
+        "page": 12
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-17.webp",
+        "width": 1193,
+        "height": 777,
+        "page": 12
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-18.webp",
+        "width": 1124,
+        "height": 827,
+        "page": 13
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-19.webp",
+        "width": 1193,
+        "height": 791,
+        "page": 13
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-20.webp",
+        "width": 1193,
+        "height": 769,
+        "page": 14
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-21.webp",
+        "width": 1071,
+        "height": 827,
+        "page": 14
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-22.webp",
+        "width": 1193,
+        "height": 737,
+        "page": 15
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-23.webp",
+        "width": 1186,
+        "height": 827,
+        "page": 15
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-24.webp",
+        "width": 1115,
+        "height": 827,
+        "page": 16
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-25.webp",
+        "width": 1193,
+        "height": 793,
+        "page": 16
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-26.webp",
+        "width": 1166,
+        "height": 827,
+        "page": 17
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-27.webp",
+        "width": 1193,
+        "height": 809,
+        "page": 17
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-28.webp",
+        "width": 1193,
+        "height": 821,
+        "page": 18
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-29.webp",
+        "width": 1193,
+        "height": 715,
+        "page": 18
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-30.webp",
+        "width": 1193,
+        "height": 713,
+        "page": 19
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-31.webp",
+        "width": 1193,
+        "height": 769,
+        "page": 19
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-32.webp",
+        "width": 1152,
+        "height": 827,
+        "page": 20
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-33.webp",
+        "width": 1193,
+        "height": 761,
+        "page": 20
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-34.webp",
+        "width": 1193,
+        "height": 777,
+        "page": 21
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-35.webp",
+        "width": 1193,
+        "height": 693,
+        "page": 21
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-36.webp",
+        "width": 1155,
+        "height": 827,
+        "page": 22
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-37.webp",
+        "width": 1193,
+        "height": 459,
+        "page": 22
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-38.webp",
+        "width": 1042,
+        "height": 827,
+        "page": 23
+      },
+      {
+        "file": "mitochondries-et-peroxysomes-illus-39.webp",
+        "width": 1174,
+        "height": 827,
+        "page": 23
+      }
+    ]
+  },
+  "m-thode-d-tude-partie-1": {
+    "source": "Méthode d'étude (Partie 1)",
+    "images": [
+      {
+        "file": "m-thode-d-tude-partie-1-illus-01.webp",
+        "width": 643,
+        "height": 344,
+        "page": 4
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-02.webp",
+        "width": 440,
+        "height": 400,
+        "page": 4
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-04.webp",
+        "width": 562,
+        "height": 556,
+        "page": 7
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-05.webp",
+        "width": 450,
+        "height": 559,
+        "page": 7
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-06.webp",
+        "width": 450,
+        "height": 331,
+        "page": 8
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-07.webp",
+        "width": 501,
+        "height": 328,
+        "page": 9
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-08.webp",
+        "width": 460,
+        "height": 918,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-09.webp",
+        "width": 266,
+        "height": 244,
+        "page": 11
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-10.webp",
+        "width": 460,
+        "height": 602,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-11.webp",
+        "width": 468,
+        "height": 204,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-12.webp",
+        "width": 273,
+        "height": 153,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-13.webp",
+        "width": 290,
+        "height": 381,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-14.webp",
+        "width": 457,
+        "height": 287,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-15.webp",
+        "width": 468,
+        "height": 204,
+        "page": 13
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-16.webp",
+        "width": 273,
+        "height": 153,
+        "page": 13
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-17.webp",
+        "width": 290,
+        "height": 381,
+        "page": 13
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-18.webp",
+        "width": 457,
+        "height": 287,
+        "page": 13
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-19.webp",
+        "width": 500,
+        "height": 354,
+        "page": 14
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-20.webp",
+        "width": 576,
+        "height": 253,
+        "page": 14
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-21.webp",
+        "width": 528,
+        "height": 150,
+        "page": 14
+      },
+      {
+        "file": "m-thode-d-tude-partie-1-illus-22.webp",
+        "width": 558,
+        "height": 447,
+        "page": 15
+      }
+    ]
+  },
+  "m-thode-d-tude-partie-2": {
+    "source": "Méthode d'étude (Partie 2)",
+    "images": [
+      {
+        "file": "m-thode-d-tude-partie-2-illus-01.webp",
+        "width": 377,
+        "height": 466,
+        "page": 2
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-02.webp",
+        "width": 433,
+        "height": 293,
+        "page": 2
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-03.webp",
+        "width": 451,
+        "height": 322,
+        "page": 3
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-04.webp",
+        "width": 201,
+        "height": 249,
+        "page": 3
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-05.webp",
+        "width": 1456,
+        "height": 572,
+        "page": 4
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-06.webp",
+        "width": 1456,
+        "height": 572,
+        "page": 4
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-07.webp",
+        "width": 375,
+        "height": 229,
+        "page": 4
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-08.webp",
+        "width": 345,
+        "height": 344,
+        "page": 7
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-09.webp",
+        "width": 318,
+        "height": 193,
+        "page": 8
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-10.webp",
+        "width": 319,
+        "height": 189,
+        "page": 8
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-11.webp",
+        "width": 437,
+        "height": 225,
+        "page": 8
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-12.webp",
+        "width": 503,
+        "height": 216,
+        "page": 9
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-13.webp",
+        "width": 227,
+        "height": 249,
+        "page": 9
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-14.webp",
+        "width": 542,
+        "height": 217,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-15.webp",
+        "width": 222,
+        "height": 440,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-16.webp",
+        "width": 542,
+        "height": 217,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-17.webp",
+        "width": 222,
+        "height": 293,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-18.webp",
+        "width": 326,
+        "height": 155,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-19.webp",
+        "width": 326,
+        "height": 206,
+        "page": 10
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-20.webp",
+        "width": 625,
+        "height": 200,
+        "page": 11
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-21.webp",
+        "width": 625,
+        "height": 150,
+        "page": 11
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-22.webp",
+        "width": 530,
+        "height": 264,
+        "page": 11
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-23.webp",
+        "width": 530,
+        "height": 472,
+        "page": 11
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-24.webp",
+        "width": 965,
+        "height": 1025,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-25.webp",
+        "width": 771,
+        "height": 1229,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-26.webp",
+        "width": 965,
+        "height": 1025,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-27.webp",
+        "width": 771,
+        "height": 1024,
+        "page": 12
+      },
+      {
+        "file": "m-thode-d-tude-partie-2-illus-28.webp",
+        "width": 965,
+        "height": 205,
+        "page": 12
+      }
+    ]
+  },
+  "organisation-cellule-eucaryote": {
+    "source": "Organisation cellule eucaryote",
+    "images": [
+      {
+        "file": "organisation-cellule-eucaryote-illus-01.webp",
+        "width": 1595,
+        "height": 2256,
+        "page": 1
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-02.webp",
+        "width": 1206,
+        "height": 1706,
+        "page": 1
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-03.webp",
+        "width": 1500,
+        "height": 844,
+        "page": 3
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-04.webp",
+        "width": 1500,
+        "height": 844,
+        "page": 3
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-05.webp",
+        "width": 680,
+        "height": 510,
+        "page": 4
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-06.webp",
+        "width": 242,
+        "height": 224,
+        "page": 6
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-07.webp",
+        "width": 285,
+        "height": 335,
+        "page": 6
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-08.webp",
+        "width": 212,
+        "height": 204,
+        "page": 6
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-09.webp",
+        "width": 1880,
+        "height": 819,
+        "page": 6
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-10.webp",
+        "width": 241,
+        "height": 299,
+        "page": 6
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-11.webp",
+        "width": 400,
+        "height": 347,
+        "page": 7
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-12.webp",
+        "width": 538,
+        "height": 470,
+        "page": 8
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-13.webp",
+        "width": 400,
+        "height": 195,
+        "page": 9
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-14.webp",
+        "width": 420,
+        "height": 241,
+        "page": 9
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-15.webp",
+        "width": 813,
+        "height": 607,
+        "page": 9
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-16.webp",
+        "width": 813,
+        "height": 595,
+        "page": 10
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-17.webp",
+        "width": 314,
+        "height": 461,
+        "page": 10
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-18.webp",
+        "width": 364,
+        "height": 239,
+        "page": 11
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-19.webp",
+        "width": 629,
+        "height": 472,
+        "page": 11
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-20.webp",
+        "width": 1070,
+        "height": 518,
+        "page": 11
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-21.webp",
+        "width": 620,
+        "height": 410,
+        "page": 12
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-22.webp",
+        "width": 510,
+        "height": 530,
+        "page": 12
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-23.webp",
+        "width": 620,
+        "height": 410,
+        "page": 13
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-24.webp",
+        "width": 218,
+        "height": 202,
+        "page": 14
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-25.webp",
+        "width": 218,
+        "height": 286,
+        "page": 14
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-26.webp",
+        "width": 685,
+        "height": 763,
+        "page": 14
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-27.webp",
+        "width": 1088,
+        "height": 436,
+        "page": 15
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-28.webp",
+        "width": 1172,
+        "height": 486,
+        "page": 15
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-29.webp",
+        "width": 407,
+        "height": 468,
+        "page": 15
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-30.webp",
+        "width": 644,
+        "height": 555,
+        "page": 15
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-31.webp",
+        "width": 1500,
+        "height": 844,
+        "page": 16
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-32.webp",
+        "width": 227,
+        "height": 227,
+        "page": 16
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-33.webp",
+        "width": 341,
+        "height": 269,
+        "page": 16
+      },
+      {
+        "file": "organisation-cellule-eucaryote-illus-34.webp",
+        "width": 219,
+        "height": 246,
+        "page": 16
+      }
+    ]
+  },
+  "syst-me-endomembranaire": {
+    "source": "Système endomembranaire",
+    "images": [
+      {
+        "file": "syst-me-endomembranaire-illus-01.webp",
+        "width": 1595,
+        "height": 2256,
+        "page": 1
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-02.webp",
+        "width": 1206,
+        "height": 1706,
+        "page": 1
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-03.webp",
+        "width": 217,
+        "height": 192,
+        "page": 3
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-04.webp",
+        "width": 486,
+        "height": 556,
+        "page": 3
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-05.webp",
+        "width": 566,
+        "height": 216,
+        "page": 4
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-06.webp",
+        "width": 342,
+        "height": 196,
+        "page": 9
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-07.webp",
+        "width": 931,
+        "height": 451,
+        "page": 9
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-08.webp",
+        "width": 611,
+        "height": 232,
+        "page": 10
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-09.webp",
+        "width": 245,
+        "height": 260,
+        "page": 10
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-10.webp",
+        "width": 225,
+        "height": 201,
+        "page": 10
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-11.webp",
+        "width": 219,
+        "height": 207,
+        "page": 11
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-12.webp",
+        "width": 377,
+        "height": 314,
+        "page": 11
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-13.webp",
+        "width": 573,
+        "height": 229,
+        "page": 13
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-14.webp",
+        "width": 765,
+        "height": 478,
+        "page": 14
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-15.webp",
+        "width": 904,
+        "height": 335,
+        "page": 16
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-16.webp",
+        "width": 699,
+        "height": 242,
+        "page": 16
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-17.webp",
+        "width": 974,
+        "height": 358,
+        "page": 21
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-18.webp",
+        "width": 777,
+        "height": 445,
+        "page": 22
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-19.webp",
+        "width": 869,
+        "height": 380,
+        "page": 23
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-20.webp",
+        "width": 493,
+        "height": 344,
+        "page": 26
+      },
+      {
+        "file": "syst-me-endomembranaire-illus-21.webp",
+        "width": 238,
+        "height": 190,
+        "page": 26
+      }
+    ]
+  },
+  "transduction-du-signal-partie-2": {
+    "source": "Transduction du signal (partie 2)",
+    "images": [
+      {
+        "file": "transduction-du-signal-partie-2-illus-01.webp",
+        "width": 999,
+        "height": 844,
+        "page": 1
+      },
+      {
+        "file": "transduction-du-signal-partie-2-illus-02.webp",
+        "width": 273,
+        "height": 193,
+        "page": 4
+      },
+      {
+        "file": "transduction-du-signal-partie-2-illus-03.webp",
+        "width": 452,
+        "height": 264,
+        "page": 9
+      },
+      {
+        "file": "transduction-du-signal-partie-2-illus-04.webp",
+        "width": 570,
+        "height": 306,
+        "page": 14
+      }
+    ]
+  }
+}

@@ -1,6 +1,4 @@
-import FICHE_CURATED from "../../data/ficheCurated";
-
-const IMAGE_BASE = "/schema-library/biochimie/";
+import { getCurated, getImageBase } from "../../data/ficheCuratedAll";
 
 function renderParagraphs(text) {
   return text
@@ -38,11 +36,11 @@ function wrapBullets(elements) {
   return result;
 }
 
-function ImageBlock({ img, titre }) {
+function ImageBlock({ img, titre, imageBase }) {
   if (!img) return null;
   return (
     <div className="fc-illus">
-      <img src={IMAGE_BASE + img.file} alt={titre} loading="lazy" />
+      <img src={imageBase + img.file} alt={titre} loading="lazy" />
       {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
     </div>
   );
@@ -50,7 +48,8 @@ function ImageBlock({ img, titre }) {
 
 export default function FichePage1Intro({ fiche, courseTitle }) {
   const titre = courseTitle || fiche?.page1_intro?.titre || "Introduction";
-  const curated = FICHE_CURATED[titre];
+  const curated = getCurated(titre);
+  const imageBase = getImageBase(titre);
 
   if (!curated) {
     const intro = fiche?.page1_intro || {};
@@ -86,7 +85,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         {wrapBullets(renderParagraphs(curated.intro))}
       </div>
 
-      <ImageBlock img={curated.images[0]} titre={titre} />
+      <ImageBlock img={curated.images[0]} titre={titre} imageBase={imageBase} />
 
       {curated.sections[0] && (
         <div className="fc-section">
@@ -95,7 +94,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      <ImageBlock img={curated.images[1]} titre={titre} />
+      <ImageBlock img={curated.images[1]} titre={titre} imageBase={imageBase} />
 
       {curated.sections[1] && (
         <div className="fc-section">
@@ -104,7 +103,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      <ImageBlock img={curated.images[2]} titre={titre} />
+      <ImageBlock img={curated.images[2]} titre={titre} imageBase={imageBase} />
 
       {curated.sections[2] && (
         <div className="fc-section">
