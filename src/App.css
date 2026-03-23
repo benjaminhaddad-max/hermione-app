@@ -1250,6 +1250,24 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   height:auto;
   display:block;
 }
+.fc-illus-svg{
+  background:#1a1a2e;
+  padding:0;
+}
+.fc-illus-svg svg{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.fc-schema-svg{
+  background:#1a1a2e;
+  overflow:hidden;
+}
+.fc-schema-svg svg{
+  display:block;
+  width:100%;
+  height:auto;
+}
 .fc-illus-caption{
   padding:10px 14px;
   font-family:var(--font-body);

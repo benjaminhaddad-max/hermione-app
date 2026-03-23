@@ -1,15 +1,23 @@
-/**
- * Hand-picked images & enriched course text for each biochimie chapter.
- * Only the clearest, most visual, most student-friendly illustrations.
- * Key = normalised course title from content.js
- */
+import ChromatineOrganisation from "../schemas/ChromatineOrganisation";
+import DoubleHelice from "../schemas/DoubleHelice";
+import ADNvsARN from "../schemas/ADNvsARN";
+import FourcheReplication from "../schemas/FourcheReplication";
+import DogmeCentral from "../schemas/DogmeCentral";
+import NiveauxProteines from "../schemas/NiveauxProteines";
+import CycleATP from "../schemas/CycleATP";
+import MembraneCellulaire from "../schemas/MembraneCellulaire";
 
+/**
+ * Each image entry is either:
+ *   { svg: ReactComponent }              — SVG schema in French
+ *   { file: "filename.webp", caption: "..." }  — WebP image with French caption
+ */
 const FICHE_CURATED = {
   "Structure et diversité du génome": {
     images: [
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-02.webp", caption: "Du génome au chromosome : cette image montre comment l'ADN est organisé dans la cellule. On part de la cellule (cell) → le noyau (nucleus) → les chromosomes → la chromatine → et enfin la double hélice d'ADN. Chaque niveau est un enroulement supplémentaire." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-31.webp", caption: "Caryotype humain : les 46 chromosomes rangés par paires. On voit 22 paires d'autosomes (numérotées 1 à 22) + 1 paire de chromosomes sexuels (XX chez la femme, XY chez l'homme). C'est la « photo d'identité » de notre génome." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-30.webp", caption: "Les niveaux de compaction de la chromatine : la double hélice d'ADN (DNA double helix, 2 nm) s'enroule autour des histones pour former des nucléosomes (11 nm), puis une fibre de 30 nm, puis des boucles de 300 nm, jusqu'au chromosome complet (1400 nm)." },
+      { svg: ChromatineOrganisation },
+      { file: "acides-nucleiques-et-structure-des-genomes-illus-31.webp", caption: "Caryotype humain : les 46 chromosomes rangés par paires. 22 paires d'autosomes (1 à 22) + 1 paire de chromosomes sexuels (XX ou XY)." },
+      { file: "acides-nucleiques-et-structure-des-genomes-illus-29.webp", caption: "Composition du génome humain : seuls ~2% du génome codent pour des protéines. 45% sont des séquences répétitives (transposons). Le reste inclut des introns, des séquences régulatrices et de l'ADN de fonction inconnue." },
     ],
     intro: `Imagine que chacune de tes cellules contient un véritable « livre d'instructions » de 3 milliards de lettres. Ce livre, c'est ton génome — l'ensemble de ton ADN. Chez l'Homme, il est réparti sur 46 chromosomes (23 paires), rangés dans le noyau de chaque cellule.
 
@@ -45,9 +53,9 @@ Vocabulaire clé : locus (position sur un chromosome), allèles (variantes d'un 
 
   "Structure des acides nucléiques": {
     images: [
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-01.webp", caption: "La double hélice d'ADN en 3D : les deux brins s'enroulent l'un autour de l'autre. Les « barreaux » de l'échelle sont les paires de bases complémentaires (A-T et C-G), le « squelette » est la chaîne sucre-phosphate (sugar-phosphate backbone)." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-21.webp", caption: "Comparaison ADN vs ARN : à gauche, l'ADN est en double brin avec le désoxyribose (deoxyribose) et la base thymine (T). À droite, l'ARN est en simple brin avec le ribose et la base uracile (U) à la place de T." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-23.webp", caption: "Du chromosome à la double hélice : on voit les niveaux d'organisation — chromosome → chromatine → nucléosomes (DNA + histone proteins) → fibre d'ADN → double hélice. Chaque étape « déroule » un peu plus la structure." },
+      { svg: DoubleHelice },
+      { svg: ADNvsARN },
+      { file: "acides-nucleiques-et-structure-des-genomes-illus-23.webp", caption: "Du chromosome à la double hélice : les niveaux d'organisation de l'ADN. Chromosome → chromatine → nucléosomes → fibre d'ADN → double hélice." },
     ],
     intro: `L'ADN et l'ARN sont les deux types d'acides nucléiques. Ce sont les molécules qui stockent et transmettent l'information génétique. L'ADN est ta « clé USB » permanente, l'ARN est la « copie de travail » temporaire.
 
@@ -86,9 +94,9 @@ L'ARN existe sous plusieurs formes : ARNm (messager, copie d'un gène), ARNt (tr
 
   "La réplication de l'ADN": {
     images: [
-      { file: "replication-illus-15.webp", caption: "La fourche de réplication : la double hélice s'ouvre en Y. Le brin du haut (leading strand = brin directeur) est copié en continu. Le brin du bas (lagging strand = brin retardé) est copié par petits morceaux appelés fragments d'Okazaki. L'ADN polymérase (DNA polymerase) copie chaque brin." },
-      { file: "replication-illus-04.webp", caption: "Vue d'ensemble de la réplication : les deux brins parents (parent strands) servent de modèle pour fabriquer deux nouvelles doubles hélices identiques. Chaque nouvelle molécule contient un brin ancien et un brin neuf (réplication semi-conservative)." },
-      { file: "replication-illus-18.webp", caption: "Le raccourcissement des télomères : à chaque division cellulaire (cell division), les extrémités des chromosomes — les télomères (telomeres, en rouge) — se raccourcissent un peu. Après de nombreuses divisions, les télomères sont trop courts et la cellule vieillit." },
+      { svg: FourcheReplication },
+      { file: "replication-illus-04.webp", caption: "Réplication semi-conservative : chaque nouvelle molécule d'ADN contient un brin ancien (bleu) et un brin nouvellement synthétisé (vert). Les deux brins parents servent de modèle." },
+      { file: "replication-illus-18.webp", caption: "Raccourcissement des télomères : à chaque division cellulaire, les extrémités des chromosomes (télomères, en rouge) se raccourcissent un peu. Après ~50 divisions, la cellule vieillit." },
     ],
     intro: `Avant chaque division cellulaire, la cellule doit copier l'intégralité de son ADN. Ce processus s'appelle la réplication. C'est un mécanisme d'une précision incroyable : sur 3 milliards de lettres copiées, il n'y a en moyenne qu'une erreur pour un milliard de nucléotides !
 
@@ -125,9 +133,9 @@ Exception : la télomérase (active dans les cellules souches et les cellules ca
 
   "La transcription": {
     images: [
-      { file: "transcription-et-traduction-illus-06.webp", caption: "La transcription en action : l'ARN polymérase (RNA polymerase) lit le brin d'ADN matrice (template strand) et fabrique un brin d'ARN messager (mRNA) complémentaire. La synthèse se fait dans le sens 5'→3'." },
-      { file: "transcription-et-traduction-illus-03.webp", caption: "Structure d'un gène eucaryote : on voit le promoteur (promoter, zone d'accroche de l'ARN polymérase), les exons (parties codantes, en couleur) et les introns (parties non codantes, entre les exons). Les séquences régulatrices (enhancer/silencer) contrôlent l'activité du gène." },
-      { file: "regulation-expression-des-genes-p1-illus-01.webp", caption: "Le dogme central de la biologie moléculaire : ADN → ARN → Protéine. La réplication (replication) copie l'ADN, la transcription (transcription) fabrique l'ARN, et la traduction (translation) fabrique la protéine. C'est le flux d'information génétique." },
+      { svg: DogmeCentral },
+      { file: "transcription-et-traduction-illus-06.webp", caption: "La transcription en action : l'ARN polymérase lit le brin d'ADN matrice et fabrique un brin d'ARN messager complémentaire. La synthèse se fait dans le sens 5'→3'." },
+      { file: "transcription-et-traduction-illus-03.webp", caption: "Structure d'un gène eucaryote : le promoteur (zone d'accroche de l'ARN polymérase), les exons (parties codantes) et les introns (parties non codantes, retirées par épissage)." },
     ],
     intro: `La transcription est la première étape de l'expression d'un gène : l'ADN est « recopié » en ARN messager. C'est comme faire une photocopie d'une page du grand livre (ADN) pour l'envoyer aux usines à protéines (ribosomes).
 
@@ -165,9 +173,9 @@ La transcription (ADN→ARN) a lieu dans le noyau. L'ARNm mature sort ensuite pa
 
   "La traduction": {
     images: [
-      { file: "transcription-et-traduction-illus-19.webp", caption: "Le code génétique : ce tableau montre la correspondance entre chaque codon (triplet de 3 bases de l'ARNm) et l'acide aminé produit. Par exemple : AUG → méthionine (Met, codon start), UAA/UAG/UGA → codons stop. Le code est lu de l'intérieur vers l'extérieur." },
-      { file: "transcription-et-traduction-illus-26.webp", caption: "Le cycle d'élongation : le ribosome possède 3 sites — E (exit/sortie), P (peptidyl/liaison) et A (aminoacyl/entrée). L'ARNt entre en A avec son acide aminé, la liaison peptidique se forme, puis le ribosome avance d'un codon (translocation)." },
-      { file: "transcription-et-traduction-illus-20.webp", caption: "Structure 3D de l'ARN de transfert (ARNt/tRNA) : il a une forme en L. D'un côté l'anticodon (qui s'apparie avec le codon de l'ARNm), de l'autre l'extrémité 3' qui porte l'acide aminé (amino acid attachment site)." },
+      { file: "transcription-et-traduction-illus-19.webp", caption: "Le code génétique : ce tableau montre la correspondance entre chaque codon (triplet de 3 bases) et l'acide aminé produit. AUG = codon start (méthionine). UAA, UAG, UGA = codons stop." },
+      { file: "transcription-et-traduction-illus-26.webp", caption: "Le cycle d'élongation de la traduction : le ribosome possède 3 sites — E (sortie), P (liaison peptidique) et A (entrée de l'ARNt). L'ARNt entre avec son acide aminé, la liaison se forme, le ribosome avance." },
+      { file: "transcription-et-traduction-illus-20.webp", caption: "Structure 3D de l'ARNt : forme en L. D'un côté l'anticodon (s'apparie avec le codon de l'ARNm), de l'autre l'extrémité qui porte l'acide aminé." },
     ],
     intro: `La traduction, c'est le passage du langage des nucléotides (ARN) au langage des acides aminés (protéines). Les ribosomes « lisent » l'ARN messager trois lettres par trois lettres (codons) et assemblent la protéine correspondante.
 
@@ -207,9 +215,9 @@ Plusieurs ribosomes peuvent traduire le même ARNm simultanément (polyribosome)
 
   "Les protéines": {
     images: [
-      { file: "structures-secondaires-illus-03.webp", caption: "Les 4 niveaux de structure des protéines : primaire (primary = séquence d'acides aminés), secondaire (secondary = hélice alpha et feuillet bêta), tertiaire (tertiary = forme 3D globale), quaternaire (quaternary = assemblage de plusieurs chaînes). Chaque niveau dépend du précédent." },
-      { file: "repliement-des-proteines-illus-14.webp", caption: "L'entonnoir du repliement : la chaîne d'acides aminés (en haut, dépliée) explore de nombreuses conformations et « descend » vers sa forme la plus stable (en bas, native state = état natif). L'axe vertical = énergie, l'axe horizontal = nombre de conformations possibles." },
-      { file: "structures-tertiaires-et-quaternaires-illus-55.webp", caption: "Structure d'un anticorps (antibody) : la forme en Y est caractéristique. Les deux « bras » (Fab) contiennent les sites de liaison à l'antigène (antigen binding sites). Le « pied » (Fc) interagit avec le système immunitaire. Chaînes lourdes (heavy chains) en bleu, légères (light chains) en jaune." },
+      { svg: NiveauxProteines },
+      { file: "repliement-des-proteines-illus-14.webp", caption: "L'entonnoir du repliement protéique : la chaîne d'acides aminés (en haut, dépliée) explore de nombreuses conformations et descend vers la forme la plus stable (en bas = état natif). Axe vertical = énergie, horizontal = nombre de conformations." },
+      { file: "structures-tertiaires-et-quaternaires-illus-55.webp", caption: "Structure d'un anticorps : forme en Y caractéristique. Les deux bras (Fab) contiennent les sites de fixation à l'antigène. Le pied (Fc) interagit avec le système immunitaire. Chaînes lourdes en bleu, légères en jaune." },
     ],
     intro: `Les protéines sont les molécules « ouvrières » de la cellule. Enzymes, hormones, anticorps, transporteurs, récepteurs… tout est protéine. Elles sont fabriquées à partir de seulement 20 acides aminés différents, mais leur variété est quasi infinie.
 
@@ -245,9 +253,9 @@ Si la forme change (dénaturation par la chaleur, le pH, etc.), la protéine per
 
   "Métabolisme énergétique": {
     images: [
-      { file: "base-de-cinetique-enzymatique-illus-08.webp", caption: "Profil énergétique d'une réaction : la courbe rouge montre la barrière d'énergie (energy barrier) SANS enzyme — très haute. La courbe verte montre la même réaction AVEC enzyme (catalyst) — la barrière est beaucoup plus basse. L'enzyme accélère la réaction sans être consommée." },
-      { file: "base-de-cinetique-enzymatique-illus-09.webp", caption: "Le cycle ATP/ADP : l'ATP (adénosine triphosphate) libère de l'énergie (energy) en perdant un phosphate pour devenir ADP. Cette énergie alimente le travail cellulaire (contraction musculaire, transport, synthèse). L'ADP est ensuite re-phosphorylé en ATP grâce au glucose." },
-      { file: "cinetique-enzymatique-illus-02.webp", caption: "Courbe de Michaelis-Menten : la vitesse de réaction (V, axe vertical) augmente avec la concentration de substrat ([S], axe horizontal), puis atteint un plateau = Vmax. Le Km correspond à la concentration de substrat où V = Vmax/2 — c'est une mesure de l'affinité enzyme-substrat." },
+      { svg: CycleATP },
+      { file: "base-de-cinetique-enzymatique-illus-08.webp", caption: "Profil énergétique d'une réaction : la courbe rouge = sans enzyme (barrière haute). La courbe verte = avec enzyme (barrière basse). L'enzyme accélère la réaction en abaissant l'énergie d'activation." },
+      { file: "cinetique-enzymatique-illus-02.webp", caption: "Courbe de Michaelis-Menten : la vitesse de réaction (V) augmente avec la concentration de substrat ([S]), puis atteint un plateau = Vmax. Km = concentration où V = Vmax/2 (mesure de l'affinité enzyme-substrat)." },
     ],
     intro: `Les enzymes sont les catalyseurs du vivant. Sans elles, les réactions biochimiques seraient des millions de fois trop lentes pour entretenir la vie. Chaque enzyme accélère une réaction précise en abaissant la barrière d'énergie nécessaire.
 
@@ -292,9 +300,9 @@ C'est grâce à cette régulation fine que la cellule adapte son métabolisme en
 
   "Les glucides": {
     images: [
-      { file: "glucides-et-lipides-illus-02.webp", caption: "Classification des glucides : les oses (monosaccharides = sucres simples) sont les briques de base. Les osides (oligosaccharides et polysaccharides) sont des chaînes d'oses liés. Exemples : glucose et fructose (oses), saccharose et lactose (diholosides), amidon et glycogène (polyholosides)." },
-      { file: "glucides-et-lipides-illus-08.webp", caption: "Cyclisation du glucose : la forme linéaire (à gauche, forme ouverte de Fischer) se referme spontanément en un cycle à 6 atomes (forme cyclique de Haworth, à droite). Le carbone 1 (C1) réagit avec le C5 pour former un hémiacétal. On obtient l'α-glucose ou le β-glucose selon la position du OH en C1." },
-      { file: "glucides-et-lipides-illus-19.webp", caption: "Structure du glycogène : un polymère très ramifié de glucose. Les unités de glucose sont liées en α(1→4) dans les chaînes droites, avec des branchements en α(1→6) tous les 8-12 résidus. C'est la réserve de glucose chez les animaux (stocké dans le foie et les muscles)." },
+      { file: "glucides-et-lipides-illus-02.webp", caption: "Classification des glucides : oses (sucres simples : glucose, fructose) et osides (assemblages d'oses : saccharose, amidon, glycogène, cellulose). La liaison entre deux oses = liaison osidique." },
+      { file: "glucides-et-lipides-illus-08.webp", caption: "Cyclisation du glucose : la forme ouverte (linéaire, à gauche) se referme en un cycle à 6 atomes (à droite). Le carbone 1 donne α-glucose ou β-glucose selon la position du OH. L'amidon contient du α-glucose, la cellulose du β-glucose." },
+      { file: "glucides-et-lipides-illus-19.webp", caption: "Structure du glycogène : un polymère très ramifié de glucose. Liaisons α(1→4) dans les chaînes + branchements α(1→6). Réserve de glucose chez les animaux (foie et muscles)." },
     ],
     intro: `Les glucides (ou « sucres ») sont des molécules essentielles au vivant. Ils fournissent l'énergie rapide (glucose), servent de réserve énergétique (glycogène), et entrent dans la composition de structures biologiques fondamentales (ADN, paroi cellulaire).
 
@@ -330,9 +338,9 @@ Le glucose cyclique existe sous deux formes : α-glucose et β-glucose, selon la
 
   "Les lipides": {
     images: [
-      { file: "glucides-et-lipides-illus-27.webp", caption: "Classification des lipides : deux grandes catégories — les lipides simples (acides gras, triglycérides) et les lipides complexes (phospholipides, sphingolipides, stéroïdes). Les lipides simples = énergie de réserve. Les lipides complexes = membranes et signalisation." },
-      { file: "glucides-et-lipides-illus-33.webp", caption: "La membrane cellulaire : une bicouche de phospholipides (phospholipid bilayer). Les têtes polaires (hydrophiles, cercles) sont vers l'eau, les queues d'acides gras (hydrophobes, traits) sont vers l'intérieur. On voit aussi le cholestérol (cholesterol) et les protéines membranaires (membrane proteins) enchâssées." },
-      { file: "glucides-et-lipides-illus-31.webp", caption: "Structure du cholestérol : 4 cycles carbonés liés (noyau stérane A-B-C-D), un groupement OH en position 3 (tête polaire), et une chaîne latérale hydrophobe. Le cholestérol est essentiel : il rigidifie les membranes et sert de précurseur aux hormones stéroïdiennes (cortisol, testostérone, œstrogènes)." },
+      { svg: MembraneCellulaire },
+      { file: "glucides-et-lipides-illus-27.webp", caption: "Classification des lipides : lipides simples (acides gras, triglycérides = réserve d'énergie) et lipides complexes (phospholipides = membranes, stéroïdes = hormones). Le cholestérol est un stéroïde essentiel." },
+      { file: "glucides-et-lipides-illus-31.webp", caption: "Structure du cholestérol : 4 cycles carbonés liés (noyau stérane), un groupement OH (tête polaire) et une queue hydrophobe. Précurseur des hormones stéroïdiennes (cortisol, testostérone, œstrogènes)." },
     ],
     intro: `Les lipides sont les molécules « grasses » du vivant. Ils sont insolubles dans l'eau mais solubles dans les solvants organiques. Loin d'être de simples réserves de graisse, ils jouent des rôles absolument essentiels : constitution des membranes cellulaires, signalisation, isolation thermique, et réserve d'énergie concentrée.`,
     sections: [
@@ -363,9 +371,9 @@ Le corps utilise d'abord le glucose, puis puise dans les réserves de glycogène
 
   "Introduction à la biochimie": {
     images: [
-      { file: "base-de-cinetique-enzymatique-illus-10.webp", caption: "Carte métabolique de la cellule : chaque point représente une molécule, chaque trait une réaction chimique catalysée par une enzyme. On voit les grandes voies : glycolyse (glycolysis), cycle de Krebs (TCA cycle), chaîne respiratoire. C'est l'ensemble des transformations chimiques qui font fonctionner la cellule." },
-      { file: "structures-secondaires-illus-03.webp", caption: "Les 4 niveaux de structure des protéines : primaire (primary = séquence d'acides aminés), secondaire (secondary = hélice alpha et feuillet bêta), tertiaire (tertiary = forme 3D globale), quaternaire (quaternary = assemblage de plusieurs chaînes)." },
-      { file: "base-de-cinetique-enzymatique-illus-02.webp", caption: "Vue 3D d'une enzyme : les différentes couleurs représentent les différentes sous-unités (chaînes polypeptidiques). La forme globale de l'enzyme crée une cavité = le site actif, où le substrat vient se fixer pour être transformé." },
+      { svg: NiveauxProteines },
+      { svg: CycleATP },
+      { file: "base-de-cinetique-enzymatique-illus-02.webp", caption: "Vue 3D d'une enzyme : les couleurs représentent les différentes sous-unités (chaînes polypeptidiques). La forme globale crée le site actif, une cavité où le substrat vient se fixer." },
     ],
     intro: `La biochimie, c'est la chimie du vivant. Elle étudie les molécules qui constituent les êtres vivants et les réactions chimiques qui les animent. C'est le pont entre la chimie et la biologie.
 

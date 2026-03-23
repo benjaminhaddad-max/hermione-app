@@ -22,34 +22,39 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
     );
   }
 
-  const imgs = curated.images.map(img => ({
-    src: IMAGE_BASE + (typeof img === "string" ? img : img.file),
-    caption: typeof img === "string" ? "" : img.caption || "",
-  }));
-
   return (
     <div className="fiche-page fiche-page-modern">
       <h2 className="fiche-titre-modern">
         <span className="fiche-souligne-vert">Schémas du chapitre</span>
       </h2>
       <p className="fc-schemas-count">
-        {imgs.length} illustration{imgs.length > 1 ? "s" : ""} clé{imgs.length > 1 ? "s" : ""} du cours
+        {curated.images.length} illustration{curated.images.length > 1 ? "s" : ""} clé{curated.images.length > 1 ? "s" : ""} du cours
       </p>
 
       <div className="fc-schemas-list">
-        {imgs.map((img, i) => (
-          <div key={i} className="fc-schema-item">
-            <img
-              src={img.src}
-              alt={img.caption || chapterTitle}
-              loading="lazy"
-              className="fc-schema-img"
-            />
-            {img.caption && (
-              <div className="fc-schema-caption">{img.caption}</div>
-            )}
-          </div>
-        ))}
+        {curated.images.map((img, i) => {
+          if (img.svg) {
+            const SvgComp = img.svg;
+            return (
+              <div key={i} className="fc-schema-item fc-schema-svg">
+                <SvgComp />
+              </div>
+            );
+          }
+          return (
+            <div key={i} className="fc-schema-item">
+              <img
+                src={IMAGE_BASE + img.file}
+                alt={img.caption || chapterTitle}
+                loading="lazy"
+                className="fc-schema-img"
+              />
+              {img.caption && (
+                <div className="fc-schema-caption">{img.caption}</div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

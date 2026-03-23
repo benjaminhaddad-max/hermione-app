@@ -39,6 +39,26 @@ function wrapBullets(elements) {
   return result;
 }
 
+function ImageBlock({ img, titre }) {
+  if (!img) return null;
+
+  if (img.svg) {
+    const SvgComp = img.svg;
+    return (
+      <div className="fc-illus fc-illus-svg">
+        <SvgComp />
+      </div>
+    );
+  }
+
+  return (
+    <div className="fc-illus">
+      <img src={IMAGE_BASE + img.file} alt={titre} loading="lazy" />
+      {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
+    </div>
+  );
+}
+
 export default function FichePage1Intro({ fiche, courseTitle }) {
   const titre = courseTitle || fiche?.page1_intro?.titre || "Introduction";
   const curated = FICHE_CURATED[titre];
@@ -66,22 +86,6 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
     );
   }
 
-  const imgs = curated.images.map(img => ({
-    src: IMAGE_BASE + (typeof img === "string" ? img : img.file),
-    caption: typeof img === "string" ? "" : img.caption || "",
-  }));
-
-  function ImageBlock({ idx }) {
-    const img = imgs[idx];
-    if (!img) return null;
-    return (
-      <div className="fc-illus">
-        <img src={img.src} alt={titre} loading="lazy" />
-        {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
-      </div>
-    );
-  }
-
   return (
     <div className="fiche-page fiche-page-modern fc-rich">
       <div className="fc-hero">
@@ -93,7 +97,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         {wrapBullets(renderParagraphs(curated.intro))}
       </div>
 
-      <ImageBlock idx={0} />
+      <ImageBlock img={curated.images[0]} titre={titre} />
 
       {curated.sections[0] && (
         <div className="fc-section">
@@ -102,7 +106,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      <ImageBlock idx={1} />
+      <ImageBlock img={curated.images[1]} titre={titre} />
 
       {curated.sections[1] && (
         <div className="fc-section">
@@ -111,7 +115,7 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      <ImageBlock idx={2} />
+      <ImageBlock img={curated.images[2]} titre={titre} />
 
       {curated.sections[2] && (
         <div className="fc-section">
