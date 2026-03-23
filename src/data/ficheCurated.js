@@ -1,14 +1,13 @@
 /**
  * Hand-picked images & enriched course text for each biochimie chapter.
- * ONLY images with French text (or no text at all). No English.
+ * ONLY simple, visual, illustrative images for a Terminale student.
+ * No formulas, no dense charts, no English, no poly pages.
  */
 
 const FICHE_CURATED = {
   "Structure et diversité du génome": {
     images: [
       { file: "acides-nucleiques-et-structure-des-genomes-illus-31.webp", caption: "Caryotype humain : les 46 chromosomes rangés par paires (22 paires d'autosomes + XX ou XY)." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-29-fr.webp", caption: "Composition du génome humain : taille des génomes et répartition des types de séquences." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-02.webp", caption: "Le génome : de la cellule au filament d'ADN. Structure comparée de l'ARN et de l'ADN." },
     ],
     intro: `Imagine que chacune de tes cellules contient un véritable « livre d'instructions » de 3 milliards de lettres. Ce livre, c'est ton génome — l'ensemble de ton ADN. Chez l'Homme, il est réparti sur 46 chromosomes (23 paires), rangés dans le noyau de chaque cellule.
 
@@ -44,9 +43,7 @@ Vocabulaire clé : locus (position sur un chromosome), allèles (variantes d'un 
 
   "Structure des acides nucléiques": {
     images: [
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-01.webp", caption: "La double hélice d'ADN en 3D : deux brins antiparallèles reliés par les paires de bases (A-T et C-G)." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-02.webp", caption: "Structure comparée de l'ARN et de l'ADN avec les 4 bases (Adénine, Thymine/Uracile, Guanine, Cytosine)." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-10.webp", caption: "Structure d'un nucléotide : sucre (pentose) + base azotée + groupement phosphate." },
+      { file: "acides-nucleiques-et-structure-des-genomes-illus-01.webp", caption: "La double hélice d'ADN : deux brins enroulés l'un autour de l'autre, reliés par les paires de bases." },
     ],
     intro: `L'ADN et l'ARN sont les deux types d'acides nucléiques. Ce sont les molécules qui stockent et transmettent l'information génétique. L'ADN est ta « clé USB » permanente, l'ARN est la « copie de travail » temporaire.
 
@@ -85,9 +82,8 @@ L'ARN existe sous plusieurs formes : ARNm (messager, copie d'un gène), ARNt (tr
 
   "La réplication de l'ADN": {
     images: [
-      { file: "replication-illus-15.webp", caption: "La fourche de réplication de l'ADN avec le brin discontinu et l'amorce." },
-      { file: "replication-illus-04.webp", caption: "Réplication semi-conservative : chaque nouvelle molécule contient un brin ancien (noir) et un brin neuf (rouge)." },
-      { file: "replication-illus-18.webp", caption: "Le raccourcissement des télomères à chaque division cellulaire, lié au vieillissement." },
+      { file: "replication-illus-04.webp", caption: "Réplication : la double hélice se sépare et chaque brin sert de modèle pour fabriquer un nouveau brin (en rouge)." },
+      { file: "replication-illus-18.webp", caption: "Les télomères raccourcissent à chaque division cellulaire → vieillissement de la cellule." },
     ],
     intro: `Avant chaque division cellulaire, la cellule doit copier l'intégralité de son ADN. Ce processus s'appelle la réplication. C'est un mécanisme d'une précision incroyable : sur 3 milliards de lettres copiées, il n'y a en moyenne qu'une erreur pour un milliard de nucléotides !
 
@@ -124,8 +120,7 @@ Exception : la télomérase (active dans les cellules souches et les cellules ca
 
   "La transcription": {
     images: [
-      { file: "transcription-et-traduction-illus-06.webp", caption: "La transcription : l'ARN polymérase lit l'ADN et fabrique l'ARN messager." },
-      { file: "transcription-et-traduction-illus-03.webp", caption: "Structure d'un gène eucaryote : promoteur, îlots CpG, boîte TATA, codon start (ATG) et stop (TAG)." },
+      { file: "transcription-et-traduction-illus-06.webp", caption: "La transcription en action : l'ARN polymérase glisse le long de l'ADN et fabrique un brin d'ARN." },
     ],
     intro: `La transcription est la première étape de l'expression d'un gène : l'ADN est « recopié » en ARN messager. C'est comme faire une photocopie d'une page du grand livre (ADN) pour l'envoyer aux usines à protéines (ribosomes).
 
@@ -162,9 +157,7 @@ La transcription (ADN→ARN) a lieu dans le noyau. L'ARNm mature sort ensuite pa
   },
 
   "La traduction": {
-    images: [
-      { file: "transcription-et-traduction-illus-19.webp", caption: "Le code génétique : chaque codon (3 bases) correspond à un acide aminé. AUG = start, UAA/UAG/UGA = stop." },
-    ],
+    images: [],
     intro: `La traduction, c'est le passage du langage des nucléotides (ARN) au langage des acides aminés (protéines). Les ribosomes « lisent » l'ARN messager trois lettres par trois lettres (codons) et assemblent la protéine correspondante.
 
 C'est la dernière étape du dogme central : ADN → ARN → Protéine.`,
@@ -202,10 +195,7 @@ Plusieurs ribosomes peuvent traduire le même ARNm simultanément (polyribosome)
   },
 
   "Les protéines": {
-    images: [
-      { file: "repliement-des-proteines-illus-14.webp", caption: "L'entonnoir énergétique du repliement : la protéine descend vers sa forme la plus stable (état natif)." },
-      { file: "base-de-cinetique-enzymatique-illus-02.webp", caption: "Structure 3D d'une enzyme : les couleurs = différentes sous-unités. La cavité centrale = site actif." },
-    ],
+    images: [],
     intro: `Les protéines sont les molécules « ouvrières » de la cellule. Enzymes, hormones, anticorps, transporteurs, récepteurs… tout est protéine. Elles sont fabriquées à partir de seulement 20 acides aminés différents, mais leur variété est quasi infinie.
 
 Comprendre les protéines, c'est comprendre comment la vie fonctionne au niveau moléculaire.`,
@@ -239,10 +229,7 @@ Si la forme change (dénaturation par la chaleur, le pH, etc.), la protéine per
   },
 
   "Métabolisme énergétique": {
-    images: [
-      { file: "cinetique-enzymatique-illus-02.webp", caption: "Courbe de Michaelis-Menten : la vitesse (V) augmente avec [S] puis atteint Vmax. Km = affinité enzyme-substrat." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-08.webp", caption: "Structure de l'adénosine triphosphate (ATP) : adénine + ribose + 3 groupements phosphate." },
-    ],
+    images: [],
     intro: `Les enzymes sont les catalyseurs du vivant. Sans elles, les réactions biochimiques seraient des millions de fois trop lentes pour entretenir la vie. Chaque enzyme accélère une réaction précise en abaissant la barrière d'énergie nécessaire.
 
 Le métabolisme énergétique, c'est l'ensemble des réactions qui permettent de produire et utiliser l'énergie cellulaire, principalement sous forme d'ATP.`,
@@ -285,11 +272,7 @@ C'est grâce à cette régulation fine que la cellule adapte son métabolisme en
   },
 
   "Les glucides": {
-    images: [
-      { file: "glucides-et-lipides-illus-02.webp", caption: "Classification des glucides : oses (sucres simples) et osides (assemblages d'oses)." },
-      { file: "glucides-et-lipides-illus-08.webp", caption: "Cyclisation du glucose : forme ouverte → cycle à 6 atomes (α ou β selon la position du OH en C1)." },
-      { file: "glucides-et-lipides-illus-19.webp", caption: "Structure du glycogène : polymère très ramifié de glucose. Réserve d'énergie chez les animaux." },
-    ],
+    images: [],
     intro: `Les glucides (ou « sucres ») sont des molécules essentielles au vivant. Ils fournissent l'énergie rapide (glucose), servent de réserve énergétique (glycogène), et entrent dans la composition de structures biologiques fondamentales (ADN, paroi cellulaire).
 
 Tout part d'une formule simple : Cn(H₂O)n — d'où le nom « hydrates de carbone ».`,
@@ -324,9 +307,7 @@ Le glucose cyclique existe sous deux formes : α-glucose et β-glucose, selon la
 
   "Les lipides": {
     images: [
-      { file: "glucides-et-lipides-illus-33.webp", caption: "La membrane cellulaire : bicouche de phospholipides avec cholestérol et protéines membranaires." },
-      { file: "glucides-et-lipides-illus-27.webp", caption: "Classification des lipides : simples (triglycérides) et complexes (phospholipides, stéroïdes)." },
-      { file: "glucides-et-lipides-illus-31.webp", caption: "Structure du cholestérol : 4 cycles carbonés, un OH polaire, une queue hydrophobe." },
+      { file: "glucides-et-lipides-illus-33.webp", caption: "La membrane cellulaire : bicouche de phospholipides avec cholestérol et protéines (tout en français)." },
     ],
     intro: `Les lipides sont les molécules « grasses » du vivant. Ils sont insolubles dans l'eau mais solubles dans les solvants organiques. Loin d'être de simples réserves de graisse, ils jouent des rôles absolument essentiels : constitution des membranes cellulaires, signalisation, isolation thermique, et réserve d'énergie concentrée.`,
     sections: [
@@ -356,10 +337,7 @@ Le corps utilise d'abord le glucose, puis puise dans les réserves de glycogène
   },
 
   "Introduction à la biochimie": {
-    images: [
-      { file: "base-de-cinetique-enzymatique-illus-02.webp", caption: "Structure 3D d'une enzyme : les couleurs = différentes sous-unités protéiques." },
-      { file: "acides-nucleiques-et-structure-des-genomes-illus-02.webp", caption: "Le génome : de la cellule à l'ADN. Les 4 bases azotées et la structure ARN vs ADN." },
-    ],
+    images: [],
     intro: `La biochimie, c'est la chimie du vivant. Elle étudie les molécules qui constituent les êtres vivants et les réactions chimiques qui les animent. C'est le pont entre la chimie et la biologie.
 
 En PASS/LAS, la biochimie est une matière incontournable. Ce chapitre d'introduction pose les bases : quelles sont les grandes familles de molécules du vivant, et comment s'organisent les réactions métaboliques ?`,
