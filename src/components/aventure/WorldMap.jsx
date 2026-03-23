@@ -36,12 +36,12 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
         <div className="map-onboard-tip">
           <div className="map-onboard-tip-arrow">👇</div>
           <div className="map-onboard-tip-content">
-            <strong>Comment ca marche ?</strong>
-            <p>Chaque bulle = un chapitre de <strong>{world.nom}</strong>. Tape dessus pour commencer !</p>
+            <strong>Comment ça marche ?</strong>
+            <p>Chaque bulle = un sortilège de <strong>{world.nom}</strong> à maîtriser. Tape dessus !</p>
             <div className="map-onboard-steps">
-              <span>📖 Lis la fiche</span>
+              <span>📜 Étudie le grimoire</span>
               <span className="map-onboard-arrow">→</span>
-              <span>✅ Reussis le QCM</span>
+              <span>⚗️ Réussis l'épreuve</span>
               <span className="map-onboard-arrow">→</span>
               <span>🔓 Niveau suivant</span>
             </div>
@@ -54,12 +54,12 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
         <span className="world-map-emoji">{world.emoji}</span>
         <div style={{ flex: 1 }}>
           <h3 className="world-map-nom">{world.nom}</h3>
-          <p className="world-map-desc">{world.levels.length} chapitres a maitriser</p>
+          <p className="world-map-desc">{world.levels.length} sortilèges à maîtriser</p>
           <div className="world-map-prog">
             <div className="world-map-prog-bar">
               <div className="world-map-prog-fill" style={{ width: `${world.progressPct}%`, background: world.color }} />
             </div>
-            <span className="world-map-prog-txt">{world.completedCount}/{world.totalLevels} reussis</span>
+            <span className="world-map-prog-txt">{world.completedCount}/{world.totalLevels} maîtrisés</span>
           </div>
         </div>
       </div>
@@ -71,13 +71,13 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
             <div className="map-reward-avatar">{nextMentor.mentor.emoji}</div>
           </div>
           <div className="map-reward-right">
-            <div className="map-reward-badge">🎁 Recompense a debloquer</div>
+            <div className="map-reward-badge">🧙 Mentor à débloquer</div>
             <strong className="map-reward-title">{nextMentor.mentor.name} — {nextMentor.mentor.rank}</strong>
             <p className="map-reward-desc">{nextMentor.mentor.specialty}</p>
             <p className="map-reward-how">
               {nextMentor.worldsNeeded === 1
-                ? "✨ Termine cette matiere pour chatter avec ce mentor !"
-                : `📚 Termine ${nextMentor.worldsNeeded} matieres pour debloquer ce chat`}
+                ? "✨ Termine ce cours pour débloquer ce mentor !"
+                : `📚 Termine ${nextMentor.worldsNeeded} cours pour débloquer ce mentor`}
             </p>
             <div className="map-reward-progress">
               {MENTORS.map((m) => (
@@ -132,14 +132,14 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
         {/* Gate fin de matiere */}
         {world.isComplete ? (
           <div className="map-gate unlocked">
-            <span className="map-gate-icon">🏰</span>
-            <span className="map-gate-label">Matiere terminee ! Bravo !</span>
+            <span className="map-gate-icon">🏆</span>
+            <span className="map-gate-label">Cours maîtrisé ! Mischief managed !</span>
           </div>
         ) : (
           <div className="map-gate locked">
-            <span className="map-gate-icon">🏁</span>
+            <span className="map-gate-icon">🔮</span>
             <span className="map-gate-label">
-              Termine les {world.totalLevels - world.completedCount} chapitre{world.totalLevels - world.completedCount > 1 ? "s" : ""} restant{world.totalLevels - world.completedCount > 1 ? "s" : ""} !
+              Encore {world.totalLevels - world.completedCount} sortilège{world.totalLevels - world.completedCount > 1 ? "s" : ""} à maîtriser !
             </span>
           </div>
         )}

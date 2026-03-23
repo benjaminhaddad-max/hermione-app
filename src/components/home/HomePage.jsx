@@ -73,12 +73,12 @@ export default function HomePage({ user, storage, onGoTo }) {
       <div className="hp-aventure-card">
         <div className="hp-aventure-glow" />
         <div className="hp-aventure-top">
-          <span className="hp-aventure-badge">🗺️ MODE AVENTURE</span>
+          <span className="hp-aventure-badge">🏰 POUDLARD MÉDECINE</span>
         </div>
-        <h3 className="hp-aventure-title">Révise tout le programme PASS/LAS comme un jeu vidéo</h3>
+        <h3 className="hp-aventure-title">Ta lettre d'admission est arrivée !</h3>
         <p className="hp-aventure-pitch">
-          Chaque matière est un <strong>monde</strong> à conquérir. Chaque chapitre est un <strong>niveau</strong>. 
-          Lis la fiche, réussis le QCM, valide les flashcards — et passe au suivant. 
+          Chaque matière est un <strong>cours à Poudlard</strong>. Chaque chapitre est un <strong>sortilège</strong> à maîtriser. 
+          Étudie le grimoire, réussis l'épreuve, maîtrise les cartes magiques — et débloque des mentors légendaires. 
           Chaque étape te rapporte des <strong>XP</strong> pour grimper au classement parmi 32 000 étudiants.
         </p>
 
@@ -86,46 +86,46 @@ export default function HomePage({ user, storage, onGoTo }) {
           <div className="hp-aventure-step">
             <div className="hp-aventure-step-num">1</div>
             <div>
-              <strong>Lis la fiche de cours</strong>
-              <span>Comprends les notions du chapitre</span>
+              <strong>📜 Étudie le grimoire</strong>
+              <span>Chaque fiche de cours est un sortilège à comprendre</span>
             </div>
           </div>
           <div className="hp-aventure-step-arrow">↓</div>
           <div className="hp-aventure-step">
             <div className="hp-aventure-step-num">2</div>
             <div>
-              <strong>Réussis le QCM (≥ 70%)</strong>
-              <span>Prouve que tu maîtrises pour débloquer la suite</span>
+              <strong>⚗️ Réussis l'épreuve (≥ 70%)</strong>
+              <span>Prouve ta maîtrise au QCM pour avancer</span>
             </div>
           </div>
           <div className="hp-aventure-step-arrow">↓</div>
           <div className="hp-aventure-step">
             <div className="hp-aventure-step-num">3</div>
             <div>
-              <strong>Valide les flashcards</strong>
-              <span>Mémorise durablement pour décrocher les 3 étoiles</span>
+              <strong>🃏 Maîtrise les cartes magiques</strong>
+              <span>Flashcards pour mémoriser et décrocher les 3 étoiles</span>
             </div>
           </div>
           <div className="hp-aventure-step-arrow">↓</div>
           <div className="hp-aventure-step hp-aventure-step-reward">
-            <div className="hp-aventure-step-num">🎁</div>
+            <div className="hp-aventure-step-num">🧙</div>
             <div>
-              <strong>Débloque un mentor PASS</strong>
-              <span>Finis un monde = accès chat avec un étudiant en médecine</span>
+              <strong>Débloque un mentor légendaire</strong>
+              <span>De Neville à Dumbledore, chaque mentor t'accompagne</span>
             </div>
           </div>
         </div>
 
         <div className="hp-aventure-bottom">
-          <span>🏰 {totalMatieres} mondes</span>
+          <span>🏰 {totalMatieres} cours</span>
           <span className="hp-aventure-dot">·</span>
-          <span>📚 {totalCours} niveaux</span>
+          <span>📜 {totalCours} sortilèges</span>
           <span className="hp-aventure-dot">·</span>
-          <span>💬 4 mentors à débloquer</span>
+          <span>🧙 4 mentors à débloquer</span>
         </div>
 
         <button className="hp-aventure-btn" onClick={() => onGoTo("aventure")}>
-          COMMENCER L'AVENTURE →
+          ENTRER À POUDLARD →
         </button>
       </div>
 

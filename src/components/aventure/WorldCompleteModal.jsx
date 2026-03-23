@@ -2,32 +2,31 @@ export default function WorldCompleteModal({ world, unlockedMentor, onDiscover, 
   return (
     <div className="level-modal-backdrop" onClick={onClose}>
       <div className="world-complete-modal" onClick={e => e.stopPropagation()}>
-        {/* Confetti effect */}
         <div className="confetti-container">
           {Array.from({ length: 20 }).map((_, i) => (
             <div key={i} className="confetti-piece" style={{
               left: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 2}s`,
-              backgroundColor: ["#C9A84C","#e05a2b","#2ecc71","#3498db","#9b59b6","#f39c12"][i % 6],
+              backgroundColor: ["#C9A84C","#740001","#2ecc71","#0E1A40","#946B2D","#222F5B"][i % 6],
             }} />
           ))}
         </div>
 
-        <div className="world-complete-icon">🎉</div>
+        <div className="world-complete-icon">🏆</div>
         <h2 className="world-complete-titre">
-          Monde termine !
+          Cours maîtrisé !
         </h2>
         <p className="world-complete-world">
           {world.emoji} {world.nom}
         </p>
         <p className="world-complete-stats">
-          {world.totalLevels} niveaux completes &middot;{" "}
-          {world.levels.reduce((s, l) => s + l.starCount, 0)}/{world.totalLevels * 3} etoiles
+          {world.totalLevels} sortilèges complétés &middot;{" "}
+          {world.levels.reduce((s, l) => s + l.starCount, 0)}/{world.totalLevels * 3} étoiles
         </p>
 
         {unlockedMentor && (
           <div className="world-complete-mentor">
-            <div className="mentor-unlock-badge">🔓 NOUVEAU MENTOR</div>
+            <div className="mentor-unlock-badge">🧙 NOUVEAU MENTOR DÉBLOQUÉ</div>
             <div className="mentor-unlock-card">
               <span className="mentor-unlock-emoji">{unlockedMentor.emoji}</span>
               <div>
@@ -37,7 +36,7 @@ export default function WorldCompleteModal({ world, unlockedMentor, onDiscover, 
             </div>
             <p className="mentor-unlock-bio">{unlockedMentor.bio}</p>
             <button className="mentor-discover-btn" onClick={onDiscover}>
-              💬 Decouvrir ton mentor
+              💬 Parler à {unlockedMentor.name}
             </button>
           </div>
         )}

@@ -4,21 +4,21 @@ export default function LevelFailModal({ score, total, onReread, onRetry, onClos
   return (
     <div className="level-modal-backdrop" onClick={onClose}>
       <div className="fail-modal" onClick={e => e.stopPropagation()}>
-        <div className="fail-modal-icon">😤</div>
-        <h3 className="fail-modal-titre">Pas encore...</h3>
+        <div className="fail-modal-icon">🧹</div>
+        <h3 className="fail-modal-titre">Le sortilège a échoué...</h3>
         <p className="fail-modal-score">
           Tu as obtenu <strong>{score}/{total}</strong> ({pct}%)
-          <br />Il faut au moins <strong>70%</strong> pour passer ce niveau.
+          <br />Il faut au moins <strong>70%</strong> pour maîtriser ce sortilège.
         </p>
         <p className="fail-modal-msg">
-          Pas de panique ! Relis la fiche de cours pour consolider tes connaissances, puis reessaye.
+          Même Hermione a dû s'y reprendre ! Relis le grimoire pour consolider tes connaissances, puis retente l'épreuve.
         </p>
         <div className="fail-modal-actions">
           <button className="fail-btn relire" onClick={onReread}>
-            📖 Relire la fiche
+            📜 Relire le grimoire
           </button>
           <button className="fail-btn retry" onClick={onRetry}>
-            🔄 Reessayer le QCM
+            🔄 Retenter l'épreuve
           </button>
         </div>
       </div>

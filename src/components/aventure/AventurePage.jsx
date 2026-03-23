@@ -169,50 +169,50 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
         <div className="aventure-intro">
           <div className="aventure-intro-glow" />
           <img src="/logo-hermione.webp" alt="Hermione" className="aventure-intro-logo" />
-          <h2 className="aventure-intro-title">Mode Aventure</h2>
-          <p className="aventure-intro-tagline">Anticipe ta 1re annee de medecine<br/>en passant des niveaux !</p>
+          <h2 className="aventure-intro-title">🧙 Bienvenue à Poudlard Médecine</h2>
+          <p className="aventure-intro-tagline">Ta lettre d'admission est arrivée !<br/>Explore les cours de Poudlard pour anticiper PASS/LAS.</p>
 
           <div className="aventure-intro-steps">
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">📖</span>
+              <span className="aventure-intro-step-icon">📜</span>
               <div>
-                <strong>Lis la fiche de cours</strong>
-                <p>Decouvre les notions essentielles de chaque chapitre PASS/LAS</p>
+                <strong>Étudie le grimoire</strong>
+                <p>Chaque fiche de cours est un sortilège à maîtriser</p>
               </div>
             </div>
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">✅</span>
+              <span className="aventure-intro-step-icon">⚗️</span>
               <div>
-                <strong>Reussis le QCM (&ge; 70%)</strong>
-                <p>Prouve que tu maitrises le chapitre pour passer au niveau suivant</p>
+                <strong>Réussis l'épreuve (≥ 70%)</strong>
+                <p>Prouve ta maîtrise au QCM pour avancer dans le château</p>
               </div>
             </div>
             <div className="aventure-intro-step">
               <span className="aventure-intro-step-icon">🃏</span>
               <div>
-                <strong>Domine les Flashcards</strong>
-                <p>Memorise durablement en maitrisant 80% des cartes</p>
+                <strong>Maîtrise les cartes magiques</strong>
+                <p>Les flashcards t'aident à mémoriser durablement</p>
               </div>
             </div>
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">💬</span>
+              <span className="aventure-intro-step-icon">🧙</span>
               <div>
-                <strong>Debloque des mentors PASS</strong>
-                <p>Progresse pour chatter avec des Top 100, Top 50, Top 10 et le Major !</p>
+                <strong>Débloque des mentors légendaires</strong>
+                <p>De Neville à Dumbledore, chaque mentor t'accompagne !</p>
               </div>
             </div>
           </div>
 
           <div className="aventure-intro-rewards">
-            <span>⭐ 3 etoiles par niveau</span>
+            <span>⭐ 3 étoiles par niveau</span>
             <span>·</span>
-            <span>🏰 8 mondes a explorer</span>
+            <span>🏰 {stats.totalWorlds} cours à Poudlard</span>
             <span>·</span>
-            <span>🏆 {stats.maxStars} etoiles au total</span>
+            <span>🧙 4 mentors à débloquer</span>
           </div>
 
           <button className="aventure-intro-btn" onClick={dismissIntro}>
-            COMMENCER L'AVENTURE →
+            ENTRER À POUDLARD →
           </button>
         </div>
       )}
@@ -223,8 +223,8 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
           <div className="aventure-header">
             <div className="aventure-header-top">
               <div>
-                <h2 className="aventure-header-title">🗺️ Aventure</h2>
-                <p className="aventure-header-sub">Anticipe PASS/LAS en passant des niveaux</p>
+                <h2 className="aventure-header-title">🏰 Poudlard Médecine</h2>
+                <p className="aventure-header-sub">Explore les cours et débloque des mentors</p>
               </div>
               <div className="aventure-stats-mini">
                 <span>⭐ {stats.totalStars}/{stats.maxStars}</span>
