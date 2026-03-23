@@ -71,7 +71,7 @@ export default function ClassementPage({ storage, onAddXP }) {
           { icon: "✅", label: "Finir un QCM", xp: XP_REWARDS.QCM_COMPLETE },
           { icon: "💯", label: "QCM score parfait", xp: XP_REWARDS.QCM_PERFECT },
           { icon: "🃏", label: "Session flashcards", xp: XP_REWARDS.FLASHCARD_SESSION },
-          { icon: "🔥", label: "Bonus streak quotidien", xp: XP_REWARDS.STREAK_BONUS },
+          { icon: "🔥", label: "Revenir chaque jour", xp: XP_REWARDS.STREAK_BONUS },
         ].map((r, i) => (
           <div key={i} className="xp-guide-row">
             <span className="xp-guide-icon">{r.icon}</span>
