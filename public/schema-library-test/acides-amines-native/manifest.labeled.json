@@ -1,0 +1,442 @@
+[
+  {
+    "id": "acides-amines-p01-i001",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 1,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p01-img001.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amine et carboxyle"
+  },
+  {
+    "id": "acides-amines-p01-i002",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 1,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p01-img002.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amino et carboxyle"
+  },
+  {
+    "id": "acides-amines-p02-i003",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 2,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p02-img003.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amino et carboxyle"
+  },
+  {
+    "id": "acides-amines-p04-i004",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 4,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p04-img004.jpeg",
+    "width": 890,
+    "height": 426,
+    "legende": "Tétrapeptide Ala-Tyr-Asp-Gly avec liaisons peptidiques et chaînes latérales caractéristiques"
+  },
+  {
+    "id": "acides-amines-p05-i005",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 5,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p05-img005.jpeg",
+    "width": 1083,
+    "height": 749,
+    "legende": "Classification des acides aminés essentiels et non essentiels chez l'homme"
+  },
+  {
+    "id": "acides-amines-p05-i006",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 5,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p05-img006.jpeg",
+    "width": 473,
+    "height": 540,
+    "legende": "Classification des vingt acides aminés selon leurs propriétés physicochimiques"
+  },
+  {
+    "id": "acides-amines-p08-i007",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 8,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p08-img007.png",
+    "width": 1038,
+    "height": 608,
+    "legende": "Formation de ponts disulfure par oxydation de deux résidus cystéine"
+  },
+  {
+    "id": "acides-amines-p10-i008",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 10,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p10-img008.jpeg",
+    "width": 640,
+    "height": 461,
+    "legende": "Structures chimiques des acides aminés non standard et de leurs dérivés"
+  },
+  {
+    "id": "acides-amines-p11-i009",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 11,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p11-img009.jpeg",
+    "width": 640,
+    "height": 303,
+    "legende": "Acides aminés non-protéiques et dérivés d'acides aminés aux fonctions biologiques spécialisées"
+  },
+  {
+    "id": "acides-amines-p11-i010",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 11,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p11-img010.jpeg",
+    "width": 734,
+    "height": 381,
+    "legende": "Structure chimique de l'ornithine et de la citrulline, acides aminés du métabolisme intermédiaire"
+  },
+  {
+    "id": "acides-amines-p12-i011",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 12,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p12-img011.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amino et carboxyle"
+  },
+  {
+    "id": "acides-amines-p13-i012",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 13,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p13-img012.jpeg",
+    "width": 640,
+    "height": 485,
+    "legende": "Structure de la lysine et de l'acide glutamique dans une chaîne peptidique"
+  },
+  {
+    "id": "acides-amines-p13-i013",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 13,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p13-img013.jpeg",
+    "width": 640,
+    "height": 243,
+    "legende": "Énantiomères séparés par un plan de symétrie illustrant la chiralité des acides aminés"
+  },
+  {
+    "id": "acides-amines-p14-i014",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 14,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p14-img014.jpeg",
+    "width": 380,
+    "height": 345,
+    "legende": "Structure générale d'un acide aminé avec carbone alpha central"
+  },
+  {
+    "id": "acides-amines-p15-i015",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 15,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p15-img015.jpeg",
+    "width": 554,
+    "height": 461,
+    "legende": "Énantiomères et diastéréoisomères de la thréonine avec leurs configurations L et D"
+  },
+  {
+    "id": "acides-amines-p16-i016",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img016.png",
+    "width": 494,
+    "height": 380,
+    "legende": "Échelle d'hydrophobicité des acides aminés selon Wimley et White"
+  },
+  {
+    "id": "acides-amines-p16-i017",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img017.png",
+    "width": 688,
+    "height": 512,
+    "legende": "Propriétés spectroscopiques d'absorption et de fluorescence des acides aminés aromatiques"
+  },
+  {
+    "id": "acides-amines-p16-i018",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img018.png",
+    "width": 741,
+    "height": 442,
+    "legende": "Classification des acides aminés selon leur hydrophobicité et polarité"
+  },
+  {
+    "id": "acides-amines-p17-i019",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 17,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p17-img019.jpeg",
+    "width": 470,
+    "height": 286,
+    "legende": "Structure générale d'un acide aminé sous forme zwitterionique à pH physiologique"
+  },
+  {
+    "id": "acides-amines-p21-i020",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 21,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p21-img020.jpeg",
+    "width": 1047,
+    "height": 718,
+    "legende": "Tableau des 20 acides aminés protéinogènes avec abréviations, pKa et points isoélectriques"
+  },
+  {
+    "id": "acides-amines-p21-i021",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 21,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p21-img021.jpeg",
+    "width": 711,
+    "height": 664,
+    "legende": "Courbe de titration du glutamate montrant les trois pKa caractéristiques"
+  },
+  {
+    "id": "acides-amines-p22-i022",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 22,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p22-img022.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amine et carboxyle"
+  },
+  {
+    "id": "acides-amines-p22-i023",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 22,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p22-img023.png",
+    "width": 718,
+    "height": 366,
+    "legende": "Réactions de dérivation des groupements aminés : protonation, alkylation, acylation et arylation"
+  },
+  {
+    "id": "acides-amines-p23-i024",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 23,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p23-img024.png",
+    "width": 736,
+    "height": 384,
+    "legende": "Modifications post-traductionnelles des chaînes latérales d'acides aminés : glycosylation, phosphorylation et iodation"
+  },
+  {
+    "id": "acides-amines-p23-i025",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 23,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p23-img025.jpeg",
+    "width": 446,
+    "height": 262,
+    "legende": "Modifications post-traductionnelles des protéines et leurs sites d'action spécifiques"
+  },
+  {
+    "id": "acides-amines-p24-i026",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img026.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amino et carboxyle"
+  },
+  {
+    "id": "acides-amines-p24-i027",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img027.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amine et carboxyle"
+  },
+  {
+    "id": "acides-amines-p24-i028",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img028.png",
+    "width": 806,
+    "height": 509,
+    "legende": "Structure générale d'un acide aminé avec groupement amino, carboxyle et chaîne latérale"
+  },
+  {
+    "id": "acides-amines-p25-i029",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 25,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p25-img029.jpeg",
+    "width": 997,
+    "height": 665,
+    "legende": "Formation de la liaison peptidique par condensation entre deux acides aminés"
+  },
+  {
+    "id": "acides-amines-p27-i030",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img030.jpeg",
+    "width": 455,
+    "height": 324,
+    "legende": "Représentation tridimensionnelle de la structure moléculaire d'un acide aminé"
+  },
+  {
+    "id": "acides-amines-p27-i031",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img031.jpeg",
+    "width": 455,
+    "height": 324,
+    "legende": "Structure tridimensionnelle d'un acide aminé avec groupements fonctionnels caractéristiques"
+  },
+  {
+    "id": "acides-amines-p27-i032",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img032.jpeg",
+    "width": 291,
+    "height": 375,
+    "legende": "Structure tridimensionnelle d'un acide aminé avec groupements fonctionnels et carbones alpha"
+  },
+  {
+    "id": "acides-amines-p27-i033",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img033.jpeg",
+    "width": 309,
+    "height": 374,
+    "legende": "Représentation tridimensionnelle d'un acide aminé avec carbone alpha central"
+  },
+  {
+    "id": "acides-amines-p28-i034",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img034.jpeg",
+    "width": 376,
+    "height": 281,
+    "legende": "Structure tridimensionnelle d'un acide aminé en conformation trans"
+  },
+  {
+    "id": "acides-amines-p28-i035",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img035.jpeg",
+    "width": 376,
+    "height": 251,
+    "legende": "Structure tridimensionnelle d'un acide aminé avec angles dièdres phi et psi"
+  },
+  {
+    "id": "acides-amines-p28-i036",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img036.jpeg",
+    "width": 946,
+    "height": 285,
+    "legende": "Structure tridimensionnelle d'un feuillet bêta avec liaisons hydrogène interbrins"
+  },
+  {
+    "id": "acides-amines-p29-i037",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 29,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p29-img037.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amine et carboxyle"
+  },
+  {
+    "id": "acides-amines-p30-i038",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 30,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p30-img038.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec fonction amine et carboxyle"
+  },
+  {
+    "id": "acides-amines-p30-i039",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 30,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p30-img039.png",
+    "width": 993,
+    "height": 244,
+    "legende": "Formation de liaison peptidique entre fonction γ carboxylique du glutamate et cystéine"
+  },
+  {
+    "id": "acides-amines-p31-i040",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 31,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p31-img040.png",
+    "width": 461,
+    "height": 340,
+    "legende": "Structure primaire de l'ocytocine et de la vasopressine avec pont disulfure"
+  },
+  {
+    "id": "acides-amines-p32-i041",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 32,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p32-img041.jpeg",
+    "width": 557,
+    "height": 275,
+    "legende": "Structure d'un peptide cyclique montrant les liaisons peptidiques et chaînes latérales"
+  },
+  {
+    "id": "acides-amines-p33-i042",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img042.jpeg",
+    "width": 943,
+    "height": 611,
+    "legende": "Structure générale d'un acide aminé avec groupement amino et carboxyle"
+  },
+  {
+    "id": "acides-amines-p33-i043",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img043.png",
+    "width": 509,
+    "height": 342,
+    "legende": "Maturation de la proinsuline en insuline par formation de ponts disulfure"
+  },
+  {
+    "id": "acides-amines-p33-i044",
+    "matiere": "Biochimie",
+    "chapter": "Acides amines",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img044.png",
+    "width": 448,
+    "height": 340,
+    "legende": "Maturation de la préproinsuline en proinsuline par clivage du peptide signal"
+  }
+]

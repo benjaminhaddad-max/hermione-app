@@ -1,0 +1,374 @@
+[
+  {
+    "id": "acides-amines-p01-img001",
+    "page": 1,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p01-img001.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p01-img001.jpeg"
+  },
+  {
+    "id": "acides-amines-p01-img002",
+    "page": 1,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p01-img002.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p01-img002.jpeg"
+  },
+  {
+    "id": "acides-amines-p02-img003",
+    "page": 2,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p02-img003.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p02-img003.jpeg"
+  },
+  {
+    "id": "acides-amines-p04-img004",
+    "page": 4,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p04-img004.jpeg",
+    "width": 890,
+    "height": 426,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p04-img004.jpeg"
+  },
+  {
+    "id": "acides-amines-p05-img005",
+    "page": 5,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p05-img005.jpeg",
+    "width": 1083,
+    "height": 749,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p05-img005.jpeg"
+  },
+  {
+    "id": "acides-amines-p05-img006",
+    "page": 5,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p05-img006.jpeg",
+    "width": 473,
+    "height": 540,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p05-img006.jpeg"
+  },
+  {
+    "id": "acides-amines-p08-img007-tile01",
+    "page": 8,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p08-img007-tile01.png",
+    "width": 784,
+    "height": 298,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p08-img007-tile01.png",
+    "parent_file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p08-img007.png"
+  },
+  {
+    "id": "acides-amines-p08-img007-tile02",
+    "page": 8,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p08-img007-tile02.png",
+    "width": 803,
+    "height": 218,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p08-img007-tile02.png",
+    "parent_file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p08-img007.png"
+  },
+  {
+    "id": "acides-amines-p10-img008",
+    "page": 10,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p10-img008.jpeg",
+    "width": 640,
+    "height": 461,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p10-img008.jpeg"
+  },
+  {
+    "id": "acides-amines-p11-img009",
+    "page": 11,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p11-img009.jpeg",
+    "width": 640,
+    "height": 303,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p11-img009.jpeg"
+  },
+  {
+    "id": "acides-amines-p11-img010",
+    "page": 11,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p11-img010.jpeg",
+    "width": 734,
+    "height": 381,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p11-img010.jpeg"
+  },
+  {
+    "id": "acides-amines-p12-img011",
+    "page": 12,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p12-img011.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p12-img011.jpeg"
+  },
+  {
+    "id": "acides-amines-p13-img012",
+    "page": 13,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p13-img012.jpeg",
+    "width": 640,
+    "height": 485,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p13-img012.jpeg"
+  },
+  {
+    "id": "acides-amines-p13-img013",
+    "page": 13,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p13-img013.jpeg",
+    "width": 640,
+    "height": 243,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p13-img013.jpeg"
+  },
+  {
+    "id": "acides-amines-p14-img014",
+    "page": 14,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p14-img014.jpeg",
+    "width": 380,
+    "height": 345,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p14-img014.jpeg"
+  },
+  {
+    "id": "acides-amines-p15-img015",
+    "page": 15,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p15-img015.jpeg",
+    "width": 554,
+    "height": 461,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p15-img015.jpeg"
+  },
+  {
+    "id": "acides-amines-p16-img016",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img016.png",
+    "width": 494,
+    "height": 380,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p16-img016.png"
+  },
+  {
+    "id": "acides-amines-p16-img017",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img017.png",
+    "width": 688,
+    "height": 512,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p16-img017.png"
+  },
+  {
+    "id": "acides-amines-p16-img018",
+    "page": 16,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p16-img018.png",
+    "width": 741,
+    "height": 442,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p16-img018.png"
+  },
+  {
+    "id": "acides-amines-p17-img019",
+    "page": 17,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p17-img019.jpeg",
+    "width": 470,
+    "height": 286,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p17-img019.jpeg"
+  },
+  {
+    "id": "acides-amines-p21-img020",
+    "page": 21,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p21-img020.jpeg",
+    "width": 1047,
+    "height": 718,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p21-img020.jpeg"
+  },
+  {
+    "id": "acides-amines-p21-img021-tile01",
+    "page": 21,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p21-img021-tile01.png",
+    "width": 257,
+    "height": 440,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p21-img021-tile01.png",
+    "parent_file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p21-img021.jpeg"
+  },
+  {
+    "id": "acides-amines-p21-img021-tile02",
+    "page": 21,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p21-img021-tile02.png",
+    "width": 238,
+    "height": 438,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p21-img021-tile02.png",
+    "parent_file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p21-img021.jpeg"
+  },
+  {
+    "id": "acides-amines-p22-img022",
+    "page": 22,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p22-img022.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p22-img022.jpeg"
+  },
+  {
+    "id": "acides-amines-p22-img023",
+    "page": 22,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p22-img023.png",
+    "width": 718,
+    "height": 366,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p22-img023.png"
+  },
+  {
+    "id": "acides-amines-p23-img024",
+    "page": 23,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p23-img024.png",
+    "width": 736,
+    "height": 384,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p23-img024.png"
+  },
+  {
+    "id": "acides-amines-p23-img025",
+    "page": 23,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p23-img025.jpeg",
+    "width": 446,
+    "height": 262,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p23-img025.jpeg"
+  },
+  {
+    "id": "acides-amines-p24-img026",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img026.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p24-img026.jpeg"
+  },
+  {
+    "id": "acides-amines-p24-img027",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img027.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p24-img027.jpeg"
+  },
+  {
+    "id": "acides-amines-p24-img028",
+    "page": 24,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p24-img028.png",
+    "width": 806,
+    "height": 509,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p24-img028.png"
+  },
+  {
+    "id": "acides-amines-p25-img029",
+    "page": 25,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p25-img029.jpeg",
+    "width": 997,
+    "height": 665,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p25-img029.jpeg"
+  },
+  {
+    "id": "acides-amines-p27-img030",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img030.jpeg",
+    "width": 455,
+    "height": 324,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p27-img030.jpeg"
+  },
+  {
+    "id": "acides-amines-p27-img031",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img031.jpeg",
+    "width": 455,
+    "height": 324,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p27-img031.jpeg"
+  },
+  {
+    "id": "acides-amines-p27-img032",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img032.jpeg",
+    "width": 291,
+    "height": 375,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p27-img032.jpeg"
+  },
+  {
+    "id": "acides-amines-p27-img033",
+    "page": 27,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p27-img033.jpeg",
+    "width": 309,
+    "height": 374,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p27-img033.jpeg"
+  },
+  {
+    "id": "acides-amines-p28-img034",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img034.jpeg",
+    "width": 376,
+    "height": 281,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p28-img034.jpeg"
+  },
+  {
+    "id": "acides-amines-p28-img035",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img035.jpeg",
+    "width": 376,
+    "height": 251,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p28-img035.jpeg"
+  },
+  {
+    "id": "acides-amines-p28-img036",
+    "page": 28,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p28-img036.jpeg",
+    "width": 946,
+    "height": 285,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p28-img036.jpeg"
+  },
+  {
+    "id": "acides-amines-p29-img037",
+    "page": 29,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p29-img037.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p29-img037.jpeg"
+  },
+  {
+    "id": "acides-amines-p30-img038",
+    "page": 30,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p30-img038.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p30-img038.jpeg"
+  },
+  {
+    "id": "acides-amines-p30-img039",
+    "page": 30,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p30-img039.png",
+    "width": 993,
+    "height": 244,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p30-img039.png"
+  },
+  {
+    "id": "acides-amines-p31-img040",
+    "page": 31,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p31-img040.png",
+    "width": 461,
+    "height": 340,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p31-img040.png"
+  },
+  {
+    "id": "acides-amines-p32-img041",
+    "page": 32,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p32-img041.jpeg",
+    "width": 557,
+    "height": 275,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p32-img041.jpeg"
+  },
+  {
+    "id": "acides-amines-p33-img042",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img042.jpeg",
+    "width": 943,
+    "height": 611,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p33-img042.jpeg"
+  },
+  {
+    "id": "acides-amines-p33-img043",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img043.png",
+    "width": 509,
+    "height": 342,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p33-img043.png"
+  },
+  {
+    "id": "acides-amines-p33-img044",
+    "page": 33,
+    "image": "/schema-library-test/acides-amines-native/acides-amines-p33-img044.png",
+    "width": 448,
+    "height": 340,
+    "file": "/Users/benjaminhaddad-diplomasante/Desktop/Plateformes Ben/hermione-app-main/public/schema-library-test/acides-amines-native/acides-amines-p33-img044.png"
+  }
+]

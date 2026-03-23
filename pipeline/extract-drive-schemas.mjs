@@ -109,6 +109,13 @@ async function listPdfsRecursively(drive, folderId, trail = []) {
   return pdfs;
 }
 
+function isRelevantSchemaPdf(pdfName) {
+  const name = String(pdfName || "").toLowerCase();
+  if (!name.endsWith(".pdf")) return false;
+  if (/^(fcds[_\-\s]|fiche[_\-\s]*de[_\-\s]*cours)/i.test(name)) return true;
+  return false;
+}
+
 async function downloadPdfBuffer(drive, fileId) {
   const res = await drive.files.get(
     { fileId, alt: "media", supportsAllDrives: true },
@@ -153,6 +160,58 @@ function unionRects(rects) {
   return [x0, y0, x1, y1];
 }
 
+function intersectsOrNear(a, b, margin = 0.015, pageRect = [0, 0, 1, 1]) {
+  const [px0, py0, px1, py1] = pageRect;
+  const pageW = Math.max(1e-6, px1 - px0);
+  const pageH = Math.max(1e-6, py1 - py0);
+  const dx = Math.max(0, Math.max(a[0] - b[2], b[0] - a[2]));
+  const dy = Math.max(0, Math.max(a[1] - b[3], b[1] - a[3]));
+  const nx = dx / pageW;
+  const ny = dy / pageH;
+  return nx <= margin && ny <= margin;
+}
+
+function mergeNearbyRects(rects, pageRect) {
+  const pending = [...rects];
+  const merged = [];
+  while (pending.length) {
+    let current = pending.shift();
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (let i = pending.length - 1; i >= 0; i -= 1) {
+        if (intersectsOrNear(current, pending[i], 0.018, pageRect)) {
+          current = unionRects([current, pending[i]]);
+          pending.splice(i, 1);
+          changed = true;
+        }
+      }
+    }
+    merged.push(current);
+  }
+  return merged;
+}
+
+function overlapArea(a, b) {
+  const x0 = Math.max(a[0], b[0]);
+  const y0 = Math.max(a[1], b[1]);
+  const x1 = Math.min(a[2], b[2]);
+  const y1 = Math.min(a[3], b[3]);
+  if (x1 <= x0 || y1 <= y0) return 0;
+  return (x1 - x0) * (y1 - y0);
+}
+
+function textCoverageRatio(targetRect, textRects) {
+  if (!targetRect || !Array.isArray(textRects) || !textRects.length) return 0;
+  const area = rectArea(targetRect);
+  if (area <= 0) return 0;
+  let covered = 0;
+  for (const t of textRects) {
+    covered += overlapArea(targetRect, t);
+  }
+  return covered / area;
+}
+
 function scoreCandidate(rect, pageRect, keywordBoost) {
   const [px0, py0, px1, py1] = pageRect;
   const pageW = px1 - px0;
@@ -181,36 +240,33 @@ function detectSchemaRects(page) {
   const hasSchemaKeyword = /(schema|sch[ée]ma|figure|diagramme|illustration|legende|courbe|circuit|mecanisme)/i.test(pageText);
 
   const imageRects = [];
-  const vectorRects = [];
+  const textRects = [];
+  let charCount = 0;
   st.walk({
     onImageBlock: (bbox) => {
-      if (rectArea(bbox) > pageArea * 0.02) imageRects.push(bbox);
+      const areaRatio = rectArea(bbox) / pageArea;
+      // Ultra-strict mode: keep only standalone illustration-like blocks.
+      if (areaRatio >= 0.02 && areaRatio <= 0.28) {
+        imageRects.push(bbox);
+      }
     },
-    onVector: (bbox) => {
-      if (rectArea(bbox) > pageArea * 0.002) vectorRects.push(bbox);
+    beginTextBlock: (bbox) => {
+      if (rectArea(bbox) > pageArea * 0.001) textRects.push(bbox);
+    },
+    onChar: () => {
+      charCount += 1;
     },
   });
 
-  const candidates = [];
-  for (const r of imageRects) candidates.push(r);
-  if (vectorRects.length >= 10) {
-    const u = unionRects(vectorRects);
-    if (u) candidates.push(u);
-  }
+  const candidates = imageRects
+    .map((r) => expandRect(r, pageRect, 0.005))
+    .map((r) => ({ rect: r, score: scoreCandidate(r, pageRect, hasSchemaKeyword) }))
+    .filter((x) => x.score > -100)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5)
+    .map((x) => x.rect);
 
-  if (!candidates.length) return { hasSchemaKeyword, rect: null, pageRect };
-
-  let best = null;
-  let bestScore = -9999;
-  for (const r of candidates) {
-    const e = expandRect(r, pageRect, 0.04);
-    const s = scoreCandidate(e, pageRect, hasSchemaKeyword);
-    if (s > bestScore) {
-      bestScore = s;
-      best = e;
-    }
-  }
-  return { hasSchemaKeyword, rect: best, pageRect };
+  return { hasSchemaKeyword, rects: candidates, pageRect, textRects, charCount };
 }
 
 function toPixelRect(pdfRect, pageRect, scale, pixWidth, pixHeight) {
@@ -228,12 +284,24 @@ function toPixelRect(pdfRect, pageRect, scale, pixWidth, pixHeight) {
   };
 }
 
+function normalizedToPdfRect(normRect, pageRect) {
+  const [px0, py0, px1, py1] = pageRect;
+  const pageW = px1 - px0;
+  const pageH = py1 - py0;
+  const x0 = px0 + normRect.x * pageW;
+  const x1 = px0 + (normRect.x + normRect.w) * pageW;
+  const y1 = py1 - normRect.y * pageH;
+  const y0 = py1 - (normRect.y + normRect.h) * pageH;
+  return clampRect([x0, y0, x1, y1], pageRect);
+}
+
 async function extractSchemasFromPdfBuffer(pdfBuffer, options = {}) {
   const scale = options.scale || 2;
   const maxPages = options.maxPages || 0;
   const startedAt = Date.now();
   const maxPdfMs = (options.maxPdfSeconds || 90) * 1000;
   const detectWithAI = options.detectWithAI || null;
+  const validateCropWithAI = options.validateCropWithAI || null;
   const doc = mupdf.Document.openDocument(new Uint8Array(pdfBuffer), "application/pdf");
   const total = doc.countPages();
   const results = [];
@@ -252,49 +320,84 @@ async function extractSchemasFromPdfBuffer(pdfBuffer, options = {}) {
       const pixW = meta.width || 1;
       const pixH = meta.height || 1;
 
-      let crop = null;
-      if (det.rect) {
-        crop = toPixelRect(det.rect, det.pageRect, scale, pixW, pixH);
+      const cropCandidates = [];
+      if (Array.isArray(det.rects) && det.rects.length) {
+        for (const pdfRect of det.rects) {
+          const coverage = textCoverageRatio(pdfRect, det.textRects);
+          const veryTextHeavyPage = det.charCount > 2600;
+          // Ultra-strict filtering: keep only low-text illustration zones.
+          if (coverage > 0.08) continue;
+          if (veryTextHeavyPage && coverage > 0.05) continue;
+          cropCandidates.push({
+            crop: toPixelRect(pdfRect, det.pageRect, scale, pixW, pixH),
+            cropPdfRect: pdfRect,
+            cropSource: "image-block",
+            textCoverage: coverage,
+          });
+        }
       } else if (det.hasSchemaKeyword && detectWithAI) {
         const aiRect = await detectWithAI(pngBytes);
         if (aiRect) {
-          crop = {
-            left: Math.max(0, Math.floor(aiRect.x * pixW)),
-            top: Math.max(0, Math.floor(aiRect.y * pixH)),
-            width: Math.max(1, Math.floor(aiRect.w * pixW)),
-            height: Math.max(1, Math.floor(aiRect.h * pixH)),
-          };
+          const aiPdfRect = normalizedToPdfRect(aiRect, det.pageRect);
+          const coverage = textCoverageRatio(aiPdfRect, det.textRects);
+          const veryTextHeavyPage = det.charCount > 2600;
+          if (coverage > 0.08) continue;
+          if (veryTextHeavyPage && coverage > 0.05) continue;
+          cropCandidates.push({
+            crop: {
+              left: Math.max(0, Math.floor(aiRect.x * pixW)),
+              top: Math.max(0, Math.floor(aiRect.y * pixH)),
+              width: Math.max(1, Math.floor(aiRect.w * pixW)),
+              height: Math.max(1, Math.floor(aiRect.h * pixH)),
+            },
+            cropPdfRect: aiPdfRect,
+            cropSource: "ai",
+            textCoverage: coverage,
+          });
         }
       }
 
-      if (!crop) continue;
-      if (!Number.isFinite(crop.left) || !Number.isFinite(crop.top) || !Number.isFinite(crop.width) || !Number.isFinite(crop.height)) {
-        continue;
+      for (const cand of cropCandidates) {
+        const crop = { ...cand.crop };
+        if (!Number.isFinite(crop.left) || !Number.isFinite(crop.top) || !Number.isFinite(crop.width) || !Number.isFinite(crop.height)) {
+          continue;
+        }
+
+        crop.left = Math.max(0, Math.min(pixW - 1, Math.floor(crop.left)));
+        crop.top = Math.max(0, Math.min(pixH - 1, Math.floor(crop.top)));
+        crop.width = Math.max(1, Math.floor(crop.width));
+        crop.height = Math.max(1, Math.floor(crop.height));
+        if (crop.left + crop.width > pixW) crop.width = Math.max(1, pixW - crop.left);
+        if (crop.top + crop.height > pixH) crop.height = Math.max(1, pixH - crop.top);
+        if (crop.width < 2 || crop.height < 2) continue;
+
+        const areaRatio = (crop.width * crop.height) / (pixW * pixH);
+        const heightRatio = crop.height / pixH;
+        // Strict anti full-page/table safeguard.
+        if (areaRatio > 0.32 || heightRatio > 0.75) continue;
+
+        const baseImage = sharp(pngBytes)
+          .extract(crop)
+          .trim({ threshold: 8 })
+          .resize({ width: 1400, withoutEnlargement: true });
+        const schemaPreviewPng = await baseImage.png().toBuffer();
+
+        const outMeta = await sharp(schemaPreviewPng).metadata();
+        if ((outMeta.width || 0) < 180 || (outMeta.height || 0) < 120) continue;
+        if (validateCropWithAI) {
+          const keep = await validateCropWithAI(schemaPreviewPng);
+          if (!keep) continue;
+        }
+        const schemaOnly = await sharp(schemaPreviewPng).webp({ quality: 92 }).toBuffer();
+
+        results.push({
+          page: pageIndex + 1,
+          image: schemaOnly,
+          cropPdfRect: cand.cropPdfRect,
+          cropSource: cand.cropSource,
+          textCoverage: cand.textCoverage,
+        });
       }
-
-      crop.left = Math.max(0, Math.min(pixW - 1, Math.floor(crop.left)));
-      crop.top = Math.max(0, Math.min(pixH - 1, Math.floor(crop.top)));
-      crop.width = Math.max(1, Math.floor(crop.width));
-      crop.height = Math.max(1, Math.floor(crop.height));
-      if (crop.left + crop.width > pixW) crop.width = Math.max(1, pixW - crop.left);
-      if (crop.top + crop.height > pixH) crop.height = Math.max(1, pixH - crop.top);
-      if (crop.width < 2 || crop.height < 2) continue;
-
-      const schemaOnly = await sharp(pngBytes)
-        .extract(crop)
-        .trim({ threshold: 8 })
-        .resize({ width: 1400, withoutEnlargement: true })
-        .webp({ quality: 92 })
-        .toBuffer();
-
-      const outMeta = await sharp(schemaOnly).metadata();
-      if ((outMeta.width || 0) < 180 || (outMeta.height || 0) < 120) continue;
-
-      results.push({
-        page: pageIndex + 1,
-        image: schemaOnly,
-        cropPdfRect: det.rect,
-      });
     } catch (e) {
       console.warn(`    page ${pageIndex + 1} skipped (${e.message})`);
       continue;
@@ -317,6 +420,8 @@ function extractFirstJsonObject(text) {
 }
 
 function createClaudeSchemaDetector() {
+  const useAiDetector = process.env.SCHEMA_DETECTOR_AI !== "0";
+  if (!useAiDetector) return null;
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return null;
   const anthropic = new Anthropic({ apiKey });
@@ -325,7 +430,10 @@ function createClaudeSchemaDetector() {
   return async function detectSchemaRectWithClaude(pngBuffer) {
     const b64 = Buffer.from(pngBuffer).toString("base64");
     const prompt =
-      "Detect the main educational diagram zone only. " +
+      "Detect one main illustration-only zone (photo, biological drawing, anatomy illustration, chart image). " +
+      "Exclude long paragraphs, bullet lists, exercise text blocks, page headers/footers and large tables. " +
+      "Exclude isolated equations/formulas and text-only snippets. " +
+      "Keep only the core visual schema/figure. " +
       "Return strict JSON only: " +
       '{"has_schema":true|false,"bbox":{"x":0..1,"y":0..1,"w":0..1,"h":0..1}} ' +
       "x,y,w,h are normalized image coordinates. " +
@@ -367,6 +475,48 @@ function createClaudeSchemaDetector() {
   };
 }
 
+function createClaudeSchemaValidator() {
+  const useAiValidator = process.env.SCHEMA_VALIDATOR_AI !== "0";
+  if (!useAiValidator) return null;
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return null;
+  const anthropic = new Anthropic({ apiKey });
+  const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-20250514";
+
+  return async function validateSchemaCropWithClaude(pngBuffer) {
+    const b64 = Buffer.from(pngBuffer).toString("base64");
+    const prompt =
+      "Decide if this crop is a true standalone illustration/schematic figure. " +
+      "Reject text-heavy blocks, formulas/equations, paragraphs, tables, and mixed page snippets. " +
+      "Return strict JSON only: {\"keep\":true|false}.";
+
+    const msg = await anthropic.messages.create({
+      model,
+      max_tokens: 80,
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: prompt },
+            {
+              type: "image",
+              source: {
+                type: "base64",
+                media_type: "image/png",
+                data: b64,
+              },
+            },
+          ],
+        },
+      ],
+    });
+    const text = msg.content?.[0]?.text || "";
+    const parsed = extractFirstJsonObject(text);
+    if (!parsed || typeof parsed.keep !== "boolean") return false;
+    return parsed.keep;
+  };
+}
+
 async function main() {
   loadEnv();
   const { folder, maxPages, maxPdfSeconds } = parseArgs();
@@ -379,8 +529,19 @@ async function main() {
   const auth = await getAuthClient();
   const drive = google.drive({ version: "v3", auth });
   const detectWithAI = createClaudeSchemaDetector();
+  const validateCropWithAI = createClaudeSchemaValidator();
   const matieres = await listFolders(drive, folder);
   const manifest = [];
+
+  function deriveChapterFromPdfName(name) {
+    return String(name || "")
+      .replace(/\.pdf$/i, "")
+      .replace(/^fcds[_\-\s]*/i, "")
+      .replace(/^fiche\s*de\s*cours[_\-\s]*/i, "")
+      .replace(/[_-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
 
   console.log(`Scanning ${matieres.length} subject folders...`);
   for (const mat of matieres) {
@@ -389,9 +550,10 @@ async function main() {
     ensureDir(matOut);
 
     const pdfs = await listPdfsRecursively(drive, mat.id, [mat.name]);
-    console.log(`- ${mat.name}: ${pdfs.length} pdf`);
+    const relevantPdfs = pdfs.filter((p) => isRelevantSchemaPdf(p.name));
+    console.log(`- ${mat.name}: ${relevantPdfs.length}/${pdfs.length} pdf pertinents`);
 
-    for (const pdf of pdfs) {
+    for (const pdf of relevantPdfs) {
       try {
         console.log(`  > ${pdf.name}`);
         const pdfSlug = slugify(pdf.name.replace(/\.pdf$/i, ""));
@@ -400,6 +562,7 @@ async function main() {
           maxPages,
           maxPdfSeconds,
           detectWithAI,
+          validateCropWithAI,
         });
         if (!schemas.length) continue;
 
@@ -413,8 +576,12 @@ async function main() {
             id: `${matSlug}-${pdfSlug}-p${s.page}-s${i}`,
             matiere: mat.name,
             sourcePdf: pdf.name,
+            chapter: deriveChapterFromPdfName(pdf.name),
+            legende: `Schema ${i} — ${deriveChapterFromPdfName(pdf.name)} (p.${s.page})`,
             page: s.page,
             image: `/schema-library/${matSlug}/${fileName}`,
+            cropSource: s.cropSource || "unknown",
+            textCoverage: Number.isFinite(s.textCoverage) ? Number(s.textCoverage.toFixed(4)) : null,
           });
         }
         console.log(`    extracted: ${schemas.length}`);

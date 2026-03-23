@@ -33,14 +33,7 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
 
       <div className="fc-schemas-list">
         {curated.images.map((img, i) => {
-          if (img.svg) {
-            const SvgComp = img.svg;
-            return (
-              <div key={i} className="fc-schema-item fc-schema-svg">
-                <SvgComp />
-              </div>
-            );
-          }
+          const translations = img.translations ? Object.entries(img.translations) : [];
           return (
             <div key={i} className="fc-schema-item">
               <img
@@ -51,6 +44,20 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
               />
               {img.caption && (
                 <div className="fc-schema-caption">{img.caption}</div>
+              )}
+              {translations.length > 0 && (
+                <div className="fc-illus-trad">
+                  <div className="fc-trad-title">🇫🇷 Traduction :</div>
+                  <div className="fc-trad-grid">
+                    {translations.map(([en, fr], j) => (
+                      <div key={j} className="fc-trad-row">
+                        <span className="fc-trad-en">{en}</span>
+                        <span className="fc-trad-arrow">→</span>
+                        <span className="fc-trad-fr">{fr}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
           );
