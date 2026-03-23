@@ -66,7 +66,21 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
     );
   }
 
-  const images = curated.images.map(f => IMAGE_BASE + f);
+  const imgs = curated.images.map(img => ({
+    src: IMAGE_BASE + (typeof img === "string" ? img : img.file),
+    caption: typeof img === "string" ? "" : img.caption || "",
+  }));
+
+  function ImageBlock({ idx }) {
+    const img = imgs[idx];
+    if (!img) return null;
+    return (
+      <div className="fc-illus">
+        <img src={img.src} alt={titre} loading="lazy" />
+        {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
+      </div>
+    );
+  }
 
   return (
     <div className="fiche-page fiche-page-modern fc-rich">
@@ -75,19 +89,12 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         <h2 className="fc-titre"><span className="fiche-souligne-rose">{titre}</span></h2>
       </div>
 
-      {/* Intro narrative */}
       <div className="fc-section fc-section-intro">
         {wrapBullets(renderParagraphs(curated.intro))}
       </div>
 
-      {/* Image 1 */}
-      {images[0] && (
-        <div className="fc-illus">
-          <img src={images[0]} alt={titre} loading="lazy" />
-        </div>
-      )}
+      <ImageBlock idx={0} />
 
-      {/* Section 1 */}
       {curated.sections[0] && (
         <div className="fc-section">
           <h3 className="fc-section-title">{curated.sections[0].title}</h3>
@@ -95,14 +102,8 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      {/* Image 2 */}
-      {images[1] && (
-        <div className="fc-illus">
-          <img src={images[1]} alt={titre} loading="lazy" />
-        </div>
-      )}
+      <ImageBlock idx={1} />
 
-      {/* Section 2 */}
       {curated.sections[1] && (
         <div className="fc-section">
           <h3 className="fc-section-title">{curated.sections[1].title}</h3>
@@ -110,14 +111,8 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
         </div>
       )}
 
-      {/* Image 3 */}
-      {images[2] && (
-        <div className="fc-illus">
-          <img src={images[2]} alt={titre} loading="lazy" />
-        </div>
-      )}
+      <ImageBlock idx={2} />
 
-      {/* Section 3 */}
       {curated.sections[2] && (
         <div className="fc-section">
           <h3 className="fc-section-title">{curated.sections[2].title}</h3>

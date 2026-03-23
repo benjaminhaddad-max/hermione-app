@@ -1,5 +1,4 @@
 import FICHE_CURATED from "../../data/ficheCurated";
-import schemaManifest from "../../data/schemaLibrary.generated.json";
 
 const IMAGE_BASE = "/schema-library/biochimie/";
 
@@ -23,15 +22,10 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
     );
   }
 
-  const selectedImages = curated.images.map(filename => {
-    const entry = schemaManifest.find(e =>
-      e.image?.endsWith(filename)
-    );
-    return {
-      src: IMAGE_BASE + filename,
-      legende: entry?.legende || "",
-    };
-  });
+  const imgs = curated.images.map(img => ({
+    src: IMAGE_BASE + (typeof img === "string" ? img : img.file),
+    caption: typeof img === "string" ? "" : img.caption || "",
+  }));
 
   return (
     <div className="fiche-page fiche-page-modern">
@@ -39,20 +33,20 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
         <span className="fiche-souligne-vert">Schémas du chapitre</span>
       </h2>
       <p className="fc-schemas-count">
-        {selectedImages.length} illustration{selectedImages.length > 1 ? "s" : ""} clé{selectedImages.length > 1 ? "s" : ""} du cours
+        {imgs.length} illustration{imgs.length > 1 ? "s" : ""} clé{imgs.length > 1 ? "s" : ""} du cours
       </p>
 
       <div className="fc-schemas-list">
-        {selectedImages.map((img, i) => (
+        {imgs.map((img, i) => (
           <div key={i} className="fc-schema-item">
             <img
               src={img.src}
-              alt={img.legende || chapterTitle}
+              alt={img.caption || chapterTitle}
               loading="lazy"
               className="fc-schema-img"
             />
-            {img.legende && (
-              <div className="fc-schema-caption">{img.legende}</div>
+            {img.caption && (
+              <div className="fc-schema-caption">{img.caption}</div>
             )}
           </div>
         ))}

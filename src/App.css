@@ -1250,6 +1250,15 @@ select.ob-input{appearance:none;-webkit-appearance:none}
   height:auto;
   display:block;
 }
+.fc-illus-caption{
+  padding:10px 14px;
+  font-family:var(--font-body);
+  font-size:12.5px;
+  line-height:1.6;
+  color:#333;
+  background:linear-gradient(135deg,#f8f7ff,#fffcf0);
+  border-top:1px solid rgba(91,79,217,0.1);
+}
 .fc-concepts-grid{
   display:flex;
   flex-direction:column;
