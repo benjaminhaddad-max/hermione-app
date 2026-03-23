@@ -87,7 +87,7 @@ function BottomNav({ active, onChange }) {
     { id:"home",       icon:"🏠", label:"Home" },
     { id:"cours",      icon:"📖", label:"Réviser" },
     { id:"classement", icon:"🏆", label:"Classement" },
-    { id:"aventure",   icon:"🏰", label:"Poudlard" },
+    { id:"aventure",   icon:"🗺️", label:"Aventure" },
   ];
   return (
     <nav className="bottom-nav">

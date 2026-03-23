@@ -73,13 +73,13 @@ export default function HomePage({ user, storage, onGoTo }) {
       <div className="hp-aventure-card">
         <div className="hp-aventure-glow" />
         <div className="hp-aventure-top">
-          <span className="hp-aventure-badge">🏰 MODE AVENTURE</span>
+          <span className="hp-aventure-badge">🗺️ MODE AVENTURE</span>
         </div>
         <h3 className="hp-aventure-title">Révise tout le programme PASS/LAS comme un jeu</h3>
         <p className="hp-aventure-pitch">
           Chaque matière est un <strong>monde</strong> à conquérir. Chaque chapitre est un <strong>niveau</strong>. 
           Lis la fiche, réussis le QCM, valide les flashcards — et passe au suivant. 
-          Chaque étape te rapporte des <strong>XP</strong> et te rapproche de mentors comme <strong>Hermione</strong> ou <strong>Dumbledore</strong>.
+          Chaque étape te rapporte des <strong>XP</strong> pour grimper au classement parmi 32 000 étudiants.
         </p>
 
         <div className="hp-aventure-steps">
@@ -111,13 +111,13 @@ export default function HomePage({ user, storage, onGoTo }) {
             <div className="hp-aventure-step-num">💬</div>
             <div>
               <strong>Débloque un mentor</strong>
-              <span>Neville, Ginny, Hermione, Dumbledore... à toi de jouer</span>
+              <span>Chatte avec des étudiants en médecine qui ont réussi</span>
             </div>
           </div>
         </div>
 
         <div className="hp-aventure-bottom">
-          <span>🏰 {totalMatieres} matières</span>
+          <span>🗺️ {totalMatieres} matières</span>
           <span className="hp-aventure-dot">·</span>
           <span>📚 {totalCours} chapitres</span>
           <span className="hp-aventure-dot">·</span>

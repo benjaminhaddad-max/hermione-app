@@ -169,7 +169,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
         <div className="aventure-intro">
           <div className="aventure-intro-glow" />
           <img src="/logo-hermione.webp" alt="Hermione" className="aventure-intro-logo" />
-          <h2 className="aventure-intro-title">🏰 Mode Aventure</h2>
+          <h2 className="aventure-intro-title">🗺️ Mode Aventure</h2>
           <p className="aventure-intro-tagline">Anticipe ta 1re année de médecine<br/>en passant des niveaux !</p>
 
           <div className="aventure-intro-steps">
@@ -198,7 +198,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
               <span className="aventure-intro-step-icon">💬</span>
               <div>
                 <strong>Débloque des mentors</strong>
-                <p>De Neville à Dumbledore, progresse pour chatter avec eux !</p>
+                <p>Progresse pour chatter avec des étudiants qui ont réussi !</p>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
           <div className="aventure-intro-rewards">
             <span>⭐ 3 étoiles par niveau</span>
             <span>·</span>
-            <span>🏰 {stats.totalWorlds} matières</span>
+            <span>🗺️ {stats.totalWorlds} matières</span>
             <span>·</span>
             <span>💬 4 mentors à débloquer</span>
           </div>
@@ -223,7 +223,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
           <div className="aventure-header">
             <div className="aventure-header-top">
               <div>
-                <h2 className="aventure-header-title">🏰 Mode Aventure</h2>
+                <h2 className="aventure-header-title">🗺️ Mode Aventure</h2>
                 <p className="aventure-header-sub">Progresse par matière et débloque des mentors</p>
               </div>
               <div className="aventure-stats-mini">
