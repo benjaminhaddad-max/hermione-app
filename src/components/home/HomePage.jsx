@@ -1,7 +1,7 @@
 import { MATIERES } from "../../data/content";
 import { getLevel, getRank } from "../../data/leaderboard";
 
-export default function HomePage({ user, storage, onGoTo }) {
+export default function HomePage({ user, storage, onGoTo, onSignOut }) {
   const fichesLues = Object.values(storage.fiches_lues || {}).filter(f => f.lue).length;
   const totalCours = MATIERES.flatMap(m => m.cours).length;
   const userXP = storage.xp || 0;
@@ -154,6 +154,12 @@ export default function HomePage({ user, storage, onGoTo }) {
           Un étudiant en médecine va te recontacter dans les <strong>48h</strong> pour répondre à toutes tes questions et t'aider à préparer ta rentrée.
         </p>
       </div>
+
+      {onSignOut && (
+        <button className="hp-signout" onClick={onSignOut}>
+          Se déconnecter
+        </button>
+      )}
 
       <div style={{ height: 24 }} />
     </div>

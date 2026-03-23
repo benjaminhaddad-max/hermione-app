@@ -107,11 +107,24 @@ export function getLevel(xp) {
   return { current, nextLevel };
 }
 
-export function getRank(userXP) {
-  const above = FAKE_USERS.filter(u => u.xp > userXP).length;
-  const fakeAboveRatio = above / FAKE_USERS.length;
-  const totalUsers = 32494;
-  return Math.min(totalUsers, Math.max(1, Math.round(fakeAboveRatio * totalUsers) + 1));
+export function getRank(userXP, realUsers = []) {
+  const allUsers = [...realUsers, ...FAKE_USERS];
+  const above = allUsers.filter(u => u.xp > userXP).length;
+  const totalUsers = Math.max(32494, allUsers.length);
+  return Math.min(totalUsers, Math.max(1, above + 1));
+}
+
+export async function loadRealLeaderboard(supabase) {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase
+      .from("user_progress")
+      .select("user_id,pseudo,xp")
+      .order("xp", { ascending: false })
+      .limit(200);
+    if (error) return [];
+    return (data || []).map(u => ({ pseudo: u.pseudo, xp: u.xp, real: true, userId: u.user_id }));
+  } catch { return []; }
 }
 
 export const XP_REWARDS = {

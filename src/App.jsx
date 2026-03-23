@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import useStorage from "./hooks/useStorage";
+import useAuth from "./hooks/useAuth";
+import useCloudStorage from "./hooks/useCloudStorage";
 import { XP_REWARDS } from "./data/leaderboard";
 
 import HomePage from "./components/home/HomePage";
@@ -101,14 +103,111 @@ function BottomNav({ active, onChange }) {
   );
 }
 
+function AuthScreen({ onAuth }) {
+  const { signIn, signUp, ready } = useAuth();
+  const [mode, setMode] = useState("login");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [pseudo, setPseudo] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [confirmMsg, setConfirmMsg] = useState("");
+
+  if (!ready) return null;
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setError("");
+    setConfirmMsg("");
+    setLoading(true);
+    if (mode === "signup") {
+      if (!pseudo.trim()) { setError("Choisis un pseudo"); setLoading(false); return; }
+      if (password.length < 6) { setError("Mot de passe : 6 caractères min."); setLoading(false); return; }
+      const { data, error: err } = await signUp(email, password, pseudo);
+      if (err) { setError(err.message); setLoading(false); return; }
+      if (data?.user?.identities?.length === 0) {
+        setError("Cet email est déjà utilisé. Connecte-toi.");
+        setMode("login");
+      } else {
+        setConfirmMsg("Compte créé ! Vérifie tes emails pour confirmer, ou connecte-toi directement.");
+        setMode("login");
+      }
+    } else {
+      const { error: err } = await signIn(email, password);
+      if (err) { setError(err.message === "Invalid login credentials" ? "Email ou mot de passe incorrect" : err.message); setLoading(false); return; }
+      onAuth();
+    }
+    setLoading(false);
+  }
+
+  return (
+    <div className="ob-wrapper">
+      <div className="ob-welcome">
+        <div className="ob-logo-wrap">
+          <img src="/logo-hermione.webp" alt="Hermione" className="ob-logo-img" />
+        </div>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, marginBottom: 4 }}>
+          {mode === "login" ? "Connexion" : "Créer un compte"}
+        </h2>
+        <p style={{ fontSize: 13, color: "var(--gray)", marginBottom: 20 }}>
+          {mode === "login" ? "Retrouve ta progression sur tous tes appareils" : "Gratuit · Ta progression sauvegardée en ligne"}
+        </p>
+
+        {confirmMsg && <p style={{ fontSize: 12, color: "var(--green)", marginBottom: 12 }}>{confirmMsg}</p>}
+
+        <form onSubmit={handleSubmit} style={{ width: "100%", display: "flex", flexDirection: "column", gap: 10 }}>
+          {mode === "signup" && (
+            <input className="ob-input" placeholder="Pseudo (visible dans le classement)" value={pseudo} onChange={e => setPseudo(e.target.value)} />
+          )}
+          <input className="ob-input" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} autoComplete="email" />
+          <input className="ob-input" type="password" placeholder="Mot de passe" value={password} onChange={e => setPassword(e.target.value)} autoComplete={mode === "signup" ? "new-password" : "current-password"} />
+          {error && <p style={{ fontSize: 12, color: "var(--red)" }}>{error}</p>}
+          <button className="ob-start-btn" type="submit" disabled={loading || !email || !password}>
+            {loading ? "..." : mode === "login" ? "SE CONNECTER →" : "CRÉER MON COMPTE →"}
+          </button>
+        </form>
+
+        <button
+          style={{ marginTop: 16, background: "none", border: "none", color: "var(--gold-light)", fontSize: 13, cursor: "pointer", textDecoration: "underline" }}
+          onClick={() => { setMode(mode === "login" ? "signup" : "login"); setError(""); setConfirmMsg(""); }}
+        >
+          {mode === "login" ? "Pas encore de compte ? Inscris-toi" : "Déjà un compte ? Connecte-toi"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [storage, updateStorage] = useStorage();
+  const auth = useAuth();
+  const cloud = useCloudStorage(auth.user?.id);
   const [tab, setTab] = useState("home");
   const [matiere, setMatiere] = useState(null);
   const [cours, setCours] = useState(null);
-  const [view, setView] = useState(null); // "fiche" | "qcm" | "fc-session"
+  const [view, setView] = useState(null);
+  const [cloudLoaded, setCloudLoaded] = useState(false);
   const isAdminRoute =
     typeof window !== "undefined" && window.location.pathname.startsWith("/admin");
+
+  const syncUpdate = useCallback((updater) => {
+    updateStorage(prev => {
+      const next = typeof updater === "function" ? updater(prev) : updater;
+      if (auth.user?.id) cloud.syncToCloud(next);
+      return next;
+    });
+  }, [updateStorage, auth.user?.id, cloud]);
+
+  useEffect(() => {
+    if (auth.user?.id && !cloudLoaded) {
+      cloud.loadFromCloud().then(cloudData => {
+        if (cloudData && cloudData.xp > (storage.xp || 0)) {
+          updateStorage(prev => ({ ...prev, ...cloudData }));
+        }
+        setCloudLoaded(true);
+      });
+    }
+  }, [auth.user?.id, cloudLoaded, cloud, storage.xp, updateStorage]);
 
   if (isAdminRoute) {
     return (
@@ -120,14 +219,22 @@ export default function App() {
     );
   }
 
+  if (auth.loading) {
+    return <div className="ob-wrapper"><div className="ob-welcome"><p style={{color:"var(--gray)"}}>Chargement...</p></div></div>;
+  }
+
+  if (auth.ready && !auth.user) {
+    return <AuthScreen onAuth={() => {}} />;
+  }
+
   if (!storage.user.onboarded) {
     return <Onboarding onDone={({ prenom, pseudo }) => {
-      updateStorage(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true }, pseudo, xp: 0, streak: 0, last_active: new Date().toISOString().split("T")[0] }));
+      syncUpdate(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true }, pseudo, xp: 0, streak: 0, last_active: new Date().toISOString().split("T")[0] }));
     }} />;
   }
 
   function addXP(amount) {
-    updateStorage(prev => {
+    syncUpdate(prev => {
       const today = new Date().toISOString().split("T")[0];
       const wasYesterday = prev.last_active && (() => {
         const d = new Date(prev.last_active);
@@ -144,7 +251,7 @@ export default function App() {
 
   function saveFicheLue(coursId) {
     const alreadyRead = storage.fiches_lues?.[coursId]?.lue;
-    updateStorage(prev => ({
+    syncUpdate(prev => ({
       ...prev,
       fiches_lues: { ...prev.fiches_lues, [coursId]: { lue: true, date: new Date().toISOString().split("T")[0] } }
     }));
@@ -152,7 +259,7 @@ export default function App() {
   }
 
   function saveQCMScore(coursId, score, total, duree) {
-    updateStorage(prev => ({
+    syncUpdate(prev => ({
       ...prev,
       qcm_scores: {
         ...prev.qcm_scores,
@@ -163,19 +270,25 @@ export default function App() {
     else addXP(XP_REWARDS.QCM_COMPLETE);
   }
 
-  function saveFCProgress(coursId, mastered) {
-    updateStorage(prev => ({
-      ...prev,
-      flashcards_progress: {
-        ...prev.flashcards_progress,
-        [coursId]: {
-          ...(prev.flashcards_progress?.[coursId] || {}),
-          mastered_count: mastered,
-          sessions: (prev.flashcards_progress?.[coursId]?.sessions || 0) + 1,
-          last_session: new Date().toISOString().split("T")[0]
+  function saveFCProgress(coursId, mastered, total, cardRatings) {
+    syncUpdate(prev => {
+      const existing = prev.flashcards_progress?.[coursId] || {};
+      const existingCards = existing.cards || {};
+      const mergedCards = { ...existingCards, ...cardRatings };
+      return {
+        ...prev,
+        flashcards_progress: {
+          ...prev.flashcards_progress,
+          [coursId]: {
+            ...existing,
+            mastered_count: mastered,
+            sessions: (existing.sessions || 0) + 1,
+            last_session: new Date().toISOString().split("T")[0],
+            cards: mergedCards,
+          }
         }
-      }
-    }));
+      };
+    });
     addXP(XP_REWARDS.FLASHCARD_SESSION);
   }
 
@@ -190,7 +303,7 @@ export default function App() {
   );
   if (view === "fc-session" && cours) return (
     <div className="app-shell"><div className="scroll-area">
-      <FlashcardSession cours={cours} onBack={() => setView(null)} onSaveProgress={saveFCProgress} />
+      <FlashcardSession cours={cours} storage={storage} onBack={() => setView(null)} onSaveProgress={saveFCProgress} />
     </div></div>
   );
 
@@ -246,7 +359,7 @@ export default function App() {
   }
 
   const pages = {
-    home: <HomePage user={storage.user} storage={storage} onGoTo={resetTab} />,
+    home: <HomePage user={storage.user} storage={storage} onGoTo={resetTab} onSignOut={auth.ready ? auth.signOut : null} />,
   };
   return wrap(pages[tab] || pages.home);
 }

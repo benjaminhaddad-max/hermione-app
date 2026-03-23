@@ -6,14 +6,22 @@ export default function QCMChapitreSession({ cours, onBack, onSaveScore }) {
   const questions = cours.qcm || [];
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [preSelected, setPreSelected] = useState(null);
   const [selected, setSelected] = useState(null);
+  const [validated, setValidated] = useState(false);
   const [showExplication, setShowExplication] = useState(false);
   const [done, setDone] = useState(false);
   const [startTime] = useState(Date.now());
 
   function handleSelect(optIdx) {
-    if (selected !== null) return;
-    setSelected(optIdx);
+    if (validated) return;
+    setPreSelected(optIdx);
+  }
+
+  function handleConfirm() {
+    if (preSelected === null || validated) return;
+    setSelected(preSelected);
+    setValidated(true);
     setShowExplication(true);
   }
 
@@ -22,7 +30,9 @@ export default function QCMChapitreSession({ cours, onBack, onSaveScore }) {
     const isCorrect = selected === q.correct;
     const newAnswers = [...answers, { question: q, selected, correct: isCorrect }];
     setAnswers(newAnswers);
+    setPreSelected(null);
     setSelected(null);
+    setValidated(false);
     setShowExplication(false);
     if (idx + 1 < questions.length) {
       setIdx(idx + 1);
@@ -71,11 +81,14 @@ export default function QCMChapitreSession({ cours, onBack, onSaveScore }) {
       <QCMQuestion
         question={q}
         selected={selected}
+        validated={validated}
+        preSelected={preSelected}
         showExplication={showExplication}
         onSelect={handleSelect}
+        onConfirm={handleConfirm}
       />
 
-      {selected !== null && (
+      {validated && (
         <button className="btn-gold" style={{ marginTop: 16 }} onClick={handleNext}>
           {idx + 1 < questions.length ? "Question suivante →" : "Voir les résultats →"}
         </button>

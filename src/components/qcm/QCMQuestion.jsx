@@ -1,7 +1,7 @@
 const DIFF_COLORS = { facile: { bg: "rgba(46,204,113,0.12)", color: "#2ecc71" }, moyen: { bg: "rgba(255,180,0,0.12)", color: "#ffb400" }, difficile: { bg: "rgba(224,90,43,0.12)", color: "#e05a2b" } };
 const LABELS = ["A", "B", "C", "D", "E"];
 
-export default function QCMQuestion({ question, selected, showExplication, onSelect }) {
+export default function QCMQuestion({ question, selected, validated, showExplication, onSelect, onConfirm, preSelected }) {
   const diff = DIFF_COLORS[question.difficulte] || DIFF_COLORS.moyen;
   const correctIdx = question.correct;
 
@@ -17,20 +17,27 @@ export default function QCMQuestion({ question, selected, showExplication, onSel
         {question.options.map((opt, i) => {
           const label = LABELS[i];
           let cls = "qcm-opt";
-          if (selected !== null) {
+          if (validated) {
             if (i === correctIdx) cls += " correct";
             else if (i === selected) cls += " wrong";
+          } else if (preSelected === i) {
+            cls += " pre-selected";
           } else {
             cls += " interactive";
           }
           return (
-            <button key={i} className={cls} onClick={() => onSelect(i)} disabled={selected !== null}>
+            <button key={i} className={cls} onClick={() => !validated && onSelect(i)} disabled={validated}>
               <span className="qcm-opt-label">{label}</span>
               <span>{opt}</span>
             </button>
           );
         })}
       </div>
+      {!validated && preSelected !== null && (
+        <button className="btn-gold qcm-confirm-btn" onClick={onConfirm}>
+          Valider ma réponse ✓
+        </button>
+      )}
       {showExplication && (
         <div className="qcm-explication">
           <div className="qcm-explication-titre">Explication</div>

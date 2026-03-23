@@ -1,16 +1,31 @@
-import { FAKE_USERS, TOTAL_USERS_DISPLAY, getLevel, getRank, XP_REWARDS, LEVELS } from "../../data/leaderboard";
+import { useState, useEffect } from "react";
+import { FAKE_USERS, TOTAL_USERS_DISPLAY, getLevel, getRank, XP_REWARDS, loadRealLeaderboard } from "../../data/leaderboard";
+import { supabase } from "../../lib/supabaseClient";
 
 export default function ClassementPage({ storage, onAddXP }) {
   const userXP = storage.xp || 0;
   const streak = storage.streak || 0;
   const pseudo = storage.pseudo || "";
   const { current, nextLevel } = getLevel(userXP);
-  const rank = getRank(userXP);
+
+  const [realUsers, setRealUsers] = useState([]);
+  useEffect(() => {
+    loadRealLeaderboard(supabase).then(setRealUsers);
+  }, []);
+
+  const rank = getRank(userXP, realUsers);
   const progressPct = nextLevel
     ? Math.min(100, Math.round((userXP - current.minXP) / (nextLevel.minXP - current.minXP) * 100))
     : 100;
 
-  const top50 = FAKE_USERS.slice(0, 50);
+  const merged = [...realUsers, ...FAKE_USERS].sort((a, b) => b.xp - a.xp);
+  const seen = new Set();
+  const uniqueTop = merged.filter(u => {
+    if (seen.has(u.pseudo)) return false;
+    seen.add(u.pseudo);
+    return true;
+  });
+  const top50 = uniqueTop.slice(0, 50);
   const userInTop50 = rank <= 50;
 
   return (
