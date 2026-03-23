@@ -113,7 +113,8 @@ export default function HomePage({ user, storage, onGoTo }) {
         <h3 className="hp-aventure-title">Révise tout le programme PASS/LAS comme un jeu vidéo</h3>
         <p className="hp-aventure-pitch">
           Chaque matière est un <strong>monde</strong> à conquérir. Chaque chapitre est un <strong>niveau</strong>. 
-          Lis la fiche, réussis le QCM, valide les flashcards — et passe au suivant.
+          Lis la fiche, réussis le QCM, valide les flashcards — et passe au suivant. 
+          Chaque étape te rapporte des <strong>XP</strong> pour grimper au classement parmi 32 000 étudiants.
         </p>
 
         <div className="hp-aventure-steps">
@@ -174,24 +175,6 @@ export default function HomePage({ user, storage, onGoTo }) {
         </div>
         <span className="hp-reviser-arrow">›</span>
       </button>
-
-      {/* ── Comment ça marche ── */}
-      <p className="section-title" style={{ marginTop: 24 }}>Comment ça marche</p>
-      <div className="hp-how-grid">
-        {[
-          { step: "1", icon: "📖", title: "Lis les fiches", desc: "Résumés visuels des cours Diploma Santé" },
-          { step: "2", icon: "✅", title: "Fais les QCM", desc: "Teste tes connaissances chapitre par chapitre" },
-          { step: "3", icon: "🃏", title: "Flashcards", desc: "Mémorise durablement avec la répétition espacée" },
-          { step: "4", icon: "🏆", title: "Grimpe au classement", desc: "Gagne des XP et dépasse 32 000 étudiants" },
-        ].map(h => (
-          <div key={h.step} className="hp-how-item">
-            <div className="hp-how-step">{h.step}</div>
-            <span className="hp-how-icon">{h.icon}</span>
-            <div className="hp-how-title">{h.title}</div>
-            <div className="hp-how-desc">{h.desc}</div>
-          </div>
-        ))}
-      </div>
 
       {/* ── CTA Coaching ── */}
       <div className="hp-coaching-card">
