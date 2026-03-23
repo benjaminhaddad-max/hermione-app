@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+  width:1551px; height:603px; background:#fff; 
+  font-family: Helvetica, Arial, sans-serif;
+  overflow:hidden;
+}
+.container { display:flex; width:100%; height:100%; }
+
+/* ====== LEFT: BAR CHART ====== */
+.bar-chart { 
+  width:560px; padding:20px 15px 50px 20px;
+  display:flex; flex-direction:column;
+}
+.bar-chart h3 { display:none; }
+.bar-rows { flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+.bar-row { display:flex; align-items:center; height:28px; }
+.bar-label { width:110px; font-size:12px; color:#333; text-align:right; padding-right:8px; font-style:italic; }
+.bar-genome { flex:1; display:flex; align-items:center; position:relative; }
+.bar-genome .bar { height:18px; background:#222; }
+.bar-coding { width:120px; display:flex; align-items:center; padding-left:4px; }
+.bar-coding .bar { height:18px; background:#222; }
+
+.bar-axis { 
+  display:flex; padding-top:8px; border-top:1px solid #999;
+  margin-top:6px;
+}
+.bar-axis-genome { flex:1; padding-left:110px; }
+.bar-axis-coding { width:120px; }
+.bar-axis span { font-size:11px; color:#555; }
+.bar-axis-label { 
+  text-align:center; font-size:13px; color:#333; font-weight:500; 
+  margin-top:2px;
+}
+
+/* ====== MIDDLE: VERTICAL TEXT ====== */
+.middle {
+  width:55px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.middle .arrow { 
+  position:absolute; top:30px; left:50%; transform:translateX(-50%);
+  font-size:28px; color:#333;
+}
+.middle .vert-text {
+  writing-mode:vertical-lr; transform:rotate(180deg);
+  font-size:11px; color:#333; text-align:center; line-height:1.4;
+  font-weight:500;
+}
+
+/* ====== RIGHT: PIE CHART ====== */
+.pie-section {
+  flex:1; padding:10px 15px; position:relative;
+}
+.pie-title {
+  text-align:center; font-size:15px; font-weight:700; color:#222;
+  background:#f1eccd; padding:5px 15px; display:inline-block;
+  margin:0 auto 15px; border-radius:3px;
+}
+.pie-title-wrap { text-align:center; }
+
+.pie-area {
+  position:relative; width:100%; height:calc(100% - 60px);
+}
+
+.pie-chart {
+  width:380px; height:380px; border-radius:50%;
+  position:absolute; top:15px; left:220px;
+  background: conic-gradient(
+    #b0a0d8 0deg 5.4deg,     /* protein coding genes 1.5% */
+    #e86060 5.4deg 10.8deg,  /* thin red slice */
+    #8888cc 10.8deg 104.4deg, /* introns 26% - lavender */
+    #c5a86a 104.4deg 108deg,  /* tiny yellow */
+    #dbb080 108deg 115.2deg,  /* light brown */
+    #e8c878 115.2deg 118.8deg,/* mustard */
+    #e0d070 118.8deg 129.6deg,/* yellow-green */
+    #c0cc88 129.6deg 133.2deg,/* sage */
+    #a8c898 133.2deg 140.4deg,/* green */
+    #c0dca0 140.4deg 158.4deg,/* light green - segmental dup 5% */
+    #f0c878 158.4deg 169.2deg,/* orange-yellow - simple seq 3% */
+    #e8b068 169.2deg 180deg,  /* orange - DNA transposons 3% */
+    #d8a0a0 180deg 208.8deg,  /* LTR retro 8% */
+    #90b8d8 208.8deg 255.6deg,/* SINEs 13% - blue */
+    #98c8a0 255.6deg 327.6deg,/* LINEs 20% - green-blue */
+    #f8d8b8 327.6deg 346deg,  /* misc unique 12% part */
+    #d0a8c8 346deg 360deg     /* misc heterochromatin */
+  );
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.12);
+}
+
+/* Labels with leader lines */
+.pie-label {
+  position:absolute;
+  font-size:13px; color:#333; font-weight:500;
+  white-space:nowrap;
+}
+.pie-label.right { text-align:left; }
+.pie-label.left { text-align:right; }
+
+.pie-label-box {
+  position:absolute;
+  font-size:12px; color:#333;
+  background:#f5dcc4;
+  padding:4px 8px;
+  border-radius:3px;
+  line-height:1.3;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- BAR CHART -->
+  <div class="bar-chart">
+    <div class="bar-rows">
+      <div class="bar-row">
+        <div class="bar-label">H. sapiens</div>
+        <div class="bar-genome"><div class="bar" style="width:95%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:12%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">R. norvegicus</div>
+        <div class="bar-genome"><div class="bar" style="width:88%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:12%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">M. musculus</div>
+        <div class="bar-genome"><div class="bar" style="width:86%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:12%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">G. gallus</div>
+        <div class="bar-genome"><div class="bar" style="width:38%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:16%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">F. rubripes</div>
+        <div class="bar-genome"><div class="bar" style="width:14%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:28%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">C. intestinalis</div>
+        <div class="bar-genome"><div class="bar" style="width:6%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:32%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">D. melanogaster</div>
+        <div class="bar-genome"><div class="bar" style="width:6%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:40%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">C. elegans</div>
+        <div class="bar-genome"><div class="bar" style="width:4%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:38%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">N. crassa</div>
+        <div class="bar-genome"><div class="bar" style="width:2%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:36%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">S. cerevisiae</div>
+        <div class="bar-genome"><div class="bar" style="width:1%"></div></div>
+        <div class="bar-coding"><div class="bar" style="width:65%"></div></div>
+      </div>
+    </div>
+    <div class="bar-axis">
+      <div class="bar-axis-genome" style="flex:1; padding-left:110px;">
+        <span>0&nbsp;&nbsp;&nbsp;500&nbsp;&nbsp;&nbsp;1500&nbsp;&nbsp;&nbsp;2000&nbsp;&nbsp;&nbsp;2500&nbsp;&nbsp;&nbsp;3000</span>
+        <div class="bar-axis-label">Taille du génome (Mb)</div>
+      </div>
+      <div class="bar-axis-coding" style="width:120px;">
+        <span>20%&nbsp;&nbsp;40%&nbsp;&nbsp;60%</span>
+        <div class="bar-axis-label">ADN codant</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VERTICAL TEXT -->
+  <div class="middle">
+    <div class="arrow">↑</div>
+    <div class="vert-text">Complexité croissante du génome<br>avec augmentation de l'ADN non codant</div>
+  </div>
+
+  <!-- PIE CHART -->
+  <div class="pie-section">
+    <div class="pie-title-wrap">
+      <span class="pie-title">Composants principaux du génome humain</span>
+    </div>
+    <div class="pie-area">
+      <div class="pie-chart"></div>
+
+      <!-- Left labels -->
+      <div class="pie-label left" style="right:620px; top:35px;">Rétrotransposons LTR 8%</div>
+      <div class="pie-label left" style="right:620px; top:65px;">Transposons ADN 3%</div>
+      <div class="pie-label left" style="right:615px; top:95px;">Répétitions séq. simples 3%</div>
+      <div class="pie-label left" style="right:632px; top:125px;">Duplications<br>segmentaires 5%</div>
+      <div class="pie-label left" style="right:620px; top:175px;">Hétérochromatine<br>diverse 8%</div>
+      <div class="pie-label left" style="right:620px; top:218px;">Séquences uniques<br>diverses 12%</div>
+
+      <!-- Right labels -->
+      <div class="pie-label right" style="left:610px; top:38px;">SINE 13%</div>
+      <div class="pie-label right" style="left:618px; top:175px;">LINE 20%</div>
+      <div class="pie-label right" style="left:545px; top:290px;">Introns 26%</div>
+
+      <!-- Special label with background box -->
+      <div class="pie-label-box" style="left:600px; top:220px;">Gènes codant pour<br>protéines 1,5%</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM BANNER -->
+<div style="position:absolute;bottom:0;left:0;right:0;height:110px;background:linear-gradient(135deg,#1a1a2e,#2d2d5e);padding:12px 20px;color:#e5c97a;">
+  <div style="font-weight:700;font-size:14px;margin-bottom:6px;">Comparaison des génomes et composition du génome humain</div>
+  <div style="font-size:11px;color:#ccc;line-height:1.5;">
+    • Le graphique de gauche compare la taille des génomes de différentes espèces (de H. sapiens aux bactéries) en mégabases et leur proportion d'ADN codant<br>
+    • Le diagramme circulaire montre la composition détaillée du génome humain avec les différents types de séquences (gènes codants, introns, rétrotransposons, etc.)<br>
+    • On observe que la taille du génome ne corrèle pas directement avec la complexité de l'organisme et que les gènes codants représentent moins de 2% du génome
+  </div>
+</div>
+</body>
+</html>

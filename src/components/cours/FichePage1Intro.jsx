@@ -40,25 +40,10 @@ function wrapBullets(elements) {
 
 function ImageBlock({ img, titre }) {
   if (!img) return null;
-  const translations = img.translations ? Object.entries(img.translations) : [];
   return (
     <div className="fc-illus">
       <img src={IMAGE_BASE + img.file} alt={titre} loading="lazy" />
       {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
-      {translations.length > 0 && (
-        <div className="fc-illus-trad">
-          <div className="fc-trad-title">🇫🇷 Traduction des termes anglais :</div>
-          <div className="fc-trad-grid">
-            {translations.map(([en, fr], i) => (
-              <div key={i} className="fc-trad-row">
-                <span className="fc-trad-en">{en}</span>
-                <span className="fc-trad-arrow">→</span>
-                <span className="fc-trad-fr">{fr}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

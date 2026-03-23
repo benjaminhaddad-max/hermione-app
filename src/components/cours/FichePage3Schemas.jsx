@@ -32,36 +32,19 @@ export default function FichePage3Schemas({ data, concepts, chapterTitle = "" })
       </p>
 
       <div className="fc-schemas-list">
-        {curated.images.map((img, i) => {
-          const translations = img.translations ? Object.entries(img.translations) : [];
-          return (
-            <div key={i} className="fc-schema-item">
-              <img
-                src={IMAGE_BASE + img.file}
-                alt={img.caption || chapterTitle}
-                loading="lazy"
-                className="fc-schema-img"
-              />
-              {img.caption && (
-                <div className="fc-schema-caption">{img.caption}</div>
-              )}
-              {translations.length > 0 && (
-                <div className="fc-illus-trad">
-                  <div className="fc-trad-title">🇫🇷 Traduction :</div>
-                  <div className="fc-trad-grid">
-                    {translations.map(([en, fr], j) => (
-                      <div key={j} className="fc-trad-row">
-                        <span className="fc-trad-en">{en}</span>
-                        <span className="fc-trad-arrow">→</span>
-                        <span className="fc-trad-fr">{fr}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
+        {curated.images.map((img, i) => (
+          <div key={i} className="fc-schema-item">
+            <img
+              src={IMAGE_BASE + img.file}
+              alt={img.caption || chapterTitle}
+              loading="lazy"
+              className="fc-schema-img"
+            />
+            {img.caption && (
+              <div className="fc-schema-caption">{img.caption}</div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
