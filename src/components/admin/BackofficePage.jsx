@@ -102,31 +102,12 @@ export default function BackofficePage() {
   const [showSqlHelp, setShowSqlHelp] = useState(false);
 
   useEffect(() => {
-    async function loadSchemas() {
-      setLoadingSchemas(true);
-      setSchemaError("");
-      try {
-        if (isAdmin && supabase) {
-          const { data, error } = await supabase
-            .from("schema_library")
-            .select("id,matiere,source_pdf,page,image_url,chapter,legende,created_at")
-            .order("matiere", { ascending: true });
-          if (error) throw error;
-          setSchemas(data || []);
-          setSource("supabase");
-        } else {
-          setSchemas(normalizeLocalRows(localSchemas));
-          setSource("local");
-        }
-      } catch (e) {
-        setSchemaError(e.message || "Impossible de charger Supabase.");
-        setSchemas(normalizeLocalRows(localSchemas));
-        setSource("local");
-      } finally {
-        setLoadingSchemas(false);
-      }
-    }
-    loadSchemas();
+    setLoadingSchemas(true);
+    setSchemaError("");
+    const local = normalizeLocalRows(localSchemas);
+    setSchemas(local);
+    setSource(`local (${local.length})`);
+    setLoadingSchemas(false);
   }, [isAdmin]);
 
   async function signIn() {
