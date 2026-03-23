@@ -98,8 +98,8 @@ export default function HomePage({ user, storage, onGoTo }) {
         </div>
         <div className="hp-stat-sep" />
         <div className="hp-stat">
-          <span className="hp-stat-num">{streak || 0}</span>
-          <span className="hp-stat-label">Jours streak</span>
+          <span className="hp-stat-num">{streak || 0}🔥</span>
+          <span className="hp-stat-label">Jours d'affilée</span>
         </div>
       </div>
 

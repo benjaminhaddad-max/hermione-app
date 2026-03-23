@@ -111,7 +111,7 @@ export function getRank(userXP) {
   const above = FAKE_USERS.filter(u => u.xp > userXP).length;
   const fakeAboveRatio = above / FAKE_USERS.length;
   const totalUsers = 32494;
-  return Math.max(1, Math.round(fakeAboveRatio * totalUsers) + 1);
+  return Math.min(totalUsers, Math.max(1, Math.round(fakeAboveRatio * totalUsers) + 1));
 }
 
 export const XP_REWARDS = {
