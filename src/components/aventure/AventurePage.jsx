@@ -18,14 +18,17 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
   const [failData, setFailData] = useState(null);
   const [worldComplete, setWorldComplete] = useState(null);
   const [subTab, setSubTab] = useState("carte"); // carte | mentors
+  const [catFilter, setCatFilter] = useState("anticipation"); // anticipation | terminale
 
   const worlds = useMemo(() => buildAventureMap(storage), [storage]);
   const { worldIdx: currentWorldIdx, levelIdx: currentLevelIdx } = useMemo(() => getCurrentLevel(worlds), [worlds]);
   const unlockedMentors = useMemo(() => getUnlockedMentors(worlds), [worlds]);
   const stats = useMemo(() => getAventureStats(worlds), [worlds]);
 
-  const activeWorldIdx = selectedWorldIdx ?? currentWorldIdx;
-  const activeWorld = worlds[activeWorldIdx];
+  const filteredWorlds = useMemo(() => worlds.filter(w => w.categorie === catFilter), [worlds, catFilter]);
+  const activeWorldIdx = selectedWorldIdx ?? 0;
+  const activeWorld = filteredWorlds[activeWorldIdx];
+  const globalWorldIdx = activeWorld ? worlds.findIndex(w => w.id === activeWorld.id) : 0;
 
   // ── Handlers ───────────────────────────────────────────────────────────────
   function handleLevelTap(level) {
@@ -73,7 +76,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
         qcm: { ...storage.qcm, [coursId]: { score, total, duree, date: new Date().toISOString().split("T")[0] } },
       };
       const updatedWorlds = buildAventureMap(patchedStorage);
-      const world = updatedWorlds[activeWorldIdx];
+      const world = updatedWorlds[globalWorldIdx];
       if (world && world.isComplete) {
         const newMentors = getUnlockedMentors(updatedWorlds);
         const justUnlocked = newMentors.find(m =>
@@ -259,35 +262,53 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
             )}
           </div>
 
+          {/* Category filter */}
+          <div className="aventure-cat-filter">
+            <button
+              className={`aventure-cat-btn ${catFilter === "anticipation" ? "active" : ""}`}
+              onClick={() => { setCatFilter("anticipation"); setSelectedWorldIdx(null); }}
+            >
+              <span className="aventure-cat-icon">🎯</span>
+              Anticipation PASS/LAS
+            </button>
+            <button
+              className={`aventure-cat-btn ${catFilter === "terminale" ? "active" : ""}`}
+              onClick={() => { setCatFilter("terminale"); setSelectedWorldIdx(null); }}
+            >
+              <span className="aventure-cat-icon">📚</span>
+              Terminale
+            </button>
+          </div>
+
           {/* World selector */}
           <div className="aventure-worlds-scroll">
-        {worlds.map((w, i) => (
-          <button
-            key={w.id}
-            className={`aventure-world-chip ${i === activeWorldIdx ? "active" : ""}`}
-            onClick={() => setSelectedWorldIdx(i)}
-            style={{ borderColor: i === activeWorldIdx ? w.color : "transparent" }}
-          >
-            <span>{w.emoji}</span>
-            <span className="aventure-world-chip-name">{w.nom.length > 10 ? w.nom.slice(0, 10) + "..." : w.nom}</span>
-            {w.isComplete && <span className="aventure-world-check">✓</span>}
-          </button>
-        ))}
-      </div>
+            {filteredWorlds.map((w, i) => (
+              <button
+                key={w.id}
+                className={`aventure-world-chip ${i === activeWorldIdx ? "active" : ""}`}
+                onClick={() => setSelectedWorldIdx(i)}
+                style={{ borderColor: i === activeWorldIdx ? w.color : "transparent" }}
+              >
+                <span>{w.emoji}</span>
+                <span className="aventure-world-chip-name">{w.nom.length > 10 ? w.nom.slice(0, 10) + "..." : w.nom}</span>
+                {w.isComplete && <span className="aventure-world-check">✓</span>}
+              </button>
+            ))}
+          </div>
 
-      {/* Map */}
-      <div className="scroll-area">
-        {activeWorld && (
-          <WorldMap
-            world={activeWorld}
-            worldIdx={activeWorldIdx}
-            totalWorlds={worlds.length}
-            completedWorlds={stats.completedWorlds}
-            currentLevelIdx={activeWorldIdx === currentWorldIdx ? currentLevelIdx : -1}
-            onLevelTap={handleLevelTap}
-          />
-        )}
-      </div>
+          {/* Map */}
+          <div className="scroll-area">
+            {activeWorld && (
+              <WorldMap
+                world={activeWorld}
+                worldIdx={globalWorldIdx}
+                totalWorlds={worlds.length}
+                completedWorlds={stats.completedWorlds}
+                currentLevelIdx={globalWorldIdx === currentWorldIdx ? currentLevelIdx : -1}
+                onLevelTap={handleLevelTap}
+              />
+            )}
+          </div>
 
       {/* Modals */}
       {selectedLevel && (

@@ -2301,6 +2301,13 @@ select.ob-input{appearance:none;-webkit-appearance:none}
 .aventure-sub-btn{padding:8px 16px;border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid var(--border-sub);color:var(--gray);font-family:var(--font-body);font-size:13px;cursor:pointer;transition:all .2s}
 .aventure-sub-btn.active{background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold)}
 
+/* Category filter */
+.aventure-cat-filter{display:flex;gap:6px;padding:4px 16px 12px}
+.aventure-cat-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:12px;background:rgba(255,255,255,0.04);border:1.5px solid var(--border-sub);color:var(--gray);font-family:var(--font-display);font-size:12px;font-weight:700;cursor:pointer;transition:all .25s;white-space:nowrap}
+.aventure-cat-btn.active{background:rgba(201,168,76,0.1);border-color:var(--gold);color:var(--gold)}
+.aventure-cat-btn:not(.active):hover{background:rgba(255,255,255,0.06);border-color:var(--border)}
+.aventure-cat-icon{font-size:14px}
+
 /* World selector chips (horizontal scroll) */
 .aventure-worlds-scroll{display:flex;gap:8px;overflow-x:auto;padding:0 16px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .aventure-worlds-scroll::-webkit-scrollbar{display:none}
