@@ -1,55 +1,158 @@
-export default function ChapitreDetailPage({ cours, storage, onFiche, onQCM, onFlashcards, onBack }) {
+import { useState } from "react";
+import FichePage1Intro from "./FichePage1Intro";
+import FichePage2Concepts from "./FichePage2Concepts";
+import FichePage3Schemas from "./FichePage3Schemas";
+import FichePage4Formules from "./FichePage4Formules";
+import FichePage5Resume from "./FichePage5Resume";
+import QCMChapitreSession from "../qcm/QCMChapitreSession";
+import FlashcardSession from "../flashcards/FlashcardSession";
+
+const FICHE_LABELS = ["Cours", "Notions", "Schémas", "Chiffres", "Résumé"];
+
+export default function ChapitreDetailPage({
+  cours, storage, onBack, onSaveProgress, onSaveQCMScore, onSaveFCProgress
+}) {
+  const [section, setSection] = useState("fiche");
+  const [fichePage, setFichePage] = useState(0);
+
+  const f = cours.fiche;
   const qcmScores = storage?.qcm_scores?.[cours.id] || [];
   const fcProgress = storage?.flashcards_progress?.[cours.id];
   const ficheLue = !!storage?.fiches_lues?.[cours.id]?.lue;
+  const bestScore = qcmScores.length > 0
+    ? Math.max(...qcmScores.map(s => Math.round(s.score / s.total * 100)))
+    : null;
 
-  const lastScore = qcmScores.length > 0 ? qcmScores[qcmScores.length - 1] : null;
-  const bestScore = qcmScores.length > 0 ? Math.max(...qcmScores.map(s => Math.round(s.score / s.total * 100))) : null;
+  const fichePages = [
+    <FichePage1Intro fiche={f} courseTitle={cours.titre} />,
+    <FichePage2Concepts data={f.page2_concepts} />,
+    <FichePage3Schemas
+      data={f.page3_schemas}
+      concepts={f.page2_concepts?.concepts || []}
+      chapterTitle={cours.titre}
+      introText={f.page1_intro?.texte || ""}
+    />,
+    <FichePage4Formules data={f.page4_formules} />,
+    <FichePage5Resume data={f.page5_resume} />,
+  ];
+
+  function goNextFiche() {
+    if (fichePage < 4) {
+      setFichePage(fichePage + 1);
+    } else {
+      onSaveProgress && onSaveProgress();
+      setFichePage(0);
+    }
+  }
 
   return (
-    <div className="page">
-      <div className="back-header">
+    <div className="cours-unified">
+      {/* Header */}
+      <div className="cu-header">
         <button className="back-btn" onClick={onBack}>←</button>
-        <span className="back-title">{cours.emoji} {cours.titre}</span>
-        <div style={{ width: 32 }} />
+        <div className="cu-header-info">
+          <span className="cu-header-titre">{cours.emoji} {cours.titre}</span>
+        </div>
       </div>
 
-      {/* Actions hub */}
-      <div className="hub-grid">
-        <button className="hub-card hub-fiche" onClick={onFiche}>
-          <span className="hub-icon">📖</span>
-          <span className="hub-label">Fiche de cours</span>
-          <span className="hub-sub">5 pages</span>
-          {ficheLue && <span className="hub-badge-done">✓ Lue</span>}
+      {/* Section tabs: Fiche / QCM / Flashcards */}
+      <div className="cu-section-tabs">
+        <button
+          className={`cu-sec-tab ${section === "fiche" ? "active" : ""}`}
+          onClick={() => setSection("fiche")}
+        >
+          <span className="cu-sec-icon">📖</span>
+          <span>Fiche</span>
+          {ficheLue && <span className="cu-sec-badge done">✓</span>}
         </button>
-
-        <button className="hub-card hub-qcm" onClick={onQCM}>
-          <span className="hub-icon">✅</span>
-          <span className="hub-label">QCM</span>
-          <span className="hub-sub">{cours.qcm?.length || 0} questions</span>
-          {bestScore !== null && <span className="hub-badge-score">{bestScore}%</span>}
+        <button
+          className={`cu-sec-tab ${section === "qcm" ? "active" : ""}`}
+          onClick={() => setSection("qcm")}
+        >
+          <span className="cu-sec-icon">✅</span>
+          <span>QCM</span>
+          {bestScore !== null && <span className="cu-sec-badge score">{bestScore}%</span>}
         </button>
-
-        <button className="hub-card hub-fc" onClick={onFlashcards}>
-          <span className="hub-icon">🃏</span>
-          <span className="hub-label">Flashcards</span>
-          <span className="hub-sub">{cours.flashcardsData?.length || 0} cartes</span>
-          {fcProgress && <span className="hub-badge-score">{fcProgress.mastered_count} maîtrisées</span>}
+        <button
+          className={`cu-sec-tab ${section === "flashcards" ? "active" : ""}`}
+          onClick={() => setSection("flashcards")}
+        >
+          <span className="cu-sec-icon">🃏</span>
+          <span>Flashcards</span>
+          {fcProgress && <span className="cu-sec-badge score">{fcProgress.mastered_count}</span>}
         </button>
       </div>
 
-      {/* Derniers résultats */}
-      {qcmScores.length > 0 && (
-        <div className="chapitre-stats">
-          <p className="fiche-section-label">Derniers résultats QCM</p>
-          {qcmScores.slice(-3).reverse().map((s, i) => (
-            <div key={i} className="chapitre-stat-row">
-              <span className="chapitre-stat-date">{s.date}</span>
-              <span className="chapitre-stat-score" style={{ color: s.score / s.total >= 0.6 ? "var(--green)" : "var(--red)" }}>
-                {s.score}/{s.total} ({Math.round(s.score / s.total * 100)}%)
-              </span>
+      {/* Content */}
+      {section === "fiche" && (
+        <div className="cu-fiche-wrapper">
+          {/* Fiche sub-tabs */}
+          <div className="cu-fiche-tabs">
+            {FICHE_LABELS.map((lbl, i) => (
+              <button
+                key={i}
+                className={`cu-ftab ${fichePage === i ? "active" : ""}`}
+                onClick={() => setFichePage(i)}
+              >
+                {lbl}
+              </button>
+            ))}
+          </div>
+
+          <div className="cu-fiche-content fiche-paper">
+            {fichePages[fichePage]}
+          </div>
+
+          <div className="cu-fiche-nav">
+            <button
+              className="cu-fnav-btn secondary"
+              onClick={() => setFichePage(p => Math.max(0, p - 1))}
+              disabled={fichePage === 0}
+            >
+              ← Préc.
+            </button>
+            <span className="cu-fiche-counter">{fichePage + 1} / 5</span>
+            <button className="cu-fnav-btn primary" onClick={goNextFiche}>
+              {fichePage < 4 ? "Suiv. →" : "✓ Terminé"}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {section === "qcm" && (
+        <div className="cu-qcm-wrapper">
+          {cours.qcm?.length > 0 ? (
+            <QCMChapitreSession
+              cours={cours}
+              onBack={() => setSection("fiche")}
+              onSaveScore={onSaveQCMScore}
+              embedded
+            />
+          ) : (
+            <div className="cu-empty">
+              <span className="cu-empty-icon">📝</span>
+              <p>Pas encore de QCM pour ce chapitre.</p>
             </div>
-          ))}
+          )}
+        </div>
+      )}
+
+      {section === "flashcards" && (
+        <div className="cu-fc-wrapper">
+          {cours.flashcardsData?.length > 0 ? (
+            <FlashcardSession
+              cours={cours}
+              storage={storage}
+              onBack={() => setSection("fiche")}
+              onSaveProgress={onSaveFCProgress}
+              embedded
+            />
+          ) : (
+            <div className="cu-empty">
+              <span className="cu-empty-icon">🃏</span>
+              <p>Pas encore de flashcards pour ce chapitre.</p>
+            </div>
+          )}
         </div>
       )}
     </div>

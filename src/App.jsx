@@ -9,8 +9,8 @@ import HomePage from "./components/home/HomePage";
 import CoursListPage from "./components/cours/CoursListPage";
 import MatiereCoursPage from "./components/cours/MatiereCoursPage";
 import ChapitreDetailPage from "./components/cours/ChapitreDetailPage";
-import FicheCoursViewer from "./components/cours/FicheCoursViewer";
-import QCMChapitreSession from "./components/qcm/QCMChapitreSession";
+
+
 import FlashcardsListPage from "./components/flashcards/FlashcardsListPage";
 import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage";
 import FlashcardSession from "./components/flashcards/FlashcardSession";
@@ -18,10 +18,17 @@ import ClassementPage from "./components/classement/ClassementPage";
 import AventurePage from "./components/aventure/AventurePage";
 import BackofficePage from "./components/admin/BackofficePage";
 
+const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
+const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
+const ROLES = ["Élève","Parent"];
+
 function Onboarding({ onDone }) {
   const [step, setStep] = useState(0);
-  const [prenom, setPrenom] = useState("");
-  const [pseudo, setPseudo] = useState("");
+  const [form, setForm] = useState({ nom:"", prenom:"", tel:"", email:"", role:"Élève", classe:"", filiere:"", departement:"", fac:"", pseudo:"" });
+  const set = (k,v) => setForm(f => ({...f,[k]:v}));
+
+  const TOTAL_STEPS = 6;
+  const progress = step === 0 ? "0%" : Math.round(step / TOTAL_STEPS * 100) + "%";
 
   if (step === 0) return (
     <div className="ob-wrapper">
@@ -32,7 +39,7 @@ function Onboarding({ onDone }) {
         </div>
         <div className="ob-tagline">Ton coach digital<br />Hermione.</div>
         <div className="ob-benefits">
-          {[["📖","Fiches de cours visuelles style manuscrit"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards par matière"],["🏆","Classement & XP pour te motiver"]].map(([icon,txt],i)=>(
+          {[["📖","Fiches de cours visuelles"],["✅","QCM avec corrigés détaillés"],["🃏","Flashcards intelligentes"],["🏆","Classement & XP pour te motiver"]].map(([icon,txt],i)=>(
             <div key={i} className="ob-benefit"><span className="ob-benefit-icon">{icon}</span><span>{txt}</span></div>
           ))}
         </div>
@@ -42,21 +49,20 @@ function Onboarding({ onDone }) {
     </div>
   );
 
-  if (step === 3) return (
+  if (step === TOTAL_STEPS) return (
     <div className="ob-wrapper">
       <div className="ob-welcome ob-final">
         <div style={{fontSize:64,marginBottom:16}}>🎉</div>
-        <div style={{fontFamily:"var(--font-display)",fontSize:22,fontWeight:900,marginBottom:8}}>Bienvenue {prenom} !</div>
+        <div style={{fontFamily:"var(--font-display)",fontSize:22,fontWeight:900,marginBottom:8}}>Bienvenue {form.prenom} !</div>
         <p style={{fontSize:14,color:"var(--gray)",marginBottom:32}}>Ton espace Hermione est prêt.<br/>Gagne des XP et grimpe dans le classement !</p>
-        <button className="ob-start-btn" onClick={() => onDone({ prenom, pseudo })}>
+        <button className="ob-start-btn" onClick={() => onDone(form)}>
           ACCÉDER À MON ESPACE →
         </button>
       </div>
     </div>
   );
 
-  const titles = ["", "Ton prénom", "Ton pseudo"];
-  const progress = step === 1 ? "33%" : step === 2 ? "66%" : "100%";
+  const titles = ["","Qui es-tu ?","Tes coordonnées","Ta situation","Ta fac","Ton pseudo"];
 
   return (
     <div className="ob-wrapper">
@@ -67,17 +73,58 @@ function Onboarding({ onDone }) {
 
         {step === 1 && <>
           <h2>Comment tu t'appelles ?</h2>
-          <input className="ob-input" placeholder="Ton prénom" value={prenom} onChange={e => setPrenom(e.target.value)} autoFocus />
+          <input className="ob-input" placeholder="Prénom" value={form.prenom} onChange={e => set("prenom",e.target.value)} autoFocus />
+          <input className="ob-input" placeholder="Nom" value={form.nom} onChange={e => set("nom",e.target.value)} />
+          <div className="ob-role-row">
+            {ROLES.map(r => (
+              <button key={r} className={`ob-role-btn ${form.role===r?"active":""}`} onClick={() => set("role",r)}>{r === "Élève" ? "🎓" : "👨‍👩‍👧"} {r}</button>
+            ))}
+          </div>
           <div style={{flex:1}} />
-          <button className="ob-next" disabled={!prenom.trim()} onClick={() => setStep(2)}>SUIVANT</button>
+          <button className="ob-next" disabled={!form.prenom.trim() || !form.nom.trim()} onClick={() => setStep(2)}>SUIVANT</button>
         </>}
 
         {step === 2 && <>
-          <h2>Choisis un pseudo pour le classement</h2>
-          <p style={{fontSize:13,color:"var(--gray)",marginBottom:16}}>Visible par les autres étudiants</p>
-          <input className="ob-input" placeholder="Ex: emma_med26" value={pseudo} onChange={e => setPseudo(e.target.value)} autoFocus />
+          <h2>Tes coordonnées</h2>
+          <p style={{fontSize:13,color:"var(--gray)",marginBottom:12}}>Pour te recontacter si besoin (coaching, résultats…)</p>
+          <input className="ob-input" type="email" placeholder="Adresse email" value={form.email} onChange={e => set("email",e.target.value)} autoFocus />
+          <input className="ob-input" type="tel" placeholder="Numéro de téléphone" value={form.tel} onChange={e => set("tel",e.target.value)} />
           <div style={{flex:1}} />
-          <button className="ob-next" disabled={!pseudo.trim()} onClick={() => setStep(3)}>SUIVANT</button>
+          <button className="ob-next" disabled={!form.email.trim()} onClick={() => setStep(3)}>SUIVANT</button>
+        </>}
+
+        {step === 3 && <>
+          <h2>Ta situation actuelle</h2>
+          <p style={{fontSize:13,color:"var(--gray)",marginBottom:12}}>Classe actuelle</p>
+          <div className="ob-chips">
+            {CLASSES.map(c => (
+              <button key={c} className={`ob-chip ${form.classe===c?"active":""}`} onClick={() => set("classe",c)}>{c}</button>
+            ))}
+          </div>
+          <p style={{fontSize:13,color:"var(--gray)",marginBottom:12,marginTop:16}}>Filière</p>
+          <div className="ob-chips">
+            {FILIERES.map(f => (
+              <button key={f} className={`ob-chip ${form.filiere===f?"active":""}`} onClick={() => set("filiere",f)}>{f}</button>
+            ))}
+          </div>
+          <div style={{flex:1}} />
+          <button className="ob-next" disabled={!form.classe} onClick={() => setStep(4)}>SUIVANT</button>
+        </>}
+
+        {step === 4 && <>
+          <h2>Ta fac visée</h2>
+          <input className="ob-input" placeholder="Département (ex: 75, 69, 13…)" value={form.departement} onChange={e => set("departement",e.target.value)} autoFocus />
+          <input className="ob-input" placeholder="Nom de la fac (ex: Paris Descartes)" value={form.fac} onChange={e => set("fac",e.target.value)} />
+          <div style={{flex:1}} />
+          <button className="ob-next" onClick={() => setStep(5)}>SUIVANT</button>
+        </>}
+
+        {step === 5 && <>
+          <h2>Choisis un pseudo</h2>
+          <p style={{fontSize:13,color:"var(--gray)",marginBottom:16}}>Visible par les autres étudiants dans le classement</p>
+          <input className="ob-input" placeholder="Ex: emma_med26" value={form.pseudo} onChange={e => set("pseudo",e.target.value)} autoFocus />
+          <div style={{flex:1}} />
+          <button className="ob-next" disabled={!form.pseudo.trim()} onClick={() => setStep(TOTAL_STEPS)}>TERMINER</button>
         </>}
       </div>
     </div>
@@ -124,17 +171,25 @@ function AuthScreen({ onAuth }) {
       if (!pseudo.trim()) { setError("Choisis un pseudo"); setLoading(false); return; }
       if (password.length < 6) { setError("Mot de passe : 6 caractères min."); setLoading(false); return; }
       const { data, error: err } = await signUp(email, password, pseudo);
-      if (err) { setError(err.message); setLoading(false); return; }
+      if (err) {
+        const msg = err.message === "Email not confirmed" ? "Email ou mot de passe incorrect" : err.message;
+        setError(msg); setLoading(false); return;
+      }
       if (data?.user?.identities?.length === 0) {
         setError("Cet email est déjà utilisé. Connecte-toi.");
         setMode("login");
       } else {
-        setConfirmMsg("Compte créé ! Vérifie tes emails pour confirmer, ou connecte-toi directement.");
-        setMode("login");
+        onAuth();
+        return;
       }
     } else {
       const { error: err } = await signIn(email, password);
-      if (err) { setError(err.message === "Invalid login credentials" ? "Email ou mot de passe incorrect" : err.message); setLoading(false); return; }
+      if (err) {
+        const msg = (err.message === "Invalid login credentials" || err.message === "Email not confirmed")
+          ? "Email ou mot de passe incorrect"
+          : err.message;
+        setError(msg); setLoading(false); return;
+      }
       onAuth();
     }
     setLoading(false);
@@ -210,13 +265,7 @@ export default function App() {
   }, [auth.user?.id, cloudLoaded, cloud, storage.xp, updateStorage]);
 
   if (isAdminRoute) {
-    return (
-      <div className="app-shell">
-        <div className="scroll-area">
-          <BackofficePage />
-        </div>
-      </div>
-    );
+    return <BackofficePage />;
   }
 
   if (auth.loading) {
@@ -228,8 +277,19 @@ export default function App() {
   }
 
   if (!storage.user.onboarded) {
-    return <Onboarding onDone={({ prenom, pseudo }) => {
-      syncUpdate(prev => ({ ...prev, user: { prenom, classe: "", fac: "", onboarded: true }, pseudo, xp: 0, streak: 0, last_active: new Date().toISOString().split("T")[0] }));
+    return <Onboarding onDone={(form) => {
+      syncUpdate(prev => ({
+        ...prev,
+        user: {
+          prenom: form.prenom, nom: form.nom, email: form.email, tel: form.tel,
+          role: form.role, classe: form.classe, filiere: form.filiere,
+          departement: form.departement, fac: form.fac, onboarded: true,
+        },
+        pseudo: form.pseudo,
+        xp: prev.xp || 0, streak: prev.streak || 0,
+        last_active: new Date().toISOString().split("T")[0],
+        show_tutorial: true,
+      }));
     }} />;
   }
 
@@ -292,16 +352,8 @@ export default function App() {
     addXP(XP_REWARDS.FLASHCARD_SESSION);
   }
 
-  // Vues plein écran
-  if (view === "fiche" && cours) return (
-    <FicheCoursViewer cours={cours} onBack={() => setView(null)} onSaveProgress={() => saveFicheLue(cours.id)} />
-  );
-  if (view === "qcm" && cours) return (
-    <div className="app-shell"><div className="scroll-area">
-      <QCMChapitreSession cours={cours} onBack={() => setView(null)} onSaveScore={saveQCMScore} />
-    </div></div>
-  );
-  if (view === "fc-session" && cours) return (
+  // Vues plein écran legacy (flashcard session depuis onglet flashcards)
+  if (view === "fc-session" && cours && tab === "flashcards") return (
     <div className="app-shell"><div className="scroll-area">
       <FlashcardSession cours={cours} storage={storage} onBack={() => setView(null)} onSaveProgress={saveFCProgress} />
     </div></div>
@@ -314,12 +366,15 @@ export default function App() {
     </div>
   );
 
-  // Onglet Cours (Fiches)
+  // Onglet Cours — page unifiée Fiche + QCM + Flashcards
   if (tab === "cours") {
     if (cours) return wrap(
       <ChapitreDetailPage cours={cours} storage={storage}
-        onFiche={() => setView("fiche")} onQCM={() => setView("qcm")} onFlashcards={() => setView("fc-session")}
-        onBack={() => setCours(null)} />
+        onBack={() => setCours(null)}
+        onSaveProgress={() => saveFicheLue(cours.id)}
+        onSaveQCMScore={saveQCMScore}
+        onSaveFCProgress={saveFCProgress}
+      />
     );
     if (matiere) return wrap(
       <MatiereCoursPage matiere={matiere} storage={storage} onSelectCours={setCours} onBack={() => setMatiere(null)} />
@@ -359,7 +414,8 @@ export default function App() {
   }
 
   const pages = {
-    home: <HomePage user={storage.user} storage={storage} onGoTo={resetTab} onSignOut={auth.ready ? auth.signOut : null} />,
+    home: <HomePage user={storage.user} storage={storage} onGoTo={resetTab} onSignOut={auth.ready ? auth.signOut : null}
+      onDismissTutorial={() => syncUpdate(prev => ({ ...prev, show_tutorial: false }))} />,
   };
   return wrap(pages[tab] || pages.home);
 }

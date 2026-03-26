@@ -278,7 +278,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 .prog-track{height:4px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .prog-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .3s}
 
-/* ── CHAPITRE HUB ── */
+/* ── CHAPITRE HUB (legacy) ── */
 .hub-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
 .hub-card{border:none;border-radius:14px;padding:20px 16px;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:6px;transition:transform .15s;position:relative}
 .hub-card:active{transform:scale(.97)}
@@ -293,6 +293,52 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 .chapitre-stats{background:var(--bg2);border:1px solid var(--border-sub);border-radius:12px;padding:14px}
 .chapitre-stat-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border-sub)}
 .chapitre-stat-row:last-child{border-bottom:none}
+
+/* ── COURS UNIFIÉ (ChapitreDetailPage V2) ── */
+.cours-unified{display:flex;flex-direction:column;min-height:0;height:100%}
+
+.cu-header{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;flex-shrink:0}
+.cu-header-info{flex:1;min-width:0}
+.cu-header-titre{font-family:var(--font-display);font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.cu-section-tabs{display:flex;gap:0;padding:0 16px;flex-shrink:0;border-bottom:1px solid var(--border-sub)}
+.cu-sec-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 8px;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--gray);letter-spacing:.3px}
+.cu-sec-tab:hover{color:var(--white)}
+.cu-sec-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.cu-sec-icon{font-size:16px}
+.cu-sec-badge{font-size:10px;padding:2px 7px;border-radius:100px;font-weight:700}
+.cu-sec-badge.done{background:rgba(46,204,113,0.15);color:var(--green)}
+.cu-sec-badge.score{background:rgba(201,168,76,0.12);color:var(--gold)}
+
+/* Fiche inside unified */
+.cu-fiche-wrapper{display:flex;flex-direction:column;flex:1;min-height:0}
+.cu-fiche-tabs{display:flex;gap:4px;padding:10px 16px;overflow-x:auto;flex-shrink:0;scrollbar-width:none}
+.cu-fiche-tabs::-webkit-scrollbar{display:none}
+.cu-ftab{background:rgba(255,255,255,0.04);border:1px solid var(--border-sub);border-radius:100px;padding:6px 12px;font-size:11.5px;font-weight:600;font-family:var(--font-display);color:var(--gray);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.cu-ftab.active{background:var(--gold);color:#0D0721;border-color:var(--gold)}
+.cu-fiche-content{flex:1;overflow-y:auto;padding:0 0 12px}
+.cu-fiche-nav{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--border-sub);flex-shrink:0;gap:8px}
+.cu-fnav-btn{padding:10px 18px;border-radius:10px;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.8px;cursor:pointer;border:none;transition:all .2s}
+.cu-fnav-btn.primary{background:var(--gold);color:#0D0721}
+.cu-fnav-btn.secondary{background:rgba(255,255,255,0.06);border:1px solid var(--border-sub);color:var(--gray)}
+.cu-fnav-btn:disabled{opacity:.3;cursor:not-allowed}
+.cu-fiche-counter{font-size:12px;color:var(--gray);font-weight:600}
+
+/* QCM embedded */
+.cu-qcm-wrapper{flex:1;overflow-y:auto;padding:8px 0}
+.cu-qcm-inner{padding:0 16px}
+.cu-qcm-header{padding:12px 16px 4px;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--white)}
+.cu-qcm-label{color:var(--gold)}
+
+/* Flashcards embedded */
+.cu-fc-wrapper{flex:1;overflow-y:auto;padding:8px 0}
+.cu-fc-inner{padding:0 16px}
+.cu-fc-header{padding:12px 16px 4px;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--white)}
+.cu-fc-label{color:var(--gold)}
+
+/* Empty state embedded */
+.cu-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:12px;color:var(--gray);text-align:center}
+.cu-empty-icon{font-size:48px}
 .chapitre-stat-date{font-size:12px;color:var(--gray)}
 .chapitre-stat-score{font-size:13px;font-weight:700}
 

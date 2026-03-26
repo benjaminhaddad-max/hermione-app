@@ -19,7 +19,7 @@ function sortCards(cards, cardProgress) {
   });
 }
 
-export default function FlashcardSession({ cours, onBack, onSaveProgress, storage }) {
+export default function FlashcardSession({ cours, onBack, onSaveProgress, storage, embedded }) {
   const allCards = cours.flashcardsData || [];
   const cardProgress = getCardProgress(storage, cours.id);
 
@@ -67,8 +67,8 @@ export default function FlashcardSession({ cours, onBack, onSaveProgress, storag
   }
 
   if (sortedCards.length === 0) return (
-    <div className="page">
-      <div className="back-header"><button className="back-btn" onClick={onBack}>←</button><span className="back-title">Flashcards</span><div style={{ width: 32 }} /></div>
+    <div className={embedded ? "cu-fc-inner" : "page"}>
+      {!embedded && <div className="back-header"><button className="back-btn" onClick={onBack}>←</button><span className="back-title">Flashcards</span><div style={{ width: 32 }} /></div>}
       <div className="empty-state"><span style={{ fontSize: 48 }}>🃏</span><p>Pas de flashcards pour ce chapitre.</p></div>
     </div>
   );
@@ -78,12 +78,19 @@ export default function FlashcardSession({ cours, onBack, onSaveProgress, storag
   const dueNow = !prevRating || prevRating.nextReview <= Date.now();
 
   return (
-    <div className="page">
-      <div className="back-header">
-        <button className="back-btn" onClick={onBack}>←</button>
-        <span className="back-title">🃏 {cours.titre}</span>
-        <span className="qcm-counter">{idx + 1}/{sortedCards.length}</span>
-      </div>
+    <div className={embedded ? "cu-fc-inner" : "page"}>
+      {!embedded && (
+        <div className="back-header">
+          <button className="back-btn" onClick={onBack}>←</button>
+          <span className="back-title">🃏 {cours.titre}</span>
+          <span className="qcm-counter">{idx + 1}/{sortedCards.length}</span>
+        </div>
+      )}
+      {embedded && (
+        <div className="cu-fc-header">
+          <span className="cu-fc-label">Carte {idx + 1}/{sortedCards.length}</span>
+        </div>
+      )}
       <div className="prog-track" style={{ marginBottom: 20 }}>
         <div className="prog-fill" style={{ width: (idx / sortedCards.length * 100) + "%" }} />
       </div>

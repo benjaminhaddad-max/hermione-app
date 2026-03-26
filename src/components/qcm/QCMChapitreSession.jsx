@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import QCMQuestion from "./QCMQuestion";
 import QCMResultat from "./QCMResultat";
 
-export default function QCMChapitreSession({ cours, onBack, onSaveScore }) {
-  const questions = cours.qcm || [];
+function shuffleOptions(questions) {
+  return questions.map(q => {
+    const indices = q.options.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    const shuffled = indices.map(i => q.options[i]);
+    const newCorrect = indices.indexOf(q.correct);
+    return { ...q, options: shuffled, correct: newCorrect, _origIndices: indices };
+  });
+}
+
+export default function QCMChapitreSession({ cours, onBack, onSaveScore, embedded }) {
+  const questions = useMemo(() => shuffleOptions(cours.qcm || []), [cours.qcm]);
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [preSelected, setPreSelected] = useState(null);
@@ -67,12 +80,19 @@ export default function QCMChapitreSession({ cours, onBack, onSaveScore }) {
 
   const q = questions[idx];
   return (
-    <div className="page">
-      <div className="back-header">
-        <button className="back-btn" onClick={onBack}>←</button>
-        <span className="back-title">QCM · {cours.emoji} {cours.titre}</span>
-        <span className="qcm-counter">{idx + 1}/{questions.length}</span>
-      </div>
+    <div className={embedded ? "cu-qcm-inner" : "page"}>
+      {!embedded && (
+        <div className="back-header">
+          <button className="back-btn" onClick={onBack}>←</button>
+          <span className="back-title">QCM · {cours.emoji} {cours.titre}</span>
+          <span className="qcm-counter">{idx + 1}/{questions.length}</span>
+        </div>
+      )}
+      {embedded && (
+        <div className="cu-qcm-header">
+          <span className="cu-qcm-label">Question {idx + 1}/{questions.length}</span>
+        </div>
+      )}
 
       <div className="prog-track" style={{ marginBottom: 20 }}>
         <div className="prog-fill" style={{ width: (idx / questions.length * 100) + "%" }} />
