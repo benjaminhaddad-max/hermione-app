@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { MATIERES } from "../../data/content";
 import { getLevel, getRank } from "../../data/leaderboard";
 
-export default function HomePage({ user, storage, onGoTo, onSignOut }) {
+const TUTORIAL_STEPS = [
+  { target: "reviser", emoji: "📖", title: "Réviser", desc: "Accède à toutes tes fiches de cours, QCM et flashcards classés par matière. C'est ici que tu apprends !" },
+  { target: "classement", emoji: "🏆", title: "Classement", desc: "Chaque action te rapporte des XP. Monte dans le classement et débloque de nouveaux niveaux !" },
+  { target: "aventure", emoji: "🗺️", title: "Aventure", desc: "Un mode guidé matière par matière. Termine les mondes pour débloquer un coach en médecine !" },
+  { target: "done", emoji: "🚀", title: "C'est parti !", desc: "Tu es prêt(e) ! Commence par réviser une matière et gagne tes premiers XP." },
+];
+
+export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTutorial }) {
   const fichesLues = Object.values(storage.fiches_lues || {}).filter(f => f.lue).length;
   const totalCours = MATIERES.flatMap(m => m.cours).length;
   const userXP = storage.xp || 0;
@@ -14,8 +22,42 @@ export default function HomePage({ user, storage, onGoTo, onSignOut }) {
     ? Math.min(100, Math.round((userXP - current.minXP) / (nextLevel.minXP - current.minXP) * 100))
     : 100;
 
+  const showTutorial = storage.show_tutorial;
+  const [tutStep, setTutStep] = useState(0);
+
+  function closeTutorial() {
+    onDismissTutorial && onDismissTutorial();
+  }
+
+  function nextTut() {
+    if (tutStep + 1 >= TUTORIAL_STEPS.length) {
+      closeTutorial();
+    } else {
+      setTutStep(tutStep + 1);
+    }
+  }
+
   return (
     <div className="page hp">
+      {showTutorial && (
+        <div className="tuto-overlay">
+          <div className="tuto-card">
+            <div className="tuto-emoji">{TUTORIAL_STEPS[tutStep].emoji}</div>
+            <h3 className="tuto-title">{TUTORIAL_STEPS[tutStep].title}</h3>
+            <p className="tuto-desc">{TUTORIAL_STEPS[tutStep].desc}</p>
+            <div className="tuto-dots">
+              {TUTORIAL_STEPS.map((_, i) => <span key={i} className={`tuto-dot ${i === tutStep ? "active" : ""}`} />)}
+            </div>
+            <div className="tuto-actions">
+              <button className="tuto-skip" onClick={closeTutorial}>Passer</button>
+              <button className="tuto-next" onClick={nextTut}>
+                {tutStep + 1 >= TUTORIAL_STEPS.length ? "C'est parti !" : "Suivant →"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ── Header ── */}
       <div className="hp-header">
         <div>
@@ -153,6 +195,37 @@ export default function HomePage({ user, storage, onGoTo, onSignOut }) {
         <p className="hp-coaching-msg">
           Un étudiant en médecine va te recontacter dans les <strong>48h</strong> pour répondre à toutes tes questions et t'aider à préparer ta rentrée.
         </p>
+      </div>
+
+      {/* ── Shorts YouTube populaires ── */}
+      <div className="hp-shorts-section">
+        <h2 className="hp-shorts-title">Nos vidéos les plus vues</h2>
+        <p className="hp-shorts-sub">+5 millions de vues sur nos shorts</p>
+        <div className="hp-shorts-scroll">
+          {[
+            { id:"FQcNPaGHw80", views:"3M",   title:"Pourquoi elle ne se DOUCHE PAS pendant un mois..." },
+            { id:"IIaCclCOBQA", views:"1.9M",  title:"JETTE tes fiches de révisions !" },
+            { id:"1uGy436yH30", views:"1.4M",  title:"Cette CHIMÈRE a FUSIONNÉ avec son jumeau" },
+            { id:"cAeLlGcU1BA", views:"1.3M",  title:"Pourquoi il ne peut PLUS BOUGER ses YEUX" },
+            { id:"mgLTvjhi6WA", views:"1.1M",  title:"Le SYNDROME de Tiktok (Barber Say)" },
+            { id:"Umbqf9VRb4w", views:"1M",    title:"Pourquoi tu ne retiens rien au long terme" },
+          ].map(s => (
+            <div key={s.id} className="hp-short-card">
+              <div className="hp-short-embed">
+                <iframe
+                  src={`https://www.youtube.com/embed/${s.id}?rel=0&modestbranding=1`}
+                  title={s.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="hp-short-info">
+                <span className="hp-short-views">👁 {s.views} vues</span>
+                <span className="hp-short-name">{s.title}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {onSignOut && (
