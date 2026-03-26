@@ -1,26 +1,48 @@
+import { useState } from "react";
 import { getCurated, getImageBase } from "../../data/ficheCuratedAll";
 
 function renderContent(text) {
   const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
 
   return lines.map((line, i) => {
-    if (/^[•→]/.test(line)) {
+    if (/^[•→›\-]/.test(line)) {
+      const clean = line.replace(/^[•→›\-]\s*/, "");
       return (
         <div key={i} className="fc-bullet-row">
-          <span className="fc-bullet-dot">›</span>
-          <span>{line.replace(/^[•→]\s*/, "")}</span>
+          <span className="fc-bullet-dot" aria-hidden="true" />
+          <span>{clean}</span>
         </div>
       );
+    }
+    if (/^\d+[\.\)]/.test(line)) {
+      return (
+        <div key={i} className="fc-bullet-row fc-bullet-num-row">
+          <span className="fc-num-dot">{line.match(/^\d+/)[0]}</span>
+          <span>{line.replace(/^\d+[\.\)]\s*/, "")}</span>
+        </div>
+      );
+    }
+    if (/^En gros\s*:/i.test(line)) {
+      return <p key={i} className="fc-text fc-engros">{line}</p>;
+    }
+    if (/^Traduction\s*:/i.test(line)) {
+      return <p key={i} className="fc-text fc-traduction">{line}</p>;
     }
     return <p key={i} className="fc-text">{line}</p>;
   });
 }
 
 function ImageBlock({ img, titre, imageBase }) {
-  if (!img) return null;
+  const [broken, setBroken] = useState(false);
+  if (!img || broken) return null;
   return (
     <div className="fc-illus">
-      <img src={imageBase + img.file} alt={titre} loading="lazy" />
+      <img
+        src={imageBase + img.file}
+        alt={titre}
+        loading="lazy"
+        onError={() => setBroken(true)}
+      />
       {img.caption && <div className="fc-illus-caption">{img.caption}</div>}
     </div>
   );
