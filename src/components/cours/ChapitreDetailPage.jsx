@@ -8,7 +8,7 @@ import QCMChapitreSession from "../qcm/QCMChapitreSession";
 import FlashcardSession from "../flashcards/FlashcardSession";
 
 const FICHE_LABELS_FULL = ["Cours", "Notions", "Schémas", "Chiffres", "Résumé"];
-const FICHE_LABELS_TERM = ["Cours", "Notions", "Chiffres"];
+const FICHE_LABELS_TERM = ["Cours", "Notions"];
 
 export default function ChapitreDetailPage({
   cours, storage, onBack, onSaveProgress, onSaveQCMScore, onSaveFCProgress
@@ -41,7 +41,6 @@ export default function ChapitreDetailPage({
   const fichePagesTerm = [
     <FichePage1Intro fiche={f} courseTitle={cours.titre} />,
     <FichePage2Concepts data={f.page2_concepts} />,
-    <FichePage4Formules data={f.page4_formules} />,
   ];
 
   const fichePages = isTerminale ? fichePagesTerm : fichePagesFull;
