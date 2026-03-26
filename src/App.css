@@ -903,11 +903,11 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 .fc-due{color:var(--gold-light);background:rgba(201,168,76,0.12);padding:4px 12px;border-radius:20px}
 .fc-mastered-tag{color:var(--green);background:rgba(46,204,113,0.1);padding:4px 12px;border-radius:20px}
 .fc-rating{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
-.fc-rate{border:none;border-radius:12px;padding:12px 6px;font-family:var(--font-body);font-size:12px;font-weight:600;cursor:pointer}
+.fc-rating-2{grid-template-columns:1fr 1fr}
+.fc-rate{border:none;border-radius:12px;padding:14px 6px;font-family:var(--font-body);font-size:14px;font-weight:700;cursor:pointer;transition:transform .1s}
+.fc-rate:active{transform:scale(.96)}
 .fc-rate.fail{background:rgba(224,90,43,0.15);color:#e05a2b}
-.fc-rate.hard{background:rgba(255,180,0,0.12);color:#ffb400}
-.fc-rate.ok{background:rgba(46,204,113,0.12);color:#2ecc71}
-.fc-rate.easy{background:rgba(46,204,113,0.2);color:#2ecc71}
+.fc-rate.ok{background:rgba(46,204,113,0.15);color:#2ecc71}
 
 /* ── COACHING PAGE ── */
 .coaching-intro{

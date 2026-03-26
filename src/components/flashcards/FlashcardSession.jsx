@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 
-const SCORE_MAP = { fail: 0, hard: 1, ok: 2, easy: 3 };
-const INTERVAL_HOURS = { 0: 0, 1: 4, 2: 24, 3: 72 };
+const SCORE_MAP = { fail: 0, ok: 2 };
+const INTERVAL_HOURS = { 0: 0, 2: 24 };
 
 function getCardProgress(storage, coursId) {
   return storage?.flashcards_progress?.[coursId]?.cards || {};
@@ -36,7 +36,7 @@ export default function FlashcardSession({ cours, onBack, onSaveProgress, storag
   function rate(score) {
     const card = sortedCards[idx];
     const numScore = SCORE_MAP[score] ?? 0;
-    const isMastered = score === "easy" || score === "ok";
+    const isMastered = score === "ok";
 
     setSessionRatings(prev => ({ ...prev, [card.q]: { score: numScore, time: Date.now() } }));
 
@@ -115,11 +115,9 @@ export default function FlashcardSession({ cours, onBack, onSaveProgress, storag
         </div>
       </div>
       {flipped && (
-        <div className="fc-rating">
-          <button className="fc-rate fail" onClick={() => rate("fail")}>😔 Raté</button>
-          <button className="fc-rate hard" onClick={() => rate("hard")}>😐 Difficile</button>
-          <button className="fc-rate ok" onClick={() => rate("ok")}>🙂 Bon</button>
-          <button className="fc-rate easy" onClick={() => rate("easy")}>😄 Facile</button>
+        <div className="fc-rating fc-rating-2">
+          <button className="fc-rate fail" onClick={() => rate("fail")}>❌ Raté</button>
+          <button className="fc-rate ok" onClick={() => rate("ok")}>✅ Bon</button>
         </div>
       )}
     </div>
