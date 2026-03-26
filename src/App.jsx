@@ -16,6 +16,7 @@ import MatiereFlashcardsPage from "./components/flashcards/MatiereFlashcardsPage
 import FlashcardSession from "./components/flashcards/FlashcardSession";
 import ClassementPage from "./components/classement/ClassementPage";
 import AventurePage from "./components/aventure/AventurePage";
+import MethodePage from "./components/methode/MethodePage";
 import BackofficePage from "./components/admin/BackofficePage";
 
 const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
@@ -135,6 +136,7 @@ function BottomNav({ active, onChange }) {
   const tabs = [
     { id:"home",       icon:"🏠", label:"Home" },
     { id:"cours",      icon:"📖", label:"Réviser" },
+    { id:"methode",    icon:"🎯", label:"Méthode" },
     { id:"classement", icon:"🏆", label:"Classement" },
     { id:"aventure",   icon:"🗺️", label:"Aventure" },
   ];
@@ -393,6 +395,11 @@ export default function App() {
         onBack={() => setMatiere(null)} />
     );
     return wrap(<FlashcardsListPage storage={storage} onSelectMatiere={setMatiere} onGoFiches={() => resetTab("cours")} />);
+  }
+
+  // Onglet Méthode
+  if (tab === "methode") {
+    return wrap(<MethodePage />);
   }
 
   // Onglet Classement

@@ -2498,3 +2498,37 @@ select.ob-input{appearance:none;-webkit-appearance:none}
 .chat-input::placeholder{color:var(--gray)}
 .chat-send-btn{width:40px;height:40px;border-radius:50%;background:var(--gold);border:none;color:#0D0721;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chat-send-btn:disabled{opacity:0.3;cursor:not-allowed}
+
+/* ── METHODE (Vidéos) ── */
+.meth-page{display:flex;flex-direction:column;min-height:0;height:100%}
+.meth-header{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;flex-shrink:0}
+.meth-header-title{font-family:var(--font-display);font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.meth-player-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;flex-shrink:0}
+.meth-player{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+
+.meth-video-desc{padding:16px}
+.meth-desc-titre{font-family:var(--font-display);font-size:16px;font-weight:700;margin:0 0 8px}
+
+.meth-intro{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.meth-intro-text{font-size:13.5px;line-height:1.6;color:var(--white);margin:0}
+.meth-intro-text strong{color:var(--gold)}
+
+.meth-chapitre{margin-bottom:8px}
+.meth-chap-header{display:flex;align-items:center;gap:8px;width:100%;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--border-sub);border-radius:12px;cursor:pointer;transition:all .2s;font-family:var(--font-display)}
+.meth-chap-header.open{border-radius:12px 12px 0 0;border-bottom-color:transparent;background:rgba(201,168,76,0.08)}
+.meth-chap-header:hover{background:rgba(255,255,255,0.06)}
+.meth-chap-num{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--gold);opacity:.7;text-transform:uppercase}
+.meth-chap-titre{flex:1;font-size:13px;font-weight:700;color:var(--white);text-align:left}
+.meth-chap-count{font-size:11px;color:var(--gray);font-weight:600}
+.meth-chap-chevron{font-size:14px;color:var(--gray);width:20px;text-align:center}
+
+.meth-chap-videos{border:1px solid var(--border-sub);border-top:none;border-radius:0 0 12px 12px;overflow:hidden}
+
+.meth-video-card{display:flex;align-items:center;gap:10px;width:100%;padding:12px 16px;background:none;border:none;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:all .15s;text-align:left}
+.meth-video-card:last-child{border-bottom:none}
+.meth-video-card:hover{background:rgba(255,255,255,0.04)}
+.meth-video-card.active{background:rgba(201,168,76,0.1)}
+.meth-video-emoji{font-size:18px;flex-shrink:0}
+.meth-video-titre{flex:1;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--white)}
+.meth-video-play{font-size:14px;color:var(--gold);flex-shrink:0}
