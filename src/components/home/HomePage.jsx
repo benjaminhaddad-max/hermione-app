@@ -64,7 +64,9 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
           <h1 className="hp-hello">Salut {user.prenom} 👋</h1>
           <p className="hp-sub">Prêt(e) à réussir PASS/LAS ?</p>
         </div>
-        <img src="/logo-hermione.webp" alt="Hermione" className="hp-logo" />
+        <button className="hp-avatar-btn" onClick={() => onGoTo("profil")}>
+          <span className="hp-avatar-initials">{(user.prenom?.[0] || "").toUpperCase()}{(user.nom?.[0] || "").toUpperCase()}</span>
+        </button>
       </div>
 
       {/* ── XP Card ── */}

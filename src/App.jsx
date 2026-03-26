@@ -17,6 +17,7 @@ import FlashcardSession from "./components/flashcards/FlashcardSession";
 import ClassementPage from "./components/classement/ClassementPage";
 import AventurePage from "./components/aventure/AventurePage";
 import MethodePage from "./components/methode/MethodePage";
+import ProfilPage from "./components/profil/ProfilPage";
 import BackofficePage from "./components/admin/BackofficePage";
 
 const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
@@ -400,6 +401,22 @@ export default function App() {
   // Onglet Méthode
   if (tab === "methode") {
     return wrap(<MethodePage />);
+  }
+
+  // Page Profil
+  if (tab === "profil") {
+    return wrap(
+      <ProfilPage
+        storage={storage}
+        onBack={() => resetTab("home")}
+        onUpdate={(updates) => syncUpdate(prev => ({
+          ...prev,
+          user: { ...prev.user, ...updates.user },
+          ...(updates.pseudo !== undefined ? { pseudo: updates.pseudo } : {}),
+        }))}
+        onSignOut={auth.ready ? auth.signOut : null}
+      />
+    );
   }
 
   // Onglet Classement
