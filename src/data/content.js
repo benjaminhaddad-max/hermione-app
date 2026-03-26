@@ -6,7 +6,7 @@ import { TERM_MATHS_COURS } from "./termMaths";
 import { TERM_PHYSIQUE_CHIMIE_COURS } from "./termPhysiqueChimie";
 import { TERM_CHIMIE_COURS } from "./termChimie";
 
-export const MATIERES = [
+const _MATIERES_RAW = [
   {
     "id": "physique",
     "emoji": "⚡",
@@ -8951,4 +8951,10 @@ export const MATIERES = [
     "color": "#2C5F2E",
     "cours": TERM_CHIMIE_COURS
   }
+];
+
+const ANTICIPATION_ORDER = ["biologie-cellulaire", "biochimie", "chimie", "physique"];
+export const MATIERES = [
+  ..._MATIERES_RAW.filter(m => m.categorie === "anticipation").sort((a, b) => ANTICIPATION_ORDER.indexOf(a.id) - ANTICIPATION_ORDER.indexOf(b.id)),
+  ..._MATIERES_RAW.filter(m => m.categorie !== "anticipation"),
 ];
