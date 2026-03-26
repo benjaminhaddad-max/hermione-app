@@ -64,8 +64,11 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
           <h1 className="hp-hello">Salut {user.prenom} 👋</h1>
           <p className="hp-sub">Prêt(e) à réussir PASS/LAS ?</p>
         </div>
-        <button className="hp-avatar-btn" onClick={() => onGoTo("profil")}>
-          <span className="hp-avatar-initials">{(user.prenom?.[0] || "").toUpperCase()}{(user.nom?.[0] || "").toUpperCase()}</span>
+        <button className="hp-profil-btn" onClick={() => onGoTo("profil")}>
+          <div className="hp-profil-avatar">
+            <span className="hp-avatar-initials">{(user.prenom?.[0] || "").toUpperCase()}{(user.nom?.[0] || "").toUpperCase()}</span>
+          </div>
+          <span className="hp-profil-label">Mon profil</span>
         </button>
       </div>
 
