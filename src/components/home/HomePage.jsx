@@ -197,6 +197,44 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
         </p>
       </div>
 
+      {/* ── Shorts YouTube récents ── */}
+      <div className="hp-shorts-section">
+        <div className="hp-shorts-header">
+          <div>
+            <h2 className="hp-shorts-title">Dernières vidéos</h2>
+            <p className="hp-shorts-sub">Nos shorts les plus récents</p>
+          </div>
+          <span className="hp-shorts-new">NEW</span>
+        </div>
+        <div className="hp-shorts-scroll">
+          {[
+            { id:"4KAVUThCoZs", views:"3.1K",  title:"Team prépa ou team tutorat ?" },
+            { id:"_yxqj4YFA3Q", views:"1.5K",  title:"Les clichés en dentisterie qui agacent..." },
+            { id:"vFSYnOQ2JxE", views:"14K",   title:"Étudiant en P1 : quels métiers visent-ils ?" },
+            { id:"i3xW--FdB2I", views:"3.1K",  title:"Avoir 145 de QI pour faire médecine ?" },
+            { id:"bM7hT9oqpms", views:"1.9K",  title:"Kiné vs ostéopathe : quelle est LA différence ?" },
+            { id:"sLegEju4Kc8", views:"2.3K",  title:"Consulter ChatGPT plutôt que son médecin ?!" },
+            { id:"4CTC3AK4Zjc", views:"1K",    title:"Le manque de confiance des femmes en médecine" },
+            { id:"3UOKIpnq_j0", views:"3.5K",  title:"Les anecdotes croustillantes en hôpital" },
+          ].map(s => (
+            <div key={s.id} className="hp-short-card">
+              <div className="hp-short-embed">
+                <iframe
+                  src={`https://www.youtube.com/embed/${s.id}?rel=0&modestbranding=1`}
+                  title={s.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="hp-short-info">
+                <span className="hp-short-views">👁 {s.views} vues</span>
+                <span className="hp-short-name">{s.title}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* ── Shorts YouTube populaires ── */}
       <div className="hp-shorts-section">
         <h2 className="hp-shorts-title">Nos vidéos les plus vues</h2>

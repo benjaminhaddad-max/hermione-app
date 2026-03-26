@@ -234,8 +234,11 @@ body{background:var(--bg);color:var(--white);font-family:var(--font-body);displa
 
 /* Shorts YouTube */
 .hp-shorts-section{margin-top:16px}
+.hp-shorts-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .hp-shorts-title{font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--white);margin:0 0 2px}
-.hp-shorts-sub{font-size:12px;color:var(--gray);margin:0 0 12px;font-weight:600}
+.hp-shorts-sub{font-size:12px;color:var(--gray);margin:0;font-weight:600}
+.hp-shorts-new{padding:3px 10px;border-radius:100px;background:var(--red,#e74c3c);color:#fff;font-family:var(--font-display);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;animation:pulse-new 2s infinite}
+@keyframes pulse-new{0%,100%{opacity:1}50%{opacity:.6}}
 
 .hp-shorts-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .hp-shorts-scroll::-webkit-scrollbar{display:none}
