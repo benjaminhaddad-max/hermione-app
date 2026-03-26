@@ -5,7 +5,7 @@ import { getLevel, getRank } from "../../data/leaderboard";
 const TUTORIAL_STEPS = [
   { target: "reviser", emoji: "📖", title: "Réviser", desc: "Accède à toutes tes fiches de cours, QCM et flashcards classés par matière. C'est ici que tu apprends !" },
   { target: "classement", emoji: "🏆", title: "Classement", desc: "Chaque action te rapporte des XP. Monte dans le classement et débloque de nouveaux niveaux !" },
-  { target: "aventure", emoji: "🗺️", title: "Aventure", desc: "Un mode guidé matière par matière. Termine les mondes pour débloquer un coach en médecine !" },
+  { target: "aventure", emoji: "🗺️", title: "Aventure", desc: "Un mode guidé matière par matière. Termine les mondes pour débloquer des appels avec des tops PASS !" },
   { target: "done", emoji: "🚀", title: "C'est parti !", desc: "Tu es prêt(e) ! Commence par réviser une matière et gagne tes premiers XP." },
 ];
 
@@ -155,10 +155,10 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
           </div>
           <div className="hp-aventure-step-arrow">↓</div>
           <div className="hp-aventure-step hp-aventure-step-reward">
-            <div className="hp-aventure-step-num">💬</div>
+            <div className="hp-aventure-step-num">📞</div>
             <div>
-              <strong>Débloque un mentor</strong>
-              <span>Chatte avec des étudiants en médecine qui ont réussi</span>
+              <strong>Débloque un appel</strong>
+              <span>Sois rappelé(e) par un étudiant du Top 50 de ta fac !</span>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
           <span className="hp-aventure-dot">·</span>
           <span>📚 {totalCours} chapitres</span>
           <span className="hp-aventure-dot">·</span>
-          <span>💬 4 mentors à débloquer</span>
+          <span>📞 4 appels à débloquer</span>
         </div>
 
         <button className="hp-aventure-btn" onClick={() => onGoTo("aventure")}>

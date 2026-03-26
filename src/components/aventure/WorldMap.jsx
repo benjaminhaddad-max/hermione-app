@@ -71,19 +71,19 @@ export default function WorldMap({ world, worldIdx, totalWorlds, completedWorlds
             <div className="map-reward-avatar">{nextMentor.mentor.emoji}</div>
           </div>
           <div className="map-reward-right">
-            <div className="map-reward-badge">🧙 Mentor à débloquer</div>
+            <div className="map-reward-badge">📞 Appel à débloquer</div>
             <strong className="map-reward-title">{nextMentor.mentor.name} — {nextMentor.mentor.rank}</strong>
             <p className="map-reward-desc">{nextMentor.mentor.specialty}</p>
             <p className="map-reward-how">
               {nextMentor.worldsNeeded === 1
-                ? "✨ Termine cette matière pour débloquer ce mentor !"
-                : `📚 Termine ${nextMentor.worldsNeeded} matières pour débloquer ce mentor`}
+                ? "✨ Termine cette matière pour débloquer un appel avec ce mentor !"
+                : `📚 Termine ${nextMentor.worldsNeeded} matières pour être rappelé(e) par ce mentor`}
             </p>
             <div className="map-reward-progress">
               {MENTORS.map((m) => (
                 <div key={m.id} className={`map-reward-step ${completedWorlds >= m.worldsRequired ? "done" : ""} ${m.id === nextMentor.mentor.id ? "current" : ""}`}>
                   <span className="map-reward-step-icon">{completedWorlds >= m.worldsRequired ? "✅" : m.id === nextMentor.mentor.id ? "⏳" : "🔒"}</span>
-                  <span className="map-reward-step-label">{m.rank.replace("Top ", "T")}</span>
+                  <span className="map-reward-step-label">{m.rankShort || m.rank}</span>
                 </div>
               ))}
             </div>

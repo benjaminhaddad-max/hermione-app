@@ -26,7 +26,7 @@ export default function WorldCompleteModal({ world, unlockedMentor, onDiscover, 
 
         {unlockedMentor && (
           <div className="world-complete-mentor">
-            <div className="mentor-unlock-badge">🔓 NOUVEAU MENTOR</div>
+            <div className="mentor-unlock-badge">📞 APPEL DÉBLOQUÉ</div>
             <div className="mentor-unlock-card">
               <span className="mentor-unlock-emoji">{unlockedMentor.emoji}</span>
               <div>
@@ -36,7 +36,7 @@ export default function WorldCompleteModal({ world, unlockedMentor, onDiscover, 
             </div>
             <p className="mentor-unlock-bio">{unlockedMentor.bio}</p>
             <button className="mentor-discover-btn" onClick={onDiscover}>
-              💬 Parler à {unlockedMentor.name}
+              📞 Demander un rappel de {unlockedMentor.name}
             </button>
           </div>
         )}

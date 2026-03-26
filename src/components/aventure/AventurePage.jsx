@@ -66,11 +66,13 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
     const pct = score / total;
 
     if (pct >= QCM_PASS_THRESHOLD) {
-      // Passe !
       addXP(XP_REWARDS.LEVEL_COMPLETE);
 
-      // Verifier si le monde est maintenant complet
-      const updatedWorlds = buildAventureMap(storage);
+      const patchedStorage = {
+        ...storage,
+        qcm: { ...storage.qcm, [coursId]: { score, total, duree, date: new Date().toISOString().split("T")[0] } },
+      };
+      const updatedWorlds = buildAventureMap(patchedStorage);
       const world = updatedWorlds[activeWorldIdx];
       if (world && world.isComplete) {
         const newMentors = getUnlockedMentors(updatedWorlds);
@@ -82,7 +84,6 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
         setWorldComplete({ world, mentor: justUnlocked || null });
       }
 
-      // Verifier 3 etoiles
       const level = world?.levels.find(l => l.coursId === coursId);
       if (level && level.starCount === 3) {
         addXP(XP_REWARDS.PERFECT_LEVEL);
@@ -90,7 +91,6 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
 
       setView("map");
     } else {
-      // Echec
       setFailData({ score, total, coursId });
       setView("map");
     }
@@ -195,10 +195,10 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
               </div>
             </div>
             <div className="aventure-intro-step">
-              <span className="aventure-intro-step-icon">💬</span>
+              <span className="aventure-intro-step-icon">📞</span>
               <div>
-                <strong>Débloque des mentors</strong>
-                <p>Progresse pour chatter avec des étudiants qui ont réussi !</p>
+                <strong>Débloque des appels</strong>
+                <p>Progresse pour être rappelé(e) par des étudiants du Top 50, Top 10… de ta fac !</p>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
             <span>·</span>
             <span>🗺️ {stats.totalWorlds} matières</span>
             <span>·</span>
-            <span>💬 4 mentors à débloquer</span>
+            <span>📞 4 appels à débloquer</span>
           </div>
 
           <button className="aventure-intro-btn" onClick={dismissIntro}>
@@ -224,7 +224,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
             <div className="aventure-header-top">
               <div>
                 <h2 className="aventure-header-title">🗺️ Mode Aventure</h2>
-                <p className="aventure-header-sub">Progresse par matière et débloque des mentors</p>
+                <p className="aventure-header-sub">Progresse par matière et débloque des appels avec des tops PASS</p>
               </div>
               <div className="aventure-stats-mini">
                 <span>⭐ {stats.totalStars}/{stats.maxStars}</span>
@@ -253,7 +253,7 @@ export default function AventurePage({ storage, addXP, saveFicheLue, saveQCMScor
                   className={`aventure-sub-btn ${subTab === "mentors" ? "active" : ""}`}
                   onClick={() => { setSubTab("mentors"); setView("chat"); }}
                 >
-                  💬 Mentors ({unlockedMentors.length})
+                  📞 Mes appels ({unlockedMentors.length})
                 </button>
               </div>
             )}
