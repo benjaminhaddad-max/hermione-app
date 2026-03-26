@@ -131,13 +131,16 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les géologues ont deux moyens de dater les roches. La chronologie relative classe les événements dans l'ordre (avant/après) sans donner d'âge chiffré. La chronologie absolue donne un âge en années grâce aux isotopes radioactifs. En gros : la relative dit 'A est avant B', l'absolue dit 'A a 200 millions d'années'. Ensemble, elles permettent de reconstituer l'histoire de la Terre sur des milliards d'années.",
+        texte: "• Les géologues veulent reconstituer l'histoire de la Terre. • Pour cela, ils datent les roches avec deux méthodes. • La chronologie relative classe les événements dans l'ordre. • Elle dit 'A est avant B' mais ne donne pas d'âge en années. • C'est comme ranger des photos par ordre sans connaître la date exacte. • La chronologie absolue donne un âge chiffré en années. • Elle utilise la désintégration radioactive (transformation d'atomes instables en atomes stables). • En gros : la relative ordonne les événements, l'absolue leur met un chiffre. • Ensemble, ces deux méthodes permettent de reconstituer des milliards d'années d'histoire. • C'est comme avoir un planning avec l'ordre des tâches ET les horaires précis.",
         points_cles: [
-          "Chronologie relative = ordre des événements sans âge chiffré",
-          "Chronologie absolue = âge en années (datation radioactive)",
-          "Trois principes relatifs : superposition, recoupement, inclusion",
-          "Fossiles stratigraphiques pour corréler des couches éloignées",
-          "Échelle stratigraphique : ères, périodes, étages"
+          "Chronologie relative = on classe les événements dans l'ordre (avant/après) sans âge chiffré",
+          "Chronologie absolue = on donne un âge en années grâce aux isotopes radioactifs",
+          "Trois principes de la chronologie relative : superposition, recoupement, inclusion",
+          "Les fossiles stratigraphiques (espèces à courte durée de vie) permettent de corréler des couches éloignées",
+          "L'échelle stratigraphique découpe le temps en ères, périodes et étages",
+          "La désintégration radioactive est le moteur de la datation absolue",
+          "On choisit le bon couple d'isotopes selon l'âge estimé de la roche",
+          "La fermeture du système (quand la roche se referme) déclenche le chronomètre radioactif"
         ]
       },
       page2_concepts: {
@@ -145,39 +148,43 @@ export const TERM_SVT_COURS = [
         concepts: [
           {
             terme: "Principe de superposition",
-            definition: "Dans un empilement de couches non déformé, la couche du bas est la plus ancienne. En gros : ce qui est en dessous est arrivé en premier."
+            definition: "Dans un empilement de couches sédimentaires (couches de terre déposées au fil du temps) non déformé, la couche du bas est la plus ancienne. C'est comme une pile de crêpes : la première posée est en dessous. En gros : ce qui est en dessous est arrivé en premier."
           },
           {
             terme: "Principe de recoupement",
-            definition: "Toute structure (faille, filon) qui en coupe une autre est plus récente qu'elle. En gros : ce qui coupe est venu après."
+            definition: "Toute structure géologique (faille, filon de roche) qui en coupe une autre est plus récente qu'elle. C'est comme un trait de stylo tracé par-dessus un dessin : le trait est venu après. En gros : ce qui coupe est venu après."
           },
           {
             terme: "Principe d'inclusion",
-            definition: "Un fragment de roche enfermé dans une autre est plus ancien que la roche qui l'entoure."
+            definition: "Un fragment de roche enfermé dans une autre roche est plus ancien que celle qui l'entoure. C'est comme un caillou pris dans du béton : le caillou existait avant le béton. En gros : ce qui est inclus est plus vieux."
           },
           {
             terme: "Fossile stratigraphique",
-            definition: "Fossile d'une espèce qui a vécu peu de temps et vivait partout sur Terre. Très utile pour dater une couche."
+            definition: "Fossile d'une espèce qui a vécu peu de temps mais vivait partout sur Terre. C'est un marqueur temporel fiable. En gros : il a existé brièvement mais partout, donc il date précisément une couche."
           },
           {
             terme: "Identité paléontologique",
-            definition: "Deux couches de roche avec les mêmes fossiles stratigraphiques ont le même âge, même si elles sont à des milliers de km."
+            definition: "Deux couches de roche situées à des milliers de km l'une de l'autre ont le même âge si elles contiennent les mêmes fossiles stratigraphiques. C'est comme trouver le même timbre rare dans deux albums différents : ils datent de la même époque."
           },
           {
             terme: "Désintégration radioactive",
-            definition: "Un atome 'père' instable se transforme spontanément en atome 'fils' stable. La vitesse de transformation est constante."
+            definition: "Un atome 'père' instable (radioactif) se transforme spontanément en atome 'fils' stable. La vitesse de cette transformation est toujours constante. C'est comme un sablier qui s'écoule toujours à la même vitesse. En gros : l'atome père disparaît et l'atome fils apparaît de façon régulière."
           },
           {
             terme: "Demi-vie (t½)",
-            definition: "Temps pour que la moitié des atomes pères se transforme en fils. Chaque isotope a sa propre demi-vie."
+            definition: "Temps nécessaire pour que la moitié des atomes pères se transforme en atomes fils. Chaque couple d'isotopes a sa propre demi-vie. C'est comme dire qu'il faut 30 minutes pour que la moitié du sable passe de l'autre côté."
           },
           {
             terme: "Fermeture du système",
-            definition: "Moment où la roche se referme (cristallisation). Les isotopes restent piégés et le 'chronomètre' radioactif démarre."
+            definition: "Moment où la roche se referme aux échanges chimiques (cristallisation, refroidissement). Les isotopes restent piégés à l'intérieur. Le 'chronomètre' radioactif démarre à cet instant. En gros : c'est le 'top départ' de la mesure du temps."
           },
           {
             terme: "Isochrone",
-            definition: "Droite sur un graphique (rapport isotopique fils/stable vs père/stable). Sa pente donne l'âge de la roche."
+            definition: "Droite tracée sur un graphique qui relie les rapports isotopiques de plusieurs minéraux d'une même roche. La pente de cette droite permet de calculer l'âge de la roche. En gros : plus la droite est inclinée, plus la roche est vieille."
+          },
+          {
+            terme: "Échelle stratigraphique",
+            definition: "Découpage du temps géologique en grandes unités : éons, ères, périodes, époques et étages. C'est le calendrier de la Terre. On y place les événements géologiques grâce à la chronologie relative et absolue."
           }
         ]
       },
@@ -191,27 +198,42 @@ export const TERM_SVT_COURS = [
           {
             nom: "Couple Rb/Sr (Rubidium/Strontium)",
             formule: "t½ ≈ 49 milliards d'années",
-            explication: "Sert à dater des roches très anciennes (granites, gneiss). On mesure le rapport ⁸⁷Sr/⁸⁶Sr."
+            explication: "Sert à dater des roches très anciennes comme les granites et les gneiss. On mesure le rapport ⁸⁷Sr/⁸⁶Sr. En gros : un chronomètre ultra-lent pour les très vieilles roches."
           },
           {
             nom: "Couple K/Ar (Potassium/Argon)",
             formule: "t½ ≈ 1,25 milliard d'années",
-            explication: "Utilisé pour les roches volcaniques. L'argon (gaz) est piégé dans la roche à sa fermeture."
+            explication: "Utilisé pour dater les roches volcaniques. L'argon (un gaz) est piégé dans la roche quand elle refroidit. En gros : idéal pour les laves et les basaltes."
           },
           {
             nom: "Couple U/Pb (Uranium/Plomb)",
             formule: "t½ ≈ 4,5 milliards d'années (²³⁸U → ²⁰⁶Pb)",
-            explication: "Très fiable. Utilisé pour les zircons, minéraux résistants qui gardent les isotopes longtemps."
+            explication: "Méthode très fiable. Utilisée sur les zircons (minéraux ultra-résistants). C'est grâce à elle qu'on a daté la Terre."
           },
           {
             nom: "Couple ¹⁴C (Carbone 14)",
             formule: "t½ ≈ 5 730 ans",
-            explication: "Pour les matières organiques récentes (< 50 000 ans). Pas pour les roches anciennes."
+            explication: "Réservé aux matières organiques récentes (< 50 000 ans). Ne sert pas pour les roches anciennes. En gros : le chronomètre pour l'archéologie, pas pour la géologie ancienne."
           },
           {
             nom: "Âge de la Terre",
             formule: "≈ 4,57 milliards d'années",
-            explication: "Déterminé grâce à la datation U/Pb sur des météorites et des zircons terrestres."
+            explication: "Déterminé grâce à la datation U/Pb sur des météorites et des zircons terrestres parmi les plus vieux du monde."
+          },
+          {
+            nom: "Les 4 grandes ères géologiques",
+            formule: "Précambrien → Paléozoïque → Mésozoïque → Cénozoïque",
+            explication: "Du plus ancien au plus récent. Le Précambrien couvre 88 % de l'histoire de la Terre. Le Cénozoïque est l'ère actuelle."
+          },
+          {
+            nom: "Crise Crétacé-Paléogène",
+            formule: "Il y a ≈ 66 millions d'années",
+            explication: "Extinction massive (dont les dinosaures). Sert de repère clé pour séparer le Mésozoïque du Cénozoïque."
+          },
+          {
+            nom: "Début de la vie sur Terre",
+            formule: "≈ 3,8 milliards d'années",
+            explication: "Les plus anciennes traces de vie datent de cette époque. Datées par la méthode U/Pb sur les roches qui les contiennent."
           }
         ]
       },
@@ -365,13 +387,16 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les plantes à fleurs sont fixées au sol. Elles doivent donc capter la lumière, l'eau et les minéraux sans pouvoir se déplacer. Chaque organe a un rôle précis : les feuilles captent la lumière, les racines absorbent l'eau, les tiges transportent les sèves. La croissance est assurée par les méristèmes, des zones de cellules qui se divisent sans cesse. En gros : chaque partie de la plante est spécialisée pour compenser le fait qu'elle ne peut pas bouger.",
+        texte: "• Les plantes à fleurs sont fixées au sol toute leur vie. • Elles ne peuvent pas se déplacer pour chercher de la nourriture. • Du coup, chaque organe est ultra-spécialisé pour compenser cette immobilité. • Les feuilles captent la lumière grâce aux stomates (petits pores). • Les racines absorbent l'eau et les sels minéraux grâce aux poils absorbants. • Les tiges transportent les sèves dans deux circuits : le xylème (sève brute) et le phloème (sève élaborée). • La croissance est assurée par les méristèmes (zones de cellules qui se divisent en permanence). • C'est comme une usine immobile : chaque département a un rôle précis. • En gros : la plante compense le fait de ne pas bouger en ayant des organes très efficaces. • L'auxine (hormone végétale) coordonne le tout.",
         points_cles: [
-          "Feuille = capteur de lumière + échanges gazeux (stomates)",
-          "Racine = absorption eau + minéraux (poils absorbants, mycorhizes)",
-          "Tige = transport (xylème = sève brute, phloème = sève élaborée)",
-          "Méristèmes = moteurs de la croissance",
-          "Phytomères = unités répétitives de la tige"
+          "Feuille = capteur de lumière + échanges gazeux via les stomates (pores sous la feuille)",
+          "Racine = absorption de l'eau et des minéraux grâce aux poils absorbants et aux mycorhizes (champignons associés)",
+          "Tige = transport : xylème (sève brute = eau + minéraux) et phloème (sève élaborée = eau + sucres)",
+          "Méristèmes apicaux = croissance en longueur (au bout des tiges et racines)",
+          "Méristèmes latéraux (cambium) = croissance en épaisseur (formation du bois)",
+          "Phytomères = modules répétitifs de la tige (entre-nœud + nœud + feuille + bourgeon)",
+          "Auxine = hormone clé qui contrôle l'élongation et la dominance apicale",
+          "Mycorhize = association gagnant-gagnant entre champignon et racine"
         ]
       },
       page2_concepts: {
@@ -379,39 +404,43 @@ export const TERM_SVT_COURS = [
         concepts: [
           {
             terme: "Stomate",
-            definition: "Pore sur la face inférieure de la feuille, délimité par deux cellules de garde. Il s'ouvre le jour (entrée de CO₂) et se ferme la nuit ou en cas de sécheresse."
+            definition: "Petit pore (ouverture) situé surtout sur la face inférieure de la feuille. Il est délimité par deux cellules de garde qui contrôlent son ouverture. Il s'ouvre le jour pour laisser entrer le CO₂ et se ferme la nuit ou en cas de sécheresse. C'est comme une porte automatique qui gère les entrées et sorties de gaz."
           },
           {
             terme: "Poils absorbants",
-            definition: "Très fines extensions des cellules de la racine. Ils augmentent énormément la surface d'absorption (jusqu'à ×100). En gros : plus de surface = plus d'eau captée."
+            definition: "Extensions très fines des cellules de la racine. Ils multiplient la surface de contact avec le sol par 100. En gros : plus de surface = plus d'eau captée. C'est comme des milliers de petites pailles qui aspirent l'eau du sol."
           },
           {
             terme: "Mycorhize",
-            definition: "Symbiose (association gagnant-gagnant) entre un champignon et une racine. Le champignon fournit eau et minéraux, la plante fournit des sucres."
+            definition: "Association mutualiste (bénéfique pour les deux) entre un champignon et une racine. Le champignon fournit eau et minéraux grâce à son réseau de filaments. En échange, la plante lui donne des sucres. En gros : c'est un deal gagnant-gagnant entre la plante et le champignon."
           },
           {
             terme: "Xylème (bois)",
-            definition: "Tissu conducteur de la sève brute (eau + sels minéraux). Ce sont des cellules mortes, creuses, empilées en tubes rigides."
+            definition: "Tissu conducteur qui transporte la sève brute (eau + sels minéraux) des racines vers les feuilles. Il est constitué de cellules mortes, creuses, empilées en tubes rigides. C'est comme une tuyauterie rigide qui monte l'eau vers le haut."
           },
           {
             terme: "Phloème (liber)",
-            definition: "Tissu conducteur de la sève élaborée (eau + sucres). Ce sont des cellules vivantes, reliées par des cribles (petits trous)."
+            definition: "Tissu conducteur qui transporte la sève élaborée (eau + sucres fabriqués par photosynthèse) des feuilles vers toute la plante. Ce sont des cellules vivantes reliées par des cribles (petits trous). C'est comme un réseau de distribution de nourriture."
           },
           {
             terme: "Méristème apical",
-            definition: "Zone de cellules indifférenciées au sommet de la tige ou de la racine. Assure la croissance en longueur."
+            definition: "Zone de cellules indifférenciées (non spécialisées) située au sommet de la tige ou au bout de la racine. Ces cellules se divisent activement pour assurer la croissance en longueur. En gros : c'est le moteur de croissance de la plante vers le haut et vers le bas."
           },
           {
             terme: "Méristème latéral (cambium)",
-            definition: "Zone de cellules indifférenciées en périphérie de la tige. Assure la croissance en épaisseur (bois)."
+            definition: "Zone de cellules indifférenciées située en périphérie de la tige. Il assure la croissance en épaisseur en produisant du bois (xylème) vers l'intérieur et du liber (phloème) vers l'extérieur. C'est comme un anneau de croissance qui épaissit le tronc chaque année."
           },
           {
             terme: "Phytomère",
-            definition: "Module de base de la tige : entre-nœud + nœud + feuille + bourgeon axillaire. La plante grandit en ajoutant des phytomères."
+            definition: "Unité de base qui se répète le long de la tige. Il comprend un entre-nœud (segment de tige), un nœud (point d'attache), une feuille et un bourgeon axillaire. La plante grandit en ajoutant des phytomères. C'est comme des Lego empilés les uns sur les autres."
           },
           {
             terme: "Auxine",
-            definition: "Hormone végétale produite au sommet. Elle stimule l'élongation des cellules et contrôle la dominance apicale (le bourgeon du haut empêche les latéraux de pousser)."
+            definition: "Hormone végétale produite au sommet de la tige (bourgeon apical). Elle stimule l'élongation des cellules et contrôle la dominance apicale (le bourgeon du haut empêche les bourgeons latéraux de pousser). En gros : c'est le chef d'orchestre de la croissance."
+          },
+          {
+            terme: "Transpiration foliaire",
+            definition: "Évaporation de l'eau par les stomates des feuilles. C'est le moteur principal de la montée de la sève brute dans le xylème. C'est comme une aspiration par le haut qui tire l'eau depuis les racines."
           }
         ]
       },
@@ -425,27 +454,42 @@ export const TERM_SVT_COURS = [
           {
             nom: "Surface d'échange des poils absorbants",
             formule: "Jusqu'à ×100 la surface racinaire",
-            explication: "Les poils absorbants démultiplient la surface de contact avec le sol. Sans eux, la plante absorberait très peu d'eau."
+            explication: "Les poils absorbants démultiplient la surface de contact avec le sol. Sans eux, la plante absorberait très peu d'eau. C'est énorme."
           },
           {
-            nom: "Transpiration foliaire",
-            formule: "Un chêne adulte peut perdre 200 à 400 L d'eau/jour",
-            explication: "L'eau s'évapore par les stomates (transpiration). C'est le moteur de l'aspiration de la sève brute."
+            nom: "Transpiration foliaire d'un chêne adulte",
+            formule: "200 à 400 litres d'eau perdus par jour",
+            explication: "L'eau s'évapore par les stomates. Cette transpiration crée l'aspiration qui fait monter la sève brute."
           },
           {
-            nom: "Vitesse de la sève brute",
-            formule: "1 à 100 m/h dans le xylème",
-            explication: "La sève brute monte grâce à la transpiration foliaire qui crée une aspiration (tension-cohésion)."
+            nom: "Vitesse de la sève brute (xylème)",
+            formule: "1 à 100 m/h",
+            explication: "La sève brute monte grâce au mécanisme de tension-cohésion. La transpiration crée une aspiration vers le haut."
           },
           {
-            nom: "Vitesse de la sève élaborée",
-            formule: "0,5 à 1 m/h dans le phloème",
-            explication: "La sève élaborée descend (ou monte) grâce à la pression osmotique créée par les sucres."
+            nom: "Vitesse de la sève élaborée (phloème)",
+            formule: "0,5 à 1 m/h",
+            explication: "Plus lente que la sève brute. Elle circule grâce à la pression osmotique (pression créée par les sucres dissous)."
           },
           {
-            nom: "Nombre de stomates",
+            nom: "Nombre de stomates par mm²",
             formule: "100 à 300 stomates/mm² de feuille",
-            explication: "Surtout sur la face inférieure, ce qui limite la perte d'eau par évaporation."
+            explication: "Ils sont surtout situés sur la face inférieure de la feuille, ce qui limite la perte d'eau par évaporation directe au soleil."
+          },
+          {
+            nom: "Pourcentage de plantes avec mycorhizes",
+            formule: "≈ 90 % des plantes terrestres",
+            explication: "Presque toutes les plantes vivent en association avec des champignons. C'est une stratégie quasi universelle."
+          },
+          {
+            nom: "Longueur totale des racines d'un plant de blé",
+            formule: "≈ 600 km (avec les poils absorbants)",
+            explication: "C'est colossal pour une seule plante. Cela montre l'importance de la surface d'absorption racinaire."
+          },
+          {
+            nom: "Hauteur record d'un arbre (séquoia)",
+            formule: "≈ 115 mètres",
+            explication: "La sève brute doit monter sur toute cette hauteur uniquement grâce à la transpiration. Pas de pompe mécanique."
           }
         ]
       },
@@ -600,13 +644,16 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les plantes sont autotrophes : elles fabriquent leur propre matière organique. Grâce à la photosynthèse, elles convertissent le CO₂ de l'air et l'eau du sol en glucose, en utilisant l'énergie lumineuse. Ce glucose sert ensuite à construire toutes les molécules de la plante (cellulose, amidon, lipides, protéines). Les plantes produisent aussi des métabolites secondaires (anthocyanes, tanins) pour interagir avec les autres êtres vivants. En gros : la plante est une usine qui transforme la lumière et le CO₂ en nourriture et en défense.",
+        texte: "• Les plantes sont autotrophes (elles fabriquent leur propre nourriture). • Elles n'ont pas besoin de manger d'autres êtres vivants. • Grâce à la photosynthèse, elles transforment le CO₂ de l'air et l'eau du sol en glucose (un sucre). • L'énergie nécessaire vient de la lumière du soleil. • C'est comme un panneau solaire qui fabrique de la nourriture au lieu de l'électricité. • Le glucose sert ensuite de brique de base pour tout construire : parois (cellulose), réserves (amidon), graisses (lipides) et protéines. • La plante fabrique aussi des molécules spéciales pour interagir avec les autres êtres vivants. • Les anthocyanes (pigments colorés) attirent les pollinisateurs avec des couleurs vives. • Les tanins (molécules amères) repoussent les herbivores. • En gros : la plante est une usine solaire qui transforme lumière + CO₂ + eau en nourriture et en défense.",
         points_cles: [
+          "Autotrophe = fabrique sa matière organique seule (≠ hétérotrophe qui doit manger)",
           "Photosynthèse = CO₂ + H₂O + lumière → glucose + O₂",
-          "Se déroule dans les chloroplastes (pigments chlorophylliens)",
-          "Glucose → cellulose (paroi), amidon (réserve), lipides, protéines",
-          "Anthocyanes = couleurs pour attirer les pollinisateurs",
-          "Tanins = défense chimique contre les herbivores"
+          "Se déroule dans les chloroplastes (organites contenant les pigments verts)",
+          "Deux phases : phase claire (thylakoïdes, besoin de lumière) et phase sombre (stroma, cycle de Calvin)",
+          "Le glucose est converti en cellulose (paroi), amidon (réserve), lipides et protéines",
+          "Anthocyanes = pigments colorés pour attirer les pollinisateurs (interaction positive)",
+          "Tanins = molécules amères pour repousser les herbivores (défense chimique)",
+          "L'O₂ que nous respirons vient de la photosynthèse des plantes"
         ]
       },
       page2_concepts: {
@@ -614,39 +661,43 @@ export const TERM_SVT_COURS = [
         concepts: [
           {
             terme: "Chloroplaste",
-            definition: "Organite à double membrane contenant des thylakoïdes (disques empilés). C'est là que la lumière est captée et que le glucose est fabriqué."
+            definition: "Organite (petit compartiment dans la cellule) à double membrane. Il contient des thylakoïdes (disques empilés en piles appelées grana) et un liquide appelé stroma. C'est là que la lumière est captée et que le glucose est fabriqué. En gros : c'est l'usine de photosynthèse de la cellule."
           },
           {
             terme: "Pigments chlorophylliens",
-            definition: "Chlorophylle a (vert bleuté), chlorophylle b (vert jaunâtre) et caroténoïdes (orange). Ils absorbent le bleu et le rouge, réfléchissent le vert."
+            definition: "Molécules qui captent la lumière dans les thylakoïdes. Chlorophylle a (vert bleuté), chlorophylle b (vert jaunâtre) et caroténoïdes (orange/jaune). Ils absorbent le bleu et le rouge mais réfléchissent le vert. C'est pour ça que les feuilles sont vertes."
           },
           {
             terme: "Phase photochimique (phase claire)",
-            definition: "Se déroule dans les thylakoïdes. La lumière casse l'eau (photolyse : H₂O → O₂ + H⁺ + e⁻) et fabrique de l'ATP et du NADPH."
+            definition: "Première étape de la photosynthèse, dans les thylakoïdes. La lumière casse l'eau (photolyse : H₂O → O₂ + H⁺ + électrons). On obtient de l'ATP (énergie) et du NADPH (pouvoir réducteur). En gros : la lumière donne l'énergie et l'eau fournit les électrons."
           },
           {
             terme: "Phase chimique (cycle de Calvin)",
-            definition: "Se déroule dans le stroma du chloroplaste. Le CO₂ est fixé et réduit en glucose grâce à l'ATP et au NADPH de la phase claire."
+            definition: "Deuxième étape, dans le stroma du chloroplaste. Le CO₂ est fixé sur une molécule organique puis réduit en glucose grâce à l'ATP et au NADPH. Attention : la phase 'sombre' n'a pas besoin d'obscurité. En gros : le CO₂ est transformé en sucre grâce à l'énergie de la phase claire."
+          },
+          {
+            terme: "Photolyse de l'eau",
+            definition: "Décomposition de l'eau (H₂O) par la lumière. Elle libère de l'O₂ (rejeté dans l'air), des protons (H⁺) et des électrons (e⁻). C'est la source de l'oxygène que nous respirons. En gros : l'O₂ vient de l'eau, pas du CO₂."
           },
           {
             terme: "Cellulose",
-            definition: "Longues chaînes de glucose liées entre elles. Forme des microfibrilles rigides dans la paroi cellulaire. Composé organique le plus abondant sur Terre."
+            definition: "Longues chaînes de glucose liées entre elles. Elle forme les microfibrilles rigides de la paroi cellulaire végétale. C'est le composé organique le plus abondant sur Terre. C'est comme l'armature en béton d'un bâtiment."
           },
           {
             terme: "Lignine",
-            definition: "Polymère complexe qui imprègne les parois du xylème. Rend le bois rigide, imperméable et résistant à la décomposition."
+            definition: "Polymère (grosse molécule) complexe qui imprègne les parois du xylème (bois). Elle rend les vaisseaux rigides, imperméables et résistants à la décomposition. C'est ce qui fait qu'un tronc d'arbre est dur et solide."
           },
           {
             terme: "Amidon",
-            definition: "Polymère de glucose de réserve. Stocké dans des amyloplastes (cellules de la pomme de terre, grains de céréales)."
+            definition: "Polymère de glucose utilisé comme réserve d'énergie. Il est stocké dans des amyloplastes (petits sacs de stockage dans la cellule). On le trouve dans la pomme de terre, le riz, le blé. En gros : c'est le stock de sucre de la plante pour plus tard."
           },
           {
             terme: "Anthocyanes",
-            definition: "Pigments colorés (rouge, bleu, violet) qui attirent les animaux pollinisateurs ou disperseurs de graines. En gros : la pub de la plante."
+            definition: "Pigments colorés (rouge, bleu, violet) présents dans les pétales et les fruits. Ils attirent les insectes pollinisateurs et les animaux disperseurs de graines. En gros : c'est la publicité colorée de la plante pour attirer ses partenaires."
           },
           {
             terme: "Tanins",
-            definition: "Molécules amères et astringentes produites par la plante. Elles repoussent les herbivores : c'est une arme chimique défensive."
+            definition: "Molécules au goût amer et astringent produites par la plante. Elles dissuadent les herbivores de manger les feuilles ou l'écorce. C'est comme un système d'alarme chimique. En gros : c'est l'arme défensive de la plante."
           }
         ]
       },
@@ -660,27 +711,42 @@ export const TERM_SVT_COURS = [
           {
             nom: "Équation bilan de la photosynthèse",
             formule: "6 CO₂ + 6 H₂O + lumière → C₆H₁₂O₆ + 6 O₂",
-            explication: "Le CO₂ de l'air et l'eau du sol sont transformés en glucose (matière organique) et en oxygène (déchet)."
+            explication: "Le CO₂ de l'air et l'eau du sol donnent du glucose (sucre) et de l'oxygène (déchet utile pour nous)."
           },
           {
-            nom: "Longueurs d'onde absorbées",
+            nom: "Longueurs d'onde absorbées par les pigments",
             formule: "Bleu ≈ 430-450 nm, Rouge ≈ 640-680 nm",
             explication: "Les pigments absorbent surtout le bleu et le rouge. Le vert est réfléchi, d'où la couleur verte des feuilles."
           },
           {
             nom: "Production mondiale de cellulose",
-            formule: "≈ 100 milliards de tonnes/an",
-            explication: "La cellulose est le polymère le plus abondant fabriqué par les êtres vivants sur Terre."
+            formule: "≈ 100 milliards de tonnes par an",
+            explication: "La cellulose est le polymère le plus fabriqué par les êtres vivants. Le papier et le coton en sont faits."
           },
           {
             nom: "Rendement photosynthétique",
             formule: "≈ 1 à 5 % de l'énergie lumineuse reçue",
-            explication: "Seule une petite fraction de la lumière est effectivement convertie en énergie chimique (glucose)."
+            explication: "Seule une petite fraction de la lumière est convertie en glucose. Le reste est perdu en chaleur ou réfléchi."
           },
           {
-            nom: "Phase claire vs phase sombre",
-            formule: "Thylakoïdes (lumière) → Stroma (Calvin, pas besoin de lumière directe)",
-            explication: "La phase claire fabrique ATP + NADPH. La phase sombre utilise ces molécules pour fixer le CO₂ en glucose."
+            nom: "Localisation des deux phases",
+            formule: "Phase claire = thylakoïdes ; Phase sombre = stroma",
+            explication: "La phase claire fabrique ATP + NADPH grâce à la lumière. La phase sombre utilise ces molécules pour fixer le CO₂."
+          },
+          {
+            nom: "Production d'O₂ par un arbre adulte",
+            formule: "≈ 100 kg d'O₂ par an",
+            explication: "Un arbre adulte produit assez d'oxygène pour faire respirer 2 à 3 personnes pendant un an."
+          },
+          {
+            nom: "Proportion de glucose converti en cellulose",
+            formule: "Jusqu'à 50 % chez certaines plantes",
+            explication: "La cellulose est le principal investissement de la plante. Elle constitue la charpente de chaque cellule."
+          },
+          {
+            nom: "Température optimale de la photosynthèse",
+            formule: "≈ 25 à 35 °C (variable selon l'espèce)",
+            explication: "Trop froid ou trop chaud, les enzymes (protéines qui accélèrent les réactions) fonctionnent moins bien."
           }
         ]
       },

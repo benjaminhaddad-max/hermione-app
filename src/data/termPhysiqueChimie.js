@@ -100,16 +100,16 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "La mécanique newtonienne décrit le mouvement des objets et les forces qui les causent. Imagine un ballon lancé : sa trajectoire, sa vitesse, son accélération, tout s'explique par les lois de Newton. Ces lois sont la base de toute la physique classique. En gros : Newton nous dit pourquoi les objets bougent (ou ne bougent pas). Pour décrire un mouvement, il faut choisir un référentiel, c'est-à-dire un point de vue fixe depuis lequel on observe.",
+        texte: "• La mécanique newtonienne (branche de la physique) décrit le mouvement des objets. • Elle explique aussi les forces qui causent ces mouvements. • Imagine un ballon lancé en l'air : sa trajectoire (le chemin qu'il suit), sa vitesse, son accélération, tout s'explique par les lois de Newton. • En gros : Newton nous dit pourquoi les objets bougent ou restent immobiles. • Pour décrire un mouvement, il faut d'abord choisir un référentiel (un point de vue fixe depuis lequel on observe). • C'est comme filmer une scène : le résultat dépend de l'endroit où tu places la caméra. • Les trois lois de Newton sont le socle de toute la physique classique. • La première loi dit qu'un objet ne change pas de mouvement sans raison (sans force). • La deuxième relie la force à l'accélération (la variation de vitesse). • La troisième dit que toute force provoque une réaction égale et opposée. • En gros : pas de force = pas de changement, force = accélération, action = réaction.",
         points_cles: [
-          "Un référentiel est indispensable pour décrire un mouvement",
-          "La vitesse est la dérivée de la position, l'accélération est la dérivée de la vitesse",
-          "Les trois lois de Newton forment le socle de la mécanique",
-          "La quantité de mouvement se conserve pour un système isolé",
-          "Le repère de Frenet simplifie l'étude des mouvements courbes",
-          "Un référentiel galiléen est celui où le principe d'inertie fonctionne",
-          "Le mouvement dépend toujours du référentiel choisi",
-          "L'accélération centripète maintient un objet sur un cercle"
+          "Un référentiel (point de vue fixe) est indispensable pour décrire un mouvement",
+          "La vitesse est la dérivée de la position par rapport au temps",
+          "L'accélération est la dérivée de la vitesse par rapport au temps",
+          "1ère loi (inertie) : sans force, un corps garde son mouvement rectiligne uniforme",
+          "2ème loi : ΣF⃗ = m·a⃗, la force provoque l'accélération",
+          "3ème loi : action = réaction, toujours par paires",
+          "La quantité de mouvement p⃗ = m·v⃗ se conserve pour un système isolé",
+          "Le repère de Frenet (t⃗, n⃗) simplifie l'étude des mouvements courbes"
         ]
       },
       page2_concepts: {
@@ -117,35 +117,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Référentiel",
-            definition: "Solide de référence + horloge pour décrire un mouvement. Terrestre (sol), géocentrique (Terre), héliocentrique (Soleil)."
-          },
-          {
-            terme: "Vecteur vitesse",
-            definition: "v⃗ = dOM⃗/dt. Il est tangent à la trajectoire et indique la direction du mouvement à chaque instant."
-          },
-          {
-            terme: "Vecteur accélération",
-            definition: "a⃗ = dv⃗/dt. Il traduit la variation de vitesse. Si a⃗ = 0⃗, le mouvement est uniforme."
-          },
-          {
-            terme: "Quantité de mouvement",
-            definition: "p⃗ = m·v⃗. Grandeur vectorielle conservée si le système est isolé (pas de force extérieure)."
-          },
-          {
-            terme: "Repère de Frenet",
-            definition: "Repère mobile (t⃗, n⃗) attaché au mobile. t⃗ tangent à la trajectoire, n⃗ dirigé vers le centre de courbure."
+            definition: "Un référentiel est un solide de référence + une horloge pour mesurer le temps. C'est comme choisir un point de vue pour filmer. En gros : sans référentiel, impossible de dire si un objet bouge ou non. Les trois classiques : terrestre (sol), géocentrique (centre de la Terre), héliocentrique (centre du Soleil)."
           },
           {
             terme: "Référentiel galiléen",
-            definition: "Référentiel où un corps isolé reste en MRU ou au repos. Le référentiel terrestre est approximativement galiléen."
+            definition: "Un référentiel galiléen est un référentiel où le principe d'inertie (1ère loi de Newton) fonctionne. En gros : c'est un référentiel qui ne tourne pas et qui ne freine pas. Le référentiel terrestre est approximativement galiléen pour des expériences courtes."
           },
           {
-            terme: "Principe d'inertie",
-            definition: "Première loi de Newton : sans force, un corps conserve son état de mouvement."
+            terme: "Vecteur vitesse",
+            definition: "v⃗ = dOM⃗/dt. C'est la dérivée de la position par rapport au temps. Il est toujours tangent à la trajectoire. En gros : il indique dans quelle direction et à quelle vitesse le mobile se déplace à chaque instant. C'est comme la flèche sur le GPS de ta voiture."
           },
           {
-            terme: "Actions réciproques",
-            definition: "Troisième loi : si A exerce F⃗ sur B, alors B exerce −F⃗ sur A. Même droite d'action, sens opposé."
+            terme: "Vecteur accélération",
+            definition: "a⃗ = dv⃗/dt. C'est la dérivée de la vitesse par rapport au temps. Il traduit la variation de vitesse. Si a⃗ = 0⃗, le mouvement est uniforme (vitesse constante). En gros : l'accélération dit si tu accélères, freines ou tournes."
+          },
+          {
+            terme: "Quantité de mouvement",
+            definition: "p⃗ = m·v⃗. C'est le produit de la masse par la vitesse. C'est une grandeur vectorielle (elle a une direction et un sens). Elle se conserve si le système est isolé (aucune force extérieure). En gros : un camion à 10 km/h a plus de quantité de mouvement qu'une balle de tennis à 100 km/h."
+          },
+          {
+            terme: "Principe d'inertie (1ère loi)",
+            definition: "Sans force (ou si les forces se compensent), un corps reste au repos ou en mouvement rectiligne uniforme. C'est comme une bille sur une table parfaitement lisse : elle roule indéfiniment. En gros : pas de force = pas de changement de mouvement."
+          },
+          {
+            terme: "Deuxième loi de Newton",
+            definition: "ΣF⃗ = m·a⃗. La somme de toutes les forces appliquées à un objet est égale à sa masse multipliée par son accélération. En gros : plus tu pousses fort (F), plus ça accélère (a). Plus c'est lourd (m), moins ça accélère."
+          },
+          {
+            terme: "Actions réciproques (3ème loi)",
+            definition: "Si A exerce une force F⃗ sur B, alors B exerce une force −F⃗ sur A. Même intensité, même direction, sens opposé. C'est comme quand tu pousses un mur : le mur te pousse aussi fort en retour. En gros : les forces vont toujours par paires."
+          },
+          {
+            terme: "Repère de Frenet",
+            definition: "Repère mobile (t⃗, n⃗) attaché au mobile. t⃗ est tangent à la trajectoire (dans le sens du mouvement). n⃗ pointe vers le centre de courbure. En gros : c'est un repère qui « suit » le mobile dans les virages. Très utile pour les mouvements circulaires."
+          },
+          {
+            terme: "Accélération centripète",
+            definition: "Accélération dirigée vers le centre de la trajectoire circulaire. Elle vaut a = v²/R. C'est elle qui « force » l'objet à tourner au lieu d'aller tout droit. C'est comme la force que tu ressens dans un virage en voiture."
           }
         ]
       },
@@ -159,32 +167,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Deuxième loi de Newton",
             formule: "ΣF⃗ = m·a⃗",
-            explication: "La résultante des forces égale masse × accélération. C'est LA loi fondamentale de la mécanique."
+            explication: "La résultante des forces égale masse × accélération. C'est LA loi fondamentale de la mécanique. En gros : force = masse × accélération."
           },
           {
             nom: "Quantité de mouvement",
             formule: "p⃗ = m·v⃗",
-            explication: "Produit de la masse par la vitesse. Se conserve si le système est isolé."
+            explication: "Produit de la masse par la vitesse. Se conserve si le système est isolé (pas de force extérieure). Unité : kg·m/s."
           },
           {
             nom: "Accélération centripète",
             formule: "a = v²/R",
-            explication: "Pour un mouvement circulaire, l'accélération pointe vers le centre et vaut v²/R."
+            explication: "Pour un mouvement circulaire, l'accélération pointe vers le centre et vaut v²/R. Plus le rayon R est petit, plus l'accélération est forte."
           },
           {
             nom: "Vitesse instantanée",
             formule: "v⃗ = dOM⃗/dt",
-            explication: "Dérivée du vecteur position par rapport au temps. Tangente à la trajectoire."
+            explication: "Dérivée du vecteur position par rapport au temps. Toujours tangente à la trajectoire. Unité : m/s."
           },
           {
             nom: "Accélération instantanée",
             formule: "a⃗ = dv⃗/dt",
-            explication: "Dérivée du vecteur vitesse par rapport au temps. Indique comment la vitesse change."
+            explication: "Dérivée du vecteur vitesse par rapport au temps. Indique comment la vitesse varie (en norme et en direction). Unité : m/s²."
           },
           {
             nom: "Théorème du centre d'inertie",
             formule: "ΣF⃗(ext) = m·a⃗(G)",
-            explication: "Le centre d'inertie G d'un système se comporte comme un point matériel soumis aux forces extérieures."
+            explication: "Le centre d'inertie G d'un système se comporte comme un point soumis aux forces extérieures. En gros : on peut résumer tout un système par un seul point."
+          },
+          {
+            nom: "Deuxième loi (forme impulsionnelle)",
+            formule: "ΣF⃗ = dp⃗/dt",
+            explication: "La somme des forces est la dérivée de la quantité de mouvement. C'est la forme la plus générale de la 2ème loi de Newton."
+          },
+          {
+            nom: "Vitesse angulaire",
+            formule: "ω = 2π/T = v/R",
+            explication: "ω (oméga) est la vitesse de rotation en rad/s. T est la période (durée d'un tour). Relie vitesse linéaire v et rayon R."
           }
         ]
       },
@@ -304,16 +322,16 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Ce chapitre étudie le mouvement d'un objet dans un champ uniforme : pesanteur ou électrique. Imagine un ballon de basket lancé : il suit une parabole à cause de la gravité constante. De même, un électron entre deux plaques chargées est dévié par le champ électrique uniforme. En gros : un champ uniforme = une force constante = une accélération constante = des équations simples à résoudre.",
+        texte: "• Ce chapitre étudie le mouvement d'un objet dans un champ uniforme (pesanteur ou électrique). • Un champ uniforme est un champ qui a la même valeur partout dans la zone étudiée. • Imagine un ballon de basket lancé en l'air : il suit une parabole (une courbe en forme d'arche) à cause de la gravité constante. • C'est comme lancer une pierre dans un lac : elle dessine un arc avant de tomber. • De même, un électron entre deux plaques chargées est dévié par le champ électrique uniforme. • En gros : champ uniforme = force constante = accélération constante. • Cela donne des équations simples à résoudre. • On décompose toujours le mouvement selon deux axes : horizontal (pas de force) et vertical (force constante). • Le mouvement horizontal est uniforme (vitesse constante). • Le mouvement vertical est uniformément accéléré (la vitesse augmente ou diminue régulièrement). • En combinant les deux, on obtient une trajectoire en forme de parabole.",
         points_cles: [
-          "Un champ uniforme produit une accélération constante",
-          "En chute libre : seule la pesanteur agit, a⃗ = g⃗",
-          "Le mouvement se décompose en horizontal (uniforme) et vertical (accéléré)",
-          "La trajectoire d'un projectile est une parabole",
-          "La portée dépend de l'angle et de la vitesse initiale",
-          "Un condensateur plan crée un champ électrique uniforme",
-          "Une charge q dans un champ E⃗ subit F⃗ = q·E⃗",
-          "Les équations sont analogues : pesanteur et champ électrique se traitent pareil"
+          "Un champ uniforme (même valeur partout) produit une accélération constante",
+          "En chute libre : seule la pesanteur agit, a⃗ = g⃗ ≈ 9,81 m/s² vers le bas",
+          "Le mouvement se décompose en horizontal (uniforme, vitesse constante) et vertical (accéléré)",
+          "La trajectoire d'un projectile est toujours une parabole",
+          "La portée (distance horizontale) dépend de l'angle et de la vitesse initiale",
+          "La flèche (hauteur max) est atteinte quand la vitesse verticale s'annule",
+          "Un condensateur plan (deux plaques parallèles) crée un champ électrique uniforme",
+          "Une charge q dans un champ E⃗ subit la force F⃗ = q·E⃗"
         ]
       },
       page2_concepts: {
@@ -321,35 +339,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Champ de pesanteur uniforme",
-            definition: "Champ g⃗ constant en tout point. Valable près de la surface terrestre quand l'altitude varie peu."
+            definition: "Le champ g⃗ est constant en tout point de la zone d'étude. C'est valable près de la surface terrestre quand l'altitude varie peu. En gros : la gravité est la même partout dans ta salle de classe. C'est comme si tu avais un vent constant qui souffle toujours dans la même direction."
           },
           {
             terme: "Chute libre",
-            definition: "Mouvement soumis uniquement à la pesanteur (frottements négligés). L'accélération vaut g ≈ 9,81 m/s²."
+            definition: "Mouvement d'un objet soumis uniquement à la pesanteur (on néglige les frottements de l'air). L'accélération vaut toujours g ≈ 9,81 m/s² vers le bas. En gros : on fait comme si l'air n'existait pas. Un stylo et une balle tombent pareil."
           },
           {
             terme: "Équations horaires",
-            definition: "Expressions de x(t) et y(t) donnant la position en fonction du temps. Obtenues par double intégration de a⃗."
+            definition: "Expressions de x(t) et y(t) qui donnent la position en fonction du temps. On les obtient par double intégration de l'accélération a⃗. En gros : on intègre deux fois pour passer de l'accélération à la position. C'est comme remonter du compteur de vitesse au GPS."
           },
           {
             terme: "Trajectoire parabolique",
-            definition: "Courbe y(x) en forme de parabole obtenue en éliminant t entre x(t) et y(t)."
+            definition: "Courbe y(x) en forme de parabole (arche). On l'obtient en éliminant le temps t entre x(t) et y(t). En gros : on supprime le temps pour voir directement la forme du chemin. C'est l'arc que dessine un jet d'eau de fontaine."
           },
           {
-            terme: "Portée",
-            definition: "Distance horizontale totale parcourue par le projectile. Maximale pour un angle de 45°."
+            terme: "Portée du tir",
+            definition: "Distance horizontale totale parcourue par le projectile quand il revient au sol. Elle est maximale pour un angle de tir de 45°. En gros : c'est « jusqu'où » le ballon va. Un angle de 45° donne la meilleure distance."
           },
           {
-            terme: "Flèche",
-            definition: "Hauteur maximale atteinte par le projectile. Atteinte quand vy = 0."
+            terme: "Flèche du tir",
+            definition: "Hauteur maximale atteinte par le projectile au sommet de sa trajectoire. Atteinte quand la vitesse verticale vy = 0. En gros : c'est « jusqu'à quelle hauteur » le ballon monte. Au sommet, il ne monte plus et ne descend pas encore."
           },
           {
             terme: "Condensateur plan",
-            definition: "Deux plaques parallèles créant un champ E⃗ uniforme entre elles. E = U/d avec U la tension et d la distance."
+            definition: "Deux plaques conductrices parallèles séparées par un isolant (diélectrique). Le champ électrique E⃗ entre elles est uniforme. E = U/d avec U la tension (en Volts) et d la distance entre les plaques (en mètres). C'est comme deux étagères chargées qui créent un « vent électrique » constant entre elles."
           },
           {
             terme: "Déviation d'une particule chargée",
-            definition: "Dans un champ E⃗, une charge q subit F⃗ = q·E⃗. La trajectoire est parabolique, analogue à la chute libre."
+            definition: "Dans un champ E⃗, une charge q subit la force F⃗ = q·E⃗. Sa trajectoire est parabolique, exactement comme un projectile en chute libre. En gros : remplace la gravité par la force électrique et tu as les mêmes équations."
+          },
+          {
+            terme: "Décomposition du mouvement",
+            definition: "On sépare le mouvement en deux axes perpendiculaires. Axe horizontal : mouvement uniforme (pas de force). Axe vertical : mouvement uniformément accéléré. C'est comme décomposer un trajet en « aller tout droit » et « monter/descendre »."
+          },
+          {
+            terme: "Angle de tir α",
+            definition: "Angle entre la direction de lancement et l'horizontale. Il détermine la décomposition de v₀ : v₀ₓ = v₀·cos(α) et v₀ᵧ = v₀·sin(α). En gros : l'angle décide si le tir est plutôt « rasant » (petit α) ou « en cloche » (grand α)."
           }
         ]
       },
@@ -363,32 +389,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Équations horaires (chute libre, v₀ oblique)",
             formule: "x(t) = v₀·cos(α)·t ; y(t) = −½g·t² + v₀·sin(α)·t + y₀",
-            explication: "Horizontalement : mouvement uniforme. Verticalement : mouvement uniformément accéléré."
+            explication: "Horizontalement : mouvement uniforme (vitesse constante). Verticalement : mouvement uniformément accéléré par la gravité."
           },
           {
             nom: "Portée du tir",
             formule: "P = v₀²·sin(2α) / g",
-            explication: "Distance horizontale quand le projectile revient au sol. Maximale pour α = 45°."
+            explication: "Distance horizontale quand le projectile revient au sol. Maximale pour α = 45° car sin(90°) = 1."
           },
           {
             nom: "Flèche du tir",
             formule: "H = v₀²·sin²(α) / (2g)",
-            explication: "Hauteur maximale atteinte. On la trouve en posant vy(t) = 0."
+            explication: "Hauteur maximale atteinte. On la trouve en posant vy(t) = 0 puis en calculant y à cet instant."
           },
           {
             nom: "Champ électrique dans un condensateur",
             formule: "E = U/d",
-            explication: "U est la tension entre les plaques, d la distance. E en V/m."
+            explication: "U est la tension entre les plaques (en Volts). d est la distance entre les plaques (en mètres). E s'exprime en V/m."
           },
           {
             nom: "Force électrique sur une charge",
             formule: "F⃗ = q·E⃗",
-            explication: "Force subie par une charge q dans un champ E⃗. Sens de E⃗ si q > 0, opposé si q < 0."
+            explication: "Force subie par une charge q dans un champ E⃗. Dans le sens de E⃗ si q > 0, sens opposé si q < 0."
           },
           {
             nom: "Accélération d'une particule chargée",
             formule: "a = q·E/m",
-            explication: "D'après Newton : F = m·a et F = q·E donc a = q·E/m."
+            explication: "D'après Newton : F = m·a et F = q·E, donc a = q·E/m. Plus la particule est légère, plus elle accélère."
+          },
+          {
+            nom: "Temps de vol",
+            formule: "t_vol = 2·v₀·sin(α) / g",
+            explication: "Durée totale du vol du projectile. C'est le temps pour monter plus le temps pour redescendre."
+          },
+          {
+            nom: "Équation de la trajectoire",
+            formule: "y(x) = −g·x² / (2·v₀²·cos²(α)) + x·tan(α) + y₀",
+            explication: "Forme parabolique y = f(x). On élimine t des équations horaires pour obtenir le chemin directement."
           }
         ]
       },
@@ -508,16 +544,16 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Ce chapitre explique le mouvement des planètes et des satellites grâce à la gravitation. Kepler a observé les orbites, Newton a expliqué pourquoi grâce à la force gravitationnelle en 1/r². En gros : les planètes tournent autour du Soleil car la gravité les « tire » en permanence. Un satellite en orbite est en chute libre perpétuelle autour de la Terre.",
+        texte: "• Ce chapitre explique le mouvement des planètes et des satellites grâce à la gravitation (force d'attraction entre les masses). • Kepler a observé que les planètes suivent des orbites en forme d'ellipses (ovales). • Newton a expliqué pourquoi grâce à la force gravitationnelle en 1/r². • En gros : les planètes tournent autour du Soleil car la gravité les « tire » en permanence. • C'est comme une balle attachée à un fil : la gravité remplace le fil. • Un satellite en orbite est en chute libre perpétuelle autour de la Terre. • Il « tombe » sans cesse mais la Terre se courbe aussi sous lui. • Les astronautes dans l'ISS (Station Spatiale Internationale) flottent car ils tombent en même temps que la station. • En gros : l'apesanteur n'est pas l'absence de gravité, c'est la chute libre. • La gravité diminue avec la distance : plus on s'éloigne, moins elle est forte.",
         points_cles: [
           "Les trois lois de Kepler décrivent les orbites des planètes",
-          "La force gravitationnelle F = GMm/r² explique les lois de Kepler",
-          "Pour une orbite circulaire : la gravité = force centripète",
-          "La vitesse orbitale diminue quand le rayon augmente",
+          "La force gravitationnelle F = GMm/r² diminue avec le carré de la distance",
+          "Pour une orbite circulaire : la gravité joue le rôle de force centripète",
+          "La vitesse orbitale v = √(GM/r) diminue quand le rayon augmente",
           "Un satellite géostationnaire a T = 24 h dans le plan équatorial",
-          "T² = (4π²/GM)·r³ relie période et rayon",
-          "L'accélération centripète vaut v²/r = GM/r²",
-          "L'apesanteur en orbite est une chute libre permanente"
+          "T² = (4π²/GM)·r³ relie période et rayon (3ème loi de Kepler)",
+          "L'apesanteur en orbite est une chute libre permanente, pas l'absence de gravité",
+          "La constante G = 6,67 × 10⁻¹¹ est universelle et très petite"
         ]
       },
       page2_concepts: {
@@ -525,35 +561,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Force gravitationnelle",
-            definition: "F = G·M·m/r². Force attractive entre deux masses, proportionnelle aux masses et inversement proportionnelle au carré de la distance."
-          },
-          {
-            terme: "Loi des orbites (Kepler 1)",
-            definition: "Les planètes décrivent des ellipses dont le Soleil est un foyer. Le cercle est un cas particulier d'ellipse."
-          },
-          {
-            terme: "Loi des aires (Kepler 2)",
-            definition: "Le rayon vecteur balaie des aires égales en temps égaux. La planète accélère au périhélie (point le plus proche)."
-          },
-          {
-            terme: "Loi des périodes (Kepler 3)",
-            definition: "T²/a³ = constante = 4π²/(GM). Relie la période orbitale au demi-grand axe de l'orbite."
-          },
-          {
-            terme: "Vitesse orbitale",
-            definition: "v = √(GM/r). Vitesse d'un satellite en orbite circulaire de rayon r autour d'un astre de masse M."
-          },
-          {
-            terme: "Satellite géostationnaire",
-            definition: "Satellite en orbite équatoriale circulaire avec T = 24 h. Il paraît immobile depuis le sol terrestre."
-          },
-          {
-            terme: "Accélération centripète",
-            definition: "a = v²/r, dirigée vers le centre de l'astre. Elle courbe la trajectoire du satellite."
+            definition: "F = G·M·m/r². C'est la force d'attraction entre deux masses M et m séparées de r. Elle est toujours attractive et diminue avec le carré de la distance. En gros : double la distance, la force est divisée par 4. C'est comme un aimant qui attire moins quand on s'éloigne."
           },
           {
             terme: "Constante gravitationnelle G",
-            definition: "G = 6,674 × 10⁻¹¹ N·m²·kg⁻². Constante universelle mesurant l'intensité de la gravitation."
+            definition: "G = 6,674 × 10⁻¹¹ N·m²·kg⁻². C'est une constante universelle qui mesure l'intensité de la gravitation. Elle est très petite, ce qui explique que la gravité entre petits objets est imperceptible. En gros : deux personnes s'attirent, mais la force est infime."
+          },
+          {
+            terme: "Loi des orbites (Kepler 1)",
+            definition: "Les planètes décrivent des ellipses dont le Soleil occupe un foyer. Le cercle est un cas particulier d'ellipse (quand les deux foyers sont confondus). En gros : les orbites ne sont pas des cercles parfaits, elles sont légèrement ovales."
+          },
+          {
+            terme: "Loi des aires (Kepler 2)",
+            definition: "Le segment Soleil-planète balaie des aires égales en temps égaux. La planète accélère quand elle est proche du Soleil (périhélie) et ralentit quand elle est loin (aphélie). C'est comme un patineur qui tourne plus vite quand il ramène ses bras."
+          },
+          {
+            terme: "Loi des périodes (Kepler 3)",
+            definition: "T²/a³ = constante = 4π²/(GM). Le rapport est le même pour tous les satellites d'un même astre. En gros : plus une planète est loin du Soleil, plus son année est longue. Mars est plus loin que la Terre, donc son année dure plus longtemps."
+          },
+          {
+            terme: "Vitesse orbitale",
+            definition: "v = √(GM/r). C'est la vitesse d'un satellite en orbite circulaire de rayon r. Plus l'orbite est haute (r grand), plus le satellite est lent. En gros : les satellites proches de la Terre vont vite, les lointains vont lentement."
+          },
+          {
+            terme: "Satellite géostationnaire",
+            definition: "Satellite en orbite équatoriale circulaire avec T = 24 h. Il paraît immobile vu depuis le sol terrestre. Son altitude est d'environ 36 000 km. En gros : c'est le satellite des antennes TV, toujours au même endroit dans le ciel."
+          },
+          {
+            terme: "Accélération centripète",
+            definition: "a = v²/r = GM/r², dirigée vers le centre de l'astre. C'est elle qui courbe la trajectoire du satellite pour le maintenir sur son orbite. En gros : sans cette accélération, le satellite partirait tout droit dans l'espace."
+          },
+          {
+            terme: "Apesanteur",
+            definition: "État d'un objet en chute libre. Les astronautes « flottent » car ils tombent en même temps que leur station. La gravité existe toujours (elle maintient l'ISS en orbite) mais on ne la ressent pas. C'est comme être dans un ascenseur en chute libre."
+          },
+          {
+            terme: "Périhélie et aphélie",
+            definition: "Périhélie : point de l'orbite le plus proche du Soleil (vitesse maximale). Aphélie : point le plus éloigné (vitesse minimale). En gros : proche = rapide, loin = lent. C'est la conséquence de la loi des aires de Kepler."
           }
         ]
       },
@@ -567,7 +611,7 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Force gravitationnelle",
             formule: "F = G·M·m / r²",
-            explication: "Force attractive entre deux masses M et m séparées de r. G ≈ 6,67 × 10⁻¹¹."
+            explication: "Force attractive entre deux masses M et m séparées de r. G ≈ 6,67 × 10⁻¹¹ N·m²·kg⁻². Toujours attractive."
           },
           {
             nom: "Vitesse orbitale",
@@ -577,22 +621,32 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Troisième loi de Kepler",
             formule: "T² = (4π² / G·M) · r³",
-            explication: "Relie période T et rayon r pour une orbite circulaire autour d'un astre de masse M."
+            explication: "Relie période T et rayon r pour une orbite circulaire. Le rapport T²/r³ est le même pour tous les satellites d'un astre."
           },
           {
             nom: "Accélération gravitationnelle",
             formule: "g = G·M / r²",
-            explication: "Accélération due à la gravité à la distance r du centre de l'astre de masse M."
+            explication: "Accélération due à la gravité à la distance r du centre d'un astre de masse M. Diminue en 1/r²."
           },
           {
             nom: "Périmètre orbital",
             formule: "v = 2πr / T",
-            explication: "Relation cinématique pour un mouvement circulaire uniforme. Permet de relier v, r et T."
+            explication: "Relation cinématique pour un mouvement circulaire uniforme. Le satellite parcourt le périmètre 2πr en une période T."
           },
           {
             nom: "Accélération centripète",
             formule: "a = v² / r = ω²·r",
-            explication: "Accélération dirigée vers le centre. ω = 2π/T est la vitesse angulaire."
+            explication: "Accélération dirigée vers le centre. ω = 2π/T est la vitesse angulaire (en rad/s)."
+          },
+          {
+            nom: "Altitude d'un satellite géostationnaire",
+            formule: "r = ∛(G·M·T² / 4π²)",
+            explication: "On isole r de la 3ème loi de Kepler. Avec T = 24 h et M = masse de la Terre, on trouve r ≈ 42 200 km (altitude ≈ 36 000 km)."
+          },
+          {
+            nom: "Énergie potentielle gravitationnelle",
+            formule: "Ep = −G·M·m / r",
+            explication: "Énergie liée à la position dans le champ gravitationnel. Négative car il faut fournir de l'énergie pour s'éloigner."
           }
         ]
       },

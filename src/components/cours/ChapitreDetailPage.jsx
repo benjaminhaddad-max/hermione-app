@@ -7,7 +7,8 @@ import FichePage5Resume from "./FichePage5Resume";
 import QCMChapitreSession from "../qcm/QCMChapitreSession";
 import FlashcardSession from "../flashcards/FlashcardSession";
 
-const FICHE_LABELS = ["Cours", "Notions", "Schémas", "Chiffres", "Résumé"];
+const FICHE_LABELS_FULL = ["Cours", "Notions", "Schémas", "Chiffres", "Résumé"];
+const FICHE_LABELS_TERM = ["Cours", "Notions", "Chiffres"];
 
 export default function ChapitreDetailPage({
   cours, storage, onBack, onSaveProgress, onSaveQCMScore, onSaveFCProgress
@@ -16,6 +17,7 @@ export default function ChapitreDetailPage({
   const [fichePage, setFichePage] = useState(0);
 
   const f = cours.fiche;
+  const isTerminale = cours.id.startsWith("term-");
   const qcmScores = storage?.qcm_scores?.[cours.id] || [];
   const fcProgress = storage?.flashcards_progress?.[cours.id];
   const ficheLue = !!storage?.fiches_lues?.[cours.id]?.lue;
@@ -23,7 +25,7 @@ export default function ChapitreDetailPage({
     ? Math.max(...qcmScores.map(s => Math.round(s.score / s.total * 100)))
     : null;
 
-  const fichePages = [
+  const fichePagesFull = [
     <FichePage1Intro fiche={f} courseTitle={cours.titre} />,
     <FichePage2Concepts data={f.page2_concepts} />,
     <FichePage3Schemas
@@ -36,8 +38,18 @@ export default function ChapitreDetailPage({
     <FichePage5Resume data={f.page5_resume} />,
   ];
 
+  const fichePagesTerm = [
+    <FichePage1Intro fiche={f} courseTitle={cours.titre} />,
+    <FichePage2Concepts data={f.page2_concepts} />,
+    <FichePage4Formules data={f.page4_formules} />,
+  ];
+
+  const fichePages = isTerminale ? fichePagesTerm : fichePagesFull;
+  const ficheLabels = isTerminale ? FICHE_LABELS_TERM : FICHE_LABELS_FULL;
+  const maxPage = fichePages.length - 1;
+
   function goNextFiche() {
-    if (fichePage < 4) {
+    if (fichePage < maxPage) {
       setFichePage(fichePage + 1);
     } else {
       onSaveProgress && onSaveProgress();
@@ -47,7 +59,6 @@ export default function ChapitreDetailPage({
 
   return (
     <div className="cours-unified">
-      {/* Header */}
       <div className="cu-header">
         <button className="back-btn" onClick={onBack}>←</button>
         <div className="cu-header-info">
@@ -55,7 +66,6 @@ export default function ChapitreDetailPage({
         </div>
       </div>
 
-      {/* Section tabs: Fiche / QCM / Flashcards */}
       <div className="cu-section-tabs">
         <button
           className={`cu-sec-tab ${section === "fiche" ? "active" : ""}`}
@@ -83,12 +93,10 @@ export default function ChapitreDetailPage({
         </button>
       </div>
 
-      {/* Content */}
       {section === "fiche" && (
         <div className="cu-fiche-wrapper">
-          {/* Fiche sub-tabs */}
           <div className="cu-fiche-tabs">
-            {FICHE_LABELS.map((lbl, i) => (
+            {ficheLabels.map((lbl, i) => (
               <button
                 key={i}
                 className={`cu-ftab ${fichePage === i ? "active" : ""}`}
@@ -111,9 +119,9 @@ export default function ChapitreDetailPage({
             >
               ← Préc.
             </button>
-            <span className="cu-fiche-counter">{fichePage + 1} / 5</span>
+            <span className="cu-fiche-counter">{fichePage + 1} / {fichePages.length}</span>
             <button className="cu-fnav-btn primary" onClick={goNextFiche}>
-              {fichePage < 4 ? "Suiv. →" : "✓ Terminé"}
+              {fichePage < maxPage ? "Suiv. →" : "✓ Terminé"}
             </button>
           </div>
         </div>

@@ -134,13 +134,16 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le raisonnement par récurrence permet de prouver une propriété P(n) pour tout entier n ≥ n₀. C'est comme des dominos : on montre que le premier tombe (initialisation), puis que chaque domino fait tomber le suivant (hérédité). Ce chapitre couvre aussi les limites de suites. En gros : on apprend à démontrer des propriétés sur une infinité d'entiers et à déterminer vers quoi une suite se dirige.",
+        texte: "• Le raisonnement par récurrence (méthode de preuve) sert à démontrer qu'une propriété P(n) est vraie pour tout entier n ≥ n₀.\n• C'est comme une file de dominos alignés.\n• On pousse le premier domino : c'est l'initialisation.\n• On prouve que chaque domino fait tomber le suivant : c'est l'hérédité.\n• Résultat : tous les dominos tombent, donc P(n) est vraie pour tout n.\n• En gros : on vérifie un cas de départ, puis on montre que ça se propage.\n• Ce chapitre couvre aussi les limites de suites (vers quelle valeur une suite se dirige).\n• On apprend à utiliser des théorèmes comme les gendarmes (encadrement) ou la convergence monotone (suite croissante bornée).\n• En gros : on maîtrise deux outils puissants — la preuve par récurrence et le calcul de limites.",
         points_cles: [
-          "Récurrence = initialisation + hérédité + conclusion",
-          "L'initialisation est indispensable (contre-exemples !)",
-          "Théorèmes de convergence (monotone bornée)",
-          "Théorème des gendarmes (encadrement)",
-          "Opérations sur les limites et formes indéterminées"
+          "Récurrence = initialisation + hérédité + conclusion (3 étapes obligatoires)",
+          "L'initialisation est indispensable : sans elle, rien ne fonctionne",
+          "C'est comme les dominos : le premier doit tomber pour que la chaîne démarre",
+          "Théorème de convergence monotone : suite croissante ET majorée → convergente",
+          "Théorème des gendarmes : une suite coincée entre deux limites identiques converge vers cette limite",
+          "Les opérations sur les limites (+, −, ×, ÷) ont des règles précises",
+          "Attention aux formes indéterminées (FI) : +∞ − ∞, 0 × ∞, ∞/∞, 0/0",
+          "Les FI nécessitent de transformer l'expression (factoriser, simplifier, encadrer)"
         ]
       },
       page2_concepts: {
@@ -148,31 +151,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Initialisation",
-            definition: "Première étape : on vérifie que P(n₀) est vraie. En gros : on pousse le premier domino."
+            definition: "Première étape de la récurrence : on vérifie que P(n₀) est vraie pour le rang initial n₀. C'est comme pousser le premier domino de la file. En gros : sans cette vérification, la preuve est invalide."
           },
           {
             terme: "Hérédité",
-            definition: "Deuxième étape : on suppose P(n) vraie (hypothèse de récurrence) et on montre que P(n+1) est vraie. En gros : un domino en fait tomber un autre."
+            definition: "Deuxième étape : on suppose P(n) vraie (c'est l'hypothèse de récurrence), puis on démontre que P(n+1) est vraie. C'est comme prouver qu'un domino qui tombe fait toujours tomber le suivant. En gros : le passage de n à n+1 est le cœur de la preuve."
+          },
+          {
+            terme: "Conclusion de la récurrence",
+            definition: "Troisième étape : on écrit que P(n) est vraie pour tout n ≥ n₀ d'après le principe de récurrence. C'est la phrase finale obligatoire. En gros : on conclut proprement, sinon le correcteur enlève des points."
           },
           {
             terme: "Suite convergente",
-            definition: "Suite (uₙ) telle que uₙ se rapproche d'un nombre ℓ quand n → +∞. On écrit lim uₙ = ℓ."
+            definition: "Suite (uₙ) dont les termes se rapprochent d'un nombre fixe ℓ quand n grandit. On écrit lim(n→+∞) uₙ = ℓ. C'est comme une balle qui rebondit de plus en plus bas et finit par s'arrêter. En gros : la suite se stabilise autour d'une valeur."
+          },
+          {
+            terme: "Suite divergente",
+            definition: "Suite qui ne converge pas. Elle peut tendre vers +∞, −∞, ou n'avoir aucune limite (oscillation). C'est comme une fusée qui monte sans s'arrêter. En gros : la suite ne se stabilise jamais."
           },
           {
             terme: "Suite majorée",
-            definition: "Suite dont tous les termes sont ≤ à un nombre M. En gros : la suite a un plafond."
+            definition: "Suite dont tous les termes sont inférieurs ou égaux à un nombre M (le majorant). C'est comme un plafond que la suite ne peut pas dépasser. En gros : il existe un « mur en haut »."
           },
           {
             terme: "Suite minorée",
-            definition: "Suite dont tous les termes sont ≥ à un nombre m. En gros : la suite a un plancher."
+            definition: "Suite dont tous les termes sont supérieurs ou égaux à un nombre m (le minorant). C'est comme un plancher sous la suite. En gros : il existe un « sol » en dessous."
           },
           {
-            terme: "Théorème des gendarmes",
-            definition: "Si vₙ ≤ uₙ ≤ wₙ et que vₙ et wₙ ont la même limite ℓ, alors uₙ aussi. En gros : coincée entre deux suites, elle suit."
+            terme: "Suite bornée",
+            definition: "Suite à la fois majorée ET minorée. Tous les termes restent dans un intervalle [m ; M]. C'est comme une balle enfermée dans une boîte. En gros : la suite ne s'échappe ni vers le haut ni vers le bas."
           },
           {
-            terme: "Forme indéterminée",
-            definition: "Expression du type +∞ − ∞, 0 × ∞, ∞/∞ ou 0/0 dont le résultat n'est pas prévisible. Il faut transformer l'expression."
+            terme: "Théorème des gendarmes (encadrement)",
+            definition: "Si vₙ ≤ uₙ ≤ wₙ et que lim vₙ = lim wₙ = ℓ, alors lim uₙ = ℓ. C'est comme être coincé entre deux voitures de police qui vont au même endroit. En gros : la suite du milieu est forcée de suivre."
+          },
+          {
+            terme: "Forme indéterminée (FI)",
+            definition: "Expression du type +∞ − ∞, 0 × ∞, ∞/∞ ou 0/0 dont le résultat est imprévisible. Il faut transformer (factoriser, simplifier) pour lever l'indétermination. En gros : le calcul « hésite » et il faut l'aider."
           }
         ]
       },
@@ -186,27 +201,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Somme des entiers",
             formule: "∑(k=1 à n) k = n(n+1)/2",
-            explication: "Somme 1 + 2 + … + n. Utile dans les calculs de récurrence."
+            explication: "Somme 1 + 2 + … + n. C'est comme additionner les numéros de marches d'un escalier. Se démontre par récurrence."
           },
           {
             nom: "Somme des carrés",
             formule: "∑(k=1 à n) k² = n(n+1)(2n+1)/6",
-            explication: "Somme 1² + 2² + … + n². Classique au bac."
+            explication: "Somme 1² + 2² + … + n². Formule classique au bac. Se démontre aussi par récurrence."
+          },
+          {
+            nom: "Somme des cubes",
+            formule: "∑(k=1 à n) k³ = [n(n+1)/2]²",
+            explication: "Somme 1³ + 2³ + … + n³. C'est le carré de la somme des entiers. Résultat élégant et utile."
           },
           {
             nom: "Inégalité de Bernoulli",
             formule: "(1+a)ⁿ ≥ 1 + na, pour a > 0 et n ∈ ℕ*",
-            explication: "Se démontre par récurrence. L'égalité n'a lieu que si n = 1."
+            explication: "Se démontre par récurrence. L'égalité n'a lieu que pour n = 1. En gros : (1+a)ⁿ grandit plus vite que 1 + na."
           },
           {
-            nom: "Suite géométrique",
+            nom: "Suite géométrique (somme)",
             formule: "∑(k=0 à n) qᵏ = (1 − qⁿ⁺¹)/(1 − q), pour q ≠ 1",
-            explication: "Somme des termes d'une suite géométrique de raison q."
+            explication: "Somme des termes d'une suite géométrique de raison q. C'est comme calculer le total d'intérêts composés."
           },
           {
             nom: "Limite de qⁿ",
             formule: "|q| < 1 ⇒ lim qⁿ = 0 ; q > 1 ⇒ lim qⁿ = +∞",
-            explication: "Résultat fondamental pour les suites géométriques."
+            explication: "Résultat fondamental. Si q est entre −1 et 1, la suite s'écrase vers 0. Si q > 1, elle explose."
+          },
+          {
+            nom: "Convergence monotone",
+            formule: "Suite croissante ET majorée ⇒ convergente ; suite décroissante ET minorée ⇒ convergente",
+            explication: "C'est comme monter un escalier avec un plafond : on finit forcément par se stabiliser."
+          },
+          {
+            nom: "Comparaison de limites",
+            formule: "Si uₙ ≥ vₙ et lim vₙ = +∞, alors lim uₙ = +∞",
+            explication: "En gros : si une suite plus petite explose, la plus grande explose aussi."
           }
         ]
       },
@@ -363,13 +393,16 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "La dérivation mesure la vitesse de variation d'une fonction. Le nombre dérivé f'(a) donne la pente de la tangente en x = a. Ce chapitre approfondit la dérivation avec les fonctions composées (v∘u) et introduit la convexité. En gros : on apprend à étudier comment une fonction varie ET comment sa « courbure » se comporte (vers le haut ou vers le bas).",
+        texte: "• La dérivation (opération mathématique) mesure la vitesse de variation d'une fonction.\n• Le nombre dérivé f'(a) donne la pente de la tangente (droite qui frôle la courbe) en x = a.\n• C'est comme mesurer la vitesse d'une voiture à un instant précis sur un compteur.\n• Ce chapitre approfondit la dérivation avec les fonctions composées (v∘u), où l'on enchaîne deux fonctions.\n• On y apprend à dériver eᵘ, ln(u), uⁿ et √u grâce à la formule de la dérivée composée.\n• Le chapitre introduit aussi la convexité (courbure vers le haut, comme un bol) et la concavité (courbure vers le bas, comme un chapeau).\n• En gros : on étudie comment une fonction varie ET comment sa courbure se comporte.\n• La dérivée seconde f'' (dérivée de la dérivée) est l'outil clé pour la convexité.\n• En gros : f' dit « ça monte ou ça descend ? », f'' dit « ça courbe vers le haut ou vers le bas ? ».",
         points_cles: [
-          "Nombre dérivé = pente de la tangente",
-          "Dérivée composée : (v∘u)' = u' × v'∘u",
+          "Nombre dérivé f'(a) = pente de la tangente en x = a",
+          "C'est comme la vitesse instantanée sur un compteur",
+          "Dérivée composée : (v∘u)' = u' × v'∘u (formule essentielle)",
           "f' > 0 ⇒ f croissante, f' < 0 ⇒ f décroissante",
-          "f'' > 0 ⇒ convexe, f'' < 0 ⇒ concave",
-          "Point d'inflexion : f'' change de signe"
+          "f'' > 0 ⇒ convexe (bol, sourire ∪), f'' < 0 ⇒ concave (chapeau, triste ∩)",
+          "Point d'inflexion : f'' = 0 ET f'' change de signe",
+          "La tangente traverse la courbe au point d'inflexion",
+          "Toujours penser à dériver « l'intérieur » dans une composée"
         ]
       },
       page2_concepts: {
@@ -377,27 +410,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Nombre dérivé",
-            definition: "f'(a) = lim(h→0) [f(a+h)−f(a)]/h. C'est la pente de la tangente en a. En gros : « à quelle vitesse f varie en a »."
+            definition: "f'(a) = lim(h→0) [f(a+h)−f(a)]/h. C'est la pente de la tangente au point d'abscisse a. C'est comme lire la vitesse sur un compteur à un instant t. En gros : « à quelle vitesse f varie en a »."
           },
           {
             terme: "Tangente",
-            definition: "Droite qui « touche » la courbe en un point. Équation : y = f'(a)(x−a) + f(a)."
+            definition: "Droite qui « touche » la courbe en un seul point localement. Son équation est y = f'(a)(x−a) + f(a). C'est comme poser une règle sur une balle : elle touche en un point. En gros : la droite qui colle à la courbe en x = a."
           },
           {
             terme: "Fonction composée (v∘u)",
-            definition: "v∘u(x) = v(u(x)). On applique d'abord u puis v. Exemple : e^(2x) = exp ∘ (2x)."
+            definition: "v∘u(x) = v(u(x)). On applique d'abord la fonction u, puis la fonction v au résultat. C'est comme une chaîne : d'abord on emballe, puis on décore. En gros : deux fonctions enchaînées."
+          },
+          {
+            terme: "Dérivée composée",
+            definition: "(v∘u)'(x) = u'(x) × v'(u(x)). On dérive l'intérieur (u') et on multiplie par la dérivée de l'extérieur évaluée en u(x). En gros : ne jamais oublier de dériver « ce qu'il y a dedans »."
           },
           {
             terme: "Convexité",
-            definition: "f est convexe si f'' ≥ 0. La courbe est sous ses cordes. En gros : « ça sourit » (∪)."
+            definition: "f est convexe sur I si f''(x) ≥ 0 pour tout x de I. La courbe est en dessous de ses cordes (sécantes). C'est comme un bol ou un sourire (forme ∪). En gros : la courbe « sourit »."
           },
           {
             terme: "Concavité",
-            definition: "f est concave si f'' ≤ 0. La courbe est au-dessus de ses cordes. En gros : « ça fait la tête » (∩)."
+            definition: "f est concave sur I si f''(x) ≤ 0 pour tout x de I. La courbe est au-dessus de ses cordes. C'est comme un chapeau retourné ou une mine triste (forme ∩). En gros : la courbe « fait la tête »."
           },
           {
             terme: "Point d'inflexion",
-            definition: "Point où f'' s'annule et change de signe. La courbe passe de convexe à concave (ou inversement). La tangente traverse la courbe."
+            definition: "Point où la courbe change de courbure : de convexe à concave, ou l'inverse. On a f''(a) = 0 ET f'' change de signe en a. La tangente traverse la courbe en ce point. En gros : c'est le point de bascule de la courbure."
+          },
+          {
+            terme: "Dérivée seconde f''",
+            definition: "La dérivée de f' (la dérivée de la dérivée). Elle renseigne sur la courbure de f, pas sur sa croissance. C'est comme l'accélération d'une voiture : elle dit si la vitesse augmente ou diminue. En gros : f'' contrôle la forme de la courbe."
+          },
+          {
+            terme: "Extremum local",
+            definition: "Point où f atteint un maximum ou un minimum local. Condition nécessaire : f'(a) = 0. Il faut vérifier le changement de signe de f' autour de a. C'est comme le sommet d'une colline ou le fond d'une vallée."
+          },
+          {
+            terme: "Tableau de variations",
+            definition: "Tableau qui résume le signe de f' et les variations de f. On y note les extrema et les limites aux bornes. En gros : c'est la « carte d'identité » du comportement de f."
           }
         ]
       },
@@ -411,37 +460,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Dérivée composée",
             formule: "(v∘u)' = u' × v'∘u",
-            explication: "On dérive l'intérieur (u') et on multiplie par la dérivée de l'extérieur évaluée en u."
+            explication: "On dérive l'intérieur (u') puis on multiplie par la dérivée de l'extérieur évaluée en u. En gros : ne jamais oublier le u' devant."
           },
           {
             nom: "Tangente en a",
             formule: "y = f'(a)(x − a) + f(a)",
-            explication: "Équation de la droite tangente à la courbe de f au point d'abscisse a."
+            explication: "Équation de la droite tangente à la courbe de f au point d'abscisse a. Le coefficient directeur est f'(a)."
           },
           {
             nom: "Dérivée de eᵘ",
             formule: "(eᵘ)' = u' × eᵘ",
-            explication: "La dérivée de l'exponentielle d'une fonction u. Exemple : (e³ˣ)' = 3e³ˣ."
+            explication: "La dérivée de l'exponentielle composée. Exemple : (e²ˣ)' = 2e²ˣ. L'exponentielle se reproduit, multipliée par u'."
           },
           {
             nom: "Dérivée de ln(u)",
             formule: "(ln u)' = u'/u",
-            explication: "La dérivée du logarithme d'une fonction u. u doit être strictement positive."
+            explication: "La dérivée du logarithme composé. Exemple : (ln(3x+1))' = 3/(3x+1). Attention : u doit être > 0."
           },
           {
             nom: "Dérivée de uⁿ",
             formule: "(uⁿ)' = n · u' · uⁿ⁻¹",
-            explication: "Formule de dérivation d'une puissance composée."
+            explication: "Formule de la puissance composée. Exemple : ((2x+1)³)' = 3 × 2 × (2x+1)² = 6(2x+1)²."
           },
           {
             nom: "Dérivée de √u",
             formule: "(√u)' = u'/(2√u)",
-            explication: "Cas particulier de uⁿ avec n = 1/2."
+            explication: "Cas particulier de uⁿ avec n = 1/2. Attention : u doit être > 0 pour que √u existe."
+          },
+          {
+            nom: "Dérivée de 1/u",
+            formule: "(1/u)' = −u'/u²",
+            explication: "Cas particulier de uⁿ avec n = −1. Exemple : (1/(x+1))' = −1/(x+1)²."
           },
           {
             nom: "Inégalité de convexité",
             formule: "f(ta + (1−t)b) ≤ t·f(a) + (1−t)·f(b), pour t ∈ [0;1]",
-            explication: "Caractérisation de la convexité par les sécantes."
+            explication: "La courbe d'une fonction convexe est sous ses cordes. C'est la définition « géométrique » de la convexité."
           }
         ]
       },
@@ -598,13 +652,16 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les probabilités modélisent le hasard. On associe un nombre entre 0 et 1 à chaque événement. Ce chapitre introduit les variables aléatoires (on « numérote » les résultats), les probabilités conditionnelles (la proba d'un événement sachant qu'un autre s'est produit) et la loi binomiale (compter les succès dans des épreuves répétées). En gros : on apprend à calculer des chances de manière rigoureuse.",
+        texte: "• Les probabilités (branche des maths) servent à modéliser le hasard de manière rigoureuse.\n• On associe un nombre entre 0 et 1 à chaque événement : 0 = impossible, 1 = certain.\n• C'est comme donner une note de « chance » à chaque résultat possible.\n• Ce chapitre introduit les variables aléatoires (on attribue un nombre à chaque résultat).\n• On apprend les probabilités conditionnelles : la chance qu'un événement se produise sachant qu'un autre a eu lieu.\n• C'est comme se demander « quelle est la chance de pluie sachant qu'il y a des nuages ? ».\n• La loi binomiale (loi de probabilité) permet de compter les succès dans des épreuves répétées.\n• En gros : on apprend à calculer des chances, des moyennes et des dispersions.\n• L'espérance (moyenne théorique) et la variance (mesure de la dispersion) sont les outils clés.",
         points_cles: [
-          "Variable aléatoire : fonction de Ω dans ℝ",
-          "Espérance = moyenne pondérée, Variance = dispersion",
-          "Probabilités conditionnelles et formule des probabilités totales",
-          "Indépendance : P(A ∩ B) = P(A) × P(B)",
-          "Loi binomiale B(n, p) : E = np, V = np(1−p)"
+          "Variable aléatoire X : fonction qui associe un nombre à chaque résultat",
+          "Espérance E(X) = moyenne pondérée par les probabilités",
+          "Variance V(X) = mesure de la dispersion autour de la moyenne",
+          "Probabilité conditionnelle : P sachant qu'un autre événement s'est produit",
+          "Formule des probabilités totales : on découpe en cas et on additionne",
+          "Indépendance : savoir A ne change rien pour B → P(A ∩ B) = P(A) × P(B)",
+          "Loi binomiale B(n, p) : nombre de succès dans n épreuves indépendantes",
+          "Problèmes de seuil : trouver n tel qu'une probabilité dépasse un niveau donné"
         ]
       },
       page2_concepts: {
@@ -612,31 +669,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Expérience aléatoire",
-            definition: "Expérience dont on ne peut pas prévoir le résultat avec certitude. L'ensemble des résultats possibles s'appelle l'univers Ω."
+            definition: "Expérience dont le résultat est incertain. L'ensemble de tous les résultats possibles s'appelle l'univers Ω. C'est comme lancer un dé : on sait que le résultat sera entre 1 et 6, mais on ne sait pas lequel."
+          },
+          {
+            terme: "Événement",
+            definition: "Sous-ensemble de l'univers Ω. Un événement est « réalisé » si le résultat de l'expérience en fait partie. C'est comme parier sur « le dé tombe sur un nombre pair » : c'est l'événement {2, 4, 6}."
           },
           {
             terme: "Variable aléatoire X",
-            definition: "Fonction qui associe un nombre réel à chaque issue de Ω. Exemple : X = « somme de deux dés »."
+            definition: "Fonction qui associe un nombre réel à chaque issue de Ω. C'est comme mettre une étiquette numérique sur chaque résultat. En gros : X « traduit » les résultats en nombres pour pouvoir calculer."
           },
           {
             terme: "Espérance E(X)",
-            definition: "Moyenne pondérée : E(X) = ∑ xᵢ · P(X = xᵢ). En gros : la valeur « attendue en moyenne »."
+            definition: "Moyenne pondérée des valeurs de X par leurs probabilités : E(X) = ∑ xᵢ · P(X = xᵢ). C'est comme la note moyenne d'une classe pondérée par le nombre d'élèves. En gros : c'est ce qu'on obtient « en moyenne » sur un grand nombre de tirages."
           },
           {
-            terme: "Probabilité conditionnelle",
-            definition: "P_A(B) = P(A ∩ B)/P(A). Probabilité de B sachant que A s'est réalisé. Se lit sur les arbres pondérés."
+            terme: "Variance V(X)",
+            definition: "Mesure de la dispersion de X autour de son espérance. V(X) = E(X²) − [E(X)]². Plus V est grand, plus les résultats sont éparpillés. C'est comme la différence entre des notes groupées (V petit) et des notes très étalées (V grand)."
+          },
+          {
+            terme: "Écart-type σ(X)",
+            definition: "Racine carrée de la variance : σ(X) = √V(X). Même unité que X, contrairement à la variance. En gros : il mesure « en moyenne » de combien X s'éloigne de E(X)."
+          },
+          {
+            terme: "Probabilité conditionnelle P_A(B)",
+            definition: "P_A(B) = P(A ∩ B)/P(A). C'est la probabilité de B sachant que A s'est réalisé. Se lit sur les arbres pondérés. C'est comme se demander : « sachant qu'il pleut, quelle chance d'avoir froid ? »."
           },
           {
             terme: "Indépendance",
-            definition: "A et B indépendants si P(A ∩ B) = P(A) × P(B). En gros : connaître A ne change rien pour B."
+            definition: "A et B sont indépendants si P(A ∩ B) = P(A) × P(B). Connaître A ne change rien pour B. C'est comme tirer deux cartes avec remise : le premier tirage n'influence pas le second."
           },
           {
             terme: "Loi binomiale B(n, p)",
-            definition: "Loi du nombre de succès dans n épreuves de Bernoulli indépendantes de paramètre p."
+            definition: "Loi du nombre de succès dans n épreuves de Bernoulli indépendantes de paramètre p. E(X) = np, V(X) = np(1−p). C'est comme compter le nombre de « pile » sur n lancers d'une pièce truquée."
           },
           {
             terme: "Coefficient binomial C(n,k)",
-            definition: "Nombre de façons de choisir k éléments parmi n. C(n,k) = n! / (k!(n−k)!). Se lit dans le triangle de Pascal."
+            definition: "Nombre de façons de choisir k éléments parmi n. C(n,k) = n! / (k!(n−k)!). Se lit dans le triangle de Pascal. En gros : c'est le nombre de « combinaisons » possibles."
           }
         ]
       },
@@ -650,32 +719,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Espérance",
             formule: "E(X) = ∑ xᵢ · P(X = xᵢ)",
-            explication: "Moyenne pondérée des valeurs de X par leurs probabilités."
+            explication: "Moyenne pondérée des valeurs de X. C'est la valeur « attendue » sur un grand nombre de tirages."
           },
           {
             nom: "Variance (König-Huygens)",
             formule: "V(X) = E(X²) − [E(X)]²",
-            explication: "Mesure la dispersion autour de l'espérance. Plus V est grand, plus X est dispersé."
+            explication: "Mesure la dispersion autour de l'espérance. Formule pratique pour calculer rapidement. Plus V est grand, plus X est dispersé."
           },
           {
             nom: "Écart-type",
             formule: "σ(X) = √V(X)",
-            explication: "Racine de la variance. Même unité que X."
+            explication: "Racine de la variance. Même unité que X. En gros : c'est la « dispersion moyenne »."
           },
           {
             nom: "Probabilité conditionnelle",
             formule: "P_A(B) = P(A ∩ B) / P(A)",
-            explication: "Probabilité de B sachant A. Attention : P(A) doit être > 0."
+            explication: "Probabilité de B sachant A. Attention : P(A) doit être strictement positif. Se lit directement sur les branches d'un arbre."
           },
           {
             nom: "Probabilités totales",
             formule: "P(B) = ∑ P(Aᵢ) × P_Aᵢ(B)",
-            explication: "Les Aᵢ forment une partition de Ω. On « décompose » P(B) selon les cas."
+            explication: "Les Aᵢ forment une partition (découpage complet) de Ω. On additionne les contributions de chaque cas. C'est comme calculer une note en additionnant les apports de chaque matière."
           },
           {
             nom: "Loi binomiale",
             formule: "P(X = k) = C(n,k) · pᵏ · (1−p)ⁿ⁻ᵏ",
-            explication: "X ∼ B(n,p). C(n,k) = n!/(k!(n−k)!). E(X) = np, V(X) = np(1−p)."
+            explication: "X ∼ B(n,p). C(n,k) choisit les places des succès, pᵏ pour les succès, (1−p)ⁿ⁻ᵏ pour les échecs."
+          },
+          {
+            nom: "Espérance et variance de B(n,p)",
+            formule: "E(X) = np et V(X) = np(1−p)",
+            explication: "Formules directes pour la loi binomiale. En gros : en moyenne np succès, avec une dispersion de np(1−p)."
+          },
+          {
+            nom: "Linéarité de l'espérance",
+            formule: "E(aX + b) = a·E(X) + b",
+            explication: "L'espérance est linéaire : on peut « sortir » les constantes. Très utile pour simplifier les calculs."
           }
         ]
       },

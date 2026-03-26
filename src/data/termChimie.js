@@ -138,13 +138,16 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les réactions acido-basiques sont partout. Dans ton estomac (acide), dans le savon (basique), dans le sang (tamponné à pH 7,4). Ce chapitre pose les bases : qu'est-ce qu'un acide, une base, comment ils réagissent ensemble, et comment mesurer le pH. On utilise le modèle de Brønsted. C'est simple : un acide donne un H⁺, une base le prend. Comme un ballon qu'on se passe.",
+        texte: "• Les réactions acido-basiques sont partout dans la vie courante. • Ton estomac produit de l'acide chlorhydrique (HCl) pour digérer. • Le savon est basique : il capte les graisses grâce à ses ions HO⁻. • Ton sang est tamponné (maintenu stable) à pH 7,4. • C'est comme une balance : l'acide penche d'un côté, la base de l'autre. • Ce chapitre pose les bases du modèle de Brønsted. • Un acide est un donneur de proton (H⁺, un noyau d'hydrogène). • Une base est un accepteur de proton H⁺. • En gros : l'acide « lance » le H⁺, la base « l'attrape ». • C'est comme se passer un ballon : un joueur lance, l'autre réceptionne. • On apprend aussi à mesurer l'acidité avec le pH. • Le pH va de 0 (très acide) à 14 (très basique). • Un pH de 7 signifie que la solution est neutre (ni acide, ni basique).",
         points_cles: [
-          "Acide de Brønsted = donneur de H⁺",
-          "Base de Brønsted = accepteur de H⁺",
-          "Un couple acide-base s'écrit AH/A⁻",
-          "L'eau est amphotère : elle peut être acide ou base",
-          "pH = −log([H₃O⁺]), échelle de 0 à 14 à 25 °C"
+          "Acide de Brønsted = donneur de H⁺ (proton)",
+          "Base de Brønsted = accepteur de H⁺ (proton)",
+          "Un couple acide-base s'écrit AH/A⁻ (acide/base conjuguée)",
+          "L'eau est amphotère (= elle peut être acide OU base)",
+          "pH = −log([H₃O⁺]), échelle de 0 à 14 à 25 °C",
+          "Liaison polarisée O–H → favorise le caractère acide",
+          "Doublet non-liant (paire d'électrons libres) → favorise le caractère basique",
+          "Autoprotolyse de l'eau : 2 H₂O ⇌ H₃O⁺ + HO⁻ (existe toujours)"
         ]
       },
       page2_concepts: {
@@ -152,31 +155,43 @@ export const TERM_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Acide de Brønsted",
-            definition: "Espèce chimique capable de céder (donner) un proton H⁺ à une autre espèce. Exemple : HCl → H⁺ + Cl⁻."
+            definition: "Espèce chimique capable de céder (donner) un proton H⁺ à une autre espèce. Exemple : HCl → H⁺ + Cl⁻. En gros : l'acide « lâche » son H⁺ comme on lâche un ballon. C'est comme quelqu'un qui donne un bonbon : il s'en sépare."
           },
           {
             terme: "Base de Brønsted",
-            definition: "Espèce chimique capable de capter (recevoir) un proton H⁺. Exemple : NH₃ + H⁺ → NH₄⁺."
+            definition: "Espèce chimique capable de capter (recevoir) un proton H⁺. Exemple : NH₃ + H⁺ → NH₄⁺. En gros : la base « attrape » le H⁺ lancé par l'acide. C'est comme un receveur au baseball qui attrape la balle."
           },
           {
             terme: "Couple acide-base",
-            definition: "Paire AH/A⁻ reliée par un transfert de H⁺. La demi-équation est : AH ⇌ A⁻ + H⁺."
+            definition: "Paire AH/A⁻ reliée par un transfert de H⁺. La demi-équation est : AH ⇌ A⁻ + H⁺. En gros : l'acide et sa base conjuguée forment un duo inséparable. C'est comme un couple : l'un donne, l'autre reçoit."
           },
           {
             terme: "Espèce amphotère",
-            definition: "Espèce pouvant jouer le rôle d'acide ET de base. L'eau en est l'exemple le plus courant."
+            definition: "Espèce pouvant jouer le rôle d'acide ET de base selon la situation. L'eau en est le meilleur exemple : elle donne H⁺ (couple H₂O/HO⁻) ou elle capte H⁺ (couple H₃O⁺/H₂O). En gros : c'est un joueur ambidextre qui joue des deux mains."
           },
           {
             terme: "Autoprotolyse de l'eau",
-            definition: "Réaction de l'eau avec elle-même : 2 H₂O ⇌ H₃O⁺ + HO⁻. C'est un équilibre qui existe toujours, même dans l'eau pure."
+            definition: "Réaction de l'eau avec elle-même : 2 H₂O ⇌ H₃O⁺ + HO⁻. Une molécule d'eau donne son H⁺ à une autre. C'est un équilibre qui existe toujours, même dans l'eau pure. En gros : l'eau se « parle à elle-même » en s'échangeant des protons."
           },
           {
             terme: "Liaison polarisée",
-            definition: "Liaison où les électrons sont attirés vers l'atome le plus électronégatif. Le H devient δ+ et peut partir facilement sous forme de H⁺."
+            definition: "Liaison où les électrons sont attirés vers l'atome le plus électronégatif (celui qui attire le plus). Dans O–H, l'oxygène attire les électrons. Le H devient δ+ (légèrement positif) et peut partir facilement sous forme de H⁺. En gros : c'est comme un aimant qui tire la couverture de son côté."
           },
           {
-            terme: "pH",
-            definition: "Grandeur sans unité qui mesure l'acidité. pH = −log([H₃O⁺]). pH < 7 → acide. pH > 7 → basique. pH = 7 → neutre."
+            terme: "Doublet non-liant",
+            definition: "Paire d'électrons libres sur un atome. Elle n'est pas engagée dans une liaison. Elle peut capter un H⁺ pour former une nouvelle liaison. En gros : c'est une main libre prête à attraper quelque chose. C'est ce qui rend une espèce basique."
+          },
+          {
+            terme: "pH (potentiel hydrogène)",
+            definition: "Grandeur sans unité qui mesure l'acidité d'une solution. pH = −log([H₃O⁺]). pH < 7 → solution acide. pH > 7 → solution basique. pH = 7 → solution neutre. En gros : c'est un thermomètre, mais pour l'acidité."
+          },
+          {
+            terme: "Proton H⁺",
+            definition: "C'est un noyau d'hydrogène qui a perdu son électron. Il est très petit et très réactif. En solution aqueuse, il s'accroche à l'eau pour former H₃O⁺ (ion hydronium). En gros : H⁺ n'existe jamais seul dans l'eau, il se colle toujours à une molécule."
+          },
+          {
+            terme: "Ion hydronium H₃O⁺",
+            definition: "C'est le proton H⁺ accroché à une molécule d'eau : H⁺ + H₂O → H₃O⁺. C'est lui qu'on mesure quand on parle de concentration en acide. En gros : H₃O⁺ est la forme « habillée » de H⁺ dans l'eau."
           }
         ]
       },
@@ -190,27 +205,42 @@ export const TERM_CHIMIE_COURS = [
           {
             nom: "Définition du pH",
             formule: "pH = −log([H₃O⁺])",
-            explication: "[H₃O⁺] en mol/L. Plus la concentration en H₃O⁺ est grande, plus le pH est petit (=plus acide)."
+            explication: "[H₃O⁺] en mol/L. Plus la concentration en H₃O⁺ est grande, plus le pH est petit (= plus acide). En gros : beaucoup de H₃O⁺ = pH bas = acide."
           },
           {
             nom: "Concentration en H₃O⁺",
             formule: "[H₃O⁺] = 10^(−pH)",
-            explication: "Formule inverse. Si pH = 2, alors [H₃O⁺] = 10⁻² = 0,01 mol/L."
+            explication: "Formule inverse. Si pH = 2, alors [H₃O⁺] = 10⁻² = 0,01 mol/L. C'est comme « remonter » du pH à la concentration."
           },
           {
             nom: "Demi-équation acide-base",
             formule: "AH ⇌ A⁻ + H⁺",
-            explication: "L'acide AH perd un H⁺ et se transforme en sa base conjuguée A⁻."
+            explication: "L'acide AH perd un H⁺ et se transforme en sa base conjuguée A⁻. C'est la « carte d'identité » du couple acide-base."
           },
           {
-            nom: "Réaction acido-basique",
+            nom: "Réaction acido-basique complète",
             formule: "AH₁ + A₂⁻ → A₁⁻ + AH₂",
-            explication: "L'acide d'un couple réagit avec la base d'un autre. Un H⁺ est transféré."
+            explication: "L'acide d'un couple réagit avec la base d'un autre couple. Un H⁺ est transféré de l'acide vers la base. C'est comme un relais : le H⁺ passe d'une équipe à l'autre."
           },
           {
             nom: "Autoprotolyse de l'eau",
             formule: "2 H₂O ⇌ H₃O⁺ + HO⁻",
-            explication: "L'eau joue les deux rôles : une molécule donne H⁺, l'autre le capte."
+            explication: "L'eau joue les deux rôles : une molécule donne H⁺ (acide), l'autre le capte (base). Cet équilibre existe toujours dans l'eau."
+          },
+          {
+            nom: "Produit ionique de l'eau (aperçu)",
+            formule: "Ke = [H₃O⁺] × [HO⁻] = 10⁻¹⁴ (à 25 °C)",
+            explication: "Cette constante relie H₃O⁺ et HO⁻ dans toute solution aqueuse. Si on connaît l'un, on déduit l'autre. En gros : H₃O⁺ et HO⁻ sont toujours liés comme une balançoire."
+          },
+          {
+            nom: "Relation pH et pOH",
+            formule: "pH + pOH = 14 (à 25 °C)",
+            explication: "pOH = −log([HO⁻]). Si le pH monte, le pOH descend. Leur somme vaut toujours 14 à 25 °C."
+          },
+          {
+            nom: "Lien pH et neutralité",
+            formule: "Solution neutre : pH = 7 (à 25 °C)",
+            explication: "Neutre signifie [H₃O⁺] = [HO⁻] = 10⁻⁷ mol/L. Attention : cette valeur change avec la température."
           }
         ]
       },
@@ -369,13 +399,16 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le chapitre 1 posait les bases : acide, base, pH. Ici, on va plus loin. On quantifie la force des acides avec Ka et pKa. On voit le produit ionique de l'eau Ke. On apprend à prédire quelle forme domine (acide ou base) selon le pH, grâce aux diagrammes de prédominance. En gros : ce chapitre te donne les outils pour prévoir le comportement d'un acide ou d'une base dans n'importe quelle situation.",
+        texte: "• Le chapitre 1 posait les bases : acide, base, pH. • Ici, on va beaucoup plus loin. • On apprend à mesurer la force d'un acide avec Ka (constante d'acidité). • Ka est un nombre : plus il est grand, plus l'acide est fort. • On utilise aussi pKa = −log(Ka), plus pratique à manipuler. • C'est comme une note sur 20 : plus le pKa est bas, plus l'acide est « costaud ». • On découvre le produit ionique de l'eau Ke = 10⁻¹⁴ (à 25 °C). • En gros : Ke est une constante universelle de l'eau à 25 °C. • On apprend la relation de Henderson-Hasselbalch. • Elle prédit quelle forme (acide AH ou base A⁻) domine à un pH donné. • Le diagramme de prédominance résume tout visuellement. • À gauche du pKa → l'acide domine. • À droite du pKa → la base domine. • En gros : ce chapitre te donne les outils pour prévoir le comportement de tout acide ou base.",
         points_cles: [
-          "Ka mesure la force d'un acide, pKa = −log(Ka)",
-          "Ke = [H₃O⁺]×[HO⁻] = 10⁻¹⁴ à 25 °C",
-          "pH = pKa + log([A⁻]/[AH]) : Henderson-Hasselbalch",
-          "pH < pKa → forme acide domine | pH > pKa → forme basique domine",
-          "Acide fort : réaction totale | Acide faible : équilibre"
+          "Ka mesure la force d'un acide : Ka = [A⁻][H₃O⁺] / [AH]",
+          "pKa = −log(Ka) — plus pKa est petit, plus l'acide est fort",
+          "Ke = [H₃O⁺]×[HO⁻] = 10⁻¹⁴ à 25 °C (produit ionique de l'eau)",
+          "pH = pKa + log([A⁻]/[AH]) → relation de Henderson-Hasselbalch",
+          "pH < pKa → forme acide AH domine (milieu acide)",
+          "pH > pKa → forme basique A⁻ domine (milieu basique)",
+          "Acide fort : réaction totale (→) avec l'eau | Acide faible : équilibre (⇌)",
+          "Diagramme de prédominance : axe pH, séparation au point pKa"
         ]
       },
       page2_concepts: {
@@ -383,31 +416,43 @@ export const TERM_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Constante d'acidité Ka",
-            definition: "Ka = [A⁻][H₃O⁺] / [AH]. Elle quantifie la force d'un acide en solution aqueuse. Plus Ka est grand, plus l'acide libère facilement son H⁺."
+            definition: "Ka = [A⁻][H₃O⁺] / [AH]. Elle quantifie la force d'un acide en solution. Plus Ka est grand, plus l'acide libère facilement son H⁺. En gros : Ka est la « puissance de frappe » de l'acide. C'est comme la force d'un lanceur de baseball."
           },
           {
             terme: "pKa",
-            definition: "pKa = −log(Ka). C'est plus pratique à manipuler que Ka. Plus pKa est petit, plus l'acide est fort."
+            definition: "pKa = −log(Ka). C'est une échelle logarithmique plus pratique. Plus pKa est petit, plus l'acide est fort. En gros : pKa = 2 est bien plus fort que pKa = 10. C'est comme un classement inversé."
           },
           {
             terme: "Produit ionique de l'eau (Ke)",
-            definition: "Ke = [H₃O⁺] × [HO⁻]. À 25 °C, Ke = 10⁻¹⁴. Cette relation est TOUJOURS vérifiée dans l'eau, quoi qu'on ajoute."
+            definition: "Ke = [H₃O⁺] × [HO⁻]. À 25 °C, Ke = 10⁻¹⁴. Cette relation est TOUJOURS vraie dans l'eau. En gros : H₃O⁺ et HO⁻ sont liés comme une balançoire. Si l'un monte, l'autre descend."
+          },
+          {
+            terme: "Relation de Henderson-Hasselbalch",
+            definition: "pH = pKa + log([A⁻]/[AH]). Elle relie le pH au rapport des formes acide et basique. Si [A⁻] = [AH], alors pH = pKa (le log vaut 0). En gros : c'est le GPS qui te dit quelle forme domine."
           },
           {
             terme: "Diagramme de prédominance",
-            definition: "Axe horizontal = pH. À gauche de pKa : la forme acide AH domine. À droite : la base A⁻ domine. Au point pKa : les deux sont à 50/50."
+            definition: "Axe horizontal = pH. À gauche de pKa : la forme acide AH domine. À droite : la base A⁻ domine. Au point pKa : 50 % de chaque. En gros : c'est une carte qui montre « qui est le chef » selon le pH."
           },
           {
             terme: "Diagramme de distribution",
-            definition: "Graphe montrant les pourcentages de AH et A⁻ en fonction du pH. Les deux courbes se croisent à pH = pKa."
+            definition: "Graphe montrant les pourcentages de AH et A⁻ en fonction du pH. Les deux courbes se croisent à pH = pKa. En gros : c'est comme deux courbes de popularité qui se croisent au milieu."
           },
           {
-            terme: "Acide fort / Base forte",
-            definition: "Espèce dont la réaction avec l'eau est totale (→). L'acide est entièrement dissocié. Exemples : HCl, HNO₃, NaOH."
+            terme: "Acide fort",
+            definition: "Acide dont la réaction avec l'eau est totale (flèche → simple). Tout l'acide se transforme en H₃O⁺. Exemples : HCl, HNO₃, H₂SO₄. En gros : il donne TOUT son H⁺, sans hésiter."
           },
           {
-            terme: "Acide faible / Base faible",
-            definition: "Espèce dont la réaction avec l'eau est un équilibre (⇌). Seule une partie se dissocie. Exemples : CH₃COOH, NH₃."
+            terme: "Acide faible",
+            definition: "Acide dont la réaction avec l'eau est un équilibre (⇌). Seule une partie se dissocie (donne son H⁺). Exemple : CH₃COOH (vinaigre). En gros : il hésite, il ne donne qu'une petite partie de ses H⁺."
+          },
+          {
+            terme: "Base forte",
+            definition: "Base dont la réaction avec l'eau est totale. Elle capte H⁺ complètement. Exemple : NaOH (soude). C'est comme un aspirateur qui prend tout le H⁺ disponible."
+          },
+          {
+            terme: "Base conjuguée indifférente",
+            definition: "Base conjuguée d'un acide fort. Elle est tellement faible qu'elle ne réagit pas avec l'eau. Exemple : Cl⁻ (base conjuguée de HCl). En gros : elle est « inerte », elle ne fait rien."
           }
         ]
       },
@@ -421,27 +466,42 @@ export const TERM_CHIMIE_COURS = [
           {
             nom: "Constante d'acidité",
             formule: "Ka = [A⁻][H₃O⁺] / [AH]",
-            explication: "Les concentrations sont celles à l'équilibre, en mol/L. L'eau n'apparaît pas (solvant)."
+            explication: "Les concentrations sont celles à l'équilibre, en mol/L. L'eau n'apparaît pas car c'est le solvant (sa concentration ne change pas). En gros : Ka mesure combien l'acide se dissocie."
           },
           {
             nom: "pKa",
             formule: "pKa = −log(Ka)",
-            explication: "Échelle logarithmique. Un acide avec pKa = 2 est plus fort qu'un acide avec pKa = 5."
+            explication: "Échelle logarithmique. Un acide avec pKa = 2 est beaucoup plus fort qu'un acide avec pKa = 5. En gros : petit pKa = acide costaud."
           },
           {
             nom: "Produit ionique de l'eau",
             formule: "Ke = [H₃O⁺] × [HO⁻] = 10⁻¹⁴ (à 25 °C)",
-            explication: "Toujours vrai dans l'eau. Si on connaît [H₃O⁺], on en déduit [HO⁻] et vice versa."
+            explication: "Toujours vrai dans l'eau, même si on ajoute un acide ou une base. Si [H₃O⁺] augmente, [HO⁻] diminue automatiquement."
           },
           {
             nom: "Henderson-Hasselbalch",
             formule: "pH = pKa + log([A⁻] / [AH])",
-            explication: "Permet de relier le pH au rapport des concentrations. Si [A⁻] = [AH], pH = pKa."
+            explication: "Relie le pH au rapport des concentrations acide/base. Si [A⁻] = [AH], le log vaut 0 et pH = pKa. C'est le point de demi-équivalence."
           },
           {
             nom: "Lien pH et Ke",
             formule: "pH + pOH = 14 (à 25 °C)",
-            explication: "Avec pOH = −log([HO⁻]). C'est une conséquence directe de Ke = 10⁻¹⁴."
+            explication: "pOH = −log([HO⁻]). Conséquence directe de Ke = 10⁻¹⁴. C'est comme deux vases communicants qui totalisent toujours 14."
+          },
+          {
+            nom: "Ka et pKa réciproques",
+            formule: "Ka = 10^(−pKa)",
+            explication: "Formule inverse pour retrouver Ka à partir du pKa. Si pKa = 4,8 alors Ka = 10⁻⁴·⁸ ≈ 1,6 × 10⁻⁵."
+          },
+          {
+            nom: "Condition de prédominance (acide)",
+            formule: "pH < pKa ⟹ [AH] > [A⁻]",
+            explication: "Quand le milieu est plus acide que le pKa, la forme acide AH est majoritaire. En gros : environnement acide = l'acide gagne."
+          },
+          {
+            nom: "Condition de prédominance (base)",
+            formule: "pH > pKa ⟹ [A⁻] > [AH]",
+            explication: "Quand le milieu est plus basique que le pKa, la forme basique A⁻ est majoritaire. En gros : environnement basique = la base gagne."
           }
         ]
       },
@@ -600,12 +660,16 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Pour étudier un système chimique, on peut le regarder, le traverser avec de la lumière ou y faire passer du courant. Ce chapitre présente les techniques physiques d'analyse : conductimétrie (courant), spectroscopie UV-visible (lumière visible), spectroscopie IR (infrarouge). On voit aussi le dosage par étalonnage : comparer une solution inconnue à des solutions connues pour trouver sa concentration.",
+        texte: "• Pour étudier un système chimique, on utilise des techniques physiques. • On ne transforme pas la matière : on la « sonde » avec du courant ou de la lumière. • C'est comme aller chez le médecin : on mesure sans opérer. • La conductimétrie (mesure du courant) sert à analyser les solutions ioniques. • La spectroscopie UV-visible envoie de la lumière à travers la solution. • Plus la solution est concentrée, plus elle absorbe de lumière. • C'est comme des lunettes de soleil : plus elles sont teintées, moins la lumière passe. • La spectroscopie IR (infrarouge) identifie les groupes chimiques d'une molécule. • Chaque liaison chimique absorbe à une fréquence précise. • C'est comme une empreinte digitale : chaque molécule a son spectre unique. • Le dosage par étalonnage compare la solution inconnue à des solutions connues. • En gros : on prépare des « témoins » et on regarde à quel témoin notre solution ressemble. • Ces méthodes sont non-destructives : on garde l'échantillon intact.",
         points_cles: [
           "Conductimétrie : G = 1/R, σ = Σ λᵢ[Xᵢ] (loi de Kohlrausch)",
-          "UV-visible : A = ε·l·[X] (loi de Beer-Lambert)",
+          "UV-visible : A = ε·l·[X] (loi de Beer-Lambert, solutions diluées)",
           "IR : transmittance T, identification des groupes caractéristiques",
-          "Dosage par étalonnage : gamme de solutions + lecture graphique"
+          "Dosage par étalonnage : gamme de solutions connues + lecture graphique",
+          "Ces techniques sont non-destructives (on ne modifie pas l'échantillon)",
+          "λᵢ (conductivité molaire ionique) dépend de la nature de l'ion",
+          "H₃O⁺ et HO⁻ ont des λ très élevés (mécanisme de Grotthuss)",
+          "Beer-Lambert valable uniquement en solution diluée et lumière monochromatique"
         ]
       },
       page2_concepts: {
@@ -613,31 +677,43 @@ export const TERM_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Conductance (G)",
-            definition: "G = 1/R, en siemens (S). Mesure la facilité d'un milieu à conduire le courant électrique."
+            definition: "G = 1/R, en siemens (S). Elle mesure la facilité d'un milieu à conduire le courant. En gros : si la résistance est faible, le courant passe bien, donc G est grand. C'est comme un tuyau : plus il est large, plus l'eau coule facilement."
           },
           {
             terme: "Conductivité (σ)",
-            definition: "σ = G × (l/S). Grandeur intrinsèque du milieu (ne dépend pas de la taille des électrodes). Unité : S·m⁻¹."
+            definition: "σ = G × (l/S). C'est une grandeur intrinsèque du milieu (ne dépend pas de la taille des électrodes). Unité : S·m⁻¹. En gros : c'est la « qualité de conducteur » de la solution, indépendamment du montage."
           },
           {
             terme: "Conductivité molaire ionique (λᵢ)",
-            definition: "Contribution d'un ion à la conductivité, en S·m²·mol⁻¹. Chaque ion a son propre λ (donné dans les tables)."
+            definition: "Contribution d'un ion à la conductivité, en S·m²·mol⁻¹. Chaque ion a son propre λ donné dans les tables. En gros : c'est la capacité individuelle de chaque ion à faire passer le courant. C'est comme la vitesse de nage de chaque nageur."
+          },
+          {
+            terme: "Loi de Kohlrausch",
+            definition: "σ = Σ λᵢ × [Xᵢ]. La conductivité totale est la somme des contributions de chaque ion. En gros : chaque ion « participe » au courant et on additionne toutes les participations."
           },
           {
             terme: "Absorbance (A)",
-            definition: "A = −log(I/I₀). Mesure combien une solution absorbe la lumière. Sans unité. Plus A est grand, plus la solution absorbe."
+            definition: "A = −log(I/I₀). Elle mesure combien une solution absorbe la lumière. C'est sans unité (rapport d'intensités). Plus A est grand, plus la solution est « opaque ». En gros : A = 0 → transparent, A = 1 → 90 % de la lumière absorbée."
           },
           {
             terme: "Coefficient d'extinction molaire (ε)",
-            definition: "Caractéristique de l'espèce à une longueur d'onde donnée. Unité : L·mol⁻¹·cm⁻¹. Plus ε est grand, plus l'espèce absorbe fortement."
+            definition: "Caractéristique propre à une espèce chimique à une longueur d'onde donnée. Unité : L·mol⁻¹·cm⁻¹. Plus ε est grand, plus l'espèce absorbe fortement la lumière. En gros : c'est la « gourmandise » de la molécule pour la lumière."
+          },
+          {
+            terme: "Loi de Beer-Lambert",
+            definition: "A = ε × l × [X]. L'absorbance est proportionnelle à la concentration et à l'épaisseur de la cuve. Valable uniquement en solution diluée et lumière monochromatique. En gros : plus c'est concentré ou plus la cuve est épaisse, plus ça absorbe."
           },
           {
             terme: "Transmittance (T)",
-            definition: "T = I/I₀. Fraction de lumière transmise. Utilisée en IR. T = 100 % → pas d'absorption. T faible → forte absorption."
+            definition: "T = I/I₀. Fraction de lumière qui traverse l'échantillon. Utilisée en IR. T = 100 % → aucune absorption. T = 10 % → forte absorption. En gros : T est le contraire de l'absorbance."
+          },
+          {
+            terme: "Spectroscopie IR",
+            definition: "Technique qui identifie les groupes caractéristiques (O-H, C=O, N-H…) grâce à leurs bandes d'absorption à des nombres d'onde précis. En gros : chaque liaison vibre à sa propre fréquence, comme une corde de guitare."
           },
           {
             terme: "Dosage par étalonnage",
-            definition: "Méthode pour déterminer une concentration inconnue en la comparant à des solutions de concentrations connues (gamme étalon)."
+            definition: "On prépare plusieurs solutions de concentrations connues (gamme étalon). On mesure A ou σ pour chacune et on trace la droite. Puis on lit la concentration inconnue sur la droite. En gros : on compare l'inconnu aux témoins, comme chercher la bonne taille de chaussure."
           }
         ]
       },
@@ -651,27 +727,42 @@ export const TERM_CHIMIE_COURS = [
           {
             nom: "Conductance",
             formule: "G = 1/R",
-            explication: "G en siemens (S), R en ohms (Ω). C'est l'inverse de la résistance."
+            explication: "G en siemens (S), R en ohms (Ω). C'est l'inverse de la résistance. En gros : grande résistance = faible conductance."
           },
           {
             nom: "Conductivité",
             formule: "σ = G × (l / S)",
-            explication: "l = distance entre électrodes (m), S = surface des électrodes (m²). σ en S·m⁻¹."
+            explication: "l = distance entre électrodes (m), S = surface des électrodes (m²). σ en S·m⁻¹. Le rapport l/S est la constante de cellule."
           },
           {
             nom: "Loi de Kohlrausch",
             formule: "σ = Σ λᵢ × [Xᵢ]",
-            explication: "La conductivité est la somme des contributions de chaque ion. λᵢ en S·m²·mol⁻¹, [Xᵢ] en mol·m⁻³."
+            explication: "La conductivité est la somme des contributions de chaque ion. λᵢ en S·m²·mol⁻¹, [Xᵢ] en mol·m⁻³. Attention aux unités : convertir mol/L en mol/m³ (× 1000)."
           },
           {
             nom: "Loi de Beer-Lambert",
-            formule: "A = Σ εᵢ × l × [Xᵢ]",
-            explication: "Pour une seule espèce : A = ε·l·[X]. ε en L·mol⁻¹·cm⁻¹, l en cm, [X] en mol·L⁻¹. Valable en solution diluée."
+            formule: "A = ε × l × [X]",
+            explication: "ε en L·mol⁻¹·cm⁻¹, l en cm (épaisseur de la cuve), [X] en mol·L⁻¹. Valable en solution diluée uniquement. En gros : A est proportionnelle à la concentration."
           },
           {
-            nom: "Absorbance",
+            nom: "Absorbance et transmittance",
             formule: "A = −log(T) = −log(I/I₀)",
-            explication: "Relation entre absorbance et transmittance. A = 0 → solution transparente. A = 1 → 90 % de la lumière absorbée."
+            explication: "A = 0 → la solution est transparente (T = 100 %). A = 1 → 90 % de la lumière est absorbée (T = 10 %). A = 2 → 99 % absorbée."
+          },
+          {
+            nom: "Constante de cellule",
+            formule: "k_cell = l / S",
+            explication: "Caractéristique de la cellule de mesure. σ = G × k_cell. On la détermine avec une solution étalon de conductivité connue."
+          },
+          {
+            nom: "Beer-Lambert (plusieurs espèces)",
+            formule: "A = Σ εᵢ × l × [Xᵢ]",
+            explication: "Si plusieurs espèces absorbent à la même longueur d'onde, on additionne leurs contributions. C'est l'additivité des absorbances."
+          },
+          {
+            nom: "Longueur d'onde maximale (λ_max)",
+            formule: "λ_max = longueur d'onde où A est maximal",
+            explication: "On mesure l'absorbance à λ_max pour avoir la meilleure sensibilité. En gros : on choisit la « couleur » de lumière que la solution absorbe le plus."
           }
         ]
       },
