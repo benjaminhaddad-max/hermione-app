@@ -100,16 +100,32 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• La mécanique newtonienne (branche de la physique) décrit le mouvement des objets. • Elle explique aussi les forces qui causent ces mouvements. • Imagine un ballon lancé en l'air : sa trajectoire (le chemin qu'il suit), sa vitesse, son accélération, tout s'explique par les lois de Newton. • En gros : Newton nous dit pourquoi les objets bougent ou restent immobiles. • Pour décrire un mouvement, il faut d'abord choisir un référentiel (un point de vue fixe depuis lequel on observe). • C'est comme filmer une scène : le résultat dépend de l'endroit où tu places la caméra. • Les trois lois de Newton sont le socle de toute la physique classique. • La première loi dit qu'un objet ne change pas de mouvement sans raison (sans force). • La deuxième relie la force à l'accélération (la variation de vitesse). • La troisième dit que toute force provoque une réaction égale et opposée. • En gros : pas de force = pas de changement, force = accélération, action = réaction.",
-        points_cles: [
-          "Un référentiel (point de vue fixe) est indispensable pour décrire un mouvement",
-          "La vitesse est la dérivée de la position par rapport au temps",
-          "L'accélération est la dérivée de la vitesse par rapport au temps",
-          "1ère loi (inertie) : sans force, un corps garde son mouvement rectiligne uniforme",
-          "2ème loi : ΣF⃗ = m·a⃗, la force provoque l'accélération",
-          "3ème loi : action = réaction, toujours par paires",
-          "La quantité de mouvement p⃗ = m·v⃗ se conserve pour un système isolé",
-          "Le repère de Frenet (t⃗, n⃗) simplifie l'étude des mouvements courbes"
+        texte: "La mécanique newtonienne décrit le mouvement des objets et les forces qui les font bouger. C'est le socle de toute la physique classique, du ballon lancé en l'air au satellite en orbite.",
+        sections: [
+          {
+            titre: "Les référentiels : choisir son point de vue",
+            contenu: `Pour décrire un mouvement, il faut un point de vue fixe.\nC'est ce qu'on appelle un référentiel.\n\nC'est comme filmer une scène : le résultat change selon l'endroit où tu places la caméra.\n\nIl existe trois référentiels classiques :\n\n• Référentiel terrestre : lié au sol.\nOn l'utilise pour un objet au quotidien.\n\n• Référentiel géocentrique : lié au centre de la Terre.\nIdéal pour un satellite autour de la Terre.\n\n• Référentiel héliocentrique : lié au centre du Soleil.\nOn l'utilise pour étudier les planètes.\n\nEn gros : un mouvement n'existe pas « tout seul ».\nIl dépend toujours de qui regarde.`
+          },
+          {
+            titre: "Vecteur position et vecteur vitesse",
+            contenu: `Le vecteur position OM⃗ repère un objet M par rapport à une origine O.\nIl donne la position à chaque instant.\n\nLe vecteur vitesse est la dérivée de la position :\n\nv⃗ = dOM⃗/dt\n\nTraduction : la vitesse mesure comment la position change à chaque instant.\n\nLe vecteur vitesse est toujours tangent à la trajectoire.\nC'est comme la direction dans laquelle tu roules à vélo : toujours le long de la route.\n\nSon module (sa « longueur ») donne la valeur de la vitesse.\nUne vitesse de 5 m/s signifie 5 mètres parcourus chaque seconde.\n\nEn gros : la position dit « où tu es », la vitesse dit « où tu vas et à quelle allure ».`
+          },
+          {
+            titre: "Vecteur accélération et repère de Frenet",
+            contenu: `L'accélération est la dérivée de la vitesse :\n\na⃗ = dv⃗/dt\n\nTraduction : l'accélération mesure comment la vitesse change.\nSi la voiture accélère, a⃗ pointe vers l'avant.\nSi elle freine, a⃗ pointe vers l'arrière.\n\nLe repère de Frenet est un repère mobile lié au mobile.\nIl possède deux vecteurs :\n\n• t⃗ : tangent à la trajectoire (direction du mouvement).\n• n⃗ : normal, pointant vers le centre de courbure.\n\nC'est comme une boussole accrochée à un train dans un virage.\nt⃗ montre « tout droit », n⃗ montre « vers l'intérieur du virage ».\n\nEn gros : Frenet décompose l'accélération en « j'accélère » et « je tourne ».`
+          },
+          {
+            titre: "Les types de mouvement",
+            contenu: `Il y a trois mouvements fondamentaux à connaître :\n\n1. Rectiligne uniforme : ligne droite, vitesse constante.\nL'accélération est nulle.\nC'est un train lancé sur un rail droit, sans accélérer ni freiner.\n\n2. Rectiligne uniformément accéléré : ligne droite, vitesse qui augmente régulièrement.\nL'accélération est constante et non nulle.\nC'est une bille qui roule sur un plan incliné.\n\n3. Circulaire uniforme : cercle, vitesse constante en norme.\nMais la direction change en permanence.\nL'accélération est centripète : a = v²/R, dirigée vers le centre.\n\nC'est comme une balle attachée à un fil qu'on fait tourner.\nLa vitesse est constante, mais la balle tourne sans cesse.\n\nEn gros : uniforme = vitesse constante, accéléré = vitesse change.`
+          },
+          {
+            titre: "Quantité de mouvement",
+            contenu: `La quantité de mouvement mesure « l'élan » d'un objet :\n\np⃗ = m · v⃗\n\nTraduction : plus un objet est lourd et rapide, plus son élan est grand.\nUn camion à 50 km/h a bien plus d'élan qu'un vélo à 50 km/h.\n\nL'unité est le kg·m/s.\n\nLoi importante : quand un système est isolé (pas de force extérieure), la quantité de mouvement totale se conserve.\n\nC'est comme deux patineurs qui se poussent.\nL'élan total avant = l'élan total après.\nPersonne ne crée ni ne perd d'élan.\n\nEn gros : pas de force dehors = p⃗ total reste constant.`
+          },
+          {
+            titre: "Les trois lois de Newton",
+            contenu: `Ces trois lois sont le cœur de la mécanique.\n\n1. Première loi (inertie) : un corps isolé ou pseudo-isolé reste immobile ou en mouvement rectiligne uniforme.\nEn gros : pas de force = pas de changement.\nUn palet de hockey sur glace glisse indéfiniment sans frottement.\n\n2. Deuxième loi (PFD) : ΣF⃗ = m · a⃗.\nTraduction : la somme des forces = masse × accélération.\nPlus la force est grande, plus l'accélération est forte.\nPlus la masse est grande, plus il faut de force pour accélérer.\nC'est comme pousser un caddie : vide il part vite, plein il résiste.\n\n3. Troisième loi (action-réaction) : F⃗(A/B) = −F⃗(B/A).\nToute action entraîne une réaction égale et opposée.\nTu pousses le mur, le mur te pousse avec la même force.\n\nEn gros : pas de force = repos, force = accélération, action = réaction.`
+          }
         ]
       },
       page2_concepts: {
@@ -322,16 +338,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Ce chapitre étudie le mouvement d'un objet dans un champ uniforme (pesanteur ou électrique). • Un champ uniforme est un champ qui a la même valeur partout dans la zone étudiée. • Imagine un ballon de basket lancé en l'air : il suit une parabole (une courbe en forme d'arche) à cause de la gravité constante. • C'est comme lancer une pierre dans un lac : elle dessine un arc avant de tomber. • De même, un électron entre deux plaques chargées est dévié par le champ électrique uniforme. • En gros : champ uniforme = force constante = accélération constante. • Cela donne des équations simples à résoudre. • On décompose toujours le mouvement selon deux axes : horizontal (pas de force) et vertical (force constante). • Le mouvement horizontal est uniforme (vitesse constante). • Le mouvement vertical est uniformément accéléré (la vitesse augmente ou diminue régulièrement). • En combinant les deux, on obtient une trajectoire en forme de parabole.",
-        points_cles: [
-          "Un champ uniforme (même valeur partout) produit une accélération constante",
-          "En chute libre : seule la pesanteur agit, a⃗ = g⃗ ≈ 9,81 m/s² vers le bas",
-          "Le mouvement se décompose en horizontal (uniforme, vitesse constante) et vertical (accéléré)",
-          "La trajectoire d'un projectile est toujours une parabole",
-          "La portée (distance horizontale) dépend de l'angle et de la vitesse initiale",
-          "La flèche (hauteur max) est atteinte quand la vitesse verticale s'annule",
-          "Un condensateur plan (deux plaques parallèles) crée un champ électrique uniforme",
-          "Une charge q dans un champ E⃗ subit la force F⃗ = q·E⃗"
+        texte: "Ce chapitre étudie le mouvement d'un objet soumis à un champ uniforme : pesanteur ou champ électrique. Un champ uniforme produit une force constante, donc une accélération constante et des équations simples.",
+        sections: [
+          {
+            titre: "Qu'est-ce qu'un champ uniforme ?",
+            contenu: `Un champ uniforme a la même valeur partout dans la zone étudiée.\nLa force qu'il exerce est donc constante : même direction, même sens, même intensité.\n\nC'est comme une pluie parfaitement verticale : chaque goutte tombe pareil, partout.\n\nDeux exemples importants :\n\n• Le champ de pesanteur g⃗ ≈ 9,81 m/s² vers le bas.\nIl agit sur tout objet ayant une masse.\n\n• Le champ électrique E⃗ = U/d entre deux plaques d'un condensateur plan.\nIl agit sur toute particule chargée.\n\nEn gros : champ uniforme = force constante = accélération constante.\nC'est ce qui rend les calculs faisables.`
+          },
+          {
+            titre: "La chute libre et les équations horaires",
+            contenu: `En chute libre, seule la pesanteur agit.\nOn néglige les frottements de l'air.\n\nOn décompose le mouvement sur deux axes :\n\n• Axe horizontal (x) : aucune force.\nLe mouvement est rectiligne uniforme.\nvx = v₀·cos(α) et x(t) = v₀·cos(α)·t.\n\n• Axe vertical (y) : la pesanteur tire vers le bas.\nLe mouvement est uniformément accéléré.\nvy = v₀·sin(α) − g·t.\ny(t) = v₀·sin(α)·t − ½g·t².\n\nTraduction : à l'horizontale, l'objet avance à vitesse constante.\nÀ la verticale, il ralentit en montant, puis accélère en tombant.\n\nC'est comme un ballon de basket lancé vers le panier.\nIl avance ET monte, puis il avance ET descend.\n\nEn gros : horizontal = facile (pas de force), vertical = accéléré (gravité).`
+          },
+          {
+            titre: "Trajectoire parabolique, portée et flèche",
+            contenu: `En combinant x(t) et y(t), on élimine le temps.\nOn obtient y en fonction de x : c'est l'équation de la trajectoire.\n\nLa courbe obtenue est une parabole (forme d'arche).\nC'est le chemin suivi par tout projectile lancé en l'air.\n\nDeux grandeurs importantes :\n\n• La portée xP : distance horizontale totale avant le retour au sol.\nElle dépend de la vitesse initiale et de l'angle de tir.\nPortée maximale pour un angle de 45°.\n\n• La flèche S : hauteur maximale atteinte.\nElle correspond au moment où vy = 0.\nL'objet a fini de monter et commence à descendre.\n\nC'est comme un jet d'eau de fontaine.\nLa portée, c'est où l'eau retombe.\nLa flèche, c'est le point le plus haut du jet.\n\nEn gros : parabole = forme du chemin, portée = distance, flèche = hauteur max.`
+          },
+          {
+            titre: "Le condensateur plan et le champ électrique",
+            contenu: `Un condensateur plan est formé de deux plaques métalliques parallèles.\nEntre les plaques, un champ électrique uniforme règne.\n\nSa valeur est :\n\nE = U / d\n\nTraduction : la tension U entre les plaques, divisée par la distance d.\nPlus la tension est grande, plus le champ est intense.\nPlus les plaques sont proches, plus le champ est fort.\n\nC'est comme un vent constant entre deux murs.\nPlus le vent souffle fort (U grand), plus il pousse.\nPlus le couloir est étroit (d petit), plus le vent est concentré.\n\nLe champ va de la plaque positive vers la plaque négative.\nIl est perpendiculaire aux plaques.\n\nEn gros : condensateur plan = deux plaques = champ uniforme entre elles.`
+          },
+          {
+            titre: "Mouvement d'une particule chargée",
+            contenu: `Une particule de charge q dans un champ E⃗ subit la force :\n\nF⃗ = q · E⃗\n\nTraduction : la force est proportionnelle à la charge et au champ.\n\nSi q > 0 (proton), la force va dans le sens de E⃗.\nSi q < 0 (électron), la force va dans le sens opposé.\n\nOn applique le PFD : m · a⃗ = q · E⃗.\nDonc a⃗ = (q/m) · E⃗ = constante.\n\nLa situation est analogue à la chute libre :\n\n• Axe parallèle aux plaques : mouvement uniforme.\n• Axe perpendiculaire aux plaques : mouvement accéléré.\n\nLa trajectoire est encore une parabole.\nC'est comme un jet d'eau, mais la « gravité » est le champ électrique.\n\nEn gros : une charge dans un condensateur se comporte comme un projectile.\nLe champ électrique joue le rôle de la pesanteur.`
+          }
         ]
       },
       page2_concepts: {
@@ -544,16 +572,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Ce chapitre explique le mouvement des planètes et des satellites grâce à la gravitation (force d'attraction entre les masses). • Kepler a observé que les planètes suivent des orbites en forme d'ellipses (ovales). • Newton a expliqué pourquoi grâce à la force gravitationnelle en 1/r². • En gros : les planètes tournent autour du Soleil car la gravité les « tire » en permanence. • C'est comme une balle attachée à un fil : la gravité remplace le fil. • Un satellite en orbite est en chute libre perpétuelle autour de la Terre. • Il « tombe » sans cesse mais la Terre se courbe aussi sous lui. • Les astronautes dans l'ISS (Station Spatiale Internationale) flottent car ils tombent en même temps que la station. • En gros : l'apesanteur n'est pas l'absence de gravité, c'est la chute libre. • La gravité diminue avec la distance : plus on s'éloigne, moins elle est forte.",
-        points_cles: [
-          "Les trois lois de Kepler décrivent les orbites des planètes",
-          "La force gravitationnelle F = GMm/r² diminue avec le carré de la distance",
-          "Pour une orbite circulaire : la gravité joue le rôle de force centripète",
-          "La vitesse orbitale v = √(GM/r) diminue quand le rayon augmente",
-          "Un satellite géostationnaire a T = 24 h dans le plan équatorial",
-          "T² = (4π²/GM)·r³ relie période et rayon (3ème loi de Kepler)",
-          "L'apesanteur en orbite est une chute libre permanente, pas l'absence de gravité",
-          "La constante G = 6,67 × 10⁻¹¹ est universelle et très petite"
+        texte: "Ce chapitre explique le mouvement des planètes et des satellites grâce à la gravitation. Kepler a décrit les orbites, Newton a expliqué pourquoi avec sa loi de la gravitation universelle.",
+        sections: [
+          {
+            titre: "Les trois lois de Kepler",
+            contenu: `Kepler a observé le mouvement des planètes pendant des années.\nIl en a tiré trois lois empiriques (issues de l'observation).\n\n1. Première loi (loi des orbites) : chaque planète suit une ellipse.\nLe Soleil est à l'un des foyers de cette ellipse.\nUne ellipse, c'est un ovale aplati.\n\n2. Deuxième loi (loi des aires) : le segment Soleil-planète balaie des aires égales en des temps égaux.\nTraduction : la planète va plus vite quand elle est proche du Soleil.\nElle ralentit quand elle s'en éloigne.\n\n3. Troisième loi : T²/a³ = constante pour toutes les planètes d'un même système.\nT est la période de révolution (durée d'un tour complet).\na est le demi-grand axe de l'ellipse.\n\nC'est comme des chevaux sur un manège.\nCeux qui sont loin du centre mettent plus de temps à faire un tour.\n\nEn gros : les planètes suivent des ovales, vont plus vite près du Soleil, et T² ∝ a³.`
+          },
+          {
+            titre: "La force gravitationnelle",
+            contenu: `Newton a expliqué les lois de Kepler par une seule force :\n\nF = G · M · m / r²\n\nTraduction : deux masses M et m s'attirent mutuellement.\nLa force diminue avec le carré de la distance r.\n\nG = 6,67 × 10⁻¹¹ N·m²/kg² est la constante de gravitation universelle.\nElle est très petite : la gravité entre deux personnes est négligeable.\nMais entre la Terre et toi, la masse de la Terre compense.\n\nC'est comme un aimant : plus tu t'éloignes, moins il attire.\nMais ici, la force baisse en 1/r² (très vite avec la distance).\n\nCette force est toujours attractive.\nElle s'exerce le long de la droite qui relie les deux masses.\n\nEn gros : toute masse attire toute masse, et ça faiblit vite avec la distance.`
+          },
+          {
+            titre: "Mouvement circulaire uniforme en orbite",
+            contenu: `Pour simplifier, on étudie souvent des orbites circulaires.\nLa planète (ou le satellite) tourne en cercle autour du corps central.\n\nLa gravité joue le rôle de force centripète.\nElle « tire » le satellite vers le centre en permanence.\n\nOn applique le PFD : G·M·m/r² = m·v²/r.\nOn simplifie par m et on obtient :\n\nv = √(G·M / r)\n\nTraduction : la vitesse orbitale ne dépend que de M (masse du corps central) et r (rayon de l'orbite).\nPlus on est loin, plus on va lentement.\n\nC'est comme une balle au bout d'une ficelle.\nLa gravité remplace la ficelle.\nSi la ficelle est longue, la balle tourne moins vite.\n\nEn gros : v = √(GM/r), plus l'orbite est haute, plus c'est lent.`
+          },
+          {
+            titre: "Période de révolution et 3ème loi",
+            contenu: `La période T est le temps pour faire un tour complet.\nPour une orbite circulaire de rayon r :\n\nT = 2π·r / v = 2π·r / √(GM/r)\n\nEn simplifiant, on obtient :\n\nT² = (4π² / GM) · r³\n\nTraduction : T² est proportionnel à r³.\nC'est la troisième loi de Kepler retrouvée par Newton.\n\nPlus l'orbite est grande, plus la période est longue.\nUn satellite proche tourne vite.\nUn satellite lointain tourne lentement.\n\nLa Lune met 27 jours pour un tour.\nL'ISS, beaucoup plus proche, met seulement 90 minutes.\n\nEn gros : T² / r³ = constante.\nGrand rayon = longue période.`
+          },
+          {
+            titre: "Satellites géostationnaires et apesanteur",
+            contenu: `Un satellite géostationnaire a une période T = 24 h.\nIl tourne à la même vitesse que la Terre.\nVu du sol, il semble immobile dans le ciel.\n\nConditions :\n• Orbite circulaire dans le plan de l'équateur.\n• Altitude d'environ 36 000 km.\n• Période exactement égale à 24 h.\n\nC'est utilisé pour les télécoms et la météo.\nL'antenne au sol reste fixe, pointée vers le satellite.\n\nL'apesanteur en orbite n'est pas l'absence de gravité.\nLe satellite ET les astronautes tombent ensemble.\nC'est une chute libre permanente.\n\nC'est comme un ascenseur en chute libre.\nTu flottes à l'intérieur, mais la gravité est toujours là.\n\nEn gros : géostationnaire = immobile vu du sol.\nApesanteur = chute libre, pas absence de gravité.`
+          }
         ]
       },
       page2_concepts: {
@@ -766,16 +806,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Ce chapitre modélise l'écoulement des fluides (liquides et gaz). Pourquoi un bateau flotte ? Pourquoi l'eau sort plus vite d'un tuyau étroit ? La poussée d'Archimède explique la flottaison, Bernoulli explique les variations de pression dans un fluide en mouvement. En gros : quand un fluide accélère, sa pression baisse. C'est le principe de l'aile d'avion et du parfumiseur.",
-        points_cles: [
-          "La pression augmente avec la profondeur : P = P₀ + ρgh",
-          "Poussée d'Archimède : Π = ρ·g·V immergé, vers le haut",
-          "Conservation du débit : S₁v₁ = S₂v₂",
-          "Bernoulli : P + ½ρv² + ρgh = constante",
-          "Effet Venturi : section ↓ → vitesse ↑ → pression ↓",
-          "Torricelli : v = √(2gh) pour un écoulement par un orifice",
-          "Un fluide parfait n'a pas de viscosité",
-          "Le régime permanent signifie que les grandeurs ne varient pas dans le temps"
+        texte: "Ce chapitre modélise l'écoulement des fluides (liquides et gaz) au repos et en mouvement. On y découvre pourquoi un bateau flotte, pourquoi l'eau accélère dans un tuyau étroit et comment vole un avion.",
+        sections: [
+          {
+            titre: "Statique des fluides : pression et profondeur",
+            contenu: `Dans un fluide au repos, la pression augmente avec la profondeur.\nLa formule fondamentale est :\n\nΔP = ρ · g · Δz\n\nTraduction : la différence de pression entre deux points dépend de la masse volumique ρ, de g et de la différence de hauteur Δz.\n\nC'est pour ça qu'un plongeur ressent la pression sur ses oreilles en descendant.\nPlus il descend, plus la colonne d'eau au-dessus est lourde.\n\nÀ 10 m de profondeur, la pression augmente d'environ 1 bar (1 atm).\n\nLa pression en un point donné s'écrit :\n\nP = P₀ + ρ · g · h\n\nP₀ est la pression atmosphérique en surface.\n\nEn gros : plus c'est profond, plus la pression est forte.\nC'est comme empiler des briques : en bas, le poids est maximal.`
+          },
+          {
+            titre: "La poussée d'Archimède",
+            contenu: `Tout corps plongé dans un fluide reçoit une poussée vers le haut.\nC'est la poussée d'Archimède :\n\nΠ = ρ_fluide · g · V_immergé\n\nTraduction : la poussée est égale au poids du fluide déplacé.\nPlus le volume immergé est grand, plus la poussée est forte.\n\nSi Π > Poids : l'objet flotte.\nSi Π < Poids : l'objet coule.\nSi Π = Poids : l'objet est en équilibre.\n\nC'est comme quand tu pousses un ballon sous l'eau.\nL'eau « refuse » de se laisser comprimer et repousse le ballon vers le haut.\n\nUn bateau flotte car sa coque creuse déplace beaucoup d'eau.\nLa poussée compense le poids total du bateau.\n\nEn gros : un objet flotte s'il déplace assez de fluide pour compenser son poids.`
+          },
+          {
+            titre: "Lignes de courant et débit volumique",
+            contenu: `Quand un fluide s'écoule, chaque particule suit un chemin : c'est une ligne de courant.\nEn régime permanent, ces lignes ne changent pas au cours du temps.\n\nLe débit volumique DV mesure le volume de fluide qui passe par seconde :\n\nDV = S · v\n\nTraduction : section du tuyau S (en m²) fois la vitesse du fluide v (en m/s).\nL'unité est le m³/s.\n\nConservation du débit : dans un tuyau, le débit est constant.\nSi le tuyau se rétrécit (S diminue), la vitesse augmente.\n\nS₁ · v₁ = S₂ · v₂\n\nC'est comme mettre le pouce sur un tuyau d'arrosage.\nLa section diminue, l'eau accélère et le jet va plus loin.\n\nEn gros : tuyau étroit = vitesse élevée, tuyau large = vitesse faible.`
+          },
+          {
+            titre: "Théorème de Bernoulli",
+            contenu: `Le théorème de Bernoulli s'applique le long d'une ligne de courant.\nIl relie pression, vitesse et altitude :\n\nP + ½ρv² + ρgz = constante\n\nTraduction : si un fluide accélère, sa pression baisse.\nSi un fluide monte, sa pression baisse aussi.\n\nConditions d'application :\n• Fluide parfait (pas de frottements internes).\n• Fluide incompressible (volume constant).\n• Régime permanent (les grandeurs ne changent pas en un point).\n\nC'est le principe de l'aile d'avion.\nL'air va plus vite au-dessus de l'aile.\nDonc la pression y est plus faible.\nL'aile est « aspirée » vers le haut.\n\nEn gros : vitesse augmente = pression diminue, et inversement.`
+          },
+          {
+            titre: "Torricelli et effet Venturi",
+            contenu: `Le théorème de Torricelli est un cas particulier de Bernoulli.\nOn considère un réservoir percé d'un petit trou en bas.\n\nLa vitesse de sortie de l'eau est :\n\nv = √(2 · g · h)\n\nTraduction : h est la hauteur d'eau au-dessus du trou.\nPlus le réservoir est rempli, plus l'eau sort vite.\n\nC'est comme un château d'eau : l'eau jaillit fort car la hauteur est grande.\n\nL'effet Venturi est une autre conséquence de Bernoulli.\nDans un tuyau qui se rétrécit :\n\n• La section diminue.\n• La vitesse augmente (conservation du débit).\n• La pression baisse (Bernoulli).\n\nC'est utilisé dans les carburateurs, les vaporisateurs et les trompes à eau.\n\nEn gros : Torricelli = vitesse à la sortie d'un trou.\nVenturi = rétrécissement = vitesse ↑ et pression ↓.`
+          }
         ]
       },
       page2_concepts: {
@@ -783,35 +835,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Pression hydrostatique",
-            definition: "P = P₀ + ρgh. Pression dans un fluide au repos. Elle augmente avec la profondeur h."
+            definition: "P = P₀ + ρgh. C'est la pression dans un fluide au repos. Elle augmente avec la profondeur h. En gros : plus tu descends, plus l'eau au-dessus « appuie » sur toi. C'est comme empiler des briques : plus il y en a, plus c'est lourd en bas."
           },
           {
             terme: "Poussée d'Archimède",
-            definition: "Π = ρ_fluide · g · V_immergé. Force verticale ascendante subie par tout corps immergé dans un fluide."
+            definition: "Π = ρ_fluide · g · V_immergé. Force verticale ascendante (vers le haut) subie par tout corps plongé dans un fluide. Elle est égale au poids du fluide déplacé. En gros : le fluide « pousse » l'objet vers le haut. C'est pour ça que tu te sens plus léger dans une piscine."
+          },
+          {
+            terme: "Condition de flottaison",
+            definition: "Un objet flotte si sa masse volumique (densité) est inférieure à celle du fluide. Dans ce cas, la poussée d'Archimède compense le poids. En gros : léger = ça flotte, lourd = ça coule. Le bois flotte sur l'eau, le plomb coule."
           },
           {
             terme: "Ligne de courant",
-            definition: "Courbe tangente au vecteur vitesse en chaque point. En régime permanent, les particules suivent les lignes de courant."
+            definition: "Courbe tangente au vecteur vitesse en chaque point du fluide. En régime permanent (rien ne change dans le temps), les particules suivent les lignes de courant. C'est comme les traces de fumée dans un tunnel aérodynamique."
           },
           {
             terme: "Débit volumique",
-            definition: "D = S·v en m³/s. Volume de fluide traversant une section S par unité de temps."
+            definition: "D = S·v en m³/s. C'est le volume de fluide qui traverse une section S par unité de temps. En gros : c'est « combien d'eau passe par seconde ». Le débit est constant dans un tube fermé."
           },
           {
             terme: "Théorème de Bernoulli",
-            definition: "P + ½ρv² + ρgh = cte le long d'une ligne de courant. Conservation de l'énergie pour un fluide parfait."
+            definition: "P + ½ρv² + ρgh = constante le long d'une ligne de courant. C'est la conservation de l'énergie pour un fluide parfait incompressible en régime permanent. En gros : si la vitesse augmente, la pression baisse (et inversement)."
           },
           {
             terme: "Effet Venturi",
-            definition: "Baisse de pression dans un rétrécissement de tube. La vitesse augmente et la pression diminue."
+            definition: "Quand la section d'un tube diminue, la vitesse du fluide augmente et la pression diminue. C'est une conséquence directe de Bernoulli + conservation du débit. En gros : tuyau plus étroit = fluide plus rapide = pression plus basse. C'est le principe du vaporisateur de parfum."
           },
           {
             terme: "Tube de Torricelli",
-            definition: "Écoulement d'un réservoir par un trou. Vitesse de sortie v = √(2gh) déduite de Bernoulli."
+            definition: "Un réservoir percé d'un trou en bas laisse sortir le fluide à la vitesse v = √(2gh). Plus le niveau d'eau h est haut, plus le jet est rapide. C'est une application directe de Bernoulli entre la surface et le trou."
           },
           {
             terme: "Fluide parfait incompressible",
-            definition: "Modèle idéal : pas de viscosité (frottements nuls) et masse volumique constante (pas de compression)."
+            definition: "Modèle idéal de fluide. Parfait = pas de viscosité (pas de frottements internes entre les couches de fluide). Incompressible = la masse volumique ρ reste constante (le fluide ne se comprime pas). En gros : c'est un fluide idéalisé, sans perte d'énergie."
+          },
+          {
+            terme: "Pression dynamique et statique",
+            definition: "Pression statique P : pression du fluide au repos. Pression dynamique ½ρv² : pression liée au mouvement. Bernoulli dit que leur somme (plus ρgh) est constante. C'est comme un budget : si tu dépenses plus en vitesse, il te reste moins en pression."
           }
         ]
       },
@@ -825,32 +885,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Pression hydrostatique",
             formule: "P = P₀ + ρ·g·h",
-            explication: "P₀ pression en surface, ρ masse volumique, h profondeur. En Pa."
+            explication: "P₀ pression en surface (souvent la pression atmosphérique). ρ masse volumique du fluide. h profondeur. Résultat en Pa."
           },
           {
             nom: "Poussée d'Archimède",
             formule: "Π = ρ_fluide · g · V_immergé",
-            explication: "Force vers le haut sur un corps immergé. Égale au poids du fluide déplacé."
+            explication: "Force vers le haut sur un corps immergé. Égale au poids du fluide déplacé. Attention : c'est ρ du fluide, pas de l'objet."
           },
           {
             nom: "Conservation du débit",
             formule: "S₁ · v₁ = S₂ · v₂",
-            explication: "Le débit est constant dans un tube de courant. Si S diminue, v augmente."
+            explication: "Le débit est constant dans un tube de courant. Si la section S diminue, la vitesse v augmente proportionnellement."
           },
           {
             nom: "Théorème de Bernoulli",
             formule: "P + ½ρv² + ρgh = constante",
-            explication: "Conservation de l'énergie par unité de volume le long d'une ligne de courant."
+            explication: "Conservation de l'énergie par unité de volume le long d'une ligne de courant. Valable pour un fluide parfait incompressible."
           },
           {
             nom: "Vitesse de Torricelli",
             formule: "v = √(2gh)",
-            explication: "Vitesse d'écoulement par un orifice situé à une profondeur h sous la surface."
+            explication: "Vitesse d'écoulement par un orifice à une profondeur h sous la surface libre. Déduite de Bernoulli."
           },
           {
             nom: "Pression dynamique",
             formule: "P_dyn = ½ρv²",
-            explication: "Terme de pression lié à la vitesse dans l'équation de Bernoulli."
+            explication: "Terme de pression lié à la vitesse du fluide dans l'équation de Bernoulli. En Pa."
+          },
+          {
+            nom: "Pression totale (tube de Pitot)",
+            formule: "P_totale = P_statique + ½ρv²",
+            explication: "La pression totale est la somme de la pression statique et de la pression dynamique. Utilisée pour mesurer la vitesse d'un avion."
+          },
+          {
+            nom: "Condition de flottaison",
+            formule: "ρ_objet < ρ_fluide",
+            explication: "L'objet flotte si sa masse volumique est inférieure à celle du fluide. Sinon il coule."
           }
         ]
       },
@@ -970,16 +1040,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "La thermodynamique étudie les échanges d'énergie entre un système et son environnement. Imagine une pompe à vélo : en comprimant l'air, tu fournis du travail et l'air chauffe. Le 1er principe dit que l'énergie ne se crée ni ne se détruit, elle se transforme. En gros : ΔU = W + Q, l'énergie interne change grâce au travail et à la chaleur.",
-        points_cles: [
-          "Le gaz parfait obéit à PV = nRT",
-          "L'énergie interne U dépend uniquement de la température pour un gaz parfait",
-          "Le 1er principe : ΔU = W + Q (conservation de l'énergie)",
-          "W = −P_ext · ΔV pour une transformation à pression extérieure constante",
-          "Q = C · ΔT pour un transfert de chaleur simple",
-          "Transformation isotherme : T constante, ΔU = 0",
-          "Transformation isochore : V constant, W = 0",
-          "Transformation adiabatique : Q = 0, ΔU = W"
+        texte: "La thermodynamique étudie les échanges d'énergie entre un système et son environnement. Le 1er principe dit que l'énergie ne se crée ni ne se détruit : elle se transforme.",
+        sections: [
+          {
+            titre: "Le modèle du gaz parfait",
+            contenu: `Un gaz parfait est un modèle simplifié.\nLes molécules n'interagissent pas entre elles.\nElles rebondissent comme des billes sans se coller.\n\nLa loi fondamentale est :\n\nPV = nRT\n\nTraduction :\n• P = pression en Pascals (Pa).\n• V = volume en m³.\n• n = nombre de moles de gaz.\n• R = 8,314 J/(mol·K) (constante des gaz parfaits).\n• T = température en Kelvin (K = °C + 273).\n\nAttention : on utilise toujours les Kelvin, jamais les °C.\n\nSi la pression augmente à volume constant, la température monte.\nC'est comme une cocotte-minute : en chauffant, la pression grimpe.\n\nEn gros : PV = nRT relie pression, volume et température d'un gaz.`
+          },
+          {
+            titre: "L'énergie interne U",
+            contenu: `L'énergie interne est l'énergie « cachée » dans un système.\nElle vient de l'agitation désordonnée des molécules.\n\nPlus les molécules bougent vite, plus U est grand.\nPlus la température est élevée, plus U est grand.\n\nPour un gaz parfait, U dépend uniquement de la température.\nSi T ne change pas, U ne change pas non plus.\n\nU ne dépend ni de la pression ni du volume.\n\nC'est comme une salle de bal.\nL'énergie interne, c'est l'agitation des danseurs.\nPlus ils dansent vite, plus il fait chaud.\n\nOn ne mesure pas U directement.\nOn mesure sa variation : ΔU.\n\nEn gros : U = énergie microscopique liée à la température.`
+          },
+          {
+            titre: "Travail W et chaleur Q",
+            contenu: `Un système peut échanger de l'énergie de deux manières :\n\n1. Le travail W : énergie mécanique échangée.\nPar exemple, comprimer un gaz avec un piston.\n\nW = −P_ext · ΔV\n\nTraduction : si le gaz est comprimé (ΔV < 0), W > 0.\nLe système reçoit de l'énergie.\nSi le gaz se détend (ΔV > 0), W < 0.\nLe système perd de l'énergie.\n\n2. La chaleur Q : énergie thermique échangée.\nPar exemple, chauffer un gaz avec une flamme.\n\nQ = m · c · ΔT (pour un solide ou un liquide)\nQ = C · ΔT (capacité thermique totale)\n\nSi Q > 0, le système reçoit de la chaleur.\nSi Q < 0, le système cède de la chaleur.\n\nC'est comme une pompe à vélo.\nTu fournis du travail (compression) et l'air chauffe (chaleur dégagée).\n\nEn gros : W = énergie mécanique, Q = énergie thermique.`
+          },
+          {
+            titre: "Le premier principe de la thermodynamique",
+            contenu: `Le premier principe est la conservation de l'énergie :\n\nΔU = W + Q\n\nTraduction : la variation d'énergie interne du système est la somme du travail et de la chaleur reçus.\n\nL'énergie ne se crée pas.\nL'énergie ne se détruit pas.\nElle se transforme d'une forme à une autre.\n\nC'est comme un compte en banque.\nΔU = ce que tu reçois (W + Q) moins ce que tu dépenses.\nLe solde change, mais l'argent total est conservé.\n\nCe principe s'applique à tout système fermé.\nPas de matière qui entre ou sort.\n\nEn gros : ΔU = W + Q.\nTout ce qui rentre dans le système augmente U.\nTout ce qui sort diminue U.`
+          },
+          {
+            titre: "Les transformations remarquables",
+            contenu: `Quatre types de transformations sont à connaître :\n\n1. Isotherme (T = constante) :\nPour un gaz parfait, ΔU = 0 (car U ne dépend que de T).\nDonc W = −Q : tout le travail part en chaleur.\n\n2. Isochore (V = constant) :\nΔV = 0, donc W = 0.\nΔU = Q : toute la chaleur va dans U.\nC'est chauffer un gaz dans un récipient fermé.\n\n3. Isobare (P = constante) :\nLe gaz se dilate ou se comprime à pression constante.\nW = −P·ΔV.\nΔU = W + Q.\n\n4. Adiabatique (Q = 0, pas d'échange thermique) :\nΔU = W.\nSi on comprime, le gaz chauffe.\nSi on détend, le gaz refroidit.\n\nC'est comme un moteur diesel : la compression adiabatique chauffe l'air assez pour enflammer le gasoil.\n\nEn gros : iso = constant.\nIsotherme = T fixe, isochore = V fixe, isobare = P fixe, adiabatique = Q = 0.`
+          }
         ]
       },
       page2_concepts: {
@@ -987,35 +1069,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Gaz parfait",
-            definition: "Modèle idéal de gaz : molécules ponctuelles sans interaction. Obéit à PV = nRT."
+            definition: "Modèle idéal de gaz : les molécules sont des points qui n'interagissent pas entre elles. Il obéit à PV = nRT. En gros : c'est un gaz « simplifié » où on ignore les forces entre molécules. C'est comme des billes qui rebondissent sans jamais se coller."
           },
           {
             terme: "Énergie interne U",
-            definition: "Somme des énergies cinétiques microscopiques (agitation thermique). Pour un gaz parfait monoatomique : U = 3/2 nRT."
+            definition: "C'est la somme des énergies cinétiques microscopiques (l'agitation thermique des molécules). Pour un gaz parfait monoatomique : U = 3/2 nRT. En gros : c'est l'énergie « cachée » à l'intérieur du gaz. Plus T augmente, plus les molécules bougent, plus U est grand."
           },
           {
             terme: "Travail W",
-            definition: "Énergie échangée par des forces de pression. W = −P_ext · ΔV. Positif si le gaz est comprimé."
+            definition: "Énergie échangée par des forces de pression (compression ou détente). W = −P_ext · ΔV. Si on comprime le gaz (ΔV < 0), W > 0 : le gaz reçoit de l'énergie. C'est comme écraser un ressort : tu lui donnes de l'énergie."
           },
           {
             terme: "Chaleur Q",
-            definition: "Énergie échangée par transfert thermique. Q > 0 si le système reçoit de la chaleur."
+            definition: "Énergie échangée par transfert thermique (quand il y a une différence de température). Q > 0 si le système reçoit de la chaleur. En gros : la chaleur c'est de l'énergie qui passe du chaud vers le froid. C'est comme l'eau qui coule du haut vers le bas."
           },
           {
-            terme: "1er principe",
-            definition: "ΔU = W + Q. Conservation de l'énergie : toute énergie reçue (travail ou chaleur) augmente U."
+            terme: "1er principe de la thermodynamique",
+            definition: "ΔU = W + Q. La variation d'énergie interne est la somme du travail et de la chaleur reçus. C'est la conservation de l'énergie appliquée à la thermodynamique. En gros : tout ce que le système reçoit (travail ou chaleur) augmente son énergie interne."
           },
           {
-            terme: "Capacité thermique",
-            definition: "C = Q/ΔT. Énergie nécessaire pour élever la température de 1 K. En J/K."
+            terme: "Capacité thermique C",
+            definition: "C = Q/ΔT en J/K. C'est l'énergie nécessaire pour élever la température de 1 Kelvin. Plus C est grand, plus il faut d'énergie pour chauffer l'objet. En gros : l'eau a une grande capacité thermique, c'est pour ça que la mer met du temps à se réchauffer."
           },
           {
             terme: "Transformation isobare",
-            definition: "Transformation à pression constante (P = cte). Le travail vaut W = −P · ΔV."
+            definition: "Transformation à pression constante (P = cte). Le travail vaut W = −P · ΔV. C'est comme chauffer de l'eau dans une casserole ouverte : la pression atmosphérique reste constante."
           },
           {
             terme: "Transformation isotherme",
-            definition: "Transformation à température constante (T = cte). Pour un gaz parfait : ΔU = 0."
+            definition: "Transformation à température constante (T = cte). Pour un gaz parfait : ΔU = 0, donc W = −Q. En gros : tout le travail fourni est évacué sous forme de chaleur (et inversement)."
+          },
+          {
+            terme: "Transformation isochore",
+            definition: "Transformation à volume constant (ΔV = 0). Donc W = 0 et ΔU = Q. En gros : pas de compression ni de détente, toute la chaleur reçue augmente la température. C'est comme chauffer un gaz dans une boîte fermée et rigide."
+          },
+          {
+            terme: "Transformation adiabatique",
+            definition: "Transformation sans échange de chaleur avec l'extérieur (Q = 0). Donc ΔU = W. En gros : le système est parfaitement isolé thermiquement. C'est comme comprimer de l'air très vite dans une pompe : pas le temps d'échanger de la chaleur."
           }
         ]
       },
@@ -1029,32 +1119,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Loi des gaz parfaits",
             formule: "PV = nRT",
-            explication: "Relie pression, volume, quantité de matière et température. R = 8,314 J/(mol·K)."
+            explication: "Relie pression (Pa), volume (m³), quantité de matière (mol) et température (Kelvin). R = 8,314 J/(mol·K)."
           },
           {
             nom: "1er principe de la thermodynamique",
             formule: "ΔU = W + Q",
-            explication: "La variation d'énergie interne = travail + chaleur reçus par le système."
+            explication: "La variation d'énergie interne = travail + chaleur reçus par le système. C'est la conservation de l'énergie."
           },
           {
             nom: "Travail des forces de pression",
             formule: "W = −P_ext · ΔV",
-            explication: "À pression extérieure constante. W > 0 en compression (ΔV < 0)."
+            explication: "À pression extérieure constante. W > 0 en compression (ΔV < 0), W < 0 en détente (ΔV > 0)."
           },
           {
             nom: "Énergie interne (gaz parfait monoatomique)",
             formule: "U = 3/2 · nRT",
-            explication: "Ne dépend que de T. Augmente si T augmente."
+            explication: "Ne dépend que de T pour un gaz parfait. Augmente si T augmente. n en mol, T en Kelvin."
           },
           {
             nom: "Chaleur échangée",
             formule: "Q = C · ΔT",
-            explication: "C est la capacité thermique du système. Q en Joules, ΔT en Kelvin."
+            explication: "C est la capacité thermique du système (en J/K). Q en Joules. ΔT = T_finale − T_initiale en Kelvin."
           },
           {
             nom: "Capacité thermique massique",
             formule: "Q = m · c · ΔT",
-            explication: "c est la capacité thermique massique (J/(kg·K)). Pour l'eau : c ≈ 4180 J/(kg·K)."
+            explication: "c est la capacité thermique massique en J/(kg·K). Pour l'eau : c ≈ 4180 J/(kg·K). m est la masse en kg."
+          },
+          {
+            nom: "Relation pression-température (isochore, gaz parfait)",
+            formule: "P/T = constante (à V et n constants)",
+            explication: "Si le volume est fixe, la pression est proportionnelle à la température. Chauffer un gaz à volume constant augmente la pression."
+          },
+          {
+            nom: "Relation pression-volume (isotherme, gaz parfait)",
+            formule: "P·V = constante (à T et n constants)",
+            explication: "Loi de Boyle-Mariotte : si T est fixe, P et V sont inversement proportionnels. Comprime = pression monte."
           }
         ]
       },
@@ -1174,16 +1274,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les transferts thermiques expliquent comment la chaleur se propage. Trois modes existent : conduction (chaleur dans un mur), convection (air chaud qui monte) et rayonnement (chaleur du Soleil dans le vide). En gros : la chaleur va toujours du chaud vers le froid, et on peut quantifier ce flux. L'isolation thermique d'une maison repose sur ces principes.",
-        points_cles: [
-          "Trois modes : conduction, convection, rayonnement",
-          "Le flux thermique Φ = ΔT / R_th (analogie électrique)",
-          "Résistance thermique : R_th = e/(λ·S)",
-          "Conductivité thermique λ : petit = isolant, grand = conducteur",
-          "Stefan-Boltzmann : P = σ·S·T⁴ pour le rayonnement",
-          "Loi de Newton : Φ = h·S·(T_paroi − T_fluide)",
-          "La chaleur va toujours du chaud vers le froid",
-          "Les résistances thermiques s'additionnent en série"
+        texte: "Les transferts thermiques expliquent comment la chaleur se propage d'un endroit à un autre. La chaleur va toujours du chaud vers le froid, jamais l'inverse spontanément.",
+        sections: [
+          {
+            titre: "Les trois modes de transfert thermique",
+            contenu: `La chaleur peut se déplacer de trois façons différentes :\n\n1. La conduction : transfert par contact direct.\nLa chaleur passe de proche en proche à travers la matière.\nC'est une cuillère en métal qui chauffe dans du café.\nLes atomes vibrent et transmettent l'énergie à leurs voisins.\n\n2. La convection : transfert par mouvement du fluide.\nL'air chaud monte, l'air froid descend.\nC'est le courant d'air au-dessus d'un radiateur.\nLe fluide transporte la chaleur en se déplaçant.\n\n3. Le rayonnement : transfert par ondes électromagnétiques.\nAucun support matériel n'est nécessaire.\nC'est la chaleur du Soleil à travers le vide spatial.\nTout corps chaud émet du rayonnement infrarouge.\n\nEn gros : conduction = contact, convection = mouvement, rayonnement = ondes.\nUne maison bien isolée bloque les trois.`
+          },
+          {
+            titre: "Résistance thermique et flux thermique",
+            contenu: `Le flux thermique Φ mesure la quantité de chaleur transférée par seconde.\nIl s'exprime en Watts (W).\n\nL'analogie avec l'électricité est très utile :\n\n• Flux thermique Φ ↔ courant électrique I.\n• Différence de température ΔT ↔ tension U.\n• Résistance thermique Rth ↔ résistance électrique R.\n\nLa loi s'écrit :\n\nΦ = ΔT / Rth\n\nTraduction : plus l'écart de température est grand, plus le flux est fort.\nPlus la résistance thermique est grande, moins la chaleur passe.\n\nC'est comme l'eau dans un tuyau.\nΔT est la pression, Rth est l'étroitesse du tuyau.\nGrande pression + tuyau large = beaucoup d'eau qui passe.\n\nEn gros : Φ = ΔT / Rth, analogue à I = U/R en électricité.`
+          },
+          {
+            titre: "La conduction : résistance et conductivité",
+            contenu: `Pour la conduction à travers une paroi :\n\nRth = e / (λ · S)\n\nTraduction :\n• e = épaisseur de la paroi (en m).\n• λ = conductivité thermique du matériau (en W/(m·K)).\n• S = surface de la paroi (en m²).\n\nλ petit = bon isolant.\nLa laine de verre a λ ≈ 0,04 W/(m·K).\n\nλ grand = bon conducteur thermique.\nLe cuivre a λ ≈ 390 W/(m·K).\n\nC'est pour ça que les casseroles sont en cuivre.\nEt que les murs sont isolés avec de la laine de verre.\n\nPlusieurs parois en série :\nRth_total = Rth₁ + Rth₂ + Rth₃ + ...\n\nC'est comme des résistances électriques en série : on les additionne.\n\nEn gros : paroi épaisse et isolante = grande Rth = peu de chaleur passe.`
+          },
+          {
+            titre: "Le rayonnement : loi de Stefan-Boltzmann",
+            contenu: `Tout corps émet un rayonnement qui dépend de sa température.\nPlus il est chaud, plus il rayonne.\n\nLa puissance rayonnée suit la loi de Stefan-Boltzmann :\n\nΦ = σ · S · T⁴\n\nTraduction :\n• σ = 5,67 × 10⁻⁸ W/(m²·K⁴) (constante de Stefan).\n• S = surface du corps (en m²).\n• T = température en Kelvin (pas en °C !).\n\nAttention : T est à la puissance 4.\nSi la température double, la puissance rayonnée est multipliée par 16.\n\nC'est comme un fer chauffé au rouge.\nÀ 500°C il rougit. À 1 500°C il devient blanc.\nLa puissance émise explose avec la température.\n\nLe Soleil (T ≈ 5 800 K) rayonne énormément.\nLa Terre (T ≈ 288 K) rayonne bien moins.\n\nEn gros : Φ = σST⁴, la puissance rayonnée croît très vite avec T.`
+          },
+          {
+            titre: "La convection : loi de Newton thermique",
+            contenu: `Le transfert conducto-convectif se produit entre une paroi et un fluide en mouvement.\nLa loi de Newton thermique s'écrit :\n\nΦ = h · S · (T_paroi − T_fluide)\n\nTraduction :\n• h = coefficient de transfert convectif (en W/(m²·K)).\n• S = surface d'échange (en m²).\n• (T_paroi − T_fluide) = écart de température.\n\nh dépend du fluide et de la vitesse de l'écoulement.\nUn ventilateur augmente h : l'air bouge plus vite, la chaleur part plus vite.\n\nC'est comme souffler sur de la soupe chaude.\nLe souffle (convection forcée) emporte la chaleur plus vite.\nSans souffle, la soupe refroidit lentement (convection naturelle).\n\nConvection naturelle : le fluide bouge seul (air chaud qui monte).\nConvection forcée : on force le mouvement (ventilateur, pompe).\n\nEn gros : Φ = hS(Tparoi − Tfluide).\nPlus le fluide bouge vite, plus h est grand, plus ça refroidit vite.`
+          }
         ]
       },
       page2_concepts: {
@@ -1191,35 +1303,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Conduction thermique",
-            definition: "Transfert de chaleur par contact, sans mouvement de matière. Décrit par la loi de Fourier : Φ = λ·S·ΔT/e."
+            definition: "Transfert de chaleur par contact direct, sans mouvement de matière. La chaleur passe de molécule en molécule, de proche en proche. Décrit par la loi de Fourier : Φ = λ·S·ΔT/e. C'est comme une chaîne humaine qui se passe un seau : personne ne bouge, mais le seau avance."
           },
           {
             terme: "Convection",
-            definition: "Transfert par mouvement du fluide. Naturelle (différence de densité) ou forcée (ventilateur, pompe)."
+            definition: "Transfert de chaleur par mouvement du fluide (liquide ou gaz). Le fluide chaud monte, le fluide froid descend. Naturelle (différence de densité, comme l'air chaud qui monte) ou forcée (ventilateur, pompe). C'est comme remuer une soupe : le mouvement distribue la chaleur."
           },
           {
             terme: "Rayonnement thermique",
-            definition: "Émission d'ondes électromagnétiques (IR). Seul mode fonctionnant dans le vide. P = σ·S·T⁴."
+            definition: "Émission d'ondes électromagnétiques (surtout infrarouges). C'est le seul mode qui fonctionne dans le vide. P = σ·S·T⁴ (loi de Stefan-Boltzmann). En gros : tout corps chaud émet de la lumière invisible (infrarouge). C'est comme ça que le Soleil nous réchauffe à 150 millions de km."
           },
           {
             terme: "Flux thermique Φ",
-            definition: "Puissance thermique en Watts. Φ = ΔT/R_th, analogue au courant I = U/R en électricité."
+            definition: "Puissance thermique en Watts (énergie par seconde). Φ = ΔT/R_th. C'est l'analogue du courant électrique I = U/R. En gros : plus l'écart de température est grand et plus la résistance thermique est faible, plus la chaleur passe vite."
           },
           {
             terme: "Résistance thermique R_th",
-            definition: "R_th = e/(λ·S) en K/W. Plus elle est grande, meilleur est l'isolant. S'additionne en série."
+            definition: "R_th = e/(λ·S) en K/W. Elle mesure la capacité d'une paroi à s'opposer au passage de la chaleur. Plus R_th est grand, meilleur est l'isolant. Les résistances en série s'additionnent. C'est comme des barrages successifs sur une rivière."
           },
           {
             terme: "Conductivité thermique λ",
-            definition: "En W/(m·K). Cuivre ≈ 400 (conducteur), laine de verre ≈ 0,04 (isolant)."
+            definition: "En W/(m·K). Elle mesure la capacité d'un matériau à conduire la chaleur. Cuivre ≈ 400 (excellent conducteur), laine de verre ≈ 0,04 (excellent isolant). En gros : petit λ = bon isolant, grand λ = bon conducteur."
           },
           {
             terme: "Coefficient conducto-convectif h",
-            definition: "En W/(m²·K). Caractérise l'échange thermique entre une paroi et un fluide en mouvement."
+            definition: "En W/(m²·K). Il caractérise l'échange thermique entre une paroi solide et un fluide en mouvement. Grand h = échange rapide (vent fort). Petit h = échange lent (air calme). C'est pourquoi le vent te fait sentir plus froid."
           },
           {
             terme: "Constante de Stefan-Boltzmann σ",
-            definition: "σ = 5,67 × 10⁻⁸ W/(m²·K⁴). Constante fondamentale du rayonnement thermique."
+            definition: "σ = 5,67 × 10⁻⁸ W/(m²·K⁴). Constante fondamentale du rayonnement thermique. La puissance rayonnée croît en T⁴ : doubler la température multiplie la puissance par 16 !"
+          },
+          {
+            terme: "Analogie thermique-électrique",
+            definition: "On peut traiter les transferts thermiques comme des circuits électriques. Φ (flux) ↔ I (courant), ΔT (écart de température) ↔ U (tension), R_th ↔ R (résistance). En gros : les mêmes méthodes de calcul fonctionnent pour les deux domaines."
+          },
+          {
+            terme: "Régime permanent thermique",
+            definition: "État où les températures ne varient plus dans le temps. Le flux thermique est constant à travers la paroi. En gros : le système a atteint son équilibre, les températures sont stables. C'est comme une rivière à débit constant."
           }
         ]
       },
@@ -1233,32 +1353,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Flux thermique par conduction",
             formule: "Φ = λ · S · ΔT / e = ΔT / R_th",
-            explication: "λ conductivité, S surface, e épaisseur, ΔT écart de température."
+            explication: "λ conductivité (W/(m·K)), S surface (m²), e épaisseur (m), ΔT écart de température (K). Φ en Watts."
           },
           {
-            nom: "Résistance thermique",
+            nom: "Résistance thermique (conduction)",
             formule: "R_th = e / (λ · S)",
-            explication: "En K/W. Analogue à une résistance électrique. Plusieurs couches : R_total = R₁ + R₂ + ..."
+            explication: "En K/W. Analogue à une résistance électrique. Pour plusieurs couches en série : R_total = R₁ + R₂ + ..."
           },
           {
             nom: "Loi de Stefan-Boltzmann",
             formule: "P = σ · S · T⁴",
-            explication: "Puissance rayonnée par un corps noir. σ ≈ 5,67 × 10⁻⁸. T en Kelvin."
+            explication: "Puissance rayonnée par un corps noir. σ ≈ 5,67 × 10⁻⁸ W/(m²·K⁴). T obligatoirement en Kelvin."
           },
           {
             nom: "Loi de Newton (conducto-convectif)",
             formule: "Φ = h · S · (T_paroi − T_fluide)",
-            explication: "h coefficient de transfert, S surface d'échange. Proportionnel à l'écart de température."
+            explication: "h coefficient de transfert (W/(m²·K)), S surface d'échange. Le flux est proportionnel à l'écart de température."
           },
           {
             nom: "Résistance thermique conducto-convective",
             formule: "R_th = 1 / (h · S)",
-            explication: "Résistance thermique associée à l'échange paroi-fluide."
+            explication: "Résistance thermique associée à l'échange entre une paroi et un fluide en mouvement. En K/W."
           },
           {
             nom: "Énergie thermique échangée",
             formule: "Q = Φ · Δt",
-            explication: "Énergie = puissance × durée. Q en Joules, Φ en Watts, Δt en secondes."
+            explication: "Énergie = puissance × durée. Q en Joules, Φ en Watts, Δt en secondes. C'est comme distance = vitesse × temps."
+          },
+          {
+            nom: "Loi de Fourier (forme locale)",
+            formule: "φ = −λ · dT/dx",
+            explication: "φ est la densité de flux (W/m²). Le signe − indique que la chaleur va du chaud vers le froid (T décroissant)."
+          },
+          {
+            nom: "Bilan thermique d'une paroi multicouche",
+            formule: "Φ = ΔT_total / (R₁ + R₂ + ... + Rₙ)",
+            explication: "On additionne les résistances thermiques de toutes les couches. Le flux est le même à travers chaque couche."
           }
         ]
       },
@@ -1378,16 +1508,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le son est une onde mécanique qui a besoin d'un milieu pour se propager. L'intensité sonore diminue avec la distance. Le niveau sonore se mesure en décibels (échelle logarithmique). L'effet Doppler explique pourquoi une sirène d'ambulance semble plus aiguë quand elle approche et plus grave quand elle s'éloigne. En gros : si la source bouge, la fréquence perçue change.",
-        points_cles: [
-          "Le son est une onde mécanique longitudinale",
-          "v_son ≈ 340 m/s dans l'air (ne se propage pas dans le vide)",
-          "L = 10·log(I/I₀) en dB, échelle logarithmique",
-          "Hauteur = fréquence, timbre = harmoniques",
-          "Atténuation : I diminue en 1/r² (source ponctuelle)",
-          "Effet Doppler : fréquence perçue ≠ fréquence émise si mouvement",
-          "Applications : échographie, radar de vitesse, astrophysique",
-          "Redshift (éloignement) et blueshift (rapprochement) en astronomie"
+        texte: "Le son est une onde mécanique qui a besoin de matière pour se propager. Ce chapitre étudie ses caractéristiques (intensité, hauteur, timbre) et l'effet Doppler.",
+        sections: [
+          {
+            titre: "Le son : une onde mécanique",
+            contenu: `Le son est une vibration de la matière.\nLes molécules d'air se compriment et se dilatent successivement.\nC'est une onde longitudinale : la vibration se fait dans le sens de propagation.\n\nLe son a besoin d'un milieu matériel pour se propager.\nDans le vide, pas de molécules = pas de son.\nC'est pour ça qu'il n'y a aucun bruit dans l'espace.\n\nDans l'air à 20°C, le son voyage à environ 340 m/s.\nDans l'eau, il va à 1 500 m/s (4 fois plus vite).\nDans l'acier, environ 5 000 m/s.\n\nC'est beaucoup plus lent que la lumière (300 000 km/s).\nC'est pourquoi tu vois l'éclair avant d'entendre le tonnerre.\n\nEn gros : le son = vibration de la matière.\nPas de matière = pas de son.`
+          },
+          {
+            titre: "Intensité sonore et niveau sonore",
+            contenu: `L'intensité sonore I mesure la puissance transportée par unité de surface :\n\nI = P / S\n\nTraduction : P est la puissance acoustique (en W), S est la surface (en m²).\nL'unité est le W/m².\n\nL'intensité diminue avec la distance.\nPour une source ponctuelle : I ∝ 1/r².\nSi tu doubles la distance, l'intensité est divisée par 4.\n\nC'est comme une lampe : plus tu t'éloignes, moins tu reçois de lumière.\n\nLe niveau sonore L se mesure en décibels (dB) :\n\nL = 10 · log(I / I₀)\n\nI₀ = 10⁻¹² W/m² est le seuil d'audibilité humaine.\n\nL'échelle est logarithmique :\n• +10 dB = intensité × 10.\n• +20 dB = intensité × 100.\n• +3 dB = intensité × 2.\n\nEn gros : les dB ne s'ajoutent pas comme des nombres normaux.\n+10 dB, c'est 10 fois plus puissant, pas « un peu plus fort ».`
+          },
+          {
+            titre: "Hauteur, timbre et spectre",
+            contenu: `Le son a trois caractéristiques perceptibles :\n\n1. La hauteur : c'est la fréquence fondamentale.\nAigu = haute fréquence (ex : sifflet, 4 000 Hz).\nGrave = basse fréquence (ex : contrebasse, 40 Hz).\nL'oreille humaine entend de 20 Hz à 20 000 Hz.\n\n2. Le timbre : c'est ce qui distingue deux instruments jouant la même note.\nUn piano et une guitare à même fréquence sonnent différemment.\nLe timbre dépend des harmoniques (multiples de la fondamentale).\n\n3. L'intensité : c'est le « volume » (fort ou faible).\n\nLe spectre en fréquences montre les harmoniques d'un son.\nC'est comme une « empreinte digitale » sonore.\nChaque instrument a son propre spectre.\n\nUn son pur n'a qu'une seule fréquence (un diapason).\nUn son complexe est la somme de plusieurs harmoniques.\n\nEn gros : hauteur = fréquence, timbre = harmoniques, intensité = volume.`
+          },
+          {
+            titre: "Atténuation du son",
+            contenu: `Le son s'atténue quand il se propage.\nDeux causes principales :\n\n1. Atténuation géométrique : l'onde se répartit sur une surface de plus en plus grande.\nPour une source ponctuelle : I ∝ 1/r².\nÀ double distance, l'intensité est divisée par 4.\nCela correspond à −6 dB quand on double la distance.\n\n2. Absorption par le milieu : l'air, les murs, les matériaux absorbent le son.\nLes matériaux poreux (mousse, moquette) absorbent bien.\nLes matériaux lisses et durs (carrelage, béton) réfléchissent.\n\nC'est comme crier dans une forêt vs crier dans une cathédrale.\nLa forêt absorbe le son (arbres, feuilles).\nLa cathédrale le réfléchit (murs en pierre) : c'est l'écho.\n\nEn gros : le son faiblit avec la distance.\nÉloignement = atténuation géométrique.\nMatériaux = absorption.`
+          },
+          {
+            titre: "L'effet Doppler",
+            contenu: `L'effet Doppler change la fréquence perçue quand la source ou l'observateur bouge.\n\nLa formule générale est :\n\nfr = fe · (c − Vr) / (c − Ve)\n\nTraduction :\n• fr = fréquence reçue par l'observateur.\n• fe = fréquence émise par la source.\n• c = vitesse du son dans le milieu.\n• Vr = vitesse du récepteur (positif s'il s'éloigne de la source).\n• Ve = vitesse de l'émetteur (positif s'il se rapproche du récepteur).\n\nSi la source se rapproche : les ondes sont comprimées.\nLa fréquence augmente. Le son est plus aigu.\n\nSi la source s'éloigne : les ondes sont étirées.\nLa fréquence diminue. Le son est plus grave.\n\nC'est comme les vagues d'un bateau.\nSi le bateau avance vers toi, les vagues arrivent plus rapprochées.\n\nApplications :\n• Échographie Doppler : mesure la vitesse du sang.\n• Radar routier : mesure la vitesse des voitures.\n• Astronomie : redshift (éloignement) et blueshift (rapprochement) des étoiles.\n\nEn gros : source qui approche = son aigu, source qui s'éloigne = son grave.`
+          }
         ]
       },
       page2_concepts: {
@@ -1395,35 +1537,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Onde sonore",
-            definition: "Onde mécanique longitudinale de compression-dilatation. Se propage dans les milieux matériels (air, eau, solide)."
+            definition: "Onde mécanique longitudinale (la vibration se fait dans la direction de propagation). Elle crée des zones de compression et de dilatation de l'air. Elle a besoin d'un milieu matériel : air, eau, solide. En gros : le son fait vibrer l'air comme une vague fait bouger l'eau."
           },
           {
             terme: "Intensité sonore I",
-            definition: "Puissance par unité de surface en W/m². I = P/S. Diminue avec le carré de la distance."
+            definition: "Puissance par unité de surface en W/m². I = P/S. Pour une source ponctuelle : I = P/(4πr²). Elle diminue avec le carré de la distance. En gros : si tu doubles la distance, le son est 4 fois moins fort."
           },
           {
             terme: "Niveau sonore L",
-            definition: "L = 10·log(I/I₀) en dB. Échelle logarithmique. 0 dB = seuil d'audibilité, 120 dB = seuil de douleur."
+            definition: "L = 10·log(I/I₀) en dB. C'est une échelle logarithmique (non linéaire). I₀ = 10⁻¹² W/m² est le seuil d'audibilité. 0 dB = à peine audible, 60 dB = conversation, 120 dB = seuil de douleur. En gros : +10 dB = 10 fois plus d'intensité, +3 dB = 2 fois plus."
           },
           {
             terme: "Hauteur d'un son",
-            definition: "Liée à la fréquence fondamentale. Aigu = haute fréquence, grave = basse fréquence."
+            definition: "La hauteur est liée à la fréquence fondamentale du son. Haute fréquence = son aigu (sifflement). Basse fréquence = son grave (grondement). L'oreille humaine entend de 20 Hz à 20 000 Hz. C'est comme les notes de musique : do grave vs do aigu."
           },
           {
-            terme: "Timbre",
-            definition: "Caractère d'un son lié à la présence d'harmoniques. Permet de distinguer deux instruments jouant la même note."
+            terme: "Timbre d'un son",
+            definition: "Le timbre dépend des harmoniques (fréquences multiples de la fondamentale) présentes dans le son. C'est ce qui permet de distinguer un piano d'une guitare jouant la même note. En gros : c'est la « couleur » du son, sa signature unique."
           },
           {
             terme: "Effet Doppler",
-            definition: "Modification de la fréquence perçue due au mouvement relatif source-observateur."
+            definition: "Modification de la fréquence perçue quand la source ou l'observateur se déplacent. Source qui approche = son plus aigu (fréquence augmente). Source qui s'éloigne = son plus grave (fréquence diminue). C'est comme les vagues d'un bateau : plus rapprochées devant, plus espacées derrière."
           },
           {
             terme: "Redshift / Blueshift",
-            definition: "Décalage spectral vers le rouge (éloignement) ou le bleu (rapprochement). Utilisé en astrophysique."
+            definition: "L'effet Doppler s'applique aussi à la lumière. Redshift (décalage vers le rouge) = la source s'éloigne. Blueshift (décalage vers le bleu) = la source se rapproche. En astronomie, le redshift prouve que l'univers est en expansion. En gros : étoile qui fuit = lumière rougie."
           },
           {
             terme: "Échographie Doppler",
-            definition: "Technique médicale utilisant le décalage Doppler des ultrasons pour mesurer la vitesse du sang."
+            definition: "Technique médicale qui utilise le décalage Doppler des ultrasons (sons de haute fréquence) réfléchis par le sang pour mesurer sa vitesse dans les vaisseaux. En gros : on « écoute » la vitesse du sang grâce au changement de fréquence."
+          },
+          {
+            terme: "Atténuation",
+            definition: "Diminution de l'intensité sonore avec la distance. Pour une source ponctuelle dans toutes les directions : I ∝ 1/r² car l'énergie se répartit sur une sphère de plus en plus grande. En gros : plus tu t'éloignes, moins tu entends."
+          },
+          {
+            terme: "Fréquence et longueur d'onde",
+            definition: "Liées par v = λ·f. v est la vitesse du son, λ la longueur d'onde (distance entre deux compressions), f la fréquence (nombre de vibrations par seconde). En gros : un son aigu (f grand) a une petite longueur d'onde, un son grave (f petit) a une grande longueur d'onde."
           }
         ]
       },
@@ -1437,32 +1587,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Niveau sonore",
             formule: "L = 10 · log(I / I₀)",
-            explication: "En dB. I₀ = 10⁻¹² W/m². +10 dB = intensité ×10, +3 dB = intensité ×2."
+            explication: "En dB. I₀ = 10⁻¹² W/m² (seuil d'audibilité). +10 dB = intensité ×10. +3 dB = intensité ×2."
           },
           {
-            nom: "Intensité sonore",
+            nom: "Intensité sonore (source ponctuelle)",
             formule: "I = P / (4πr²)",
-            explication: "Pour une source ponctuelle isotrope. L'énergie se répartit sur une sphère de rayon r."
+            explication: "Pour une source qui émet dans toutes les directions. L'énergie se répartit sur une sphère de rayon r. I en W/m²."
           },
           {
             nom: "Effet Doppler (source mobile, observateur fixe)",
             formule: "f_perçue = f_émise · v / (v ∓ v_source)",
-            explication: "− si la source approche (f↑), + si elle s'éloigne (f↓). v = vitesse du son."
+            explication: "Signe − si la source approche (f↑), signe + si elle s'éloigne (f↓). v = vitesse du son dans le milieu."
           },
           {
             nom: "Effet Doppler (observateur mobile, source fixe)",
             formule: "f_perçue = f_émise · (v ± v_obs) / v",
-            explication: "+ si l'observateur approche, − s'il s'éloigne."
+            explication: "Signe + si l'observateur approche la source, signe − s'il s'en éloigne."
           },
           {
             nom: "Relation fréquence-longueur d'onde",
             formule: "v = λ · f",
-            explication: "v vitesse de propagation, λ longueur d'onde, f fréquence."
+            explication: "v vitesse de propagation (m/s), λ longueur d'onde (m), f fréquence (Hz). Valable pour toute onde."
           },
           {
             nom: "Décalage Doppler relatif",
-            formule: "Δf/f = v_source / v",
-            explication: "Approximation pour v_source << v. Permet de calculer la vitesse de la source."
+            formule: "Δf/f ≈ v_source / v",
+            explication: "Approximation pour v_source ≪ v. Permet de calculer la vitesse de la source à partir du décalage de fréquence."
+          },
+          {
+            nom: "Atténuation géométrique",
+            formule: "L₂ = L₁ − 20·log(r₂/r₁)",
+            explication: "Le niveau sonore diminue de 6 dB quand la distance double. Valable pour une source ponctuelle en champ libre."
+          },
+          {
+            nom: "Période et fréquence",
+            formule: "T = 1/f",
+            explication: "T est la période (durée d'un cycle) en secondes. f est la fréquence (nombre de cycles par seconde) en Hz."
           }
         ]
       },
@@ -1582,16 +1742,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "La diffraction et les interférences sont des phénomènes ondulatoires. Quand une onde passe par une petite ouverture, elle s'étale : c'est la diffraction. Quand deux ondes se superposent, elles peuvent se renforcer (constructives) ou s'annuler (destructives) : ce sont les interférences. En gros : la lumière se comporte comme une onde, pas seulement comme un rayon droit.",
-        points_cles: [
-          "La diffraction prouve le caractère ondulatoire de la lumière",
-          "Condition : a ≈ λ pour observer la diffraction",
-          "Écart angulaire : θ = λ/a",
-          "Interférences constructives : δ = kλ (maximum)",
-          "Interférences destructives : δ = (k+½)λ (minimum)",
-          "Trous de Young : figure de franges alternées",
-          "Interfrange : i = λD/a",
-          "La cohérence des sources est nécessaire pour des interférences stables"
+        texte: "La diffraction et les interférences prouvent que la lumière est une onde. Ces phénomènes apparaissent quand une onde rencontre un obstacle ou quand deux ondes se superposent.",
+        sections: [
+          {
+            titre: "La diffraction : l'étalement d'une onde",
+            contenu: `Quand une onde passe par une petite ouverture, elle s'étale.\nC'est la diffraction.\n\nC'est comme une vague qui entre dans un port par une passe étroite.\nDe l'autre côté, la vague s'étale dans toutes les directions.\n\nLa condition pour observer la diffraction :\nl'ouverture a doit être comparable à la longueur d'onde λ.\n\nSi a >> λ : pas de diffraction visible.\nLa lumière passe « tout droit ».\n\nSi a ≈ λ : diffraction marquée.\nL'onde s'étale fortement.\n\nPour la lumière visible : λ ≈ 400 à 800 nm.\nDonc il faut des fentes très fines (quelques micromètres).\n\nLa diffraction prouve le caractère ondulatoire de la lumière.\nUn simple rayon ne pourrait pas s'étaler.\n\nEn gros : petite ouverture + onde = étalement.\nC'est la signature d'un comportement ondulatoire.`
+          },
+          {
+            titre: "Diffraction par une fente fine",
+            contenu: `Quand un faisceau laser traverse une fente de largeur a, on observe une tache centrale brillante sur un écran.\nDe part et d'autre, des taches secondaires plus faibles.\n\nL'écart angulaire du premier minimum est :\n\nθ = λ / a\n\nTraduction : θ est le demi-angle de la tache centrale (en radians).\nPlus a est petit, plus θ est grand (plus la tache est large).\nPlus λ est grand, plus θ est grand.\n\nSur l'écran, la largeur de la tache centrale vaut :\n\nL = 2 · λ · D / a\n\nD est la distance fente-écran.\n\nC'est contre-intuitif : plus la fente est étroite, plus la tache est large.\nC'est comme serrer un tuyau d'arrosage : le jet s'élargit.\n\nEn gros : θ = λ/a.\nPetite fente = grande diffraction.\nGrande fente = faible diffraction.`
+          },
+          {
+            titre: "Interférences : quand deux ondes se rencontrent",
+            contenu: `Quand deux ondes se superposent, elles peuvent se renforcer ou s'annuler.\nC'est le phénomène d'interférences.\n\nTout dépend de la différence de marche δ :\nδ = d₂ − d₁ (différence de chemin parcouru par les deux ondes).\n\n• Interférences constructives : δ = k · λ (k entier).\nLes crêtes coïncident. Les ondes s'ajoutent.\nRésultat : maximum de lumière (frange brillante).\n\n• Interférences destructives : δ = (k + ½) · λ.\nUne crête rencontre un creux. Les ondes s'annulent.\nRésultat : obscurité (frange sombre).\n\nC'est comme deux vagues sur un lac.\nSi les crêtes arrivent ensemble : grosse vague.\nSi crête rencontre creux : l'eau est plate.\n\nCondition indispensable : les sources doivent être cohérentes.\nMême fréquence et déphasage constant.\n\nEn gros : constructif = lumière, destructif = obscurité.\nTout dépend du retard δ entre les deux ondes.`
+          },
+          {
+            titre: "L'expérience des trous de Young",
+            contenu: `C'est l'une des expériences les plus célèbres de la physique.\nDeux fentes fines et parallèles, éclairées par une source cohérente.\n\nChaque fente se comporte comme une source secondaire.\nLes deux ondes se superposent sur un écran placé à distance D.\n\nOn observe des franges alternées : brillantes et sombres.\nC'est la preuve directe que la lumière est une onde.\n\nLa différence de marche en un point M de l'écran vaut :\n\nδ = b · x / D\n\nTraduction :\n• b = distance entre les deux fentes.\n• x = position du point M sur l'écran.\n• D = distance fentes-écran.\n\nFrange brillante si δ = kλ, soit x = k · λD/b.\nFrange sombre si δ = (k+½)λ.\n\nEn gros : deux fentes + lumière cohérente = franges claires et sombres alternées.`
+          },
+          {
+            titre: "Interfrange et applications",
+            contenu: `L'interfrange i est la distance entre deux franges brillantes consécutives :\n\ni = λ · D / b\n\nTraduction :\n• λ = longueur d'onde de la lumière.\n• D = distance fentes-écran.\n• b = écart entre les deux fentes.\n\nPlus les fentes sont rapprochées (b petit), plus les franges sont espacées.\nPlus l'écran est loin (D grand), plus les franges sont espacées.\nPlus la longueur d'onde est grande (rouge > bleu), plus les franges sont espacées.\n\nEn lumière blanche, chaque couleur a son propre interfrange.\nLes franges sont irisées (arc-en-ciel) sauf la frange centrale qui est blanche.\nAu centre, δ = 0 pour toutes les couleurs : elles s'ajoutent toutes.\n\nApplications :\n• Mesurer λ avec précision.\n• Antireflets sur les lunettes (interférences destructives).\n• Interférométrie en astronomie et en industrie.\n\nEn gros : i = λD/b.\nL'interfrange permet de mesurer des longueurs d'onde.`
+          }
         ]
       },
       page2_concepts: {
@@ -1599,35 +1771,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Diffraction",
-            definition: "Étalement d'une onde passant par une ouverture ou contournant un obstacle. Significative si a ≈ λ."
+            definition: "Étalement d'une onde quand elle passe par une ouverture ou contourne un obstacle. Elle est significative quand la taille de l'ouverture a est comparable à la longueur d'onde λ. En gros : petite ouverture = grande diffraction. C'est comme une vague qui entre dans un port par une petite passe et s'étale dans tout le bassin."
           },
           {
             terme: "Écart angulaire θ",
-            definition: "θ = λ/a (en rad). Demi-angle du cône central de diffraction. Plus a est petit, plus l'étalement est grand."
+            definition: "θ = λ/a (en radians). C'est le demi-angle du cône central de diffraction. Plus l'ouverture a est petite, plus l'étalement est grand. Plus la longueur d'onde λ est grande, plus la diffraction est marquée. En gros : petite fente = grande tache de diffraction."
           },
           {
             terme: "Interférences",
-            definition: "Superposition de deux ondes cohérentes. Constructives (en phase) ou destructives (en opposition de phase)."
+            definition: "Phénomène de superposition de deux ondes cohérentes. Si les crêtes coïncident (en phase), elles s'ajoutent : interférences constructives (lumière maximale). Si crête rencontre creux (opposition de phase), elles s'annulent : interférences destructives (obscurité). C'est comme deux vagues qui se croisent."
           },
           {
             terme: "Différence de marche δ",
-            definition: "δ = d₂ − d₁. Différence de chemin optique entre les deux ondes. Détermine constructif ou destructif."
+            definition: "δ = d₂ − d₁. C'est la différence de chemin parcouru par les deux ondes depuis leurs sources respectives. Si δ = kλ (k entier) : constructif. Si δ = (k+½)λ : destructif. En gros : c'est le « retard » d'une onde par rapport à l'autre."
           },
           {
             terme: "Trous de Young",
-            definition: "Deux fentes fines éclairées par une source cohérente. Produisent des franges d'interférences sur un écran."
+            definition: "Expérience historique : deux fentes fines et parallèles éclairées par une source cohérente (même fréquence). Elles produisent des franges d'interférences (bandes claires et sombres alternées) sur un écran. C'est la preuve que la lumière est une onde."
           },
           {
             terme: "Interfrange i",
-            definition: "i = λD/a. Distance entre deux franges brillantes consécutives. λ longueur d'onde, D distance à l'écran, a écart entre fentes."
+            definition: "i = λD/a. Distance entre deux franges brillantes (ou sombres) consécutives. λ longueur d'onde, D distance fentes-écran, a écart entre les deux fentes. En gros : plus les fentes sont rapprochées (petit a), plus les franges sont espacées."
           },
           {
             terme: "Cohérence",
-            definition: "Deux sources cohérentes ont même fréquence et un déphasage constant. Condition nécessaire pour des interférences."
+            definition: "Deux sources sont cohérentes si elles ont la même fréquence et un déphasage constant dans le temps. C'est la condition indispensable pour observer des interférences stables. En gros : si les deux sources ne vibrent pas « ensemble », les franges bougent trop vite pour être vues."
           },
           {
             terme: "Frange centrale",
-            definition: "Frange brillante au centre (δ = 0). Toujours présente quelle que soit la longueur d'onde."
+            definition: "Frange brillante située au centre de l'écran (là où δ = 0). Elle est toujours constructive quelle que soit la longueur d'onde. C'est pour ça que la frange centrale est blanche en lumière blanche."
+          },
+          {
+            terme: "Tache d'Airy",
+            definition: "Figure de diffraction produite par une ouverture circulaire (comme un objectif d'appareil photo). C'est un disque central brillant entouré d'anneaux alternativement sombres et brillants. En gros : c'est la version « ronde » de la diffraction par une fente."
+          },
+          {
+            terme: "Lumière monochromatique vs polychromatique",
+            definition: "Monochromatique = une seule longueur d'onde (une seule couleur, ex : laser). Polychromatique = plusieurs longueurs d'onde (lumière blanche). En gros : le laser donne des franges nettes, la lumière blanche donne des franges colorées car chaque couleur a un interfrange différent."
           }
         ]
       },
@@ -1641,32 +1821,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Écart angulaire de diffraction",
             formule: "θ = λ / a",
-            explication: "En radians. a = largeur de la fente, λ = longueur d'onde."
+            explication: "En radians. a = largeur de la fente. λ = longueur d'onde. Plus a est petit, plus θ est grand (plus de diffraction)."
           },
           {
             nom: "Largeur de la tache centrale",
             formule: "L = 2λD / a",
-            explication: "Largeur de la frange centrale sur un écran à distance D de la fente."
+            explication: "Largeur de la frange centrale sur un écran à la distance D de la fente. L = 2·θ·D."
           },
           {
             nom: "Interfrange (Young)",
             formule: "i = λ · D / a",
-            explication: "a = distance entre les deux fentes, D = distance fentes-écran."
+            explication: "a = distance entre les deux fentes. D = distance fentes-écran. i augmente si λ ou D augmentent, ou si a diminue."
           },
           {
             nom: "Condition d'interférences constructives",
             formule: "δ = k · λ (k entier)",
-            explication: "Les ondes arrivent en phase : amplitude maximale."
+            explication: "Les ondes arrivent en phase : les amplitudes s'ajoutent. Maximum de lumière (frange brillante)."
           },
           {
             nom: "Condition d'interférences destructives",
             formule: "δ = (k + ½) · λ",
-            explication: "Les ondes arrivent en opposition de phase : amplitude nulle."
+            explication: "Les ondes arrivent en opposition de phase : les amplitudes s'annulent. Minimum de lumière (frange sombre)."
           },
           {
-            nom: "Différence de marche",
+            nom: "Différence de marche (Young)",
             formule: "δ = a · x / D",
-            explication: "Approximation pour les trous de Young. x = position sur l'écran depuis le centre."
+            explication: "Approximation valable quand D ≫ a. x = position sur l'écran par rapport au centre de la figure."
+          },
+          {
+            nom: "Position des franges brillantes",
+            formule: "x_k = k · λ · D / a",
+            explication: "Position de la k-ième frange brillante sur l'écran. k = 0 est la frange centrale."
+          },
+          {
+            nom: "Position des franges sombres",
+            formule: "x_k = (k + ½) · λ · D / a",
+            explication: "Position de la k-ième frange sombre sur l'écran. Les franges sombres sont à mi-chemin entre les brillantes."
           }
         ]
       },
@@ -1786,16 +1976,32 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Ce chapitre explore la lumière sous deux aspects : ondulatoire (images, optique) et corpusculaire (photons). Une lunette astronomique utilise des lentilles pour grossir les étoiles. Mais la lumière est aussi faite de photons, des grains d'énergie E = hν. L'effet photoélectrique, où la lumière éjecte des électrons d'un métal, prouve cette nature corpusculaire. En gros : la lumière est à la fois onde et particule (dualité onde-corpuscule).",
-        points_cles: [
-          "La lunette astronomique est un système afocal (objectif + oculaire)",
-          "Grossissement G = f'_objectif / f'_oculaire",
-          "Le photon est le quantum de lumière : E = hν = hc/λ",
-          "Les niveaux d'énergie atomiques sont quantifiés",
-          "Émission de photon : E = E₂ − E₁ lors d'une transition",
-          "Effet photoélectrique : hν ≥ W₀ pour éjecter un électron",
-          "Ec = hν − W₀ : bilan énergétique de l'effet photoélectrique",
-          "La dualité onde-corpuscule est fondamentale en physique moderne"
+        texte: "Ce chapitre explore la lumière sous deux aspects : onde (optique, lentilles, images) et particule (photons, niveaux d'énergie, effet photoélectrique). C'est la dualité onde-corpuscule.",
+        sections: [
+          {
+            titre: "La lunette astronomique",
+            contenu: `Une lunette astronomique est un instrument d'optique pour observer les objets lointains.\nElle est composée de deux lentilles convergentes :\n\n• L'objectif (L₁) : grande distance focale f'₁.\nIl capte la lumière de l'objet lointain.\nIl forme une image intermédiaire petite mais nette.\n\n• L'oculaire (L₂) : petite distance focale f'₂.\nIl grossit l'image intermédiaire.\nIl joue le rôle d'une loupe.\n\nLa lunette est un système afocal.\nTraduction : le foyer image de L₁ coïncide avec le foyer objet de L₂.\nF'₁ = F₂.\n\nLes rayons entrent parallèles et sortent parallèles.\nL'œil observe sans fatiguer (accommodation au repos).\n\nC'est comme un relais : L₁ capte l'image, L₂ la grossit.\n\nEn gros : objectif = capteur, oculaire = loupe.\nLes deux travaillent ensemble pour grossir les étoiles.`
+          },
+          {
+            titre: "Le grossissement",
+            contenu: `Le grossissement G mesure combien la lunette agrandit l'image.\n\nG = α' / α = f'₁ / f'₂\n\nTraduction :\n• α = angle sous lequel l'œil voit l'objet sans lunette.\n• α' = angle sous lequel l'œil voit l'image avec la lunette.\n• f'₁ = focale de l'objectif.\n• f'₂ = focale de l'oculaire.\n\nG = 10 signifie que l'objet paraît 10 fois plus gros.\n\nPour un grand grossissement :\n• f'₁ doit être grande (objectif à longue focale).\n• f'₂ doit être petite (oculaire à courte focale).\n\nC'est comme une fraction : grand numérateur et petit dénominateur.\n\nMais attention : un grossissement trop fort rend l'image floue.\nLa qualité dépend aussi du diamètre de l'objectif.\n\nEn gros : G = f'₁ / f'₂.\nGrand objectif + petit oculaire = fort grossissement.`
+          },
+          {
+            titre: "Le photon : grain de lumière",
+            contenu: `La lumière est aussi faite de particules : les photons.\nChaque photon transporte un quantum (une portion) d'énergie :\n\nE = h · ν = h · c / λ\n\nTraduction :\n• h = 6,63 × 10⁻³⁴ J·s (constante de Planck).\n• ν = fréquence de la lumière (en Hz).\n• c = 3 × 10⁸ m/s (vitesse de la lumière).\n• λ = longueur d'onde.\n\nPlus la fréquence est élevée, plus le photon est énergétique.\nUn photon UV est plus énergétique qu'un photon rouge.\nUn photon X est encore plus énergétique.\n\nC'est comme des billes de tailles différentes.\nChaque bille transporte une énergie fixe.\nOn ne peut pas avoir « une demi-bille ».\n\nLe photon n'a pas de masse.\nIl se déplace toujours à la vitesse c.\n\nEn gros : E = hν.\nLumière = paquets d'énergie. Haute fréquence = beaucoup d'énergie.`
+          },
+          {
+            titre: "Niveaux d'énergie et spectres de raies",
+            contenu: `Les électrons dans un atome occupent des niveaux d'énergie quantifiés.\nIls ne peuvent avoir que certaines valeurs précises.\n\nC'est comme un escalier : tu ne peux être que sur une marche.\nJamais entre deux marches.\n\nQuand un électron passe d'un niveau haut E₂ à un niveau bas E₁ :\nil émet un photon d'énergie :\n\nE_photon = E₂ − E₁ = h · ν\n\nTraduction : l'énergie du photon est exactement la différence entre les deux niveaux.\n\nQuand un photon est absorbé, c'est l'inverse.\nL'électron monte d'un niveau bas à un niveau haut.\nMais le photon doit avoir exactement la bonne énergie.\n\nChaque atome a ses propres niveaux.\nDonc chaque atome a ses propres raies spectrales.\nC'est une « empreinte digitale » lumineuse unique.\n\nEn gros : transition = saut entre marches.\nSaut vers le bas = émission de photon.\nSaut vers le haut = absorption de photon.`
+          },
+          {
+            titre: "L'effet photoélectrique",
+            contenu: `L'effet photoélectrique est l'éjection d'électrons d'un métal par la lumière.\n\nCondition : le photon doit avoir assez d'énergie.\n\nh · ν ≥ W₀\n\nW₀ est le travail d'extraction du métal.\nC'est l'énergie minimale pour arracher un électron.\nChaque métal a son propre W₀.\n\nSi hν < W₀ : rien ne se passe.\nMême en augmentant l'intensité lumineuse.\nC'est la fréquence qui compte, pas le nombre de photons.\n\nSi hν ≥ W₀ : l'électron est éjecté.\nSon énergie cinétique est :\n\nEc = h · ν − W₀\n\nTraduction : l'énergie du photon se partage.\nW₀ pour extraire l'électron.\nLe reste devient de l'énergie cinétique.\n\nC'est comme lancer des billes sur une cible.\nSi la bille n'est pas assez rapide, la cible ne bouge pas.\nPeu importe combien de billes faibles tu lances.\n\nEn gros : Ec = hν − W₀.\nPhoton assez énergétique = électron éjecté.`
+          },
+          {
+            titre: "La dualité onde-corpuscule",
+            contenu: `La lumière se comporte parfois comme une onde, parfois comme des particules.\n\nAspect ondulatoire :\n• Diffraction (chapitre précédent).\n• Interférences.\n• Propagation, réfraction.\n\nAspect corpusculaire :\n• Effet photoélectrique.\n• Absorption et émission par les atomes.\n• Comptage de photons individuels.\n\nC'est la dualité onde-corpuscule.\nLa lumière n'est ni 100 % onde ni 100 % particule.\nElle est les deux, selon l'expérience.\n\nC'est comme une pièce de monnaie.\nCôté pile = onde. Côté face = particule.\nTu ne vois qu'un côté à la fois, mais la pièce a les deux.\n\nCette idée est au cœur de la physique quantique.\nElle s'applique aussi aux électrons et à toute la matière.\n\nEn gros : la lumière est onde ET particule.\nCela dépend de comment on la regarde.`
+          }
         ]
       },
       page2_concepts: {
@@ -1803,35 +2009,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Lunette astronomique",
-            definition: "Instrument afocal : objectif convergent (grande focale) + oculaire convergent (petite focale). Grossit les objets lointains."
+            definition: "Instrument d'optique formé de deux lentilles convergentes : l'objectif (grande focale, capte la lumière) et l'oculaire (petite focale, grossit l'image). En gros : l'objectif fait une petite image, l'oculaire la grossit comme une loupe. C'est comme un télescope simplifié."
           },
           {
             terme: "Système afocal",
-            definition: "Système optique où F'₁ coïncide avec F₂. Un objet à l'infini donne une image à l'infini."
+            definition: "Système optique où le foyer image de l'objectif (F'₁) coïncide avec le foyer objet de l'oculaire (F₂). Les rayons entrent parallèles et sortent parallèles. En gros : un objet à l'infini donne une image à l'infini. L'œil peut observer sans fatiguer."
           },
           {
             terme: "Grossissement",
-            definition: "G = α'/α = f'₁/f'₂. Rapport de l'angle sous lequel on voit l'image à celui sous lequel on voit l'objet à l'œil nu."
+            definition: "G = α'/α = f'₁/f'₂. C'est le rapport entre l'angle sous lequel on voit l'image à travers la lunette et l'angle à l'œil nu. En gros : G = 10 signifie que l'objet paraît 10 fois plus gros. Plus l'objectif a une grande focale et l'oculaire une petite, plus on grossit."
           },
           {
             terme: "Photon",
-            definition: "Particule de lumière sans masse. Énergie E = hν. Se déplace à la vitesse c = 3 × 10⁸ m/s."
+            definition: "Particule de lumière sans masse. Son énergie est E = hν (h = constante de Planck, ν = fréquence). Il se déplace toujours à la vitesse c = 3 × 10⁸ m/s. En gros : la lumière est faite de « grains » d'énergie. Plus la fréquence est haute (UV, X), plus le grain est énergétique."
           },
           {
             terme: "Niveaux d'énergie",
-            definition: "Valeurs discrètes d'énergie autorisées pour un électron dans un atome. Transition = changement de niveau."
+            definition: "Les électrons dans un atome ne peuvent avoir que certaines valeurs d'énergie précises (quantifiées). C'est comme un escalier : tu ne peux être que sur une marche, pas entre deux. En gros : pas de valeur intermédiaire possible. C'est la base de la physique quantique."
+          },
+          {
+            terme: "Transition et spectre de raies",
+            definition: "Quand un électron passe d'un niveau haut E₂ à un niveau bas E₁, il émet un photon d'énergie E = E₂ − E₁ = hν. Chaque atome a ses propres niveaux, donc ses propres raies. En gros : chaque élément a une « empreinte digitale » lumineuse unique."
           },
           {
             terme: "Effet photoélectrique",
-            definition: "Éjection d'électrons d'un métal par absorption de photons. Condition : hν ≥ W₀."
+            definition: "Éjection d'électrons d'un métal quand il est éclairé par de la lumière suffisamment énergétique. Condition : hν ≥ W₀ (travail d'extraction). En gros : si le photon n'a pas assez d'énergie, rien ne se passe, même avec beaucoup de lumière. C'est la fréquence qui compte, pas l'intensité."
           },
           {
             terme: "Travail d'extraction W₀",
-            definition: "Énergie minimale pour arracher un électron du métal. Dépend du matériau."
+            definition: "Énergie minimale nécessaire pour arracher un électron du métal. Chaque métal a son propre W₀. Si hν < W₀, pas d'effet photoélectrique. En gros : c'est le « ticket d'entrée » que le photon doit payer pour libérer l'électron."
           },
           {
             terme: "Dualité onde-corpuscule",
-            definition: "La lumière se comporte comme une onde (diffraction, interférences) ET comme des particules (photons, effet photoélectrique)."
+            definition: "La lumière se comporte comme une onde dans certaines expériences (diffraction, interférences) et comme des particules (photons) dans d'autres (effet photoélectrique). En gros : la lumière n'est ni 100 % onde ni 100 % particule. Elle est les deux selon comment on la regarde."
+          },
+          {
+            terme: "Constante de Planck h",
+            definition: "h = 6,63 × 10⁻³⁴ J·s. Constante fondamentale de la physique quantique. Elle relie l'énergie d'un photon à sa fréquence : E = hν. Plus h est petit, plus les effets quantiques sont invisibles à notre échelle. C'est pourquoi on ne voit pas les photons individuels dans la vie courante."
           }
         ]
       },
@@ -1845,32 +2059,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Énergie d'un photon",
             formule: "E = h·ν = h·c / λ",
-            explication: "h = 6,63 × 10⁻³⁴ J·s. Plus la fréquence est haute, plus le photon est énergétique."
+            explication: "h = 6,63 × 10⁻³⁴ J·s (Planck). Plus la fréquence ν est haute (ou λ petite), plus le photon est énergétique."
           },
           {
             nom: "Grossissement de la lunette",
             formule: "G = f'_objectif / f'_oculaire",
-            explication: "Rapport des distances focales. Grand objectif + petit oculaire = fort grossissement."
+            explication: "Rapport des focales. Grand objectif (grande focale) + petit oculaire (petite focale) = fort grossissement."
           },
           {
             nom: "Bilan photoélectrique",
             formule: "Ec = h·ν − W₀",
-            explication: "L'énergie cinétique de l'électron éjecté = énergie du photon − travail d'extraction."
+            explication: "Énergie cinétique de l'électron éjecté = énergie du photon − travail d'extraction. Si hν < W₀, pas d'éjection."
           },
           {
             nom: "Énergie de transition",
             formule: "E_photon = |E₂ − E₁|",
-            explication: "Le photon émis ou absorbé a une énergie égale à la différence entre deux niveaux."
+            explication: "Le photon émis ou absorbé a une énergie égale à la différence entre les deux niveaux. Toujours positif (valeur absolue)."
           },
           {
             nom: "Fréquence seuil",
             formule: "ν_seuil = W₀ / h",
-            explication: "Fréquence minimale pour l'effet photoélectrique. Si ν < ν_seuil, pas d'éjection."
+            explication: "Fréquence minimale pour arracher un électron. Si ν < ν_seuil, pas d'effet photoélectrique, quelle que soit l'intensité."
           },
           {
             nom: "Encombrement de la lunette",
             formule: "L = f'_objectif + f'_oculaire",
-            explication: "Distance entre les deux lentilles en configuration afocale."
+            explication: "Distance entre les deux lentilles en configuration afocale. C'est la longueur physique de la lunette."
+          },
+          {
+            nom: "Longueur d'onde seuil",
+            formule: "λ_seuil = h·c / W₀",
+            explication: "Longueur d'onde maximale pour l'effet photoélectrique. Si λ > λ_seuil, le photon n'a pas assez d'énergie."
+          },
+          {
+            nom: "Conversion eV ↔ Joules",
+            formule: "1 eV = 1,6 × 10⁻¹⁹ J",
+            explication: "L'électronvolt (eV) est l'unité d'énergie en physique atomique. Plus pratique que le Joule pour les petites énergies."
           }
         ]
       },
@@ -1990,16 +2214,28 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Ce chapitre étudie le condensateur et le circuit RC. Un condensateur est comme un mini-réservoir d'énergie électrique : il se charge et se décharge. Le circuit RC (résistance + condensateur) est régi par une équation différentielle du 1er ordre. La constante de temps τ = RC contrôle la vitesse de charge/décharge. En gros : petit τ = charge rapide, grand τ = charge lente.",
-        points_cles: [
-          "Le condensateur stocke des charges : q = Cu",
-          "L'intensité dans un condensateur : i = C·du/dt",
-          "Circuit RC : équation différentielle du 1er ordre",
-          "Charge : u(t) = E·(1 − e^(−t/τ))",
-          "Décharge : u(t) = E·e^(−t/τ)",
-          "Constante de temps : τ = RC",
-          "Après 5τ, le régime permanent est atteint (99 %)",
-          "Énergie stockée : E = ½Cu²"
+        texte: "Ce chapitre étudie le condensateur et le circuit RC. Le condensateur stocke de l'énergie électrique, et le circuit RC obéit à une équation différentielle du premier ordre.",
+        sections: [
+          {
+            titre: "Le condensateur : un réservoir de charges",
+            contenu: `Un condensateur est un composant formé de deux armatures métalliques.\nEntre elles, un isolant (diélectrique).\n\nQuand on le branche à un générateur, des charges s'accumulent sur les armatures.\nUne armature se charge positivement, l'autre négativement.\n\nLa charge stockée est proportionnelle à la tension :\n\nq = C · u\n\nTraduction :\n• q = charge en Coulombs (C).\n• C = capacité en Farads (F).\n• u = tension aux bornes du condensateur (V).\n\nPlus C est grand, plus le condensateur stocke de charges pour une même tension.\n\nC'est comme un réservoir d'eau.\nC (capacité) = taille du réservoir.\nu (tension) = hauteur d'eau.\nq (charge) = volume d'eau stocké.\n\nEn gros : q = Cu.\nLe condensateur est un réservoir d'énergie électrique.`
+          },
+          {
+            titre: "Intensité et énergie du condensateur",
+            contenu: `L'intensité du courant dans un condensateur est :\n\ni = C · du/dt\n\nTraduction : le courant est proportionnel à la vitesse de variation de la tension.\nSi la tension change vite, le courant est fort.\nSi la tension est stable, le courant est nul.\n\nC'est comme remplir un verre d'eau.\nLe débit (courant) dépend de la vitesse à laquelle le niveau (tension) monte.\n\nL'énergie stockée dans le condensateur est :\n\nE = ½ · C · u²\n\nTraduction : l'énergie dépend du carré de la tension.\nSi la tension double, l'énergie est multipliée par 4.\n\nCette énergie est stockée dans le champ électrique entre les armatures.\nElle est restituée quand le condensateur se décharge.\n\nEn gros : i = C·du/dt (courant = C × variation de tension).\nE = ½Cu² (énergie stockée).`
+          },
+          {
+            titre: "Le circuit RC : charge du condensateur",
+            contenu: `Un circuit RC est composé d'une résistance R et d'un condensateur C en série.\nOn branche un générateur de tension E.\n\nLa loi des mailles donne l'équation différentielle :\n\nRC · du/dt + u = E\n\nC'est une équation différentielle du premier ordre à coefficients constants.\n\nLa solution pour la charge (condensateur initialement vide) est :\n\nu(t) = E · (1 − e^(−t/τ))\n\nAvec τ = R · C (constante de temps en secondes).\n\nAu début (t = 0) : u = 0, le condensateur est vide.\nÀ t = τ : u ≈ 0,63 · E (63 % de la valeur finale).\nÀ t = 5τ : u ≈ 0,99 · E (99 %, quasi complètement chargé).\n\nC'est comme remplir une baignoire.\nAu début, l'eau coule vite.\nPlus la baignoire se remplit, plus le débit ralentit.\nÀ la fin, le niveau se stabilise.\n\nEn gros : u = E(1 − e^(−t/τ)).\nLa tension monte vers E en suivant une exponentielle croissante.`
+          },
+          {
+            titre: "Le circuit RC : décharge du condensateur",
+            contenu: `Quand on retire le générateur, le condensateur se décharge à travers R.\n\nL'équation différentielle devient :\n\nRC · du/dt + u = 0\n\nLa solution est :\n\nu(t) = E · e^(−t/τ)\n\nAvec τ = RC (même constante de temps).\n\nAu début (t = 0) : u = E, le condensateur est plein.\nÀ t = τ : u ≈ 0,37 · E (il reste 37 %).\nÀ t = 5τ : u ≈ 0,01 · E (quasi vide, 1 %).\n\nC'est comme vider une baignoire.\nAu début, l'eau coule vite (beaucoup de pression).\nPlus le niveau baisse, plus l'écoulement ralentit.\n\nLa courbe est une exponentielle décroissante.\nElle ne touche jamais exactement zéro.\nMais après 5τ, on considère que c'est fini.\n\nEn gros : u = E · e^(−t/τ).\nLa tension descend vers 0 en exponentielle décroissante.`
+          },
+          {
+            titre: "La constante de temps τ = RC",
+            contenu: `La constante de temps τ contrôle la vitesse de charge et de décharge.\n\nτ = R · C\n\nTraduction :\n• R en Ohms (Ω).\n• C en Farads (F).\n• τ en secondes (s).\n\nGrand τ = charge et décharge lentes.\nPetit τ = charge et décharge rapides.\n\nPour augmenter τ : augmenter R ou C.\nPour diminuer τ : diminuer R ou C.\n\nC'est comme le diamètre d'un tuyau (R) et la taille du réservoir (C).\nPetit tuyau + gros réservoir = remplissage très lent.\nGros tuyau + petit réservoir = remplissage très rapide.\n\nRepères importants :\n• À t = τ : 63 % (charge) ou 37 % (décharge).\n• À t = 2τ : 86 % (charge) ou 14 % (décharge).\n• À t = 3τ : 95 % (charge) ou 5 % (décharge).\n• À t = 5τ : 99 % → régime permanent atteint.\n\nEn gros : τ = RC.\nC'est le « chronomètre » du circuit.\nAprès 5τ, tout est fini.`
+          }
         ]
       },
       page2_concepts: {
@@ -2007,35 +2243,43 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Condensateur",
-            definition: "Composant à deux armatures séparant un isolant (diélectrique). Stocke de l'énergie électrique sous forme de charges."
+            definition: "Composant électrique formé de deux armatures conductrices (plaques) séparées par un isolant (diélectrique). Il stocke de l'énergie sous forme de charges électriques. C'est comme un réservoir d'eau : on le remplit (charge) et il se vide (décharge). On en trouve partout : téléphones, ordinateurs, flash d'appareil photo."
           },
           {
             terme: "Capacité C",
-            definition: "En Farads (F). C = q/u. Plus C est grand, plus le condensateur stocke de charges pour une même tension."
+            definition: "En Farads (F). C = q/u : c'est le rapport entre la charge stockée et la tension. Plus C est grand, plus le condensateur peut stocker de charges pour une même tension. En gros : c'est la « taille du réservoir ». En pratique : μF (10⁻⁶ F), nF (10⁻⁹ F), pF (10⁻¹² F)."
           },
           {
             terme: "Circuit RC",
-            definition: "Circuit série avec une résistance R et un condensateur C. La tension aux bornes du condensateur suit une exponentielle."
+            definition: "Circuit série avec une résistance R et un condensateur C. Quand on branche une pile, le condensateur se charge exponentiellement. La résistance R « freine » la charge. En gros : R contrôle la vitesse de remplissage, C contrôle la taille du réservoir."
           },
           {
             terme: "Constante de temps τ",
-            definition: "τ = RC en secondes. Temps caractéristique de charge/décharge. Après τ : 63 % (charge) ou 37 % (décharge)."
+            definition: "τ = R·C en secondes. C'est le temps caractéristique du circuit. Après 1τ : 63 % de la charge finale. Après 5τ : 99 % (régime permanent). En gros : τ dit « à quelle vitesse le condensateur se charge ». C'est comme le temps pour remplir une baignoire."
           },
           {
             terme: "Équation différentielle du RC",
-            definition: "RC·du/dt + u = E (charge) ou RC·du/dt + u = 0 (décharge). Équation du 1er ordre à coefficients constants."
+            definition: "En charge : R·C·du/dt + u = E. En décharge : R·C·du/dt + u = 0. C'est une équation du 1er ordre à coefficients constants. La solution est toujours une exponentielle. En gros : c'est la « recette mathématique » qui donne u(t)."
           },
           {
             terme: "Régime transitoire",
-            definition: "Phase pendant laquelle la tension évolue (de 0 à E en charge). Dure environ 5τ."
+            definition: "Phase pendant laquelle la tension évolue (augmente en charge, diminue en décharge). Elle dure environ 5τ. C'est la période de « transition » entre l'état initial et l'état final. En gros : c'est le temps que met le réservoir à se remplir ou à se vider."
           },
           {
             terme: "Régime permanent",
-            definition: "Atteint après 5τ. La tension est stable : u = E (charge complète) ou u = 0 (décharge complète)."
+            definition: "État atteint après 5τ. La tension est stable : u = E (condensateur plein) ou u = 0 (condensateur vide). Le courant est alors nul (i = 0). En gros : le réservoir est plein (ou vide), plus rien ne bouge."
           },
           {
             terme: "Énergie du condensateur",
-            definition: "E = ½Cu². L'énergie stockée est proportionnelle au carré de la tension et à la capacité."
+            definition: "E = ½·C·u². L'énergie stockée est proportionnelle à la capacité C et au carré de la tension u. En gros : double la tension, tu multiplies l'énergie par 4. C'est comme l'énergie potentielle d'un ressort comprimé."
+          },
+          {
+            terme: "Détermination graphique de τ",
+            definition: "Sur le graphe u(t), on trace la tangente à la courbe à t = 0. Cette tangente coupe l'asymptote horizontale (u = E) à t = τ. Alternativement, τ est le temps pour atteindre 63 % de E (en charge) ou 37 % de E (en décharge). C'est la méthode la plus courante au bac."
+          },
+          {
+            terme: "Courant de charge/décharge",
+            definition: "En charge : i(t) = (E/R)·e^(−t/τ). Le courant est maximal au début puis décroît vers 0. En décharge : i(t) = −(E/R)·e^(−t/τ). Le courant part en sens inverse. En gros : au début ça coule fort, puis ça ralentit progressivement."
           }
         ]
       },
@@ -2049,32 +2293,42 @@ export const TERM_PHYSIQUE_CHIMIE_COURS = [
           {
             nom: "Relation charge-tension",
             formule: "q = C · u",
-            explication: "q en Coulombs, C en Farads, u en Volts."
+            explication: "q en Coulombs, C en Farads, u en Volts. C'est la définition de la capacité : plus C est grand, plus on stocke de charges."
           },
           {
             nom: "Intensité dans un condensateur",
             formule: "i = C · du/dt",
-            explication: "Le courant est proportionnel à la variation de tension. Si u est constant, i = 0."
+            explication: "Le courant est proportionnel à la vitesse de variation de la tension. Si u est constant (régime permanent), i = 0."
           },
           {
-            nom: "Charge du condensateur",
+            nom: "Charge du condensateur (circuit RC)",
             formule: "u(t) = E · (1 − e^(−t/τ))",
-            explication: "La tension croît de 0 vers E. τ = RC. Atteint 63 % de E après τ."
+            explication: "La tension croît exponentiellement de 0 vers E. τ = RC. Atteint 63 % de E après 1τ, 99 % après 5τ."
           },
           {
-            nom: "Décharge du condensateur",
+            nom: "Décharge du condensateur (circuit RC)",
             formule: "u(t) = E · e^(−t/τ)",
-            explication: "La tension décroît de E vers 0. Atteint 37 % de E après τ."
+            explication: "La tension décroît exponentiellement de E vers 0. Atteint 37 % de E après 1τ, 1 % après 5τ."
           },
           {
             nom: "Constante de temps",
             formule: "τ = R · C",
-            explication: "En secondes. R en Ohms, C en Farads. Temps caractéristique du circuit."
+            explication: "En secondes. R en Ohms (Ω), C en Farads (F). Vérification dimensionnelle : Ω × F = s."
           },
           {
             nom: "Énergie stockée",
             formule: "E_c = ½ · C · u²",
-            explication: "Énergie en Joules. Proportionnelle à C et au carré de u."
+            explication: "Énergie en Joules. Proportionnelle à C et au carré de u. Double u = quadruple l'énergie."
+          },
+          {
+            nom: "Courant de charge",
+            formule: "i(t) = (E/R) · e^(−t/τ)",
+            explication: "Le courant est maximal à t = 0 (vaut E/R) puis décroît exponentiellement vers 0."
+          },
+          {
+            nom: "Équation différentielle (charge)",
+            formule: "R·C · du/dt + u = E",
+            explication: "Équation du 1er ordre. La solution est u(t) = E·(1 − e^(−t/RC)). C'est l'équation fondamentale du circuit RC en charge."
           }
         ]
       },

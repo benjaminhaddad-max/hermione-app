@@ -134,16 +134,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Le raisonnement par récurrence (méthode de preuve) sert à démontrer qu'une propriété P(n) est vraie pour tout entier n ≥ n₀.\n• C'est comme une file de dominos alignés.\n• On pousse le premier domino : c'est l'initialisation.\n• On prouve que chaque domino fait tomber le suivant : c'est l'hérédité.\n• Résultat : tous les dominos tombent, donc P(n) est vraie pour tout n.\n• En gros : on vérifie un cas de départ, puis on montre que ça se propage.\n• Ce chapitre couvre aussi les limites de suites (vers quelle valeur une suite se dirige).\n• On apprend à utiliser des théorèmes comme les gendarmes (encadrement) ou la convergence monotone (suite croissante bornée).\n• En gros : on maîtrise deux outils puissants — la preuve par récurrence et le calcul de limites.",
-        points_cles: [
-          "Récurrence = initialisation + hérédité + conclusion (3 étapes obligatoires)",
-          "L'initialisation est indispensable : sans elle, rien ne fonctionne",
-          "C'est comme les dominos : le premier doit tomber pour que la chaîne démarre",
-          "Théorème de convergence monotone : suite croissante ET majorée → convergente",
-          "Théorème des gendarmes : une suite coincée entre deux limites identiques converge vers cette limite",
-          "Les opérations sur les limites (+, −, ×, ÷) ont des règles précises",
-          "Attention aux formes indéterminées (FI) : +∞ − ∞, 0 × ∞, ∞/∞, 0/0",
-          "Les FI nécessitent de transformer l'expression (factoriser, simplifier, encadrer)"
+        texte: "Le raisonnement par récurrence permet de prouver qu'une propriété est vraie pour tous les entiers. Ce chapitre aborde aussi les limites de suites, c'est-à-dire vers quelle valeur une suite se dirige quand n grandit.",
+        sections: [
+          {
+            titre: "Le principe de la récurrence",
+            contenu: `Le raisonnement par récurrence sert à démontrer qu'une propriété P(n) est vraie pour tout entier n ≥ n₀.\n\nC'est comme une file de dominos alignés. On pousse le premier domino : c'est l'initialisation. Ensuite, on prouve que chaque domino fait tomber le suivant : c'est l'hérédité. Si les deux conditions sont remplies, tous les dominos tombent.\n\nConcrètement, on procède en 3 étapes obligatoires :\n\n1. Initialisation : on vérifie que P(n₀) est vraie au rang de départ.\n2. Hérédité : on suppose P(n) vraie (hypothèse de récurrence), et on montre que P(n+1) est vraie.\n3. Conclusion : on écrit que P(n) est vraie pour tout n ≥ n₀ d'après le principe de récurrence.\n\nEn gros : on vérifie un cas de départ, puis on montre que ça se propage de rang en rang.\n\nAttention : les trois étapes sont obligatoires. Oublier l'initialisation ou la conclusion coûte des points au bac.`
+          },
+          {
+            titre: "Pourquoi l'initialisation est indispensable",
+            contenu: `Sans initialisation, la récurrence est invalide. C'est comme une file de dominos où personne ne pousse le premier : aucun ne tombe.\n\nUn contre-exemple classique le montre bien. On veut prouver que « 6ⁿ + 1 est multiple de 5 ». L'hérédité fonctionne parfaitement. Pourtant, 6¹ + 1 = 7, et 7 n'est pas multiple de 5.\n\nEn gros : l'hérédité peut être correcte, mais la propriété est fausse si le premier cas ne marche pas.\n\nTraduction : l'initialisation, c'est le fondement de toute la preuve. Sans elle, l'hérédité tourne dans le vide.\n\nC'est comme un escalier : si la première marche n'existe pas, tu ne peux pas monter. L'hérédité te dit comment passer d'une marche à la suivante, mais encore faut-il pouvoir poser le pied sur la première.`
+          },
+          {
+            titre: "Exemples classiques de récurrence",
+            contenu: `Voici les formules classiques démontrées par récurrence au bac :\n\n• Somme des entiers : 1 + 2 + … + n = n(n+1)/2.\nTraduction : c'est comme additionner les numéros de marches d'un escalier.\n\n• Somme des carrés : 1² + 2² + … + n² = n(n+1)(2n+1)/6.\nC'est une formule incontournable du programme.\n\n• Somme des cubes : 1³ + 2³ + … + n³ = [n(n+1)/2]².\nTraduction : le carré de la somme des entiers. Résultat élégant.\n\n• Inégalité de Bernoulli : pour a > 0 et n ≥ 1, (1+a)ⁿ ≥ 1 + na.\nEn gros : (1+a)ⁿ grandit plus vite que 1 + na.\n\n• Suites géométriques : ∑(k=0 à n) qᵏ = (1 − qⁿ⁺¹)/(1 − q) pour q ≠ 1.\n\nChaque preuve suit le même schéma : initialisation, hérédité, conclusion.`
+          },
+          {
+            titre: "Limites de suites : les opérations",
+            contenu: `La limite d'une suite décrit la valeur vers laquelle ses termes se dirigent quand n → +∞.\n\nLes opérations sur les limites suivent des règles précises :\n\n• Somme : lim(uₙ + vₙ) = lim(uₙ) + lim(vₙ).\n• Produit : lim(uₙ × vₙ) = lim(uₙ) × lim(vₙ).\n• Quotient : lim(uₙ / vₙ) = lim(uₙ) / lim(vₙ), si lim(vₙ) ≠ 0.\n\nMais attention aux formes indéterminées (FI) : +∞ − ∞, 0 × ∞, ∞/∞, 0/0.\n\nEn gros : dans ces cas, le calcul « hésite ». Il faut transformer l'expression.\n\nTraduction : factoriser, simplifier ou encadrer pour lever l'indétermination. C'est comme dénouer un nœud : on ne peut pas tirer directement, il faut trouver le bon bout.\n\nLes limites de référence à connaître :\n• Si |q| < 1 : lim qⁿ = 0.\n• Si q > 1 : lim qⁿ = +∞.\n• Si q = 1 : lim qⁿ = 1.`
+          },
+          {
+            titre: "Théorèmes de comparaison et encadrement",
+            contenu: `Quand le calcul direct de la limite ne suffit pas, on utilise des théorèmes de comparaison.\n\n• Comparaison directe : si uₙ ≥ vₙ pour tout n et lim(vₙ) = +∞, alors lim(uₙ) = +∞.\nEn gros : plus grand qu'une suite qui explose → elle explose aussi.\n\n• Théorème des gendarmes (encadrement) : si vₙ ≤ uₙ ≤ wₙ et lim(vₙ) = lim(wₙ) = ℓ, alors lim(uₙ) = ℓ.\nC'est comme être coincé entre deux voitures de police qui vont au même endroit. La suite du milieu est forcée de suivre.\n\nTraduction : on « coince » la suite entre deux suites dont on connaît la limite.\n\nEn gros : si le plancher et le plafond convergent vers le même point, ce qui est entre les deux converge aussi.\n\nCe théorème est très utile pour les suites difficiles à calculer directement. On cherche un encadrement simple, et on conclut.`
+          },
+          {
+            titre: "Convergence monotone bornée",
+            contenu: `Le théorème de convergence monotone est un outil fondamental.\n\n• Suite croissante ET majorée → convergente.\nC'est comme monter un escalier avec un plafond : on finit par se stabiliser.\n\n• Suite décroissante ET minorée → convergente.\nC'est comme descendre avec un plancher : on ne peut pas aller plus bas.\n\nAttention : ce théorème ne donne PAS la valeur de la limite. Il dit juste qu'elle existe.\n\nEn gros : pour trouver la limite, on utilise d'autres méthodes (point fixe, par exemple).\n\nTraduction : si uₙ₊₁ = f(uₙ) et la suite converge vers ℓ, alors ℓ = f(ℓ). On résout cette équation pour trouver la limite.\n\nPiège classique : « majorée » ne veut pas dire « convergente » toute seule. Il faut aussi la monotonie. De même, « croissante » ne suffit pas. Il faut aussi le majorant.`
+          }
         ]
       },
       page2_concepts: {
@@ -393,16 +409,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• La dérivation (opération mathématique) mesure la vitesse de variation d'une fonction.\n• Le nombre dérivé f'(a) donne la pente de la tangente (droite qui frôle la courbe) en x = a.\n• C'est comme mesurer la vitesse d'une voiture à un instant précis sur un compteur.\n• Ce chapitre approfondit la dérivation avec les fonctions composées (v∘u), où l'on enchaîne deux fonctions.\n• On y apprend à dériver eᵘ, ln(u), uⁿ et √u grâce à la formule de la dérivée composée.\n• Le chapitre introduit aussi la convexité (courbure vers le haut, comme un bol) et la concavité (courbure vers le bas, comme un chapeau).\n• En gros : on étudie comment une fonction varie ET comment sa courbure se comporte.\n• La dérivée seconde f'' (dérivée de la dérivée) est l'outil clé pour la convexité.\n• En gros : f' dit « ça monte ou ça descend ? », f'' dit « ça courbe vers le haut ou vers le bas ? ».",
-        points_cles: [
-          "Nombre dérivé f'(a) = pente de la tangente en x = a",
-          "C'est comme la vitesse instantanée sur un compteur",
-          "Dérivée composée : (v∘u)' = u' × v'∘u (formule essentielle)",
-          "f' > 0 ⇒ f croissante, f' < 0 ⇒ f décroissante",
-          "f'' > 0 ⇒ convexe (bol, sourire ∪), f'' < 0 ⇒ concave (chapeau, triste ∩)",
-          "Point d'inflexion : f'' = 0 ET f'' change de signe",
-          "La tangente traverse la courbe au point d'inflexion",
-          "Toujours penser à dériver « l'intérieur » dans une composée"
+        texte: "La dérivation mesure la vitesse de variation d'une fonction. Ce chapitre approfondit les dérivées composées et introduit la convexité, qui décrit la courbure d'une courbe.",
+        sections: [
+          {
+            titre: "Le nombre dérivé et la tangente",
+            contenu: `Le nombre dérivé f'(a) mesure la pente de la courbe au point d'abscisse a.\n\nSa définition exacte est : f'(a) = lim(h→0) [f(a+h) − f(a)] / h.\n\nC'est comme mesurer la vitesse d'une voiture à un instant précis. Le compteur affiche une valeur instantanée. C'est exactement ce que fait f'(a) : la « vitesse » de f en x = a.\n\nL'équation de la tangente à la courbe en x = a est :\ny = f'(a)(x − a) + f(a)\n\nTraduction : c'est la droite qui « colle » à la courbe en un seul point. Le coefficient directeur est f'(a), et elle passe par le point (a, f(a)).\n\nEn gros : f'(a) te donne la pente, et la formule de la tangente te donne la droite entière.\n\nLa tangente est un outil puissant. Elle sert à approcher localement la courbe par une droite. C'est la meilleure approximation linéaire de f au voisinage de a.`
+          },
+          {
+            titre: "Sens de variation et extrema",
+            contenu: `Le signe de la dérivée donne le sens de variation de la fonction.\n\n• f'(x) > 0 sur un intervalle → f est strictement croissante.\n• f'(x) < 0 sur un intervalle → f est strictement décroissante.\n• f'(x) = 0 en un point a → candidat pour un extremum.\n\nC'est comme la pente d'une route. Si la pente est positive, tu montes. Si elle est négative, tu descends. Au sommet, la pente vaut zéro.\n\nAttention : f'(a) = 0 ne suffit pas pour conclure. Il faut vérifier que f' change de signe autour de a.\n\n• Si f' passe de + à − en a : maximum local.\n• Si f' passe de − à + en a : minimum local.\n• Si f' ne change pas de signe : pas d'extremum (point d'inflexion horizontal).\n\nEn gros : on construit le tableau de variations pour résumer tout ça. C'est la « carte d'identité » du comportement de f.`
+          },
+          {
+            titre: "La dérivée composée (v∘u)'",
+            contenu: `Quand on enchaîne deux fonctions, on obtient une fonction composée : (v∘u)(x) = v(u(x)).\n\nC'est comme une chaîne de production. D'abord la machine u transforme x, puis la machine v transforme le résultat.\n\nLa formule de la dérivée composée est :\n(v∘u)'(x) = u'(x) × v'(u(x))\n\nTraduction : on dérive « l'intérieur » (u') et on multiplie par la dérivée de « l'extérieur » évaluée en u(x).\n\nVoici les cas les plus fréquents au bac :\n\n• (eᵘ)' = u' × eᵘ. Exemple : (e²ˣ)' = 2e²ˣ.\n• (ln u)' = u'/u. Exemple : (ln(3x+1))' = 3/(3x+1).\n• (uⁿ)' = n × u' × uⁿ⁻¹. Exemple : ((2x+1)³)' = 6(2x+1)².\n• (√u)' = u'/(2√u). Exemple : (√(x+1))' = 1/(2√(x+1)).\n• (1/u)' = −u'/u². Exemple : (1/(x+1))' = −1/(x+1)².\n\nEn gros : ne JAMAIS oublier de dériver « ce qu'il y a dedans ». C'est l'erreur la plus fréquente au bac.`
+          },
+          {
+            titre: "Convexité et concavité",
+            contenu: `La dérivée seconde f'' (la dérivée de f') renseigne sur la courbure de la courbe.\n\n• f''(x) ≥ 0 sur un intervalle → f est convexe. La courbe « sourit » (forme ∪).\nC'est comme un bol posé à l'endroit. La courbe est en dessous de ses cordes (sécantes).\n\n• f''(x) ≤ 0 sur un intervalle → f est concave. La courbe « fait la tête » (forme ∩).\nC'est comme un chapeau retourné. La courbe est au-dessus de ses cordes.\n\nEn gros : f' dit « ça monte ou ça descend ? ». f'' dit « ça courbe vers le haut ou vers le bas ? ».\n\nTraduction : si f est convexe, la pente f' est croissante. La courbe accélère de plus en plus.\n\nSi f est concave, la pente f' est décroissante. La courbe freine de plus en plus.\n\nLa convexité a aussi une interprétation géométrique. Pour une fonction convexe, la tangente est toujours SOUS la courbe. Pour une concave, la tangente est toujours AU-DESSUS.`
+          },
+          {
+            titre: "Le point d'inflexion",
+            contenu: `Un point d'inflexion est un point où la courbe change de courbure.\n\nElle passe de convexe à concave, ou de concave à convexe. C'est le moment où la courbe « bascule ».\n\nLes conditions pour un point d'inflexion en x = a sont :\n\n1. f''(a) = 0.\n2. f'' change de signe en a.\n\nAttention : f''(a) = 0 seul ne suffit PAS. Il faut absolument que f'' change de signe.\n\nC'est comme un virage en voiture. Tu tournais à gauche, et maintenant tu tournes à droite. Le point d'inflexion, c'est le moment exact où tu es entre les deux.\n\nEn gros : au point d'inflexion, la tangente traverse la courbe. C'est le seul endroit où ça arrive.\n\nTraduction : sur le tableau de signes de f'', le point d'inflexion correspond au changement de signe. Si f'' passe de + à − ou de − à +, il y a inflexion.`
+          },
+          {
+            titre: "Tableau récapitulatif des dérivées",
+            contenu: `Voici les dérivées usuelles à connaître par cœur :\n\n• (xⁿ)' = nxⁿ⁻¹. Exemple : (x³)' = 3x².\n• (eˣ)' = eˣ. L'exponentielle se reproduit à l'identique.\n• (ln x)' = 1/x. Attention : défini pour x > 0.\n• (√x)' = 1/(2√x). Cas particulier de xⁿ avec n = 1/2.\n• (1/x)' = −1/x². Cas particulier de xⁿ avec n = −1.\n\nPour les composées, on multiplie par u' :\n\n• (eᵘ)' = u' × eᵘ.\n• (ln u)' = u'/u.\n• (uⁿ)' = n × u' × uⁿ⁻¹.\n\nEn gros : la composée, c'est la dérivée « classique » multipliée par u'. C'est le facteur qu'on oublie le plus souvent.\n\nTraduction : quand tu dérives « quelque chose de compliqué à l'intérieur », n'oublie jamais la dérivée de l'intérieur devant.`
+          }
         ]
       },
       page2_concepts: {
@@ -652,16 +684,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Les probabilités (branche des maths) servent à modéliser le hasard de manière rigoureuse.\n• On associe un nombre entre 0 et 1 à chaque événement : 0 = impossible, 1 = certain.\n• C'est comme donner une note de « chance » à chaque résultat possible.\n• Ce chapitre introduit les variables aléatoires (on attribue un nombre à chaque résultat).\n• On apprend les probabilités conditionnelles : la chance qu'un événement se produise sachant qu'un autre a eu lieu.\n• C'est comme se demander « quelle est la chance de pluie sachant qu'il y a des nuages ? ».\n• La loi binomiale (loi de probabilité) permet de compter les succès dans des épreuves répétées.\n• En gros : on apprend à calculer des chances, des moyennes et des dispersions.\n• L'espérance (moyenne théorique) et la variance (mesure de la dispersion) sont les outils clés.",
-        points_cles: [
-          "Variable aléatoire X : fonction qui associe un nombre à chaque résultat",
-          "Espérance E(X) = moyenne pondérée par les probabilités",
-          "Variance V(X) = mesure de la dispersion autour de la moyenne",
-          "Probabilité conditionnelle : P sachant qu'un autre événement s'est produit",
-          "Formule des probabilités totales : on découpe en cas et on additionne",
-          "Indépendance : savoir A ne change rien pour B → P(A ∩ B) = P(A) × P(B)",
-          "Loi binomiale B(n, p) : nombre de succès dans n épreuves indépendantes",
-          "Problèmes de seuil : trouver n tel qu'une probabilité dépasse un niveau donné"
+        texte: "Les probabilités modélisent le hasard de manière rigoureuse. Ce chapitre introduit les variables aléatoires, les probabilités conditionnelles et la loi binomiale.",
+        sections: [
+          {
+            titre: "Expérience aléatoire et univers",
+            contenu: `Une expérience aléatoire est une expérience dont on ne peut pas prévoir le résultat à l'avance.\n\nL'ensemble de tous les résultats possibles s'appelle l'univers, noté Ω. Par exemple, pour un lancer de dé, Ω = {1, 2, 3, 4, 5, 6}.\n\nUn événement est un sous-ensemble de Ω. Par exemple, « obtenir un nombre pair » = {2, 4, 6}.\n\nÀ chaque événement, on associe un nombre entre 0 et 1 :\n\n• 0 = événement impossible (ne se produira jamais).\n• 1 = événement certain (se produira toujours).\n• Entre 0 et 1 = plus ou moins probable.\n\nC'est comme donner une note de « chance » à chaque résultat. Plus la note est haute, plus c'est probable.\n\nEn gros : la probabilité mesure à quel point un événement est susceptible de se réaliser.`
+          },
+          {
+            titre: "Variable aléatoire, espérance et variance",
+            contenu: `Une variable aléatoire X est une fonction qui associe un nombre à chaque résultat de l'expérience.\n\nC'est comme mettre une étiquette numérique sur chaque issue. Par exemple, X = gain au jeu.\n\nL'espérance E(X) est la moyenne pondérée des valeurs de X par leurs probabilités :\nE(X) = ∑ xᵢ × P(X = xᵢ)\n\nTraduction : c'est ce qu'on obtiendrait « en moyenne » si on répétait l'expérience un très grand nombre de fois.\n\nLa variance V(X) mesure la dispersion autour de l'espérance :\nV(X) = E(X²) − [E(X)]²\n\nC'est comme comparer des notes groupées (V petit) à des notes très étalées (V grand). Plus V est grand, plus les résultats sont éparpillés.\n\nL'écart-type σ(X) = √V(X) est dans la même unité que X.\n\nEn gros : E(X) dit « où est le centre ? ». V(X) dit « à quel point c'est dispersé autour du centre ? ».`
+          },
+          {
+            titre: "Probabilité conditionnelle",
+            contenu: `La probabilité conditionnelle répond à la question : « quelle est la chance de B sachant que A s'est produit ? ».\n\nLa formule est : P_A(B) = P(A ∩ B) / P(A)\n\nAttention : P(A) doit être strictement positif. Sinon la formule n'a pas de sens.\n\nC'est comme se demander : « sachant qu'il pleut, quelle chance d'avoir froid ? ». Le fait de savoir qu'il pleut modifie la probabilité.\n\nSur un arbre pondéré, les probabilités conditionnelles se lisent directement sur les branches.\n\nTraduction : la première branche donne P(A), la deuxième branche donne P_A(B), et le produit des deux donne P(A ∩ B).\n\nEn gros : P_A(B) ≠ P(B) en général. Le fait de savoir A change la donne. C'est toute la différence entre « la chance de B » et « la chance de B sachant A ».`
+          },
+          {
+            titre: "Formule des probabilités totales et indépendance",
+            contenu: `La formule des probabilités totales permet de calculer P(B) en découpant selon les cas.\n\nSi A₁, A₂, …, Aₙ forment une partition de Ω (ils couvrent tout et ne se chevauchent pas) :\nP(B) = ∑ P(Aᵢ) × P_Aᵢ(B)\n\nC'est comme calculer une note globale en additionnant les contributions de chaque matière.\n\nTraduction : on passe en revue tous les cas possibles et on additionne. C'est très utile avec les arbres pondérés.\n\nDeux événements A et B sont indépendants si :\nP(A ∩ B) = P(A) × P(B)\n\nEn gros : savoir que A s'est produit ne change rien pour B. Les deux événements « ne se parlent pas ».\n\nC'est comme tirer deux cartes avec remise. Le premier tirage n'influence pas le second.\n\nAttention : indépendance ≠ incompatibilité. Deux événements incompatibles (P(A ∩ B) = 0) ne sont JAMAIS indépendants (sauf si l'un est impossible).`
+          },
+          {
+            titre: "Loi binomiale B(n, p)",
+            contenu: `La loi binomiale modélise le nombre de succès dans un schéma de Bernoulli.\n\nUn schéma de Bernoulli, c'est :\n• n épreuves identiques et indépendantes.\n• Chaque épreuve a exactement 2 issues : succès (probabilité p) ou échec (probabilité 1−p).\n\nC'est comme lancer n fois une pièce truquée et compter le nombre de « pile ».\n\nSi X = nombre de succès, alors X suit la loi B(n, p) :\nP(X = k) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ\n\nOù C(n,k) = n! / (k!(n−k)!) est le coefficient binomial.\n\nTraduction : C(n,k) choisit les places des succès, pᵏ compte les succès, (1−p)ⁿ⁻ᵏ compte les échecs.\n\nFormules directes :\n• E(X) = np (en moyenne np succès sur n épreuves).\n• V(X) = np(1−p).\n\nEn gros : la loi binomiale est LE modèle pour « combien de succès sur n essais ? ».`
+          },
+          {
+            titre: "Le problème du seuil",
+            contenu: `Un problème de seuil consiste à trouver le plus petit n tel qu'une probabilité dépasse (ou reste sous) un seuil donné.\n\nExemple typique : « Combien de lancers faut-il pour que la probabilité d'avoir au moins un succès dépasse 0.99 ? ».\n\nLa méthode repose souvent sur les logarithmes.\n\n1. Écrire l'inégalité avec la probabilité.\n2. Utiliser les propriétés de ln pour isoler n.\n3. Arrondir à l'entier supérieur.\n\nExemple : P(X ≥ 1) = 1 − (1−p)ⁿ ≥ 0.99.\nDonc (1−p)ⁿ ≤ 0.01.\nDonc n × ln(1−p) ≤ ln(0.01).\nDonc n ≥ ln(0.01) / ln(1−p).\n\nAttention : ln(1−p) est négatif, donc l'inégalité change de sens quand on divise.\n\nEn gros : le problème de seuil demande de « résoudre à l'envers ». On connaît le résultat voulu et on cherche n.\n\nTraduction : c'est un classique du bac. La méthode est toujours la même : poser l'inégalité, passer au ln, isoler n.`
+          }
         ]
       },
       page2_concepts: {
@@ -911,13 +959,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "La géométrie dans l'espace étend les concepts du plan à trois dimensions. On travaille avec des points, droites et plans dans un espace à 3 coordonnées (x, y, z). La perspective cavalière permet de représenter l'espace sur une feuille. Les vecteurs permettent de décrire positions et directions. En gros : on apprend à raisonner en 3D avec des outils algébriques.",
-        points_cles: [
-          "Perspective cavalière : parallélisme conservé, pas les angles",
-          "Vecteurs : colinéarité (droites), coplanarité (plans)",
-          "Relations droites/plans : parallèles, sécants, inclus",
-          "Représentation paramétrique d'une droite",
-          "Repère de l'espace (O ; i⃗, j⃗, k⃗)"
+        texte: "La géométrie dans l'espace étend les concepts du plan à trois dimensions. On y travaille avec des coordonnées, des vecteurs, des droites et des plans en 3D.",
+        sections: [
+          {
+            titre: "La perspective cavalière",
+            contenu: `La perspective cavalière est une méthode de dessin. Elle permet de représenter l'espace 3D sur une feuille 2D.\n\nC'est comme dessiner une boîte vue de côté. On garde certaines propriétés, mais pas toutes.\n\nCe qui est CONSERVÉ :\n• Le parallélisme : les droites parallèles restent parallèles.\n• Les milieux : le milieu d'un segment reste au milieu.\n\nCe qui est DÉFORMÉ :\n• Les angles : un angle droit n'apparaît pas forcément droit.\n• Les longueurs en profondeur (fuyantes) : elles sont réduites.\n\nEn gros : on peut faire confiance au parallélisme, mais pas aux angles ni aux longueurs.\n\nTraduction : quand tu dessines un cube en perspective cavalière, les arêtes parallèles restent parallèles. Mais les arêtes en profondeur sont plus courtes que les autres.\n\nC'est le premier outil du chapitre. Il sert à visualiser les problèmes avant de calculer.`
+          },
+          {
+            titre: "Vecteurs, colinéarité et coplanarité",
+            contenu: `Les vecteurs dans l'espace ont trois coordonnées : u⃗(x ; y ; z). C'est comme une flèche avec une direction et une longueur dans un espace 3D.\n\nDeux vecteurs u⃗ et v⃗ sont colinéaires s'il existe un réel k tel que v⃗ = k·u⃗.\n\nEn coordonnées : les rapports x'/x = y'/y = z'/z sont tous égaux.\n\nTraduction : colinéaires = même direction. C'est comme deux routes qui vont exactement dans le même sens.\n\nTrois vecteurs u⃗, v⃗, w⃗ sont coplanaires si w⃗ = a·u⃗ + b·v⃗.\n\nC'est comme trois flèches qui tiennent toutes sur une même feuille de papier. w⃗ est une combinaison linéaire de u⃗ et v⃗.\n\nEn gros : colinéarité = caractérise les droites. Coplanarité = caractérise les plans.\n\nPour qu'un repère existe, il faut trois vecteurs NON coplanaires. Sinon, on reste coincé dans un plan.`
+          },
+          {
+            titre: "Positions relatives des droites et plans",
+            contenu: `Dans l'espace, les positions relatives sont plus riches que dans le plan.\n\nDeux droites peuvent être :\n• Parallèles : vecteurs directeurs colinéaires (même direction).\n• Sécantes : elles se croisent en un point.\n• Gauches : ni parallèles, ni sécantes.\n\nLes droites gauches sont une NOUVEAUTÉ de l'espace. Ça n'existe pas dans le plan. C'est comme une route au sol et un câble électrique au-dessus : ils ne se touchent jamais et ne vont pas dans la même direction.\n\nUne droite et un plan peuvent être :\n• Parallèles : le vecteur directeur de la droite est combinaison linéaire des vecteurs du plan.\n• Sécants : ils se croisent en un point.\n• La droite est incluse dans le plan.\n\nDeux plans peuvent être :\n• Parallèles : mêmes directions.\n• Sécants : ils se coupent selon une droite.\n\nEn gros : dans l'espace, tout est plus complexe. On a plus de cas à considérer qu'en 2D.`
+          },
+          {
+            titre: "Le repère de l'espace et les coordonnées",
+            contenu: `Un repère de l'espace est formé d'un point O (l'origine) et de trois vecteurs i⃗, j⃗, k⃗ non coplanaires.\n\nChaque point M de l'espace a des coordonnées uniques (x ; y ; z) :\nOM⃗ = x·i⃗ + y·j⃗ + z·k⃗\n\nC'est comme un GPS qui utilise latitude, longitude et altitude. Trois nombres suffisent pour localiser n'importe quel point.\n\nLe vecteur AB⃗ se calcule par :\nAB⃗ = (xB − xA ; yB − yA ; zB − zA)\n\nTraduction : coordonnées d'arrivée moins coordonnées de départ.\n\nLa distance entre A et B :\nAB = √((xB−xA)² + (yB−yA)² + (zB−zA)²)\n\nEn gros : c'est le théorème de Pythagore généralisé en 3D.\n\nLe milieu de [AB] :\nM = ((xA+xB)/2 ; (yA+yB)/2 ; (zA+zB)/2)\n\nTraduction : on fait la moyenne de chaque coordonnée. C'est comme couper un segment en deux parts égales.`
+          },
+          {
+            titre: "Représentation paramétrique d'une droite",
+            contenu: `Une droite dans l'espace se décrit par une représentation paramétrique.\n\nPour une droite passant par A(x₀ ; y₀ ; z₀) de vecteur directeur u⃗(a ; b ; c) :\n\nx = x₀ + at\ny = y₀ + bt\nz = z₀ + ct\navec t ∈ ℝ\n\nC'est comme avancer le long d'un rail, pas à pas. Chaque valeur de t donne un point différent sur la droite.\n\nTraduction : quand t = 0, on est en A. Quand t = 1, on a avancé d'un vecteur u⃗. Quand t = −1, on est « derrière » A.\n\nEn gros : le paramètre t parcourt toute la droite. C'est un « curseur » qui se déplace le long de la droite.\n\nPour vérifier si un point M appartient à la droite, on vérifie s'il existe un t qui satisfait les trois équations en même temps.\n\nPour trouver l'intersection de deux droites, on résout le système formé par leurs deux représentations paramétriques.`
+          },
+          {
+            titre: "Représentation paramétrique d'un plan",
+            contenu: `Un plan se décrit aussi par une représentation paramétrique, mais avec DEUX paramètres.\n\nPour un plan passant par A(x₀ ; y₀ ; z₀) de vecteurs directeurs u⃗(a ; b ; c) et v⃗(a' ; b' ; c') :\n\nx = x₀ + at + a's\ny = y₀ + bt + b's\nz = z₀ + ct + c's\navec t, s ∈ ℝ\n\nC'est comme se déplacer sur un terrain plat. Le paramètre t te fait avancer dans une direction, le paramètre s dans une autre.\n\nTraduction : avec t et s, tu peux atteindre n'importe quel point du plan. Un seul paramètre donne une droite, deux paramètres donnent un plan.\n\nPour trouver l'intersection de deux plans non parallèles, on résout le système de leurs équations. Le résultat est une droite.\n\nC'est comme deux murs d'une pièce qui se rejoignent sur une arête. L'arête est la droite d'intersection.\n\nEn gros : la géométrie dans l'espace, c'est traduire des problèmes géométriques en systèmes d'équations. Les vecteurs et les coordonnées sont les outils de traduction.`
+          }
         ]
       },
       page2_concepts: {
@@ -925,27 +992,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Perspective cavalière",
-            definition: "Méthode de dessin en 3D sur une feuille. Les parallèles restent parallèles, les milieux sont conservés, mais les angles et les longueurs en profondeur sont déformés."
+            definition: "Méthode de dessin qui représente l'espace 3D sur une feuille 2D. Les droites parallèles restent parallèles, les milieux sont conservés. C'est comme dessiner une boîte vue de côté. En gros : les angles et les longueurs en profondeur sont déformés, mais le parallélisme reste intact."
           },
           {
             terme: "Colinéarité",
-            definition: "Deux vecteurs u⃗ et v⃗ sont colinéaires s'il existe k ∈ ℝ tel que v⃗ = k·u⃗. En gros : même direction."
+            definition: "Deux vecteurs u⃗ et v⃗ sont colinéaires s'il existe k ∈ ℝ tel que v⃗ = k·u⃗. C'est comme deux flèches pointant dans la même direction (ou direction opposée). En gros : même direction = colinéaires."
           },
           {
             terme: "Coplanarité",
-            definition: "Trois vecteurs u⃗, v⃗, w⃗ sont coplanaires si w⃗ = a·u⃗ + b·v⃗. En gros : les trois « tiennent » dans un même plan."
+            definition: "Trois vecteurs u⃗, v⃗, w⃗ sont coplanaires si w⃗ = a·u⃗ + b·v⃗. C'est comme trois flèches qui tiennent toutes dans une même feuille de papier. En gros : w⃗ est une combinaison linéaire de u⃗ et v⃗."
           },
           {
             terme: "Droites gauches",
-            definition: "Deux droites non coplanaires : ni parallèles, ni sécantes. Spécifique à l'espace (n'existe pas dans le plan)."
+            definition: "Deux droites qui ne sont ni parallèles, ni sécantes. Elles ne se croisent jamais et ne vont pas dans la même direction. C'est comme une route au sol et un câble électrique au-dessus : ils ne se touchent jamais. En gros : ça n'existe qu'en 3D."
           },
           {
-            terme: "Représentation paramétrique",
-            definition: "Écriture d'une droite avec un paramètre t : x = x₀+at, y = y₀+bt, z = z₀+ct. Le point (x₀,y₀,z₀) est sur la droite, (a,b,c) est le vecteur directeur."
+            terme: "Représentation paramétrique d'une droite",
+            definition: "Écriture d'une droite avec un paramètre t : x = x₀+at, y = y₀+bt, z = z₀+ct. Le point A(x₀,y₀,z₀) est sur la droite, u⃗(a,b,c) est le vecteur directeur. C'est comme avancer le long d'un rail, pas à pas. En gros : on « parcourt » la droite en faisant varier t."
           },
           {
             terme: "Repère de l'espace",
-            definition: "Un point O et trois vecteurs i⃗, j⃗, k⃗ non coplanaires. Chaque point M a des coordonnées (x;y;z) uniques."
+            definition: "Un point O (l'origine) et trois vecteurs i⃗, j⃗, k⃗ non coplanaires. Chaque point M a des coordonnées (x;y;z) uniques. C'est comme un système GPS avec trois axes perpendiculaires."
+          },
+          {
+            terme: "Points alignés dans l'espace",
+            definition: "Trois points A, B, C sont alignés si AB⃗ et AC⃗ sont colinéaires. C'est comme vérifier que trois villes sont sur la même route. En gros : il existe k tel que AC⃗ = k · AB⃗."
+          },
+          {
+            terme: "Intersection de deux plans",
+            definition: "Deux plans non parallèles se coupent selon une droite. On résout le système de leurs deux équations pour trouver cette droite. C'est comme deux murs d'une pièce qui se rejoignent sur une arête."
+          },
+          {
+            terme: "Plan défini par trois points",
+            definition: "Trois points non alignés A, B, C définissent un unique plan. Les vecteurs directeurs du plan sont AB⃗ et AC⃗. En gros : comme une feuille de papier posée sur trois punaises."
+          },
+          {
+            terme: "Droite et plan sécants",
+            definition: "Une droite et un plan sont sécants s'ils ont exactement un point d'intersection. Le vecteur directeur de la droite n'est pas combinaison des vecteurs du plan. En gros : la droite « perce » le plan."
           }
         ]
       },
@@ -959,27 +1042,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Représentation paramétrique",
             formule: "x = x₀ + at, y = y₀ + bt, z = z₀ + ct (t ∈ ℝ)",
-            explication: "Droite passant par A(x₀;y₀;z₀) de vecteur directeur u⃗(a;b;c)."
+            explication: "Droite passant par A(x₀;y₀;z₀) de vecteur directeur u⃗(a;b;c). Chaque valeur de t donne un point de la droite."
           },
           {
             nom: "Milieu de [AB]",
             formule: "M = ((xA+xB)/2 ; (yA+yB)/2 ; (zA+zB)/2)",
-            explication: "Les coordonnées du milieu sont les moyennes des coordonnées."
+            explication: "Les coordonnées du milieu sont les moyennes des coordonnées de A et B. C'est comme couper un segment en deux parts égales."
           },
           {
             nom: "Vecteur AB⃗",
             formule: "AB⃗ = (xB−xA ; yB−yA ; zB−zA)",
-            explication: "Coordonnées de B moins coordonnées de A."
+            explication: "Coordonnées de B moins coordonnées de A. En gros : c'est le « déplacement » de A vers B."
           },
           {
-            nom: "Colinéarité",
+            nom: "Colinéarité (test)",
             formule: "u⃗ ∥ v⃗ ⟺ ∃k : v⃗ = k·u⃗",
-            explication: "Rapports des coordonnées tous égaux (si non nulles)."
+            explication: "On vérifie que les rapports des coordonnées sont tous égaux (quand les coordonnées sont non nulles)."
           },
           {
             nom: "Distance dans l'espace",
             formule: "AB = √((xB−xA)² + (yB−yA)² + (zB−zA)²)",
-            explication: "Généralisation du théorème de Pythagore en 3D."
+            explication: "Généralisation du théorème de Pythagore en 3D. C'est comme mesurer la longueur d'un fil tendu entre deux points."
+          },
+          {
+            nom: "Combinaison linéaire (coplanarité)",
+            formule: "w⃗ = a·u⃗ + b·v⃗ ⟺ u⃗, v⃗, w⃗ coplanaires",
+            explication: "On cherche des coefficients a et b tels que w⃗ s'exprime avec u⃗ et v⃗. Si c'est possible, les trois vecteurs sont dans le même plan."
+          },
+          {
+            nom: "Condition de non-coplanarité",
+            formule: "i⃗, j⃗, k⃗ non coplanaires ⟺ forment une base de l'espace",
+            explication: "Trois vecteurs non coplanaires permettent d'exprimer tout vecteur de l'espace comme combinaison. C'est la condition pour un repère."
+          },
+          {
+            nom: "Centre de gravité d'un triangle",
+            formule: "G = ((xA+xB+xC)/3 ; (yA+yB+yC)/3 ; (zA+zB+zC)/3)",
+            explication: "Le centre de gravité (isobarycentre) est la moyenne des coordonnées des trois sommets."
           }
         ]
       },
@@ -1136,13 +1234,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le produit scalaire est un outil puissant pour mesurer des angles, prouver des orthogonalités et calculer des distances dans l'espace. Il associe un nombre réel à deux vecteurs. Quand ce nombre vaut 0, les vecteurs sont perpendiculaires. Ce chapitre introduit aussi les équations de plans et la notion de vecteur normal. En gros : le produit scalaire est la « clé » de la géométrie dans l'espace.",
-        points_cles: [
-          "Produit scalaire : 4 expressions (cosinus, norme, coordonnées, projeté)",
-          "Orthogonalité : u⃗ · v⃗ = 0",
-          "Vecteur normal et équation cartésienne du plan",
-          "Distance d'un point à un plan",
-          "Plans parallèles et perpendiculaires"
+        texte: "Le produit scalaire associe un nombre réel à deux vecteurs. C'est l'outil central pour mesurer des angles, prouver des orthogonalités et écrire des équations de plans.",
+        sections: [
+          {
+            titre: "Le produit scalaire : définition et formules",
+            contenu: `Le produit scalaire de deux vecteurs u⃗ et v⃗ donne un NOMBRE (pas un vecteur).\n\nIl existe plusieurs façons de le calculer :\n\n• Avec le cosinus : u⃗ · v⃗ = ‖u⃗‖ × ‖v⃗‖ × cos(u⃗, v⃗).\nTraduction : on combine les longueurs des vecteurs et l'angle entre eux.\n\n• En coordonnées : u⃗(x;y;z) · v⃗(x';y';z') = xx' + yy' + zz'.\nTraduction : on multiplie coordonnée par coordonnée et on additionne.\n\n• Avec la norme : u⃗ · v⃗ = ½(‖u⃗+v⃗‖² − ‖u⃗‖² − ‖v⃗‖²).\n\nC'est comme mesurer « à quel point deux flèches pointent dans la même direction ». Si le résultat est positif, elles vont « plutôt ensemble ». Si c'est négatif, elles s'opposent. Si c'est zéro, elles sont perpendiculaires.\n\nEn gros : le produit scalaire est la « clé universelle » de la géométrie dans l'espace. Il permet de tout calculer : angles, distances, orthogonalités.`
+          },
+          {
+            titre: "Orthogonalité de vecteurs, droites et plans",
+            contenu: `Deux vecteurs sont orthogonaux (perpendiculaires) quand leur produit scalaire vaut zéro :\nu⃗ ⊥ v⃗ ⟺ u⃗ · v⃗ = 0\n\nC'est comme vérifier si deux rues se croisent à angle droit. On calcule le produit scalaire : s'il vaut zéro, c'est perpendiculaire.\n\nPour les droites : deux droites sont orthogonales si leurs vecteurs directeurs sont orthogonaux.\n\nAttention : dans l'espace, deux droites orthogonales ne se croisent pas forcément. Elles peuvent être orthogonales ET gauches.\n\nPour une droite et un plan : D est orthogonale à P si le vecteur directeur de D est colinéaire au vecteur normal de P.\n\nC'est comme un poteau vertical planté dans le sol. Le poteau est perpendiculaire au sol.\n\nTraduction : D ⊥ P ⟺ u⃗_D = k × n⃗_P.\n\nPour deux plans : ils sont perpendiculaires si leurs vecteurs normaux sont orthogonaux.\nn⃗₁ · n⃗₂ = 0 ⟹ les plans sont perpendiculaires.\n\nEn gros : tout se ramène au produit scalaire. Perpendiculaire = produit scalaire nul.`
+          },
+          {
+            titre: "Le vecteur normal à un plan",
+            contenu: `Un vecteur normal n⃗ est un vecteur perpendiculaire à TOUS les vecteurs contenus dans un plan.\n\nC'est comme un piquet planté verticalement sur le sol. Le piquet pointe dans la direction orthogonale au sol.\n\nLe vecteur normal est la clé pour écrire l'équation d'un plan. Si on connaît n⃗ et un point du plan, on peut écrire l'équation.\n\nComment trouver un vecteur normal ?\n\n• Il est donné dans l'énoncé.\n• On le déduit de l'équation cartésienne (les coefficients de x, y, z).\n• On le calcule à partir de deux vecteurs du plan (produit vectoriel, hors programme mais utile à savoir).\n\nEn gros : le vecteur normal « résume » la direction du plan. Deux plans ont la même direction si et seulement si leurs vecteurs normaux sont colinéaires.\n\nTraduction : connaître le vecteur normal, c'est connaître l'orientation du plan dans l'espace.`
+          },
+          {
+            titre: "Équation cartésienne d'un plan",
+            contenu: `L'équation cartésienne d'un plan est de la forme :\nax + by + cz + d = 0\n\nOù n⃗(a ; b ; c) est le vecteur normal au plan.\n\nTraduction : les coefficients devant x, y et z donnent directement les coordonnées du vecteur normal.\n\nPour trouver d, on substitue un point connu du plan dans l'équation.\n\nExemple : plan de vecteur normal n⃗(2 ; −3 ; 1) passant par A(1 ; 0 ; 2).\n2(x−1) − 3(y−0) + 1(z−2) = 0\n2x − 3y + z − 4 = 0\n\nDeux plans sont parallèles ⟺ leurs vecteurs normaux sont colinéaires.\nC'est comme deux étages d'un immeuble : mêmes directions, mais décalés.\n\nDeux plans sont sécants ⟺ leurs normales ne sont PAS colinéaires.\nLeur intersection est une droite.\n\nEn gros : l'équation cartésienne est l'outil le plus pratique pour travailler avec les plans. On lit le vecteur normal, on calcule les intersections, on vérifie le parallélisme.`
+          },
+          {
+            titre: "Distance d'un point à un plan",
+            contenu: `La distance d'un point M₀(x₀ ; y₀ ; z₀) au plan P : ax + by + cz + d = 0 se calcule par :\n\nd(M₀, P) = |ax₀ + by₀ + cz₀ + d| / √(a² + b² + c²)\n\nTraduction : on remplace x, y, z par les coordonnées du point dans l'équation du plan. On prend la valeur absolue. On divise par la norme du vecteur normal.\n\nC'est comme mesurer la hauteur d'un oiseau au-dessus du sol. La formule donne la distance la plus courte entre le point et le plan.\n\nExemple : distance de M₀(1 ; 2 ; 3) au plan 2x + y − 2z + 1 = 0.\nd = |2(1) + 1(2) − 2(3) + 1| / √(4 + 1 + 4)\nd = |2 + 2 − 6 + 1| / 3 = 1/3\n\nAttention : ne PAS oublier la valeur absolue au numérateur. C'est l'erreur la plus fréquente.\n\nEn gros : cette formule est un classique du bac. Elle est rapide et directe, mais il faut être soigneux avec les calculs.`
+          },
+          {
+            titre: "Le projeté orthogonal",
+            contenu: `Le projeté orthogonal de M sur un plan P est le point H de P le plus proche de M.\n\nLe segment [MH] est perpendiculaire au plan. Sa longueur est la distance de M à P.\n\nC'est comme l'ombre d'un point sous un soleil vertical. L'ombre tombe au pied de la perpendiculaire.\n\nPour trouver H concrètement :\n\n1. Écrire la droite (MH) passant par M de vecteur directeur n⃗ (le vecteur normal au plan).\n2. Écrire la représentation paramétrique de cette droite.\n3. Substituer dans l'équation du plan pour trouver t.\n4. Calculer les coordonnées de H.\n\nTraduction : on « descend » depuis M perpendiculairement au plan. Le point d'arrivée est H.\n\nLe projeté orthogonal d'un vecteur u⃗ sur v⃗ est :\nproj = (u⃗ · v⃗ / ‖v⃗‖²) × v⃗\n\nEn gros : c'est la « composante » de u⃗ dans la direction de v⃗. C'est comme décomposer une force en ses composantes.`
+          }
         ]
       },
       page2_concepts: {
@@ -1150,27 +1267,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Produit scalaire",
-            definition: "Opération qui à deux vecteurs associe un réel : u⃗ · v⃗ = ‖u⃗‖‖v⃗‖cos θ = xx'+yy'+zz'. En gros : ça mesure « à quel point les vecteurs vont dans la même direction »."
+            definition: "Opération qui à deux vecteurs associe un nombre réel : u⃗ · v⃗ = ‖u⃗‖‖v⃗‖cos θ = xx'+yy'+zz'. C'est comme mesurer à quel point deux flèches vont dans la même direction. En gros : si le résultat est positif, elles vont « plutôt ensemble » ; si c'est négatif, elles s'opposent."
           },
           {
             terme: "Orthogonalité",
-            definition: "Deux vecteurs sont orthogonaux si u⃗ · v⃗ = 0. En gros : ils sont perpendiculaires (angle de 90°)."
+            definition: "Deux vecteurs sont orthogonaux (perpendiculaires) si u⃗ · v⃗ = 0. C'est comme deux rues qui se croisent à angle droit. En gros : produit scalaire nul = angle de 90°."
           },
           {
-            terme: "Vecteur normal",
-            definition: "Vecteur n⃗ perpendiculaire à un plan P. Il est orthogonal à tous les vecteurs contenus dans P."
+            terme: "Norme d'un vecteur",
+            definition: "La norme ‖u⃗‖ = √(x² + y² + z²) mesure la longueur du vecteur. On a ‖u⃗‖² = u⃗ · u⃗. C'est comme mesurer la longueur d'une flèche avec une règle. En gros : c'est le théorème de Pythagore en 3D."
+          },
+          {
+            terme: "Vecteur normal à un plan",
+            definition: "Vecteur n⃗ perpendiculaire à tous les vecteurs contenus dans un plan P. C'est comme un piquet planté verticalement sur le sol : il est perpendiculaire au sol. En gros : il « pointe » dans la direction orthogonale au plan."
           },
           {
             terme: "Équation cartésienne d'un plan",
-            definition: "ax + by + cz + d = 0, où n⃗(a;b;c) est normal au plan. On trouve d en substituant un point du plan."
+            definition: "ax + by + cz + d = 0, où n⃗(a;b;c) est le vecteur normal au plan. On trouve d en substituant un point connu du plan. En gros : les coefficients devant x, y, z donnent directement le vecteur normal."
+          },
+          {
+            terme: "Plans parallèles",
+            definition: "Deux plans sont parallèles si leurs vecteurs normaux sont colinéaires (même direction). C'est comme deux étages d'un immeuble : ils ne se coupent jamais. En gros : normales colinéaires = plans parallèles."
           },
           {
             terme: "Plans perpendiculaires",
-            definition: "Deux plans sont perpendiculaires si leurs vecteurs normaux sont orthogonaux : n⃗₁ · n⃗₂ = 0."
+            definition: "Deux plans sont perpendiculaires si leurs vecteurs normaux sont orthogonaux : n⃗₁ · n⃗₂ = 0. C'est comme un mur et le sol : ils se coupent à angle droit."
           },
           {
             terme: "Projeté orthogonal",
-            definition: "Le projeté de M sur un plan P est le point H de P le plus proche de M. MH est perpendiculaire à P."
+            definition: "Le projeté de M sur un plan P est le point H de P le plus proche de M. Le segment MH est perpendiculaire à P. C'est comme l'ombre d'un point sous un soleil vertical. En gros : c'est le point « au pied de la perpendiculaire »."
+          },
+          {
+            terme: "Droite orthogonale à un plan",
+            definition: "Une droite D est orthogonale à un plan P si son vecteur directeur est colinéaire au vecteur normal du plan. C'est comme un poteau vertical sur un sol horizontal. En gros : la droite « perce » le plan à angle droit."
+          },
+          {
+            terme: "Angle entre deux vecteurs",
+            definition: "L'angle θ entre u⃗ et v⃗ se calcule avec cos θ = (u⃗ · v⃗)/(‖u⃗‖ × ‖v⃗‖). On obtient θ entre 0° et 180°. En gros : on utilise le produit scalaire pour retrouver l'angle."
           }
         ]
       },
@@ -1184,32 +1317,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Produit scalaire (cosinus)",
             formule: "u⃗ · v⃗ = ‖u⃗‖ × ‖v⃗‖ × cos(u⃗, v⃗)",
-            explication: "Expression avec les normes et l'angle. Utile pour trouver un angle."
+            explication: "Expression avec les normes et l'angle entre les vecteurs. Utile quand on cherche un angle."
           },
           {
             nom: "Produit scalaire (coordonnées)",
             formule: "u⃗ · v⃗ = xx' + yy' + zz'",
-            explication: "Expression calculatoire la plus utilisée."
+            explication: "Expression calculatoire la plus utilisée. On multiplie coordonnée par coordonnée et on additionne."
           },
           {
-            nom: "Norme",
+            nom: "Norme d'un vecteur",
             formule: "‖u⃗‖ = √(x² + y² + z²)",
-            explication: "Longueur du vecteur. On a aussi ‖u⃗‖² = u⃗ · u⃗."
+            explication: "Longueur du vecteur dans l'espace. On a ‖u⃗‖² = u⃗ · u⃗. C'est Pythagore en 3D."
           },
           {
             nom: "Équation du plan",
             formule: "ax + by + cz + d = 0, avec n⃗(a;b;c) normal",
-            explication: "Les coefficients de x, y, z forment le vecteur normal."
+            explication: "Les coefficients de x, y, z forment le vecteur normal. On trouve d en substituant un point du plan."
           },
           {
             nom: "Distance point-plan",
             formule: "d(M₀, P) = |ax₀ + by₀ + cz₀ + d| / √(a² + b² + c²)",
-            explication: "Formule directe. Attention aux valeurs absolues et à la racine."
+            explication: "Formule directe pour la distance du point M₀ au plan P. Attention à la valeur absolue au numérateur."
           },
           {
             nom: "Angle entre deux vecteurs",
             formule: "cos θ = (u⃗ · v⃗) / (‖u⃗‖ × ‖v⃗‖)",
-            explication: "On isole le cosinus à partir du produit scalaire."
+            explication: "On isole le cosinus à partir du produit scalaire. Puis on utilise arccos pour trouver l'angle θ."
+          },
+          {
+            nom: "Projeté orthogonal d'un vecteur",
+            formule: "proj = (u⃗ · v⃗ / ‖v⃗‖²) × v⃗",
+            explication: "Projette u⃗ sur la direction de v⃗. C'est comme « l'ombre » de u⃗ sur v⃗."
+          },
+          {
+            nom: "Condition de perpendicularité droite/plan",
+            formule: "D ⊥ P ⟺ u⃗_D = k · n⃗_P (vecteurs colinéaires)",
+            explication: "Le vecteur directeur de la droite doit être colinéaire au vecteur normal du plan."
           }
         ]
       },
@@ -1366,13 +1509,32 @@ export const TERM_MATHS_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le logarithme népérien (noté ln) est la fonction réciproque de l'exponentielle. Si eʸ = x, alors y = ln(x). Défini pour x > 0, il transforme les produits en sommes et les puissances en produits. C'est un outil essentiel pour résoudre des équations avec des exponentielles et pour les études de fonctions. En gros : ln « défait » ce que fait l'exponentielle.",
-        points_cles: [
-          "ln est la réciproque de exp : ln(eˣ) = x et e^(ln x) = x",
-          "Domaine : ]0 ; +∞[",
-          "ln transforme les produits en sommes",
-          "Dérivée : (ln x)' = 1/x",
-          "Croissances comparées : x l'emporte sur ln(x)"
+        texte: "Le logarithme népérien (ln) est la fonction réciproque de l'exponentielle. C'est un outil essentiel pour résoudre des équations exponentielles et simplifier des calculs.",
+        sections: [
+          {
+            titre: "Rappels sur l'exponentielle",
+            contenu: `Avant d'aborder le logarithme, rappelons l'exponentielle.\n\nLa fonction exponentielle exp(x) = eˣ est définie sur ℝ tout entier. Elle est toujours strictement positive : eˣ > 0 pour tout x.\n\nPropriétés fondamentales :\n• e⁰ = 1.\n• e¹ = e ≈ 2.718.\n• eᵃ⁺ᵇ = eᵃ × eᵇ.\n• eᵃ⁻ᵇ = eᵃ / eᵇ.\n• (eᵃ)ⁿ = eⁿᵃ.\n\nC'est comme une machine qui transforme des additions en multiplications.\n\nTraduction : quand on additionne les exposants, on multiplie les résultats. Et quand on soustrait les exposants, on divise.\n\nLe logarithme népérien est la fonction qui « défait » l'exponentielle. C'est comme la touche « annuler » d'un traitement de texte.\n\nEn gros : exp et ln sont comme une clé et une serrure. L'une défait ce que l'autre fait.`
+          },
+          {
+            titre: "Définition du logarithme népérien",
+            contenu: `Le logarithme népérien, noté ln, est défini pour x > 0 uniquement.\n\nDéfinition : ln(x) est l'unique nombre y tel que eʸ = x.\n\nTraduction : « À quelle puissance faut-il élever e pour obtenir x ? ».\n\nLes deux relations fondamentales :\n• ln(eˣ) = x pour tout x ∈ ℝ.\n• e^(ln x) = x pour tout x > 0.\n\nValeurs de référence à connaître par cœur :\n• ln(1) = 0, car e⁰ = 1.\n• ln(e) = 1, car e¹ = e.\n\nAttention : ln(0) n'existe PAS. Et ln d'un nombre négatif n'existe pas non plus.\n\nC'est comme un traducteur entre le « langage exponentiel » et le « langage normal ». Si eˣ = 7, alors x = ln(7).\n\nEn gros : ln est une bijection de ]0 ; +∞[ vers ℝ. Elle est strictement croissante, continue, et passe par le point (1 ; 0).`
+          },
+          {
+            titre: "Propriétés algébriques de ln",
+            contenu: `Le logarithme transforme les opérations « complexes » en opérations « simples ».\n\n• Produit → Somme : ln(ab) = ln(a) + ln(b).\nC'est comme un convertisseur : multiplier dedans = additionner dehors.\n\n• Quotient → Différence : ln(a/b) = ln(a) − ln(b).\nTraduction : diviser dedans = soustraire dehors.\n\n• Puissance → Produit : ln(aⁿ) = n × ln(a).\nTraduction : l'exposant « descend » devant le ln.\n\n• Inverse : ln(1/a) = −ln(a).\n\nAttention au piège CLASSIQUE : ln(a + b) ≠ ln(a) + ln(b) !\n\nLa propriété ne marche QUE pour les produits, pas pour les sommes. C'est l'erreur la plus fréquente au bac.\n\nEn gros : ln simplifie les calculs. Il « descend d'un cran » la complexité des opérations. Multiplication → addition. Puissance → multiplication.\n\nSigne de ln(x) :\n• Si 0 < x < 1 : ln(x) < 0.\n• Si x = 1 : ln(x) = 0.\n• Si x > 1 : ln(x) > 0.`
+          },
+          {
+            titre: "Dérivée de ln et variations",
+            contenu: `La dérivée de ln(x) est :\n(ln x)' = 1/x, pour x > 0.\n\nEn gros : la pente de la courbe de ln diminue quand x augmente. ln monte de moins en moins vite.\n\nComme 1/x > 0 pour tout x > 0, la fonction ln est strictement croissante sur ]0 ; +∞[.\n\nTraduction : si a < b (avec a, b > 0), alors ln(a) < ln(b). L'ordre est conservé.\n\nPour les fonctions composées :\n(ln u)' = u'/u, pour u > 0.\n\nExemple : (ln(3x + 1))' = 3/(3x + 1).\n\nC'est la même logique que la dérivée composée : on dérive l'intérieur (u' = 3) et on divise par l'intérieur (u = 3x + 1).\n\nApplication inverse : ln(x) est une primitive de 1/x sur ]0 ; +∞[.\nTraduction : ∫(1/x)dx = ln(x) + C.\n\nEn gros : la dérivée de ln est simple, mais il ne faut pas oublier la condition x > 0 (ou u > 0 pour les composées).`
+          },
+          {
+            titre: "Limites et croissances comparées",
+            contenu: `Les limites de référence du logarithme sont :\n\n• lim(x→+∞) ln(x) = +∞.\nTraduction : ln monte indéfiniment, mais très lentement.\n\n• lim(x→0⁺) ln(x) = −∞.\nTraduction : quand x se rapproche de 0, ln plonge vers −∞.\n\nLes croissances comparées sont des limites fondamentales :\n\n• lim(x→+∞) ln(x)/x = 0.\nEn gros : x grandit beaucoup plus vite que ln(x). C'est comme une tortue (ln) face à un lièvre (x). Le lièvre gagne toujours.\n\n• lim(x→0⁺) x × ln(x) = 0.\nEn gros : près de 0, x « l'emporte » sur ln(x) malgré la divergence de ln.\n\n• lim(x→+∞) ln(x)/xⁿ = 0 pour tout n > 0.\nTraduction : n'importe quelle puissance de x bat ln(x) à l'infini.\n\nCes limites sont à connaître par cœur. Elles servent à lever des formes indéterminées du type 0 × (−∞) ou ∞/∞.`
+          },
+          {
+            titre: "Logarithme décimal et équations avec ln",
+            contenu: `Le logarithme décimal (noté log₁₀ ou log) est lié à ln par la formule :\nlog₁₀(x) = ln(x) / ln(10) ≈ ln(x) / 2.303\n\nTraduction : on change de « base ». Au lieu de e, on utilise 10.\n\n• log₁₀(10) = 1.\n• log₁₀(100) = 2.\n• log₁₀(1000) = 3.\n\nC'est utilisé en sciences : pH en chimie, décibels en acoustique, échelle de Richter en sismologie.\n\nPour résoudre une équation avec ln :\n• ln(x) = a ⟺ x = eᵃ. On « passe à l'exponentielle ».\n• eˣ = b ⟺ x = ln(b) (si b > 0). On « passe au ln ».\n\nPour les inéquations : ln est strictement croissante, donc :\n• ln(a) < ln(b) ⟺ a < b (pour a, b > 0).\n\nEn gros : ln conserve l'ordre. On peut « enlever » le ln sans changer le sens de l'inégalité.\n\nTraduction : pour « défaire » un ln, on applique exp. Pour « défaire » une exp, on applique ln. C'est la règle d'or.`
+          }
         ]
       },
       page2_concepts: {
@@ -1380,27 +1542,43 @@ export const TERM_MATHS_COURS = [
         concepts: [
           {
             terme: "Logarithme népérien",
-            definition: "Fonction ln : ]0;+∞[ → ℝ. Pour tout x > 0, ln(x) est l'unique y tel que eʸ = x. En gros : « à quelle puissance faut-il élever e pour obtenir x ? »"
+            definition: "Fonction ln : ]0;+∞[ → ℝ. Pour tout x > 0, ln(x) est l'unique y tel que eʸ = x. C'est comme se demander : « à quelle puissance faut-il élever e pour obtenir x ? ». En gros : ln(x) = y signifie eʸ = x."
           },
           {
             terme: "Fonction réciproque",
-            definition: "ln et exp sont réciproques : ln(eˣ) = x pour tout x ∈ ℝ, et e^(ln x) = x pour tout x > 0."
+            definition: "ln et exp sont réciproques : ln(eˣ) = x pour tout x ∈ ℝ, et e^(ln x) = x pour tout x > 0. C'est comme une clé et une serrure : l'une « défait » l'autre. En gros : elles s'annulent mutuellement."
           },
           {
             terme: "Propriétés algébriques de ln",
-            definition: "ln(ab) = ln(a)+ln(b), ln(a/b) = ln(a)−ln(b), ln(aⁿ) = n·ln(a). En gros : les opérations « descendent d'un cran »."
-          },
-          {
-            terme: "Croissance comparée",
-            definition: "ln(x) croît moins vite que toute puissance de x. lim ln(x)/x = 0 quand x → +∞. En gros : ln est « plus faible » que x."
-          },
-          {
-            terme: "Logarithme décimal",
-            definition: "log₁₀(x) = ln(x)/ln(10). Utilisé en sciences (pH, décibels). log₁₀(10) = 1, log₁₀(100) = 2."
+            definition: "ln(ab) = ln(a)+ln(b), ln(a/b) = ln(a)−ln(b), ln(aⁿ) = n·ln(a). C'est comme un convertisseur : les multiplications deviennent des additions. En gros : les opérations « descendent d'un cran » de complexité."
           },
           {
             terme: "Signe de ln(x)",
-            definition: "ln(x) < 0 si 0 < x < 1, ln(1) = 0, ln(x) > 0 si x > 1. En gros : ln est négatif avant 1 et positif après."
+            definition: "ln(x) < 0 quand 0 < x < 1 (avant 1). ln(1) = 0 (point de référence). ln(x) > 0 quand x > 1 (après 1). C'est comme une balance : avant 1, ln pèse négatif ; après 1, il pèse positif."
+          },
+          {
+            terme: "Croissance comparée",
+            definition: "ln(x) croît moins vite que toute puissance de x : lim ln(x)/x = 0 quand x → +∞. C'est comme une tortue (ln) face à un lièvre (x). En gros : ln est toujours « dominé » par x à l'infini."
+          },
+          {
+            terme: "Limites de ln",
+            definition: "lim(x→+∞) ln(x) = +∞ (croissance lente mais infinie). lim(x→0⁺) ln(x) = −∞ (plongée vers −∞ près de 0). C'est comme un ascenseur très lent qui monte sans fin, mais qui plonge quand x → 0."
+          },
+          {
+            terme: "Équation ln(x) = a",
+            definition: "La solution est x = eᵃ. On « passe à l'exponentielle » des deux côtés. C'est comme traduire une phrase d'une langue à l'autre. En gros : pour « défaire » un ln, on applique exp."
+          },
+          {
+            terme: "Inéquation avec ln",
+            definition: "ln est strictement croissante, donc ln(a) < ln(b) ⟺ a < b (pour a, b > 0). En gros : l'ordre est conservé. On peut « enlever » le ln en gardant le sens de l'inégalité."
+          },
+          {
+            terme: "Logarithme décimal",
+            definition: "log₁₀(x) = ln(x)/ln(10) ≈ ln(x)/2.303. Utilisé en sciences : pH, décibels, échelle de Richter. log₁₀(10) = 1, log₁₀(100) = 2. En gros : on change la « base » du logarithme."
+          },
+          {
+            terme: "Primitive de 1/x",
+            definition: "La fonction ln(x) est une primitive de 1/x sur ]0;+∞[. C'est le lien entre dérivation et intégration pour ln. En gros : ∫(1/x)dx = ln(x) + C."
           }
         ]
       },
@@ -1414,42 +1592,42 @@ export const TERM_MATHS_COURS = [
           {
             nom: "Définition",
             formule: "y = ln(x) ⟺ x = eʸ (x > 0)",
-            explication: "Passage entre ln et exp. Fondamental pour résoudre des équations."
+            explication: "Passage entre ln et exp. C'est la traduction fondamentale. En gros : ln et exp sont comme deux langues, cette formule permet de passer de l'une à l'autre."
           },
           {
             nom: "Produit",
             formule: "ln(ab) = ln(a) + ln(b)",
-            explication: "Le logarithme transforme un produit en somme."
+            explication: "Le logarithme transforme un produit en somme. Attention : valable uniquement si a > 0 et b > 0."
           },
           {
             nom: "Quotient",
             formule: "ln(a/b) = ln(a) − ln(b)",
-            explication: "Le logarithme transforme un quotient en différence."
+            explication: "Le logarithme transforme un quotient en différence. En gros : diviser « dedans » = soustraire « dehors »."
           },
           {
             nom: "Puissance",
             formule: "ln(aⁿ) = n · ln(a)",
-            explication: "L'exposant « descend » devant le logarithme."
+            explication: "L'exposant « descend » devant le logarithme. C'est comme sortir un facteur d'une parenthèse."
           },
           {
             nom: "Dérivée de ln(x)",
             formule: "(ln x)' = 1/x, pour x > 0",
-            explication: "Fondamental. La dérivée diminue quand x grandit."
+            explication: "Formule fondamentale. La pente de la courbe de ln diminue quand x augmente. En gros : ln monte de moins en moins vite."
           },
           {
             nom: "Dérivée de ln(u)",
             formule: "(ln u)' = u'/u, pour u > 0",
-            explication: "Formule composée. Exemple : (ln(2x+1))' = 2/(2x+1)."
+            explication: "Formule composée : on dérive l'intérieur (u') et on divise par l'intérieur (u). Exemple : (ln(2x+1))' = 2/(2x+1)."
           },
           {
-            nom: "Croissance comparée",
-            formule: "lim(x→+∞) ln(x)/x = 0 et lim(x→0⁺) x·ln(x) = 0",
-            explication: "ln est « dominé » par les puissances de x."
+            nom: "Croissance comparée (en +∞)",
+            formule: "lim(x→+∞) ln(x)/x = 0",
+            explication: "ln est « dominé » par x à l'infini. En gros : x grandit beaucoup plus vite que ln(x)."
           },
           {
-            nom: "Changement de base",
-            formule: "log_b(x) = ln(x)/ln(b)",
-            explication: "Pour passer de ln au logarithme en base b."
+            nom: "Croissance comparée (en 0⁺)",
+            formule: "lim(x→0⁺) x·ln(x) = 0",
+            explication: "Près de 0, x « l'emporte » sur ln(x) malgré la divergence de ln. En gros : le produit tend vers 0."
           }
         ]
       },

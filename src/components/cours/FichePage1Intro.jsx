@@ -55,16 +55,23 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
 
   if (!curated) {
     const intro = fiche?.page1_intro || {};
+    const sections = fiche?.page1_intro?.sections || [];
+    const hasSections = sections.length > 0;
+
     return (
       <div className="fiche-page fiche-page-modern fc-rich">
         <div className="fc-hero">
           <span className="fc-kicker">Fiche de cours</span>
           <h2 className="fc-titre"><span className="fiche-souligne-rose">{titre}</span></h2>
         </div>
-        <div className="fc-section">
-          <p className="fc-text">{intro.texte || "Contenu en cours de rédaction."}</p>
-        </div>
-        {intro.points_cles?.length > 0 && (
+
+        {intro.texte && (
+          <div className="fc-section fc-section-intro">
+            {renderContent(intro.texte)}
+          </div>
+        )}
+
+        {intro.points_cles?.length > 0 && !hasSections && (
           <div className="fc-section">
             <h3 className="fc-section-title">🎯 Points clés</h3>
             <ul className="fc-bullet-list">
@@ -72,6 +79,17 @@ export default function FichePage1Intro({ fiche, courseTitle }) {
             </ul>
           </div>
         )}
+
+        {sections.map((sec, i) => (
+          <div key={i} className="fc-section">
+            <h3 className="fc-section-title">{sec.titre}</h3>
+            {renderContent(sec.contenu)}
+          </div>
+        ))}
+
+        <div className="fc-footer">
+          <p>Fiche rédigée pour Hermione Médecine</p>
+        </div>
       </div>
     );
   }

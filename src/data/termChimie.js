@@ -138,16 +138,32 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Les réactions acido-basiques sont partout dans la vie courante. • Ton estomac produit de l'acide chlorhydrique (HCl) pour digérer. • Le savon est basique : il capte les graisses grâce à ses ions HO⁻. • Ton sang est tamponné (maintenu stable) à pH 7,4. • C'est comme une balance : l'acide penche d'un côté, la base de l'autre. • Ce chapitre pose les bases du modèle de Brønsted. • Un acide est un donneur de proton (H⁺, un noyau d'hydrogène). • Une base est un accepteur de proton H⁺. • En gros : l'acide « lance » le H⁺, la base « l'attrape ». • C'est comme se passer un ballon : un joueur lance, l'autre réceptionne. • On apprend aussi à mesurer l'acidité avec le pH. • Le pH va de 0 (très acide) à 14 (très basique). • Un pH de 7 signifie que la solution est neutre (ni acide, ni basique).",
-        points_cles: [
-          "Acide de Brønsted = donneur de H⁺ (proton)",
-          "Base de Brønsted = accepteur de H⁺ (proton)",
-          "Un couple acide-base s'écrit AH/A⁻ (acide/base conjuguée)",
-          "L'eau est amphotère (= elle peut être acide OU base)",
-          "pH = −log([H₃O⁺]), échelle de 0 à 14 à 25 °C",
-          "Liaison polarisée O–H → favorise le caractère acide",
-          "Doublet non-liant (paire d'électrons libres) → favorise le caractère basique",
-          "Autoprotolyse de l'eau : 2 H₂O ⇌ H₃O⁺ + HO⁻ (existe toujours)"
+        texte: "Les réactions acido-basiques sont partout autour de toi. Ton estomac, ton sang, le savon : tout repose sur des échanges de protons H⁺. Ce chapitre t'apprend à modéliser ces échanges avec le modèle de Brønsted.",
+        sections: [
+          {
+            titre: "Le modèle de Brønsted : acide et base",
+            contenu: `Un acide, selon Brønsted, c'est une espèce qui donne un proton H⁺.\nUne base, c'est une espèce qui capte (attrape) ce proton H⁺.\n\nC'est comme se passer un ballon.\nUn joueur lance (l'acide), l'autre réceptionne (la base).\nLe ballon, c'est le proton H⁺.\n\nExemple concret :\n• HCl donne un H⁺ → c'est un acide.\n• NH₃ capte un H⁺ → c'est une base.\n\nTraduction : acide = donneur de H⁺, base = accepteur de H⁺.\n\nEn gros : si une espèce lâche un H⁺, elle est acide. Si elle en attrape un, elle est basique. Pas besoin de chercher plus loin.`
+          },
+          {
+            titre: "Le couple acide-base AH/A⁻",
+            contenu: `Un acide et sa base sont toujours liés.\nQuand l'acide AH perd un H⁺, il se transforme en A⁻.\nCette paire s'appelle un couple acide-base.\n\nLa demi-équation s'écrit : AH ⇌ A⁻ + H⁺.\nTraduction : l'acide AH donne son proton et devient la base conjuguée A⁻.\n\nExemples de couples :\n• HCl / Cl⁻ (acide chlorhydrique / ion chlorure)\n• CH₃COOH / CH₃COO⁻ (vinaigre / ion acétate)\n• NH₄⁺ / NH₃ (ion ammonium / ammoniac)\n\nC'est comme un couple de danseurs.\nL'un mène (l'acide), l'autre suit (la base conjuguée).\nIls sont toujours ensemble.\n\nEn gros : chaque acide a une base conjuguée. Ils forment un duo inséparable lié par un H⁺.`
+          },
+          {
+            titre: "Liaison polarisée et doublet non-liant",
+            contenu: `Pourquoi certaines molécules sont-elles acides ?\nTout vient de la liaison polarisée.\n\nDans la liaison O–H, l'oxygène attire les électrons.\nL'hydrogène H devient un peu positif (noté δ+).\nIl est facile à arracher sous forme de H⁺.\n\nC'est comme un aimant qui tire la couverture.\nL'oxygène prend tout, et H part facilement.\n\nEt pourquoi certaines espèces sont-elles basiques ?\nGrâce à un doublet non-liant (paire d'électrons libres).\nCe doublet peut capter un H⁺ pour former une nouvelle liaison.\n\nC'est comme une main libre prête à attraper un objet.\nPas de main libre → pas de capture → pas de basicité.\n\nEn gros : liaison polarisée O–H → caractère acide. Doublet non-liant → caractère basique. Ce sont les deux clés à retenir.`
+          },
+          {
+            titre: "L'eau : espèce amphotère et autoprotolyse",
+            contenu: `L'eau est une espèce amphotère.\nTraduction : elle peut jouer le rôle d'acide ET de base.\n\nComme acide : H₂O donne un H⁺ → HO⁻ (couple H₂O/HO⁻).\nComme base : H₂O capte un H⁺ → H₃O⁺ (couple H₃O⁺/H₂O).\n\nC'est comme un joueur ambidextre.\nIl peut lancer de la main droite ou de la main gauche.\n\nL'eau réagit même avec elle-même.\nCette réaction s'appelle l'autoprotolyse :\n2 H₂O ⇌ H₃O⁺ + HO⁻\n\nTraduction : une molécule d'eau donne son H⁺ à une autre.\nOn obtient un ion hydronium H₃O⁺ et un ion hydroxyde HO⁻.\nCet équilibre existe TOUJOURS, même dans l'eau pure.\n\nEn gros : l'eau se « parle à elle-même » en s'échangeant des protons. C'est discret, mais c'est permanent.`
+          },
+          {
+            titre: "Le pH : mesurer l'acidité",
+            contenu: `Le pH est une grandeur sans unité.\nIl mesure l'acidité d'une solution.\n\nFormule : pH = −log([H₃O⁺]).\nTraduction : on prend la concentration en ions H₃O⁺ et on applique le log négatif.\n\n• pH < 7 → solution acide (beaucoup de H₃O⁺).\n• pH = 7 → solution neutre (autant de H₃O⁺ que de HO⁻).\n• pH > 7 → solution basique (peu de H₃O⁺).\n\nL'échelle va de 0 (très acide) à 14 (très basique).\nC'est comme un thermomètre, mais pour l'acidité.\n\nExemple : pH = 3 → [H₃O⁺] = 10⁻³ = 0,001 mol/L.\nPlus le pH est petit, plus il y a de H₃O⁺.\n\nOn mesure le pH avec un pH-mètre (précis, ±0,01) ou du papier pH (approximatif, ±1).\n\nEn gros : le pH te dit « c'est acide ou basique ? » en un seul chiffre. Retiens la formule et l'échelle 0-14.`
+          },
+          {
+            titre: "Le proton H⁺ et l'ion hydronium H₃O⁺",
+            contenu: `Le proton H⁺, c'est un noyau d'hydrogène sans son électron.\nIl est minuscule et très réactif.\n\nMais attention : H⁺ n'existe jamais seul dans l'eau.\nIl s'accroche immédiatement à une molécule d'eau.\nOn obtient l'ion hydronium : H⁺ + H₂O → H₃O⁺.\n\nC'est comme un enfant qui ne peut pas rester seul.\nIl attrape la main de quelqu'un tout de suite.\n\nQuand on écrit [H₃O⁺], c'est la même chose que [H⁺] en solution.\nLes deux notations existent. En terminale, on utilise surtout H₃O⁺.\n\nLa relation inverse du pH est aussi très utile :\n[H₃O⁺] = 10^(−pH)\nSi pH = 2, alors [H₃O⁺] = 10⁻² = 0,01 mol/L.\n\nEn gros : H₃O⁺ est la forme « habillée » de H⁺ dans l'eau. C'est lui qu'on mesure avec le pH.`
+          }
         ]
       },
       page2_concepts: {
@@ -399,16 +415,32 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Le chapitre 1 posait les bases : acide, base, pH. • Ici, on va beaucoup plus loin. • On apprend à mesurer la force d'un acide avec Ka (constante d'acidité). • Ka est un nombre : plus il est grand, plus l'acide est fort. • On utilise aussi pKa = −log(Ka), plus pratique à manipuler. • C'est comme une note sur 20 : plus le pKa est bas, plus l'acide est « costaud ». • On découvre le produit ionique de l'eau Ke = 10⁻¹⁴ (à 25 °C). • En gros : Ke est une constante universelle de l'eau à 25 °C. • On apprend la relation de Henderson-Hasselbalch. • Elle prédit quelle forme (acide AH ou base A⁻) domine à un pH donné. • Le diagramme de prédominance résume tout visuellement. • À gauche du pKa → l'acide domine. • À droite du pKa → la base domine. • En gros : ce chapitre te donne les outils pour prévoir le comportement de tout acide ou base.",
-        points_cles: [
-          "Ka mesure la force d'un acide : Ka = [A⁻][H₃O⁺] / [AH]",
-          "pKa = −log(Ka) — plus pKa est petit, plus l'acide est fort",
-          "Ke = [H₃O⁺]×[HO⁻] = 10⁻¹⁴ à 25 °C (produit ionique de l'eau)",
-          "pH = pKa + log([A⁻]/[AH]) → relation de Henderson-Hasselbalch",
-          "pH < pKa → forme acide AH domine (milieu acide)",
-          "pH > pKa → forme basique A⁻ domine (milieu basique)",
-          "Acide fort : réaction totale (→) avec l'eau | Acide faible : équilibre (⇌)",
-          "Diagramme de prédominance : axe pH, séparation au point pKa"
+        texte: "Le chapitre 1 posait les bases : acide, base, pH. Ici, on va beaucoup plus loin. On apprend à mesurer la force d'un acide et à prévoir quelle forme domine selon le pH.",
+        sections: [
+          {
+            titre: "La constante d'acidité Ka",
+            contenu: `Ka mesure la force d'un acide en solution.\nSa formule est : Ka = [A⁻][H₃O⁺] / [AH].\n\nTraduction : on regarde combien l'acide se dissocie.\nPlus Ka est grand, plus l'acide libère facilement son H⁺.\nPlus Ka est petit, plus l'acide garde son H⁺.\n\nC'est comme la puissance d'un lanceur de baseball.\nUn lanceur puissant (Ka grand) envoie la balle très loin.\nUn lanceur faible (Ka petit) la lance mollement.\n\nAttention : les concentrations dans Ka sont celles à l'équilibre.\nL'eau n'apparaît pas car c'est le solvant.\nSa concentration ne change pratiquement pas.\n\nEn gros : Ka est le « score de force » de l'acide. Grand Ka = acide costaud. Petit Ka = acide timide.`
+          },
+          {
+            titre: "Le pKa : l'échelle pratique",
+            contenu: `Manipuler Ka directement n'est pas pratique.\nLes valeurs sont souvent très petites (10⁻⁵, 10⁻¹⁰…).\nOn utilise donc le pKa.\n\npKa = −log(Ka).\nTraduction : on passe sur une échelle logarithmique.\n\nL'avantage : on compare des nombres simples.\n• pKa = 2 → acide fort.\n• pKa = 5 → acide moyen.\n• pKa = 10 → acide très faible.\n\nPlus le pKa est petit, plus l'acide est fort.\nC'est un classement inversé.\nC'est comme un classement sportif : numéro 1 = le meilleur.\n\nFormule inverse : Ka = 10^(−pKa).\nSi pKa = 4,8, alors Ka = 10⁻⁴·⁸ ≈ 1,6 × 10⁻⁵.\n\nEn gros : le pKa est juste une façon plus lisible d'exprimer Ka. Petit pKa = acide costaud.`
+          },
+          {
+            titre: "Le produit ionique de l'eau Ke",
+            contenu: `Dans toute solution aqueuse, il existe une relation fondamentale :\nKe = [H₃O⁺] × [HO⁻].\n\nÀ 25 °C, Ke = 10⁻¹⁴. Toujours.\nC'est une constante universelle de l'eau à cette température.\n\nTraduction : si tu connais [H₃O⁺], tu déduis [HO⁻].\nEt inversement.\n\nC'est comme une balançoire.\nSi un côté monte (H₃O⁺ augmente), l'autre descend (HO⁻ diminue).\nMais le produit des deux reste toujours 10⁻¹⁴.\n\nConséquence directe : pH + pOH = 14 (à 25 °C).\npOH = −log([HO⁻]).\n\nAttention : Ke = 10⁻¹⁴ seulement à 25 °C.\nÀ 37 °C (corps humain), Ke ≈ 2,4 × 10⁻¹⁴.\n\nEn gros : Ke est la loi qui lie H₃O⁺ et HO⁻ dans toute solution. C'est une constante incontournable.`
+          },
+          {
+            titre: "Henderson-Hasselbalch : qui domine ?",
+            contenu: `La relation de Henderson-Hasselbalch relie pH, pKa et concentrations :\npH = pKa + log([A⁻] / [AH]).\n\nTraduction : elle te dit quelle forme (acide ou base) est majoritaire.\n\nTrois cas simples :\n• Si [A⁻] = [AH] → log = 0 → pH = pKa.\n• Si [A⁻] > [AH] → log > 0 → pH > pKa.\n• Si [AH] > [A⁻] → log < 0 → pH < pKa.\n\nEn gros : c'est un GPS chimique.\nTu entres le pH et le pKa, et tu sais qui domine.\n\nRègle simple à retenir :\n• pH < pKa → la forme acide AH domine.\n• pH > pKa → la forme basique A⁻ domine.\n• pH = pKa → 50/50, les deux sont à égalité.\n\nC'est le point de demi-équivalence.\n\nEn gros : Henderson-Hasselbalch est LA formule centrale de ce chapitre. Apprends-la par cœur.`
+          },
+          {
+            titre: "Diagramme de prédominance et de distribution",
+            contenu: `Le diagramme de prédominance est un axe horizontal gradué en pH.\nOn place le pKa au milieu.\n\n• À gauche du pKa : la forme acide AH prédomine.\n• À droite du pKa : la forme basique A⁻ prédomine.\n• Au point pKa : [AH] = [A⁻].\n\nC'est comme une carte de territoire.\nÀ gauche, c'est le territoire de l'acide.\nÀ droite, c'est le territoire de la base.\n\nLe diagramme de distribution va plus loin.\nIl trace les pourcentages de AH et A⁻ en fonction du pH.\nLes deux courbes se croisent à pH = pKa (50 % chacune).\n\nC'est comme deux courbes de popularité.\nL'une monte pendant que l'autre descend.\nElles se croisent au milieu.\n\nEn gros : le diagramme de prédominance te dit « qui est le chef ». Le diagramme de distribution te donne les pourcentages exacts.`
+          },
+          {
+            titre: "Acide fort vs acide faible",
+            contenu: `Un acide fort réagit totalement avec l'eau.\nFlèche simple : → (pas de retour en arrière).\nTout l'acide se transforme en H₃O⁺.\nExemples : HCl, HNO₃, H₂SO₄.\n\nUn acide faible réagit partiellement avec l'eau.\nDouble flèche : ⇌ (équilibre).\nSeule une fraction de l'acide donne son H⁺.\nExemple : CH₃COOH (vinaigre), pKa = 4,8.\n\nC'est comme un distributeur de bonbons.\nL'acide fort donne TOUS ses bonbons d'un coup.\nL'acide faible n'en donne que quelques-uns.\n\nMême logique pour les bases :\n• Base forte → réaction totale (NaOH, KOH).\n• Base faible → équilibre (NH₃).\n\nLa base conjuguée d'un acide fort est dite « indifférente ».\nElle est trop faible pour réagir avec l'eau.\nExemple : Cl⁻ ne fait rien dans l'eau.\n\nEn gros : fort = réaction totale (→). Faible = équilibre (⇌). C'est la distinction fondamentale.`
+          }
         ]
       },
       page2_concepts: {
@@ -660,16 +692,28 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Pour étudier un système chimique, on utilise des techniques physiques. • On ne transforme pas la matière : on la « sonde » avec du courant ou de la lumière. • C'est comme aller chez le médecin : on mesure sans opérer. • La conductimétrie (mesure du courant) sert à analyser les solutions ioniques. • La spectroscopie UV-visible envoie de la lumière à travers la solution. • Plus la solution est concentrée, plus elle absorbe de lumière. • C'est comme des lunettes de soleil : plus elles sont teintées, moins la lumière passe. • La spectroscopie IR (infrarouge) identifie les groupes chimiques d'une molécule. • Chaque liaison chimique absorbe à une fréquence précise. • C'est comme une empreinte digitale : chaque molécule a son spectre unique. • Le dosage par étalonnage compare la solution inconnue à des solutions connues. • En gros : on prépare des « témoins » et on regarde à quel témoin notre solution ressemble. • Ces méthodes sont non-destructives : on garde l'échantillon intact.",
-        points_cles: [
-          "Conductimétrie : G = 1/R, σ = Σ λᵢ[Xᵢ] (loi de Kohlrausch)",
-          "UV-visible : A = ε·l·[X] (loi de Beer-Lambert, solutions diluées)",
-          "IR : transmittance T, identification des groupes caractéristiques",
-          "Dosage par étalonnage : gamme de solutions connues + lecture graphique",
-          "Ces techniques sont non-destructives (on ne modifie pas l'échantillon)",
-          "λᵢ (conductivité molaire ionique) dépend de la nature de l'ion",
-          "H₃O⁺ et HO⁻ ont des λ très élevés (mécanisme de Grotthuss)",
-          "Beer-Lambert valable uniquement en solution diluée et lumière monochromatique"
+        texte: "Pour étudier un système chimique, on utilise des techniques physiques. On ne transforme pas la matière : on la sonde avec du courant ou de la lumière, sans la détruire.",
+        sections: [
+          {
+            titre: "La conductimétrie : mesurer le courant",
+            contenu: `La conductimétrie analyse les solutions qui contiennent des ions.\nLes ions conduisent le courant électrique.\nPlus il y a d'ions, mieux le courant passe.\n\nLa conductance G mesure cette facilité.\nG = 1/R, en siemens (S).\nTraduction : G est l'inverse de la résistance R.\nGrande résistance = faible conductance.\n\nMais G dépend de la taille des électrodes.\nPour s'en affranchir, on utilise la conductivité σ.\nσ = G × (l / S), en S·m⁻¹.\nl = distance entre électrodes, S = surface.\n\nC'est comme mesurer la qualité d'un tuyau.\nG dépend de la taille du tuyau.\nσ dépend uniquement du liquide qui coule dedans.\n\nEn gros : la conductimétrie mesure combien d'ions « transportent » le courant. Plus il y a d'ions, plus σ est grand.`
+          },
+          {
+            titre: "La loi de Kohlrausch",
+            contenu: `La loi de Kohlrausch relie la conductivité aux ions présents :\nσ = Σ λᵢ × [Xᵢ].\n\nTraduction : la conductivité totale est la somme des contributions de chaque ion.\n\nChaque ion a sa propre conductivité molaire ionique λᵢ.\nλᵢ est en S·m²·mol⁻¹.\nC'est la capacité individuelle de chaque ion à conduire.\n\nC'est comme une équipe de nageurs.\nChaque nageur a sa propre vitesse.\nLa performance totale = somme de toutes les vitesses.\n\nPoint important : H₃O⁺ et HO⁻ ont des λ très élevés.\nLe proton « saute » de molécule en molécule (mécanisme de Grotthuss).\nC'est plus rapide que de se déplacer physiquement.\n\nAttention aux unités :\n• λᵢ en S·m²·mol⁻¹.\n• [Xᵢ] en mol·m⁻³ (pas mol/L !).\n• Pour convertir : 1 mol/L = 1000 mol/m³.\n\nEn gros : Kohlrausch dit que chaque ion « participe » au courant. On additionne toutes les participations.`
+          },
+          {
+            titre: "La spectroscopie UV-visible et Beer-Lambert",
+            contenu: `On envoie de la lumière à travers la solution.\nLa solution absorbe une partie de cette lumière.\nPlus elle est concentrée, plus elle absorbe.\n\nL'absorbance A mesure cette absorption.\nA = −log(I/I₀), sans unité.\nI₀ = intensité incidente (avant), I = intensité transmise (après).\n\nC'est comme des lunettes de soleil.\nPlus elles sont teintées, moins la lumière passe.\n\nLa loi de Beer-Lambert donne la relation :\nA = ε × l × [X].\n• ε = coefficient d'extinction molaire (L·mol⁻¹·cm⁻¹).\n• l = épaisseur de la cuve (cm).\n• [X] = concentration (mol/L).\n\nTraduction : l'absorbance est proportionnelle à la concentration.\nC'est une droite A = f([X]).\n\nMais attention : cette loi n'est valable que :\n• En solution diluée.\n• Avec une lumière monochromatique (une seule couleur).\n\nEn gros : Beer-Lambert dit « plus c'est concentré, plus ça absorbe ». C'est une relation linéaire, simple et puissante.`
+          },
+          {
+            titre: "La spectroscopie infrarouge (IR)",
+            contenu: `La spectroscopie IR identifie les groupes caractéristiques d'une molécule.\nChaque liaison chimique vibre à une fréquence précise.\nOn mesure quelles fréquences sont absorbées.\n\nC'est comme une empreinte digitale.\nChaque molécule a son spectre IR unique.\n\nEn IR, on utilise la transmittance T, pas l'absorbance A.\nT = I/I₀ (fraction de lumière qui passe).\nUn creux sur le spectre = forte absorption = liaison présente.\n\nLes bandes importantes à connaître :\n• O–H (alcool) : bande large vers 3200-3600 cm⁻¹.\n• N–H (amine) : bande vers 3300 cm⁻¹.\n• C=O (carbonyle) : bande fine vers 1700 cm⁻¹.\n• O–H (acide carboxylique) : bande très large vers 2500-3300 cm⁻¹.\n\nOn lit le spectre en repérant ces bandes.\nPas besoin de tout retenir : les tables sont fournies.\n\nEn gros : l'IR te dit « quelles liaisons sont dans la molécule ? ». C'est un outil d'identification, pas de dosage.`
+          },
+          {
+            titre: "Le dosage par étalonnage",
+            contenu: `Le dosage par étalonnage sert à trouver une concentration inconnue.\nLe principe est simple :\n\n1. On prépare plusieurs solutions de concentrations connues (gamme étalon).\n2. On mesure A (UV-vis) ou σ (conductimétrie) pour chacune.\n3. On trace la droite d'étalonnage : A = f([X]) ou σ = f([X]).\n4. On mesure A ou σ pour la solution inconnue.\n5. On lit la concentration sur la droite.\n\nC'est comme chercher la bonne taille de chaussure.\nOn essaie les tailles connues, on regarde laquelle correspond.\n\nConditions pour que ça marche :\n• Même longueur d'onde λ_max en UV-vis.\n• Même conditions de température.\n• Solutions diluées (pour rester dans le domaine linéaire).\n\nλ_max est la longueur d'onde où l'absorbance est maximale.\nOn choisit cette longueur d'onde pour avoir la meilleure sensibilité.\n\nEn gros : on prépare des « témoins » et on compare. Pas de calcul compliqué, juste une lecture graphique.`
+          }
         ]
       },
       page2_concepts: {
@@ -920,13 +964,32 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Toutes les réactions ne vont pas à la même vitesse. Certaines sont instantanées (une explosion), d'autres prennent des heures (la rouille). Ce chapitre étudie la cinétique chimique : à quelle vitesse une réaction avance, quels facteurs l'influencent (température, concentration, catalyseur), et comment décrire mathématiquement l'évolution des concentrations au cours du temps. On voit en détail les réactions d'ordre 1.",
-        points_cles: [
-          "Transformation lente (observable) vs rapide (instantanée)",
-          "Facteurs cinétiques : température et concentration",
-          "Catalyse : accélère sans être consommé (homogène ou hétérogène)",
-          "Vitesse volumique v = −d[R]/dt",
-          "Ordre 1 : [A] = [A]₀·e^(−kt), t₁/₂ = ln(2)/k"
+        texte: "Toutes les réactions chimiques ne vont pas à la même vitesse. Certaines sont instantanées, d'autres prennent des heures. Ce chapitre étudie la cinétique chimique : la science de la vitesse des réactions.",
+        sections: [
+          {
+            titre: "Transformation lente vs rapide",
+            contenu: `Une transformation rapide paraît instantanée.\nElle se produit en moins d'une seconde.\nExemple : une explosion, un précipité qui apparaît immédiatement.\nTu n'as pas le temps de voir les étapes.\n\nUne transformation lente est observable à l'œil nu.\nElle dure des secondes, des minutes, voire des heures.\nExemple : la rouille qui apparaît sur du fer.\nExemple : la décoloration d'une solution.\n\nC'est comme la cuisine.\nCertains plats sont prêts en 2 minutes (micro-ondes).\nD'autres mijotent pendant des heures (pot-au-feu).\n\nPour les réactions lentes, on peut suivre l'évolution.\nOn mesure la concentration au cours du temps.\nOn trace [X] = f(t) et on analyse la courbe.\n\nEn gros : rapide = instantanée, impossible à suivre. Lente = on peut observer et mesurer étape par étape.`
+          },
+          {
+            titre: "Les facteurs cinétiques",
+            contenu: `Un facteur cinétique est un paramètre qui modifie la vitesse.\nIl y en a deux principaux.\n\n1. La température :\nQuand T augmente, les molécules bougent plus vite.\nElles se rencontrent plus souvent.\nElles ont plus d'énergie pour réagir.\nRésultat : la réaction accélère.\n\n2. La concentration des réactifs :\nPlus il y a de réactifs, plus les chocs sont fréquents.\nPlus il y a de chocs, plus la réaction est rapide.\n\nC'est comme une piste de danse.\nPlus il y a de danseurs (concentration), plus ils se bousculent.\nPlus la musique est rapide (température), plus ils bougent.\n\nIl existe d'autres facteurs :\n• La surface de contact (pour les solides).\n• La pression (pour les gaz).\n• La lumière (pour les réactions photochimiques).\n\nEn gros : température ↑ = plus vite. Concentration ↑ = plus vite. Ce sont les deux « boutons de réglage » à connaître.`
+          },
+          {
+            titre: "La catalyse",
+            contenu: `Un catalyseur est une espèce qui accélère la réaction.\nMais il n'est PAS consommé.\nIl est retrouvé intact à la fin.\n\nComment ça marche ?\nIl abaisse l'énergie d'activation Ea.\nC'est la barrière d'énergie à franchir pour que la réaction démarre.\n\nC'est comme un tunnel sous une montagne.\nSans tunnel, tu dois escalader (lent et difficile).\nAvec tunnel, tu passes en dessous (rapide et facile).\nLa montagne est toujours là, mais tu ne la franchis plus.\n\nDeux types de catalyse :\n• Catalyse homogène : le catalyseur est dans la même phase que les réactifs.\nExemple : un ion dissous qui catalyse une réaction en solution.\n• Catalyse hétérogène : le catalyseur est dans une phase différente.\nExemple : du platine solide dans une solution liquide.\n\nAttention : le catalyseur ne change PAS l'état d'équilibre final.\nIl accélère juste l'atteinte de l'équilibre.\n\nEn gros : le catalyseur est un raccourci réutilisable. Il accélère sans se consumer.`
+          },
+          {
+            titre: "La vitesse volumique de réaction",
+            contenu: `La vitesse volumique mesure la rapidité de la réaction.\nPour un réactif R : v = −d[R]/dt.\nPour un produit P : v = d[P]/dt.\n\nTraduction : c'est la variation de concentration par unité de temps.\nUnité : mol·L⁻¹·s⁻¹.\n\nPourquoi le signe − pour un réactif ?\nParce que [R] diminue au cours du temps.\nd[R]/dt est négatif.\nLe signe − rend v positif.\n\nLa vitesse est toujours positive.\nC'est comme un compteur kilométrique.\nIl avance toujours, il ne recule jamais.\n\nSur un graphique [R] = f(t), la vitesse est la pente.\nPente raide = vitesse élevée.\nPente douce = vitesse faible.\nLa vitesse diminue au cours du temps (les réactifs s'épuisent).\n\nEn gros : v = −d[R]/dt te dit « combien de mol/L disparaissent chaque seconde ». N'oublie pas le signe −.`
+          },
+          {
+            titre: "Réaction d'ordre 1 et décroissance exponentielle",
+            contenu: `Pour une réaction d'ordre 1, la vitesse est proportionnelle à la concentration :\nv = k × [A].\n\nk est la constante de vitesse, en s⁻¹.\nPlus k est grand, plus la réaction est rapide.\nk dépend de la température.\n\nLa solution de cette équation donne :\n[A] = [A]₀ × e^(−kt).\nTraduction : la concentration décroît de façon exponentielle.\n\nC'est comme une batterie qui se décharge.\nAu début, ça va vite (beaucoup de charge).\nPuis ça ralentit (de moins en moins de charge).\n\nPour vérifier si c'est bien l'ordre 1 :\nOn trace ln([A]) en fonction de t.\nSi on obtient une droite, c'est confirmé.\nLa pente de cette droite vaut −k.\n\nln([A]) = ln([A]₀) − k·t.\nTraduction : le log de la concentration diminue linéairement.\n\nEn gros : ordre 1 = décroissance exponentielle. La preuve graphique : ln([A]) vs t donne une droite.`
+          },
+          {
+            titre: "Le temps de demi-réaction t₁/₂",
+            contenu: `Le temps de demi-réaction t₁/₂ est la durée pour atteindre la moitié de la réaction.\nÀ t = t₁/₂, l'avancement vaut xf/2.\nLa concentration du réactif a diminué de moitié.\n\nPour une réaction d'ordre 1 :\nt₁/₂ = ln(2) / k ≈ 0,693 / k.\n\nPropriété remarquable : t₁/₂ ne dépend PAS de [A]₀.\nPeu importe la concentration initiale, le temps de demi-réaction est le même.\n\nC'est comme un sablier.\nQu'il soit plein ou à moitié plein, le temps pour vider la moitié est le même.\n\nSur le graphique [A] = f(t) :\n• On lit [A]₀ à t = 0.\n• On calcule [A]₀/2.\n• On lit le temps correspondant : c'est t₁/₂.\n\nAttention : cette propriété est spécifique à l'ordre 1.\nPour l'ordre 2, t₁/₂ dépend de [A]₀.\nSi on te demande l'ordre, vérifie si t₁/₂ change avec [A]₀.\n\nEn gros : t₁/₂ = ln(2)/k. C'est le « chrono » qui caractérise la réaction d'ordre 1. Indépendant de la quantité de départ.`
+          }
         ]
       },
       page2_concepts: {
@@ -934,31 +997,43 @@ export const TERM_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Transformation lente",
-            definition: "Réaction dont l'évolution est observable sur plusieurs secondes, minutes ou heures. On peut suivre son avancement au cours du temps."
+            definition: "Réaction dont l'évolution est observable sur plusieurs secondes, minutes ou heures. On peut la suivre avec un chronomètre. En gros : tu vois la réaction se produire en temps réel. C'est comme regarder la glace fondre."
           },
           {
             terme: "Transformation rapide",
-            definition: "Réaction qui paraît instantanée (< 1 s). On ne peut pas observer d'étape intermédiaire."
+            definition: "Réaction qui paraît instantanée (moins d'une seconde). On ne peut pas observer d'étape intermédiaire. En gros : c'est fini avant que tu aies le temps de cligner des yeux. C'est comme un flash d'appareil photo."
           },
           {
             terme: "Facteur cinétique",
-            definition: "Paramètre qui modifie la vitesse de réaction. Les deux principaux : température et concentration des réactifs."
+            definition: "Paramètre qui modifie la vitesse de réaction. Les deux principaux : la température et la concentration des réactifs. En gros : ce sont les « boutons de réglage » de la vitesse. C'est comme le thermostat d'un four."
           },
           {
             terme: "Catalyseur",
-            definition: "Espèce qui accélère une réaction sans être consommée. Il abaisse l'énergie d'activation mais ne change pas l'état final."
+            definition: "Espèce qui accélère une réaction sans être consommée. Il est retrouvé intact à la fin. Il abaisse l'énergie d'activation (la barrière à franchir). En gros : c'est un raccourci qui ne s'use pas. C'est comme un tunnel sous une montagne."
           },
           {
-            terme: "Vitesse volumique",
-            definition: "v = −d[R]/dt pour un réactif, ou v = d[P]/dt pour un produit. Elle représente la variation de concentration par unité de temps."
+            terme: "Catalyse homogène",
+            definition: "Le catalyseur est dans la même phase (état physique) que les réactifs. Par exemple : un catalyseur dissous dans la même solution que les réactifs. En gros : tout le monde est mélangé dans le même milieu."
+          },
+          {
+            terme: "Catalyse hétérogène",
+            definition: "Le catalyseur est dans une phase différente des réactifs. Exemple : du platine solide dans une solution liquide. En gros : le catalyseur est à part, comme un pont au-dessus d'une rivière."
+          },
+          {
+            terme: "Vitesse volumique de réaction",
+            definition: "v = −d[R]/dt pour un réactif, ou v = d[P]/dt pour un produit. Le signe − rend v positive (car [R] diminue). En gros : c'est la vitesse à laquelle les réactifs disparaissent. C'est comme la vitesse à laquelle tu manges un gâteau."
           },
           {
             terme: "Temps de demi-réaction (t₁/₂)",
-            definition: "Durée au bout de laquelle l'avancement a atteint la moitié de sa valeur finale. Pour l'ordre 1 : t₁/₂ = ln(2)/k."
+            definition: "Durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale. Pour l'ordre 1 : t₁/₂ = ln(2)/k ≈ 0,693/k. En gros : c'est le temps pour que la moitié du travail soit fait. Comme un sablier à moitié vidé."
           },
           {
             terme: "Réaction d'ordre 1",
-            definition: "Réaction où la vitesse est proportionnelle à [A] : v = k[A]. La concentration décroît exponentiellement : [A] = [A]₀·e^(−kt)."
+            definition: "Réaction où la vitesse est proportionnelle à la concentration : v = k[A]. La concentration décroît de façon exponentielle : [A] = [A]₀·e^(−kt). En gros : plus il reste de réactif, plus ça va vite. C'est comme vider une baignoire : ça coule vite au début, puis de plus en plus lentement."
+          },
+          {
+            terme: "Constante de vitesse (k)",
+            definition: "Nombre qui caractérise la rapidité d'une réaction. Pour l'ordre 1 : k est en s⁻¹. Plus k est grand, plus la réaction est rapide. En gros : k est le « compteur de vitesse » de la réaction. Il dépend de la température."
           }
         ]
       },
@@ -972,27 +1047,42 @@ export const TERM_CHIMIE_COURS = [
           {
             nom: "Vitesse volumique de disparition",
             formule: "v = −d[R]/dt",
-            explication: "Le − assure que v > 0 (car [R] diminue). En mol·L⁻¹·s⁻¹."
+            explication: "Le signe − assure que v > 0 (car la concentration [R] du réactif diminue). Unité : mol·L⁻¹·s⁻¹. En gros : c'est combien de mol/L disparaissent chaque seconde."
+          },
+          {
+            nom: "Vitesse volumique d'apparition",
+            formule: "v = d[P]/dt",
+            explication: "Pour un produit, pas de signe − car [P] augmente naturellement. En gros : c'est combien de produit apparaît par seconde."
           },
           {
             nom: "Loi de vitesse d'ordre 1",
             formule: "v = k × [A]",
-            explication: "k est la constante de vitesse (en s⁻¹). Plus k est grand, plus la réaction est rapide."
+            explication: "k est la constante de vitesse (en s⁻¹). Plus k est grand, plus ça va vite. La vitesse est directement proportionnelle à ce qui reste."
           },
           {
             nom: "Loi de décroissance d'ordre 1",
             formule: "[A] = [A]₀ × e^(−kt)",
-            explication: "La concentration décroît de façon exponentielle. [A]₀ est la concentration initiale."
+            explication: "La concentration décroît de façon exponentielle. [A]₀ est la concentration au départ. C'est comme une batterie qui se décharge : vite au début, lentement ensuite."
           },
           {
             nom: "Linéarisation (ordre 1)",
             formule: "ln([A]) = ln([A]₀) − k·t",
-            explication: "Si on trace ln([A]) vs t et qu'on obtient une droite de pente −k, la réaction est d'ordre 1."
+            explication: "Si on trace ln([A]) en fonction du temps t et qu'on obtient une droite de pente −k, c'est confirmé : la réaction est d'ordre 1."
           },
           {
             nom: "Temps de demi-réaction (ordre 1)",
-            formule: "t₁/₂ = ln(2) / k",
-            explication: "Pour l'ordre 1, t₁/₂ ne dépend que de k, pas de la concentration initiale."
+            formule: "t₁/₂ = ln(2) / k ≈ 0,693 / k",
+            explication: "Pour l'ordre 1, t₁/₂ ne dépend que de k, PAS de la concentration initiale. En gros : peu importe combien tu as au départ, le temps pour en perdre la moitié est le même."
+          },
+          {
+            nom: "Énergie d'activation (notion)",
+            formule: "Ea = énergie minimale pour que la réaction démarre",
+            explication: "Le catalyseur abaisse Ea, donc la réaction démarre plus facilement. C'est comme baisser la hauteur d'un mur à escalader."
+          },
+          {
+            nom: "Influence de la température sur k",
+            formule: "k augmente quand T augmente",
+            explication: "La constante de vitesse k dépend de la température. Plus T est élevée, plus les molécules bougent vite et se rencontrent souvent. En gros : la chaleur « booste » les réactions."
           }
         ]
       },
@@ -1151,12 +1241,32 @@ export const TERM_CHIMIE_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Un titrage (ou dosage par titrage) sert à déterminer la concentration d'une espèce en solution. Le principe : on verse un réactif de concentration connue (le titrant) dans la solution à doser (le titré) jusqu'à l'équivalence. Ce chapitre détaille les méthodes de suivi : conductimétrique (on suit σ) et pH-métrique (on suit le pH). On voit aussi les notions de masse volumique, densité et titre massique, indispensables pour préparer les solutions.",
-        points_cles: [
-          "ρ = m/V (masse volumique), d = ρ/ρ_eau (densité), w = m_soluté/m_solution (titre massique)",
-          "Équivalence : nA/a = nB/b — proportions stœchiométriques exactes",
-          "Titrage conductimétrique : σ = f(V), changement de pente → VE",
-          "Titrage pH-métrique : méthode des tangentes ou de la dérivée → VE"
+        texte: "Un titrage sert à trouver la concentration d'une espèce en solution. On verse un réactif connu dans la solution inconnue, jusqu'au point d'équivalence. Ce chapitre couvre aussi les grandeurs utiles pour préparer les solutions.",
+        sections: [
+          {
+            titre: "Masse volumique, densité et titre massique",
+            contenu: `Avant de titrer, il faut savoir préparer les solutions.\nTrois grandeurs sont essentielles.\n\n1. La masse volumique ρ :\nρ = m / V (en g/mL ou kg/m³).\nTraduction : c'est la masse d'un volume donné de solution.\nC'est comme peser un verre de jus d'orange.\n\n2. La densité d :\nd = ρ_liquide / ρ_eau.\nC'est un rapport sans unité.\n• d > 1 → le liquide est plus lourd que l'eau (il coule).\n• d < 1 → le liquide est plus léger que l'eau (il flotte).\nC'est comme se comparer à un voisin de même taille.\n\n3. Le titre massique w :\nw = m_soluté / m_solution.\nSouvent exprimé en % : w = 36 % signifie 36 g de soluté pour 100 g de solution.\nAttention : c'est 100 g de SOLUTION, pas 100 g de solvant.\n\nFormule de conversion très utile :\nC = w × ρ / M.\nElle relie le titre massique à la concentration molaire.\n\nEn gros : ρ dit « combien ça pèse », d dit « ça flotte ou pas », w dit « combien de soluté dedans ».`
+          },
+          {
+            titre: "Le principe du titrage",
+            contenu: `Un titrage (ou dosage par titrage) détermine une concentration inconnue.\nLe principe est simple.\n\nOn a deux acteurs :\n• Le réactif titrant : concentration connue, dans la burette.\n• Le réactif titré : concentration inconnue, dans le bécher.\n\nOn verse le titrant goutte à goutte dans le titré.\nLa réaction entre les deux consomme le titré progressivement.\nOn continue jusqu'à l'équivalence.\n\nC'est comme remplir un verre d'eau.\nOn verse petit à petit.\nOn s'arrête quand il est plein (= équivalence).\n\nLa réaction de titrage doit être :\n• Rapide (sinon on ne sait pas quand s'arrêter).\n• Totale (sinon les calculs ne marchent pas).\n• Unique (une seule réaction, pas de réaction parasite).\n\nEn gros : on verse du connu dans de l'inconnu, jusqu'à ce que tout ait réagi. Simple et efficace.`
+          },
+          {
+            titre: "L'équivalence : le moment clé",
+            contenu: `L'équivalence est le moment central du titrage.\nC'est quand les réactifs ont été mélangés dans les proportions stœchiométriques exactes.\n\nFormule : nA/a = nB/b.\nTraduction : le nombre de moles de chaque réactif divisé par son coefficient stœchiométrique est le même.\n\nC'est comme un puzzle complet.\nChaque pièce a trouvé sa place.\nIl ne reste ni excès de titrant ni de titré.\n\nÀ l'équivalence, on connaît :\n• C_B (concentration du titrant).\n• V_E (volume de titrant versé à l'équivalence).\n• V_A (volume de la solution titrée).\n• a et b (coefficients stœchiométriques).\n\nOn calcule C_A :\nC_A × V_A / a = C_B × V_E / b.\nDonc C_A = (C_B × V_E × a) / (b × V_A).\n\nEn gros : l'équivalence donne V_E. Avec V_E, on calcule la concentration inconnue C_A. C'est la « clé » du titrage.`
+          },
+          {
+            titre: "Le suivi conductimétrique",
+            contenu: `On peut suivre un titrage en mesurant la conductivité σ.\nOn trace σ = f(V), où V est le volume de titrant ajouté.\n\nLe graphique montre deux portions linéaires (deux droites).\nLeur intersection donne le volume équivalent V_E.\nC'est le changement de pente.\n\nPourquoi la pente change-t-elle ?\nAvant V_E : des ions sont consommés et/ou créés par la réaction.\nAprès V_E : la réaction est finie, on ajoute un excès de titrant.\nLes ions s'accumulent sans réagir.\n\nC'est comme remplir un seau percé.\nAvant qu'il soit plein, l'eau s'écoule (réaction).\nUne fois plein, l'eau déborde (excès).\n\nMéthode pour trouver V_E :\n1. Tracer les deux droites (avant et après le changement).\n2. Les prolonger jusqu'à leur intersection.\n3. Lire V_E sur l'axe des abscisses.\n\nEn gros : conductimétrie → deux droites → intersection = V_E. C'est simple et visuel.`
+          },
+          {
+            titre: "Le suivi pH-métrique",
+            contenu: `On peut aussi suivre un titrage en mesurant le pH.\nOn trace pH = f(V).\nLe graphique montre un saut brutal de pH à l'équivalence.\n\nC'est comme un escalier.\nLe pH monte (ou descend) progressivement.\nPuis d'un coup, il fait un bond énorme.\nCe bond signale l'équivalence.\n\nDeux méthodes pour trouver V_E :\n\n1. Méthode des tangentes :\n• On trace deux tangentes parallèles aux branches de la courbe.\n• On trace la droite parallèle équidistante au milieu.\n• L'intersection avec la courbe donne le point E.\n• On lit V_E sur l'axe des abscisses.\n\n2. Méthode de la dérivée :\n• On trace dpH/dV en fonction de V.\n• Le maximum (pic) de cette courbe donne V_E.\n• C'est l'endroit où le pH varie le plus brutalement.\n\nPour un titrage acide fort / base forte :\nLe pH à l'équivalence vaut 7 (à 25 °C).\nPour un acide faible / base forte : pH_E > 7.\nPour un acide fort / base faible : pH_E < 7.\n\nEn gros : pH-métrie → saut de pH → tangentes ou dérivée → V_E. C'est la méthode la plus précise.`
+          },
+          {
+            titre: "Bilan : conductimétrie vs pH-métrie",
+            contenu: `Les deux méthodes trouvent V_E, mais différemment.\n\nConductimétrie :\n• On trace σ = f(V).\n• Deux droites → intersection → V_E.\n• Avantage : pas besoin de mesurer beaucoup de points près de V_E.\n• Inconvénient : il faut que la conductivité change de pente nettement.\n\npH-métrie :\n• On trace pH = f(V).\n• Saut de pH → tangentes ou dérivée → V_E.\n• Avantage : très précise, fonctionne pour presque tous les titrages acido-basiques.\n• Inconvénient : il faut resserrer les points près de V_E.\n\nDans les deux cas, on utilise la même formule à l'équivalence :\nC_A × V_A / a = C_B × V_E / b.\n\nC'est comme deux chemins qui mènent au même sommet.\nL'un passe par la conductivité, l'autre par le pH.\nMais la destination (V_E et C_A) est la même.\n\nEn gros : conductimétrie = changement de pente. pH-métrie = saut de pH. Même résultat, deux approches.`
+          }
         ]
       },
       page2_concepts: {
@@ -1164,31 +1274,43 @@ export const TERM_CHIMIE_COURS = [
         concepts: [
           {
             terme: "Masse volumique (ρ)",
-            definition: "ρ = m/V. Masse par unité de volume. Unités courantes : g/mL, g/L, ou kg/m³."
+            definition: "ρ = m/V. C'est la masse par unité de volume. Unités courantes : g/mL, g/L, ou kg/m³. En gros : c'est combien pèse 1 mL (ou 1 L) de solution. C'est comme peser un verre de jus d'orange."
           },
           {
             terme: "Densité (d)",
-            definition: "d = ρ_liquide / ρ_eau. Rapport sans unité. Si d > 1, le liquide est plus dense que l'eau."
+            definition: "d = ρ_liquide / ρ_eau. C'est un rapport sans unité. Si d > 1, le liquide est plus dense que l'eau (il coule). Si d < 1, il flotte. En gros : c'est la comparaison de poids avec l'eau. C'est comme se comparer au voisin."
           },
           {
             terme: "Titre massique (w)",
-            definition: "w = m_soluté / m_solution. Fraction de la masse totale qui est du soluté. Souvent en pourcentage."
+            definition: "w = m_soluté / m_solution. C'est la fraction de masse du soluté dans la solution. Souvent en % : w = 36 % signifie 36 g de soluté pour 100 g de solution totale. En gros : c'est la « recette » de la solution."
           },
           {
             terme: "Équivalence",
-            definition: "Moment du titrage où les réactifs ont été mélangés dans les proportions stœchiométriques exactes : nA/a = nB/b."
+            definition: "Moment du titrage où les réactifs ont été mélangés dans les proportions stœchiométriques exactes : nA/a = nB/b. En gros : tout le titré a réagi, et tout le titrant a été consommé. C'est comme un puzzle complet : chaque pièce a trouvé sa place."
           },
           {
             terme: "Titrage conductimétrique",
-            definition: "On suit la conductivité σ en fonction du volume V de titrant ajouté. Le changement de pente de σ(V) donne VE."
+            definition: "On suit la conductivité σ en fonction du volume V de titrant ajouté. Le graphique σ(V) présente deux portions linéaires (deux droites). Leur intersection donne VE. En gros : le graphique « casse » à l'équivalence."
           },
           {
             terme: "Titrage pH-métrique",
-            definition: "On suit le pH en fonction du volume V de titrant ajouté. Le saut de pH permet de repérer VE."
+            definition: "On suit le pH en fonction du volume V de titrant ajouté. Le pH varie brutalement à l'équivalence (saut de pH). Ce saut permet de repérer VE. En gros : le pH fait un bond énorme d'un coup."
           },
           {
             terme: "Méthode des tangentes",
-            definition: "Sur la courbe pH = f(V), on trace deux tangentes parallèles (avant et après le saut). VE est au milieu du segment vertical entre elles."
+            definition: "Sur la courbe pH = f(V), on trace deux tangentes parallèles aux branches avant et après le saut. VE est au milieu du segment vertical entre les deux tangentes. En gros : on encadre le saut et on prend le milieu."
+          },
+          {
+            terme: "Méthode de la dérivée",
+            definition: "On trace dpH/dV en fonction de V. Le maximum (pic) de cette courbe donne VE. En gros : on cherche l'endroit où le pH varie le plus vite. C'est le point le plus « violent » de la courbe."
+          },
+          {
+            terme: "Réactif titrant",
+            definition: "C'est le réactif de concentration connue qu'on ajoute petit à petit avec une burette. On contrôle le volume ajouté. En gros : c'est l'outil de mesure, comme un mètre ruban."
+          },
+          {
+            terme: "Réactif titré",
+            definition: "C'est l'espèce dont on cherche la concentration. Elle est dans le bécher. En gros : c'est « l'inconnu » qu'on veut mesurer."
           }
         ]
       },
@@ -1202,27 +1324,42 @@ export const TERM_CHIMIE_COURS = [
           {
             nom: "Masse volumique",
             formule: "ρ = m / V",
-            explication: "m en g, V en mL → ρ en g/mL. Ou m en kg, V en m³ → ρ en kg/m³."
+            explication: "m en g, V en mL → ρ en g/mL. Ou m en kg, V en m³ → ρ en kg/m³. En gros : c'est le poids d'un volume donné de solution."
           },
           {
             nom: "Densité",
             formule: "d = ρ / ρ_eau",
-            explication: "ρ_eau = 1,0 g/mL = 1000 kg/m³. La densité est sans unité."
+            explication: "ρ_eau = 1,0 g/mL = 1000 kg/m³. La densité est sans unité. Si d = 1,2, le liquide est 1,2 fois plus lourd que l'eau."
           },
           {
             nom: "Titre massique",
             formule: "w = m_soluté / m_solution",
-            explication: "En % : w × 100. Exemple : w = 0,36 → 36 % en masse."
+            explication: "En % : w × 100. Exemple : w = 0,36 → 36 % en masse. Attention : c'est la masse de SOLUTION (pas de solvant) au dénominateur."
           },
           {
             nom: "Relation à l'équivalence",
             formule: "C_A × V_A / a = C_B × V_E / b",
-            explication: "a et b sont les coefficients stœchiométriques. On connaît C_B, V_A, VE → on trouve C_A."
+            explication: "a et b sont les coefficients stœchiométriques. On connaît C_B, V_A, VE → on calcule C_A. En gros : c'est la « clé » du titrage."
           },
           {
-            nom: "Concentration en soluté",
-            formule: "C = n / V = (w × ρ × V_solution) / (M × V_solution) = w × ρ / M",
-            explication: "Relie le titre massique w, la masse volumique ρ et la masse molaire M à la concentration C."
+            nom: "Concentration à partir du titre massique",
+            formule: "C = w × ρ / M",
+            explication: "Relie le titre massique w, la masse volumique ρ et la masse molaire M à la concentration C en mol/L. Très utile pour les solutions commerciales."
+          },
+          {
+            nom: "Nombre de moles",
+            formule: "n = C × V",
+            explication: "C en mol/L, V en L. Attention : convertir les mL en L (÷ 1000). En gros : pour trouver combien de « paquets de molécules » il y a dans un volume."
+          },
+          {
+            nom: "Masse de soluté",
+            formule: "m = n × M = C × V × M",
+            explication: "M est la masse molaire (en g/mol). Permet de passer de la concentration à la masse. C'est comme peser le sucre dissous dans un verre d'eau."
+          },
+          {
+            nom: "Dilution",
+            formule: "C₁ × V₁ = C₂ × V₂",
+            explication: "Lors d'une dilution, le nombre de moles de soluté ne change pas. On ajoute du solvant : le volume augmente et la concentration diminue. En gros : on « étale » le soluté dans plus de solvant."
           }
         ]
       },

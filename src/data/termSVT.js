@@ -131,16 +131,28 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Les géologues veulent reconstituer l'histoire de la Terre. • Pour cela, ils datent les roches avec deux méthodes. • La chronologie relative classe les événements dans l'ordre. • Elle dit 'A est avant B' mais ne donne pas d'âge en années. • C'est comme ranger des photos par ordre sans connaître la date exacte. • La chronologie absolue donne un âge chiffré en années. • Elle utilise la désintégration radioactive (transformation d'atomes instables en atomes stables). • En gros : la relative ordonne les événements, l'absolue leur met un chiffre. • Ensemble, ces deux méthodes permettent de reconstituer des milliards d'années d'histoire. • C'est comme avoir un planning avec l'ordre des tâches ET les horaires précis.",
-        points_cles: [
-          "Chronologie relative = on classe les événements dans l'ordre (avant/après) sans âge chiffré",
-          "Chronologie absolue = on donne un âge en années grâce aux isotopes radioactifs",
-          "Trois principes de la chronologie relative : superposition, recoupement, inclusion",
-          "Les fossiles stratigraphiques (espèces à courte durée de vie) permettent de corréler des couches éloignées",
-          "L'échelle stratigraphique découpe le temps en ères, périodes et étages",
-          "La désintégration radioactive est le moteur de la datation absolue",
-          "On choisit le bon couple d'isotopes selon l'âge estimé de la roche",
-          "La fermeture du système (quand la roche se referme) déclenche le chronomètre radioactif"
+        texte: "Les géologues cherchent à reconstituer l'histoire de la Terre en datant les roches. Ils utilisent deux grandes méthodes complémentaires : la chronologie relative et la chronologie absolue.",
+        sections: [
+          {
+            titre: "Chronologie relative : l'ordre des événements",
+            contenu: `La chronologie relative permet de classer les événements géologiques dans l'ordre. Elle dit « A s'est passé avant B », mais ne donne aucun âge en années.\n\nC'est comme ranger des photos dans un album par ordre chronologique, sans connaître la date exacte de chaque photo.\n\nElle repose sur trois principes simples :\n\n• Principe de superposition. Dans un empilement de couches sédimentaires (couches de terre) non déformé, la couche du bas est la plus ancienne. C'est comme une pile de crêpes : la première posée est en dessous.\n\n• Principe de recoupement. Si une faille ou un filon de roche traverse une couche, il est plus récent qu'elle. C'est comme un trait de stylo tracé par-dessus un dessin : le trait est venu après.\n\n• Principe d'inclusion. Un fragment de roche enfermé dans une autre est plus ancien que celle qui l'entoure. C'est comme un caillou pris dans du béton : le caillou existait avant.\n\nEn gros : on observe les roches et on déduit l'ordre des événements grâce à leur position et leurs relations.`
+          },
+          {
+            titre: "Les fossiles stratigraphiques",
+            contenu: `Un fossile stratigraphique est le reste d'une espèce qui a vécu peu de temps mais qui vivait partout sur Terre. C'est un marqueur temporel très fiable.\n\nPour être utile, le fossile doit remplir deux conditions :\n\n• Courte durée de vie de l'espèce. Plus l'espèce a vécu brièvement, plus la datation est précise.\n\n• Large répartition géographique. On doit le retrouver sur plusieurs continents pour pouvoir comparer des couches éloignées.\n\nC'est comme un tube musical qui passe à la radio un seul été : si tu entends cette chanson, tu sais exactement de quel été il s'agit, et tout le monde l'a entendue.\n\nLe principe d'identité paléontologique dit ceci : si deux couches de roche éloignées de milliers de km contiennent les mêmes fossiles stratigraphiques, elles ont le même âge.\n\nEn gros : les fossiles stratigraphiques sont les tampons-dateurs de la géologie.`
+          },
+          {
+            titre: "L'échelle stratigraphique",
+            contenu: `Grâce à la chronologie relative et aux fossiles, les géologues ont construit l'échelle stratigraphique. C'est le calendrier officiel de la Terre.\n\nElle découpe le temps en grandes unités, du plus large au plus fin :\n\n1. Les éons (les plus grandes divisions).\n2. Les ères : Précambrien, Paléozoïque, Mésozoïque, Cénozoïque.\n3. Les périodes (ex : Jurassique, Crétacé).\n4. Les époques et les étages (encore plus précis).\n\nC'est comme un calendrier avec les années, les mois, les semaines et les jours. Le Précambrien à lui seul couvre 88 % de l'histoire de la Terre.\n\nLes grandes coupures entre ères correspondent souvent à des crises biologiques majeures. Par exemple, la crise Crétacé-Paléogène (il y a 66 Ma) sépare le Mésozoïque du Cénozoïque.\n\nEn gros : l'échelle stratigraphique est le planning de la Terre, construit grâce aux fossiles et aux principes de la chronologie relative.`
+          },
+          {
+            titre: "Chronologie absolue : un âge en années",
+            contenu: `La chronologie absolue donne un âge chiffré en années. Elle utilise la désintégration radioactive.\n\nUn atome « père » instable (radioactif) se transforme spontanément en atome « fils » stable. Cette transformation se fait à vitesse constante.\n\nC'est comme un sablier dont le sable s'écoule toujours au même rythme. On mesure la quantité de sable passée de l'autre côté pour savoir combien de temps s'est écoulé.\n\nLa demi-vie (notée t½) est le temps nécessaire pour que la moitié des atomes pères se transforme en atomes fils. Chaque couple d'isotopes a sa propre demi-vie :\n\n• Rb/Sr : t½ ≈ 49 milliards d'années → pour les roches très anciennes.\n• K/Ar : t½ ≈ 1,25 milliard d'années → pour les roches volcaniques.\n• U/Pb : t½ ≈ 4,5 milliards d'années → méthode qui a daté la Terre.\n\nEn gros : on mesure le rapport père/fils dans une roche et on calcule son âge grâce à la demi-vie.`
+          },
+          {
+            titre: "La fermeture du système",
+            contenu: `Pour que le chronomètre radioactif fonctionne, il faut un « top départ ». C'est la fermeture du système.\n\nLa fermeture du système est le moment où la roche se referme aux échanges chimiques. Concrètement, cela arrive quand la roche refroidit et cristallise.\n\nÀ partir de cet instant, les isotopes père et fils restent piégés à l'intérieur. Plus aucun atome n'entre ni ne sort. Le chronomètre démarre.\n\nC'est comme retourner un sablier et le sceller : à partir de ce moment, on peut compter le temps qui passe.\n\nAttention, piège fréquent : la fermeture du système n'est pas toujours le moment de formation de la roche. C'est le moment où les échanges s'arrêtent. Si la roche est réchauffée plus tard, le système peut se « rouvrir » et le chronomètre se remet à zéro.\n\nOn utilise aussi la méthode de l'isochrone (droite tracée sur un graphique des rapports isotopiques) pour calculer l'âge avec plus de précision.\n\nEn gros : pas de fermeture du système, pas de datation fiable. C'est le point de départ de toute mesure d'âge absolu.`
+          }
         ]
       },
       page2_concepts: {
@@ -387,16 +399,28 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Les plantes à fleurs sont fixées au sol toute leur vie. • Elles ne peuvent pas se déplacer pour chercher de la nourriture. • Du coup, chaque organe est ultra-spécialisé pour compenser cette immobilité. • Les feuilles captent la lumière grâce aux stomates (petits pores). • Les racines absorbent l'eau et les sels minéraux grâce aux poils absorbants. • Les tiges transportent les sèves dans deux circuits : le xylème (sève brute) et le phloème (sève élaborée). • La croissance est assurée par les méristèmes (zones de cellules qui se divisent en permanence). • C'est comme une usine immobile : chaque département a un rôle précis. • En gros : la plante compense le fait de ne pas bouger en ayant des organes très efficaces. • L'auxine (hormone végétale) coordonne le tout.",
-        points_cles: [
-          "Feuille = capteur de lumière + échanges gazeux via les stomates (pores sous la feuille)",
-          "Racine = absorption de l'eau et des minéraux grâce aux poils absorbants et aux mycorhizes (champignons associés)",
-          "Tige = transport : xylème (sève brute = eau + minéraux) et phloème (sève élaborée = eau + sucres)",
-          "Méristèmes apicaux = croissance en longueur (au bout des tiges et racines)",
-          "Méristèmes latéraux (cambium) = croissance en épaisseur (formation du bois)",
-          "Phytomères = modules répétitifs de la tige (entre-nœud + nœud + feuille + bourgeon)",
-          "Auxine = hormone clé qui contrôle l'élongation et la dominance apicale",
-          "Mycorhize = association gagnant-gagnant entre champignon et racine"
+        texte: "Les plantes à fleurs sont fixées au sol toute leur vie. Pour compenser cette immobilité, chaque organe est ultra-spécialisé : capter la lumière, absorber l'eau, transporter les nutriments et grandir.",
+        sections: [
+          {
+            titre: "La feuille : capteur solaire et échangeur de gaz",
+            contenu: `La feuille est l'organe principal de la photosynthèse. Elle capte la lumière du soleil pour fabriquer des sucres. Mais elle doit aussi échanger des gaz avec l'air.\n\nLes échanges se font par les stomates (petits pores sous la feuille). Chaque stomate est bordé de deux cellules de garde qui contrôlent son ouverture.\n\nC'est comme une porte automatique qui gère les entrées et sorties de gaz.\n\nQuand les stomates s'ouvrent :\n\n• Le CO₂ entre dans la feuille. Il est utilisé pour la photosynthèse.\n• L'O₂ sort de la feuille. C'est un déchet de la photosynthèse.\n• La vapeur d'eau sort aussi. C'est la transpiration foliaire.\n\nProblème : quand les stomates sont ouverts, la plante perd de l'eau. En cas de sécheresse, elle ferme ses stomates pour économiser l'eau, mais elle ne peut plus capter de CO₂.\n\nC'est un compromis permanent entre capter du CO₂ et ne pas se dessécher. Il y a entre 100 et 300 stomates par mm² de feuille.\n\nEn gros : la feuille est un panneau solaire qui respire par des milliers de pores microscopiques.`
+          },
+          {
+            titre: "Les racines : absorption et symbioses",
+            contenu: `Les racines ont deux missions : ancrer la plante au sol et absorber l'eau + les sels minéraux.\n\nL'absorption se fait surtout grâce aux poils absorbants. Ce sont des extensions très fines des cellules de la racine. Ils multiplient la surface de contact avec le sol par 100.\n\nC'est comme des milliers de petites pailles qui aspirent l'eau du sol.\n\nUn plant de blé peut avoir jusqu'à 600 km de racines (poils absorbants compris). C'est énorme pour une seule plante.\n\nMais les racines ne travaillent pas seules. Environ 90 % des plantes vivent en association avec des champignons : les mycorhizes.\n\n• Le champignon étend ses filaments dans le sol. Il capte eau et minéraux sur une zone bien plus grande que les racines seules.\n• En échange, la plante lui fournit des sucres fabriqués par photosynthèse.\n\nC'est un deal gagnant-gagnant. On appelle ça une association mutualiste (bénéfique pour les deux).\n\nEn gros : les racines absorbent l'eau grâce aux poils absorbants, et les mycorhizes élargissent encore leur zone de captage.`
+          },
+          {
+            titre: "Les tiges : deux circuits de transport",
+            contenu: `La tige relie les racines aux feuilles. Elle contient deux réseaux de transport, comme un système de tuyauterie à double sens.\n\n• Le xylème (bois) transporte la sève brute. C'est de l'eau + des sels minéraux, qui monte des racines vers les feuilles. Les vaisseaux du xylème sont des cellules mortes, creuses, empilées en tubes rigides. La sève brute monte à une vitesse de 1 à 100 m/h.\n\n• Le phloème (liber) transporte la sève élaborée. C'est de l'eau + des sucres fabriqués par la photosynthèse, qui descend des feuilles vers toute la plante. Les vaisseaux du phloème sont des cellules vivantes, reliées par des cribles (petits trous). La sève élaborée circule à 0,5 à 1 m/h.\n\nC'est comme un immeuble avec deux systèmes de plomberie : un pour l'eau potable qui monte et un pour les nutriments qui descendent.\n\nLe moteur de la montée de la sève brute, c'est la transpiration foliaire. L'eau qui s'évapore par les stomates crée une aspiration qui tire la sève depuis les racines. Un chêne adulte perd 200 à 400 litres d'eau par jour par ses feuilles.\n\nEn gros : xylème = eau + minéraux vers le haut ; phloème = sucres vers toute la plante.`
+          },
+          {
+            titre: "Méristèmes et phytomères : la croissance modulaire",
+            contenu: `Contrairement aux animaux, les plantes grandissent toute leur vie. Le moteur de cette croissance, ce sont les méristèmes.\n\nUn méristème est une zone de cellules indifférenciées (non spécialisées) qui se divisent activement. C'est comme une réserve de cellules souches.\n\nIl en existe deux types :\n\n• Les méristèmes apicaux, situés au sommet des tiges et au bout des racines. Ils assurent la croissance en longueur. La plante pousse vers le haut et vers le bas.\n\n• Les méristèmes latéraux (cambium), situés en périphérie de la tige. Ils assurent la croissance en épaisseur. C'est eux qui produisent les anneaux de croissance dans le tronc des arbres.\n\nLa tige grandit en ajoutant des modules répétitifs appelés phytomères. Chaque phytomère contient :\n\n1. Un entre-nœud (segment de tige).\n2. Un nœud (point d'attache).\n3. Une feuille.\n4. Un bourgeon axillaire.\n\nC'est comme des Lego empilés les uns sur les autres. La plante ajoute un phytomère à chaque étape de croissance.\n\nEn gros : les méristèmes sont les usines à cellules, et les phytomères sont les briques qui s'empilent.`
+          },
+          {
+            titre: "L'auxine : l'hormone chef d'orchestre",
+            contenu: `Les plantes n'ont pas de système nerveux. Pour coordonner leur croissance, elles utilisent des hormones végétales. La plus importante est l'auxine.\n\nL'auxine est fabriquée au sommet de la tige, dans le bourgeon apical. Elle descend ensuite vers le bas de la plante.\n\nElle a deux effets principaux :\n\n• Elle stimule l'élongation cellulaire. Les cellules s'allongent davantage là où il y a de l'auxine. C'est ce qui permet à la tige de grandir en longueur.\n\n• Elle contrôle la dominance apicale. Le bourgeon du sommet (apical) produit de l'auxine qui empêche les bourgeons latéraux de se développer. Si on coupe le sommet, les latéraux se réveillent et la plante se ramifie.\n\nC'est comme un chef d'équipe qui dit aux autres « attendez, c'est moi qui grandis d'abord ». Si le chef part, tout le monde se met à pousser.\n\nL'auxine explique aussi pourquoi les plantes poussent vers la lumière (phototropisme). Le côté à l'ombre reçoit plus d'auxine, ses cellules s'allongent davantage, et la tige se courbe vers la lumière.\n\nEn gros : l'auxine coordonne la croissance, oriente la plante vers la lumière et gère la hiérarchie entre les bourgeons.`
+          }
         ]
       },
       page2_concepts: {
@@ -644,16 +668,28 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "• Les plantes sont autotrophes (elles fabriquent leur propre nourriture). • Elles n'ont pas besoin de manger d'autres êtres vivants. • Grâce à la photosynthèse, elles transforment le CO₂ de l'air et l'eau du sol en glucose (un sucre). • L'énergie nécessaire vient de la lumière du soleil. • C'est comme un panneau solaire qui fabrique de la nourriture au lieu de l'électricité. • Le glucose sert ensuite de brique de base pour tout construire : parois (cellulose), réserves (amidon), graisses (lipides) et protéines. • La plante fabrique aussi des molécules spéciales pour interagir avec les autres êtres vivants. • Les anthocyanes (pigments colorés) attirent les pollinisateurs avec des couleurs vives. • Les tanins (molécules amères) repoussent les herbivores. • En gros : la plante est une usine solaire qui transforme lumière + CO₂ + eau en nourriture et en défense.",
-        points_cles: [
-          "Autotrophe = fabrique sa matière organique seule (≠ hétérotrophe qui doit manger)",
-          "Photosynthèse = CO₂ + H₂O + lumière → glucose + O₂",
-          "Se déroule dans les chloroplastes (organites contenant les pigments verts)",
-          "Deux phases : phase claire (thylakoïdes, besoin de lumière) et phase sombre (stroma, cycle de Calvin)",
-          "Le glucose est converti en cellulose (paroi), amidon (réserve), lipides et protéines",
-          "Anthocyanes = pigments colorés pour attirer les pollinisateurs (interaction positive)",
-          "Tanins = molécules amères pour repousser les herbivores (défense chimique)",
-          "L'O₂ que nous respirons vient de la photosynthèse des plantes"
+        texte: "Les plantes sont autotrophes : elles fabriquent leur propre nourriture à partir de lumière, d'eau et de CO₂. Le glucose produit sert ensuite de brique de base pour construire toute la matière organique de la plante.",
+        sections: [
+          {
+            titre: "La photosynthèse : l'usine solaire de la plante",
+            contenu: `Les plantes n'ont pas besoin de manger d'autres êtres vivants. Elles fabriquent leur nourriture elles-mêmes grâce à la photosynthèse.\n\nLa photosynthèse transforme le CO₂ de l'air et l'eau du sol en glucose (un sucre), en utilisant l'énergie de la lumière. L'oxygène (O₂) est rejeté comme déchet.\n\nL'équation bilan : 6 CO₂ + 6 H₂O + lumière → C₆H₁₂O₆ (glucose) + 6 O₂.\n\nTraduction : six molécules de gaz carbonique + six molécules d'eau + de la lumière donnent un sucre et six molécules d'oxygène.\n\nC'est comme un panneau solaire, sauf qu'au lieu de produire de l'électricité, il produit de la nourriture.\n\nLa photosynthèse a lieu dans les chloroplastes. Ce sont des organites (petits compartiments) présents dans les cellules des feuilles. Ils contiennent des pigments chlorophylliens (chlorophylle a, chlorophylle b, caroténoïdes) qui captent la lumière.\n\nCes pigments absorbent le bleu et le rouge, mais réfléchissent le vert. C'est pour ça que les feuilles sont vertes.\n\nEn gros : la plante est une usine solaire qui transforme lumière + CO₂ + eau en sucre + oxygène.`
+          },
+          {
+            titre: "Les deux phases de la photosynthèse",
+            contenu: `La photosynthèse se déroule en deux étapes, dans deux endroits différents du chloroplaste.\n\n1. La phase photochimique (phase claire). Elle a lieu dans les thylakoïdes (disques empilés à l'intérieur du chloroplaste). La lumière fournit l'énergie pour casser l'eau : c'est la photolyse de l'eau.\n\nH₂O → ½ O₂ + 2 H⁺ + 2 e⁻.\n\nTraduction : l'eau est décomposée en oxygène, en protons et en électrons.\n\nL'O₂ est rejeté dans l'air. Les protons et électrons servent à fabriquer de l'ATP (énergie) et du NADPH (pouvoir réducteur). Ce sont les « carburants » de l'étape suivante.\n\n2. La phase chimique (cycle de Calvin). Elle a lieu dans le stroma (liquide du chloroplaste). Le CO₂ est fixé sur une molécule organique, puis réduit en glucose grâce à l'ATP et au NADPH.\n\nAttention, piège : la phase « sombre » n'a pas besoin d'obscurité. Elle a juste besoin d'ATP et de NADPH produits par la phase claire.\n\nC'est comme une usine à deux étages : l'étage du haut (phase claire) fabrique l'énergie, l'étage du bas (phase sombre) fabrique le sucre.\n\nEn gros : la phase claire capte l'énergie lumineuse, la phase sombre utilise cette énergie pour transformer le CO₂ en glucose.`
+          },
+          {
+            titre: "Du glucose à la matière organique",
+            contenu: `Le glucose fabriqué par la photosynthèse est la brique de base. La plante le transforme en plusieurs types de molécules selon ses besoins.\n\n• Cellulose. Longues chaînes de glucose assemblées en fibres rigides. Elles forment la paroi des cellules végétales. C'est le composé organique le plus abondant sur Terre (100 milliards de tonnes par an). C'est comme l'armature en béton d'un bâtiment.\n\n• Lignine. Grosse molécule complexe qui imprègne les parois du xylème (bois). Elle rend les vaisseaux rigides, imperméables et résistants. C'est elle qui fait que le tronc d'un arbre est dur.\n\n• Amidon. Polymère de glucose stocké dans les amyloplastes (petits sacs de réserve). On le trouve dans la pomme de terre, le riz, le blé. C'est le stock d'énergie de la plante pour plus tard.\n\n• Saccharose. C'est le sucre de transport. Il circule dans le phloème (sève élaborée) depuis les feuilles vers le reste de la plante.\n\n• Lipides et protéines. Stockés dans les graines. Ils servent de réserve d'énergie et de matériaux de construction pour le futur embryon.\n\nEn gros : le glucose est le point de départ de toute la chimie de la plante. Il est transformé en structures, en réserves ou en énergie.`
+          },
+          {
+            titre: "Les interactions mutualistes : attirer ses partenaires",
+            contenu: `Les plantes ne sont pas isolées. Elles interagissent avec les autres êtres vivants. Certaines interactions sont bénéfiques pour les deux parties : ce sont les interactions mutualistes.\n\nLe principal outil d'attraction, ce sont les anthocyanes. Ce sont des pigments colorés (rouge, bleu, violet) présents dans les pétales et les fruits.\n\n• Dans les pétales, les anthocyanes attirent les insectes pollinisateurs (abeilles, papillons). La couleur vive dit « viens ici, il y a du nectar ».\n\n• Dans les fruits, les anthocyanes attirent les animaux disperseurs de graines (oiseaux, mammifères). La couleur vive dit « mange-moi et transporte mes graines ».\n\nC'est comme une publicité colorée que la plante affiche pour attirer ses partenaires.\n\nLes mycorhizes (association champignon-racine) sont aussi un exemple de mutualisme : le champignon fournit eau et minéraux, la plante fournit des sucres.\n\nEn gros : la plante fabrique des molécules colorées et sucrées pour attirer les animaux dont elle a besoin.`
+          },
+          {
+            titre: "Les interactions compétitives : se défendre",
+            contenu: `D'autres interactions sont négatives. Les plantes doivent se défendre contre les herbivores qui veulent les manger.\n\nLeur arme principale, ce sont les tanins. Ce sont des molécules au goût amer et astringent (qui assèche la bouche). Elles sont présentes dans les feuilles, l'écorce et parfois les fruits non mûrs.\n\nQuand un herbivore mange une feuille riche en tanins, il trouve le goût désagréable et va chercher ailleurs. C'est une défense chimique passive.\n\nC'est comme un système d'alarme chimique : la plante rend ses tissus immangeables.\n\nD'autres mécanismes de défense existent :\n\n• Les épines et les poils urticants (défense physique).\n• Les alcaloïdes (molécules toxiques comme la nicotine ou la caféine).\n• Les résines et les latex (substances collantes qui piègent les insectes).\n\nCertaines plantes émettent même des signaux chimiques dans l'air quand elles sont attaquées. Les plantes voisines captent ces signaux et renforcent leurs propres défenses.\n\nEn gros : les tanins et autres molécules de défense sont les armes chimiques de la plante pour décourager les herbivores.`
+          }
         ]
       },
       page2_concepts: {
@@ -900,13 +936,28 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Les plantes à fleurs se reproduisent de deux façons. La reproduction asexuée (bouturage, marcottage) donne des clones grâce à la totipotence des cellules végétales. La reproduction sexuée passe par la fleur : les étamines (mâle) produisent le pollen, le pistil (femelle) contient les ovules. La pollinisation permet la fécondation, qui donne graines et fruits. Les plantes ont co-évolué avec leurs pollinisateurs. En gros : les plantes se copient (asexuée) ou se mélangent (sexuée) pour assurer leur descendance.",
-        points_cles: [
-          "Reproduction asexuée = clones (totipotence, bouturage, marcottage)",
-          "Reproduction sexuée = fleur (pistil + étamines)",
-          "Pollinisation par le vent ou les animaux",
-          "Co-évolution plante-pollinisateur",
-          "Ovule → graine, ovaire → fruit, puis dispersion"
+        texte: "Les plantes à fleurs disposent de deux stratégies de reproduction : la voie asexuée (clonage) et la voie sexuée (via la fleur). L'une copie, l'autre mélange les gènes pour créer de la diversité.",
+        sections: [
+          {
+            titre: "La reproduction asexuée : copier-coller du vivant",
+            contenu: `La reproduction asexuée ne fait intervenir aucune fécondation. Elle produit des clones, c'est-à-dire des individus génétiquement identiques à la plante mère.\n\nElle repose sur une propriété extraordinaire des cellules végétales : la totipotence. Chaque cellule conserve le génome complet de la plante et peut, dans les bonnes conditions, redonner un organisme entier.\n\nC'est comme si chaque pixel d'une photo pouvait recréer la photo entière.\n\nDeux techniques courantes :\n\n• Le bouturage. On coupe un fragment de plante (tige, feuille, racine) et on le plante dans le sol. Grâce à la totipotence, il régénère les parties manquantes. Le résultat est un clone parfait.\n\n• Le marcottage. Une tige encore reliée à la plante mère touche le sol et y forme des racines. Un nouvel individu pousse naturellement, sans intervention humaine.\n\nC'est comme faire un copier-coller d'un fichier informatique : le contenu est identique à l'original.\n\nAvantage : c'est rapide et efficace. Inconvénient : aucune diversité génétique. Si une maladie attaque un clone, tous les autres sont vulnérables.\n\nEn gros : la reproduction asexuée produit des copies conformes grâce à la totipotence des cellules végétales.`
+          },
+          {
+            titre: "La fleur : organe de la reproduction sexuée",
+            contenu: `La reproduction sexuée passe obligatoirement par la fleur. La fleur contient les organes reproducteurs de la plante.\n\nLes deux organes clés :\n\n• Les étamines (organe mâle). Composées du filet (petite tige) et de l'anthère (sac qui fabrique les grains de pollen). Le pollen contient les cellules reproductrices mâles. C'est comme un distributeur de gamètes mâles.\n\n• Le pistil ou carpelle (organe femelle). Composé de trois parties : le stigmate (surface collante qui reçoit le pollen), le style (tube qui descend) et l'ovaire (contient les ovules). C'est l'appareil reproducteur femelle.\n\nLa fleur contient aussi des pièces stériles :\n\n• Les pétales. Ils attirent les pollinisateurs avec leurs couleurs vives.\n• Les sépales. Ils protègent le bouton floral avant l'ouverture.\n\nIl existe deux types de fécondation :\n\n• L'autofécondation. Le pollen féconde l'ovule de la même fleur. Pas de mélange génétique. Pratique quand il n'y a pas de voisin.\n• La fécondation croisée. Le pollen vient d'une autre plante. Les gènes se mélangent. Plus de diversité = meilleure adaptation.\n\nEn gros : la fleur est le lieu de rencontre entre gamètes mâles (pollen) et femelles (ovules).`
+          },
+          {
+            titre: "La pollinisation et la co-évolution",
+            contenu: `La pollinisation est le transport du pollen depuis l'anthère (étamine) jusqu'au stigmate (pistil). C'est une étape indispensable avant la fécondation.\n\nDeux grands modes de transport :\n\n• L'anémogamie (pollinisation par le vent). Le pollen est léger, produit en masse et lancé au hasard dans l'air. C'est la stratégie du nombre. Inconvénient : beaucoup de gaspillage. Exemples : graminées, arbres comme le chêne ou le bouleau.\n\n• La zoogamie (pollinisation par les animaux). Le pollen est transporté par des insectes (abeilles, papillons), des oiseaux (colibris) ou des chauves-souris. La fleur attire le pollinisateur avec du nectar, des couleurs vives et des odeurs.\n\n80 à 90 % des plantes à fleurs dépendent d'animaux pollinisateurs. C'est une stratégie ultra-efficace mais risquée si le pollinisateur disparaît.\n\nLa co-évolution est l'adaptation mutuelle entre la plante et son pollinisateur au fil du temps. La forme de la fleur s'adapte à l'animal, et l'animal s'adapte à la fleur.\n\nC'est comme une clé et une serrure qui évoluent ensemble. Exemple : la trompe du papillon s'allonge pour atteindre le nectar d'une fleur tubulaire.\n\nEn gros : la pollinisation est la « livraison » du pollen, et la co-évolution a créé des duos plante-animal parfaitement ajustés.`
+          },
+          {
+            titre: "De la fécondation à la graine et au fruit",
+            contenu: `Après la pollinisation, le grain de pollen germe sur le stigmate. Un tube pollinique pousse à travers le style jusqu'à l'ovule. La fécondation a lieu : les gamètes mâle et femelle fusionnent.\n\nAttention, piège : pollinisation ≠ fécondation. La pollinisation est le transport du pollen. La fécondation est la fusion des gamètes.\n\nAprès la fécondation, deux transformations se produisent :\n\n• L'ovule se transforme en graine. La graine contient un embryon (la future plante), des réserves nutritives (amidon, lipides, protéines) et un tégument (enveloppe protectrice). C'est comme un paquet cadeau contenant une mini-plante avec son repas.\n\n• L'ovaire du pistil se transforme en fruit. Le fruit protège les graines et aide à leur dispersion. Attention : un fruit n'est pas toujours charnu. Une gousse de haricot, un akène de pissenlit et une capsule de pavot sont aussi des fruits.\n\nUne orchidée peut produire jusqu'à 2 millions de graines minuscules par fruit. Une cerise investit tout dans une seule grosse graine bien nourrie. Chaque espèce a sa stratégie.\n\nEn gros : la fécondation transforme l'ovule en graine et l'ovaire en fruit.`
+          },
+          {
+            titre: "La dispersion des graines",
+            contenu: `Pour coloniser de nouveaux territoires, les graines doivent s'éloigner de la plante mère. C'est la dispersion (ou dissémination).\n\nTrois grands modes de dispersion :\n\n• L'anémochorie (par le vent). Les graines sont légères, ailées ou munies de poils plumeux. Exemples : pissenlit (aigrettes), érable (samares ailées). Elles peuvent voyager sur des centaines de km.\n\n• La zoochorie (par les animaux). Deux variantes. Les fruits charnus (cerise, framboise) sont mangés par les animaux ; les graines passent dans le tube digestif et sont déposées plus loin. Les fruits à crochets (bardane) s'accrochent à la fourrure ou aux vêtements.\n\n• L'hydrochorie (par l'eau). Les graines flottent et sont transportées par les rivières ou la mer. Exemple : la noix de coco.\n\nC'est comme un système de livraison gratuit : le vent, les animaux et l'eau font le travail de transport.\n\nLa dispersion est essentielle pour éviter la compétition entre la plante mère et ses descendants. Plus les graines vont loin, plus elles ont de chances de trouver un environnement favorable.\n\nEn gros : la plante produit graines et fruits adaptés au mode de transport disponible dans son environnement.`
+          }
         ]
       },
       page2_concepts: {
@@ -914,39 +965,43 @@ export const TERM_SVT_COURS = [
         concepts: [
           {
             terme: "Totipotence",
-            definition: "Capacité d'une cellule végétale à redonner un organisme entier. C'est possible car le génome complet est conservé dans chaque cellule."
+            definition: "Capacité d'une cellule végétale à régénérer un organisme entier. C'est possible car chaque cellule conserve le génome complet de la plante. C'est comme si chaque pixel d'une photo pouvait recréer la photo entière. En gros : une seule cellule = potentiellement une plante complète."
           },
           {
             terme: "Bouturage",
-            definition: "On coupe un morceau de plante (tige, feuille) et on le plante. Il régénère racines et tiges grâce à la totipotence. Résultat : un clone."
+            definition: "On coupe un fragment de plante (tige, feuille, racine) et on le plante. Grâce à la totipotence, il régénère les parties manquantes. Le résultat est un clone (copie génétique). C'est comme couper un bras d'étoile de mer qui repousse un corps entier."
           },
           {
             terme: "Marcottage",
-            definition: "Une tige se courbe jusqu'au sol et s'enracine. Le nouvel individu reste d'abord relié à la mère. En gros : la plante se clone naturellement."
+            definition: "Une tige encore reliée à la plante mère touche le sol et y forme des racines. Un nouvel individu pousse à cet endroit. Il reste d'abord relié à la mère, puis peut devenir indépendant. En gros : la plante se clone naturellement sans intervention humaine."
           },
           {
             terme: "Pistil (carpelle)",
-            definition: "Organe femelle de la fleur. Composé du stigmate (récepteur de pollen), du style (tube) et de l'ovaire (contient les ovules)."
+            definition: "Organe femelle de la fleur. Il est composé de trois parties : le stigmate (surface collante qui reçoit le pollen), le style (tube qui relie le stigmate à l'ovaire) et l'ovaire (contient les ovules). En gros : c'est l'appareil reproducteur femelle de la plante."
           },
           {
             terme: "Étamine",
-            definition: "Organe mâle de la fleur. Composée du filet (tige) et de l'anthère (sac qui produit les grains de pollen)."
+            definition: "Organe mâle de la fleur. Composée du filet (petite tige) et de l'anthère (sac qui fabrique les grains de pollen). Le pollen contient les cellules reproductrices mâles. C'est comme un distributeur de gamètes mâles."
           },
           {
             terme: "Pollinisation",
-            definition: "Transport du pollen de l'anthère au stigmate. Par le vent (anémogamie) ou par un animal (zoogamie : insecte, oiseau, chauve-souris)."
+            definition: "Transport du pollen depuis l'anthère (étamine) jusqu'au stigmate (pistil). Par le vent on parle d'anémogamie (pollen léger, produit en masse). Par un animal on parle de zoogamie (insecte, oiseau, chauve-souris). En gros : c'est la livraison du pollen."
           },
           {
             terme: "Autofécondation vs fécondation croisée",
-            definition: "Auto : le pollen féconde la même fleur (pas de mélange). Croisée : le pollen vient d'une autre plante (plus de diversité génétique)."
+            definition: "Autofécondation : le pollen féconde l'ovule de la même fleur (pas de mélange génétique). Fécondation croisée : le pollen vient d'une autre plante (diversité génétique accrue). En gros : l'auto fait des quasi-clones, la croisée fait des individus variés."
           },
           {
-            terme: "Co-évolution",
-            definition: "Deux espèces évoluent en réponse l'une à l'autre. Ex : la forme de la fleur s'adapte au bec du colibri, et inversement."
+            terme: "Co-évolution plante-pollinisateur",
+            definition: "Évolution parallèle où la plante et son pollinisateur s'adaptent l'un à l'autre au fil du temps. Exemple : la trompe du papillon s'allonge pour atteindre le nectar d'une fleur tubulaire. C'est comme une clé et une serrure qui évoluent ensemble."
           },
           {
-            terme: "Graine et fruit",
-            definition: "Après fécondation, l'ovule → graine (embryon + réserves) et l'ovaire → fruit. Le fruit protège la graine et aide à sa dispersion."
+            terme: "Graine",
+            definition: "Résultat de la transformation de l'ovule après fécondation. Elle contient un embryon (future plante), des réserves nutritives et un tégument (enveloppe protectrice). C'est comme un paquet cadeau contenant une mini-plante avec son repas."
+          },
+          {
+            terme: "Fruit",
+            definition: "Résultat de la transformation de l'ovaire du pistil après fécondation. Il protège les graines et aide à leur dispersion. Attention : un fruit n'est pas toujours charnu. Une gousse, un akène ou une capsule sont aussi des fruits."
           }
         ]
       },
@@ -958,29 +1013,44 @@ export const TERM_SVT_COURS = [
         titre: "Chiffres clés",
         formules: [
           {
-            nom: "Diversité des fleurs",
-            formule: "≈ 300 000 espèces de plantes à fleurs",
-            explication: "Les Angiospermes (plantes à fleurs) dominent les milieux terrestres depuis le Crétacé (~100 Ma)."
+            nom: "Nombre d'espèces de plantes à fleurs",
+            formule: "≈ 300 000 espèces d'Angiospermes",
+            explication: "Les plantes à fleurs dominent les milieux terrestres depuis le Crétacé (il y a environ 100 millions d'années)."
           },
           {
             nom: "Grains de pollen par étamine",
             formule: "De quelques centaines à plusieurs millions",
-            explication: "Les plantes anémogames (pollinisées par le vent) produisent beaucoup plus de pollen car le transport est aléatoire."
+            explication: "Les plantes pollinisées par le vent en produisent énormément car le transport est aléatoire. C'est la stratégie du nombre."
           },
           {
-            nom: "Nombre d'espèces d'abeilles",
-            formule: "≈ 20 000 espèces dans le monde",
-            explication: "Les abeilles sont parmi les pollinisateurs les plus efficaces. Leur déclin menace la reproduction de nombreuses plantes."
+            nom: "Nombre d'espèces d'abeilles dans le monde",
+            formule: "≈ 20 000 espèces",
+            explication: "Les abeilles sont les pollinisateurs les plus efficaces. Leur déclin menace la reproduction de nombreuses plantes cultivées."
           },
           {
-            nom: "Pourcentage de plantes pollinisées par des animaux",
+            nom: "Plantes pollinisées par des animaux",
             formule: "≈ 80 à 90 % des plantes à fleurs",
-            explication: "La grande majorité des plantes dépend des animaux (insectes surtout) pour leur reproduction sexuée."
+            explication: "La grande majorité des plantes dépend des animaux (insectes surtout) pour le transport du pollen."
           },
           {
             nom: "Durée de vie d'un grain de pollen",
             formule: "De quelques heures à quelques jours",
-            explication: "Le pollen est fragile. Il doit atteindre le stigmate rapidement pour que la fécondation ait lieu."
+            explication: "Le pollen est fragile et sèche vite. Il doit atteindre le stigmate rapidement pour que la fécondation ait lieu."
+          },
+          {
+            nom: "Nombre de graines par fruit (exemples)",
+            formule: "1 (cerise) à 2 000 000 (orchidée)",
+            explication: "Les orchidées produisent des millions de graines minuscules. Les cerises investissent tout dans une seule graine bien nourrie."
+          },
+          {
+            nom: "Distance de dispersion par le vent",
+            formule: "Jusqu'à plusieurs centaines de km (pissenlit, érable)",
+            explication: "Les graines ailées ou plumeuses peuvent voyager très loin grâce au vent. C'est l'anémochorie."
+          },
+          {
+            nom: "Apparition des premières fleurs",
+            formule: "≈ 130-140 millions d'années (début du Crétacé)",
+            explication: "Les plantes à fleurs sont apparues au Mésozoïque et ont rapidement dominé les milieux terrestres."
           }
         ]
       },
@@ -1135,13 +1205,32 @@ export const TERM_SVT_COURS = [
     fiche: {
       page1_intro: {
         titre: "Introduction",
-        texte: "Le climat de la Terre a beaucoup varié au cours de son histoire. À l'échelle récente (Quaternaire), la Terre alterne entre glaciations et périodes chaudes selon les cycles de Milankovitch. À grande échelle (centaines de millions d'années), le CO₂ atmosphérique est le facteur clé : plus de CO₂ = plus chaud (Mésozoïque), moins de CO₂ = plus froid (Cénozoïque). En gros : le climat dépend de l'orbite terrestre (court terme) et du CO₂ (long terme), avec des boucles d'amplification (albédo, solubilité du CO₂).",
-        points_cles: [
-          "Quaternaire : alternance glaciaires/interglaciaires (cycles de Milankovitch)",
-          "Rétroactions : albédo (glace réfléchit) et solubilité du CO₂ (eau chaude → libère CO₂)",
-          "Cénozoïque : refroidissement depuis 30 Ma (altération continentale consomme du CO₂)",
-          "Mésozoïque : climat chaud (dorsales actives → beaucoup de CO₂)",
-          "Paléozoïque : glaciation Carbonifère-Permien (enfouissement de carbone)"
+        texte: "Le climat de la Terre a énormément varié au cours de milliards d'années. À court terme, l'orbite terrestre contrôle les glaciations. À long terme, c'est le CO₂ atmosphérique qui fait la pluie et le beau temps.",
+        sections: [
+          {
+            titre: "Le Quaternaire : alternance glaciaires/interglaciaires",
+            contenu: `Depuis 800 000 ans, la Terre oscille entre des périodes glaciaires (très froides, immenses calottes de glace) et des périodes interglaciaires (plus chaudes, calottes réduites).\n\nNous vivons actuellement dans un interglaciaire, depuis environ 11 000 ans. La dernière glaciation s'est étendue de -120 000 à -11 000 ans. Le niveau de la mer était 120 m plus bas qu'aujourd'hui. On pouvait aller à pied de France en Angleterre.\n\nCes alternances suivent un cycle d'environ 100 000 ans. Elles sont déclenchées par les cycles de Milankovitch.\n\nMilankovitch a montré que trois paramètres de l'orbite terrestre varient lentement :\n\n• L'excentricité (forme de l'orbite, cycle de ~100 000 ans). L'orbite passe d'un cercle presque parfait à une ellipse plus allongée.\n• L'obliquité (inclinaison de l'axe, cycle de ~41 000 ans). L'axe de la Terre penche plus ou moins.\n• La précession (oscillation de l'axe, cycle de ~26 000 ans). L'axe tourne lentement comme une toupie.\n\nC'est comme si la Terre tanguait doucement dans l'espace. Ces variations modifient la quantité et la répartition de la lumière solaire reçue.\n\nEn gros : les cycles de Milankovitch déclenchent les glaciations en changeant la façon dont la Terre reçoit la lumière du Soleil.`
+          },
+          {
+            titre: "Les boucles d'amplification : albédo et CO₂",
+            contenu: `Les cycles de Milankovitch déclenchent les changements, mais ne suffisent pas à eux seuls à expliquer l'ampleur des glaciations. Des boucles de rétroaction positive amplifient le signal.\n\nPremière boucle : l'albédo.\n\nL'albédo est la proportion de lumière solaire réfléchie par une surface. La glace et la neige ont un albédo élevé (elles renvoient 80 à 90 % de la lumière). L'océan sombre a un albédo faible (il absorbe 90 % de la lumière).\n\n• Il fait plus froid → plus de glace → l'albédo augmente → plus de lumière réfléchie → encore plus froid.\n• Inversement : il fait plus chaud → la glace fond → l'albédo diminue → plus de lumière absorbée → encore plus chaud.\n\nC'est comme un effet boule de neige qui amplifie le changement initial.\n\nDeuxième boucle : la solubilité du CO₂.\n\nL'eau froide dissout beaucoup de CO₂ (comme une boisson gazeuse froide qui garde ses bulles). L'eau chaude en dissout moins (les bulles s'échappent).\n\n• L'océan se réchauffe → il libère du CO₂ dans l'atmosphère → plus d'effet de serre → encore plus chaud.\n• L'océan se refroidit → il absorbe du CO₂ → moins d'effet de serre → encore plus froid.\n\nAttention, piège fréquent : l'eau froide dissout PLUS de CO₂, pas moins.\n\nEn gros : l'albédo et la solubilité du CO₂ sont des amplificateurs qui transforment un petit changement orbital en une glaciation massive.`
+          },
+          {
+            titre: "Le Cénozoïque : le lent refroidissement (depuis 30 Ma)",
+            contenu: `À l'échelle de dizaines de millions d'années, c'est le taux de CO₂ atmosphérique qui contrôle le climat. Plus de CO₂ = plus d'effet de serre = plus chaud. Moins de CO₂ = plus froid.\n\nDepuis environ 30 millions d'années, la température globale baisse progressivement. Pourquoi ? À cause de l'altération des silicates continentaux.\n\nComment ça marche :\n\n1. Des chaînes de montagnes se forment (Himalaya, Alpes).\n2. Les roches silicatées (riches en silicium) sont exposées à l'air.\n3. L'eau de pluie, chargée en CO₂ dissous, attaque chimiquement ces roches.\n4. Cette réaction consomme du CO₂ atmosphérique.\n5. Moins de CO₂ dans l'air → moins d'effet de serre → refroidissement.\n\nC'est comme un climatiseur géologique ultra-lent. La formation de l'Himalaya a aspiré tellement de CO₂ que la Terre s'est progressivement refroidie.\n\nCe refroidissement a conduit à l'apparition des calottes glaciaires permanentes en Antarctique (il y a ~34 Ma) puis en Arctique (il y a ~3 Ma).\n\nEn gros : les montagnes consomment du CO₂ en s'érodant, ce qui refroidit la planète sur des millions d'années.`
+          },
+          {
+            titre: "Le Mésozoïque : un monde sans glace",
+            contenu: `Le Mésozoïque (de -252 à -66 Ma) était une époque bien plus chaude qu'aujourd'hui. Il n'y avait aucune calotte glaciaire, même aux pôles. Les dinosaures vivaient dans un monde tropical.\n\nLa cause principale : une très forte activité des dorsales océaniques.\n\nLes dorsales sont des chaînes de montagnes sous-marines où le magma remonte. Quand le magma sort, il libère du CO₂ en grande quantité.\n\n• Dorsales très actives → beaucoup de CO₂ dégazé → effet de serre puissant → climat très chaud.\n\nLe niveau de la mer était aussi beaucoup plus haut qu'aujourd'hui (jusqu'à 200 m de plus). Les dorsales très actives prenaient plus de place au fond des océans et repoussaient l'eau vers les continents.\n\nC'est comme un radiateur géologique géant au fond des océans qui réchauffe toute la planète.\n\nLe Mésozoïque montre que le CO₂ est le thermostat principal du climat terrestre à long terme.\n\nEn gros : les dorsales très actives du Mésozoïque ont libéré tellement de CO₂ que la Terre était un four sans glace.`
+          },
+          {
+            titre: "Le Paléozoïque : la glaciation du Carbonifère-Permien",
+            contenu: `Au Paléozoïque, entre -360 et -260 millions d'années, une glaciation massive a frappé la Terre. C'est la glaciation Carbonifère-Permien.\n\nSa cause est originale : l'enfouissement massif de matière organique.\n\nAu Carbonifère, d'immenses forêts tropicales recouvraient les continents. Ces arbres géants (jusqu'à 40 m de haut) absorbaient du CO₂ par photosynthèse.\n\nMais quand ils mouraient, ils n'étaient pas décomposés. Les champignons capables de digérer la lignine (le bois) n'existaient pas encore. Les troncs s'entassaient et étaient enfouis dans les sédiments.\n\nRésultat :\n\n• Du carbone piégé dans le sol → c'est ce carbone qui est devenu le charbon que nous brûlons aujourd'hui.\n• Moins de CO₂ dans l'atmosphère → moins d'effet de serre → refroidissement massif → glaciation.\n\nEn parallèle, la formation de la chaîne hercynienne (une immense chaîne de montagnes, ancêtre des Appalaches et du Massif Central) a aussi consommé du CO₂ par altération des silicates.\n\nC'est comme si les forêts avaient aspiré tellement de CO₂ que la Terre est tombée dans un congélateur.\n\nEn gros : l'enfouissement des forêts carbonifères a retiré du CO₂ de l'atmosphère et provoqué une glaciation de 100 millions d'années.`
+          },
+          {
+            titre: "Le réchauffement actuel : un cas à part",
+            contenu: `Le réchauffement climatique actuel est d'environ +1 °C en 150 ans (depuis la révolution industrielle, vers 1850). Ce rythme est inédit dans l'histoire géologique.\n\nPourquoi est-ce si rapide ? Parce que les humains brûlent des combustibles fossiles (pétrole, gaz, charbon). Ce charbon et ce pétrole sont justement le carbone enfoui depuis le Carbonifère. En les brûlant, on libère en quelques décennies du CO₂ qui avait mis des millions d'années à être piégé.\n\nC'est comme vider un sablier géant en une seconde alors qu'il avait mis des millénaires à se remplir.\n\nImportant : les cycles de Milankovitch ne sont PAS responsables du réchauffement actuel. Ils agissent sur des milliers d'années, pas sur des décennies.\n\nSans l'effet de serre naturel, la Terre serait à -18 °C au lieu de +15 °C. L'effet de serre naturel est vital. Le problème, c'est l'effet de serre additionnel causé par les activités humaines.\n\nLes forages glaciaires (carottes de glace de l'Antarctique, jusqu'à 3 270 m de profondeur) permettent de reconstituer 800 000 ans de climat. Les bulles d'air piégées dans la glace montrent que le taux de CO₂ actuel est le plus élevé depuis 800 000 ans.\n\nEn gros : le réchauffement actuel est causé par l'homme, pas par les cycles naturels. Il est beaucoup trop rapide pour être naturel.`
+          }
         ]
       },
       page2_concepts: {
@@ -1149,39 +1238,43 @@ export const TERM_SVT_COURS = [
         concepts: [
           {
             terme: "Cycle de Milankovitch",
-            definition: "Trois paramètres orbitaux varient cycliquement : l'excentricité (~100 000 ans), l'obliquité (~41 000 ans) et la précession (~26 000 ans). Ils modifient l'ensoleillement et déclenchent glaciations ou réchauffements."
+            definition: "Trois paramètres de l'orbite terrestre varient lentement. L'excentricité (forme de l'orbite, ~100 000 ans), l'obliquité (inclinaison de l'axe, ~41 000 ans) et la précession (oscillation de l'axe, ~26 000 ans). Ils modifient la quantité de lumière reçue et déclenchent glaciations ou réchauffements. C'est comme si la Terre tanguait doucement dans l'espace."
           },
           {
             terme: "Glaciaire / Interglaciaire",
-            definition: "Période glaciaire = froid, calottes étendues, niveau de mer bas. Interglaciaire = chaud, calottes réduites, niveau de mer haut. On vit en interglaciaire depuis ~11 000 ans."
+            definition: "Période glaciaire = très froid, calottes de glace immenses, niveau de la mer très bas. Interglaciaire = plus chaud, calottes réduites, niveau de la mer élevé. Nous vivons en interglaciaire depuis environ 11 000 ans. En gros : la Terre oscille entre des périodes froides et chaudes."
           },
           {
             terme: "Albédo",
-            definition: "Fraction de lumière réfléchie par une surface. Glace/neige = albédo élevé (90 %). Océan/forêt = albédo faible (10-20 %). En gros : la glace renvoie la lumière, l'océan l'absorbe."
+            definition: "Proportion de lumière solaire réfléchie par une surface. La glace et la neige ont un albédo élevé (elles renvoient jusqu'à 90 % de la lumière). L'océan sombre a un albédo faible (il absorbe 90 % de la lumière). En gros : surface blanche = renvoie la lumière ; surface sombre = absorbe la chaleur."
           },
           {
             terme: "Rétroaction positive (albédo)",
-            definition: "Plus il fait froid → plus de glace → albédo augmente → plus de lumière réfléchie → encore plus froid. (Et inversement pour le réchauffement.)"
+            definition: "Plus il fait froid → plus de glace → albédo augmente → encore plus de lumière réfléchie → encore plus froid. Et ça marche aussi dans l'autre sens : plus il fait chaud → moins de glace → plus d'absorption → encore plus chaud. C'est comme un effet boule de neige qui amplifie le changement initial."
           },
           {
-            terme: "Solubilité du CO₂",
-            definition: "L'eau froide dissout plus de CO₂ que l'eau chaude. Quand l'océan se réchauffe, il libère du CO₂ → amplifie le réchauffement (rétroaction positive)."
+            terme: "Solubilité du CO₂ dans l'océan",
+            definition: "L'eau froide dissout beaucoup de CO₂ (comme une boisson gazeuse froide qui garde ses bulles). L'eau chaude en dissout moins (les bulles s'échappent). Quand l'océan se réchauffe, il libère du CO₂ dans l'atmosphère, ce qui amplifie le réchauffement. En gros : c'est une deuxième boucle d'amplification."
           },
           {
-            terme: "Altération des silicates",
-            definition: "Réaction chimique : les roches silicatées + CO₂ dissous dans la pluie → carbonates. Cela retire du CO₂ de l'atmosphère → refroidissement à long terme."
+            terme: "Altération des silicates continentaux",
+            definition: "Réaction chimique entre les roches silicatées (contenant du silicium) exposées par les montagnes et le CO₂ dissous dans l'eau de pluie. Cette réaction consomme du CO₂ atmosphérique. Résultat : moins de CO₂ → moins d'effet de serre → refroidissement. C'est comme un climatiseur géologique très lent."
           },
           {
             terme: "Activité des dorsales océaniques",
-            definition: "Quand les dorsales sont très actives, elles dégazent beaucoup de CO₂. Cela renforce l'effet de serre → climat plus chaud (ex : Mésozoïque)."
+            definition: "Les dorsales (chaînes de montagnes sous-marines) émettent du CO₂ quand le magma remonte. Quand elles sont très actives (beaucoup de volcans), elles libèrent énormément de CO₂. Plus de CO₂ = plus d'effet de serre = climat chaud. C'est ce qui explique la chaleur du Mésozoïque."
           },
           {
             terme: "Enfouissement de matière organique",
-            definition: "Quand la matière organique est enterrée sans être décomposée, le carbone est piégé. Moins de CO₂ dans l'air → refroidissement (ex : Carbonifère)."
+            definition: "Quand des plantes ou des animaux morts sont enterrés avant d'être décomposés, leur carbone est piégé dans le sol. Ce carbone ne retourne pas dans l'air sous forme de CO₂. Moins de CO₂ atmosphérique → refroidissement. C'est ce qui a causé la glaciation du Carbonifère."
           },
           {
             terme: "Effet de serre",
-            definition: "Certains gaz (CO₂, CH₄, H₂O) piègent la chaleur renvoyée par la Terre. Sans effet de serre, la Terre serait à -18 °C. Trop d'effet de serre → surchauffe."
+            definition: "Certains gaz (CO₂, méthane CH₄, vapeur d'eau H₂O) piègent la chaleur renvoyée par la surface de la Terre. Sans eux, la Terre serait gelée à -18 °C. Mais trop de gaz à effet de serre provoque une surchauffe. C'est comme une couverture : une c'est bien, dix c'est trop chaud."
+          },
+          {
+            terme: "Forages glaciaires",
+            definition: "On fore dans les calottes glaciaires (Antarctique, Groenland) pour extraire des carottes de glace très anciennes. Les bulles d'air piégées dans la glace permettent de connaître la composition de l'atmosphère passée. En gros : la glace est un livre d'histoire du climat."
           }
         ]
       },
@@ -1193,29 +1286,44 @@ export const TERM_SVT_COURS = [
         titre: "Chiffres clés",
         formules: [
           {
-            nom: "Réchauffement récent",
+            nom: "Réchauffement climatique actuel",
             formule: "+1 °C en ~150 ans (depuis 1850)",
-            explication: "Rythme inédit dans l'histoire géologique. Lié principalement aux émissions humaines de CO₂ (combustibles fossiles)."
+            explication: "Rythme inédit dans l'histoire géologique. Causé principalement par les émissions humaines de CO₂ (combustion de pétrole, gaz, charbon)."
           },
           {
             nom: "Dernière glaciation",
             formule: "De -120 000 à -11 000 ans",
-            explication: "Le niveau de la mer était ~120 m plus bas qu'aujourd'hui. D'immenses calottes recouvraient l'hémisphère Nord."
+            explication: "Le niveau de la mer était ~120 m plus bas qu'aujourd'hui. On pouvait aller à pied de France en Angleterre."
           },
           {
-            nom: "Période des cycles glaciaires récents",
-            formule: "≈ 100 000 ans (dominé par l'excentricité)",
-            explication: "Depuis 800 000 ans, les alternances glaciaires/interglaciaires suivent un cycle d'environ 100 000 ans."
+            nom: "Cycle des glaciations récentes",
+            formule: "≈ 100 000 ans (dominé par l'excentricité orbitale)",
+            explication: "Depuis 800 000 ans, les alternances froid/chaud suivent un cycle de ~100 000 ans lié à l'orbite terrestre."
           },
           {
             nom: "Refroidissement cénozoïque",
-            formule: "Baisse progressive depuis ~30 Ma",
-            explication: "L'altération des silicates des chaînes de montagnes (Himalaya, Alpes) consomme du CO₂ → refroidissement global."
+            formule: "Baisse progressive de la température depuis ~30 Ma",
+            explication: "L'altération des montagnes (Himalaya, Alpes) consomme du CO₂. Moins de CO₂ → refroidissement global."
           },
           {
-            nom: "Température sans effet de serre",
-            formule: "-18 °C (au lieu de +15 °C en moyenne)",
-            explication: "Sans les gaz à effet de serre, la Terre serait une boule de glace. L'effet de serre naturel est vital."
+            nom: "Température terrestre sans effet de serre",
+            formule: "-18 °C au lieu de +15 °C en moyenne",
+            explication: "L'effet de serre naturel réchauffe la Terre de 33 °C. Sans lui, aucune vie complexe ne serait possible."
+          },
+          {
+            nom: "Albédo de la glace vs océan",
+            formule: "Glace ≈ 80-90 % réfléchi ; Océan ≈ 6-10 % réfléchi",
+            explication: "C'est pourquoi la fonte des glaces accélère le réchauffement : la surface sombre qui remplace absorbe plus de chaleur."
+          },
+          {
+            nom: "Glaciation Carbonifère-Permien",
+            formule: "De -360 à -260 millions d'années",
+            explication: "Causée par l'enfouissement massif des forêts tropicales (qui sont devenues le charbon). Le CO₂ a chuté."
+          },
+          {
+            nom: "Profondeur des forages glaciaires (record)",
+            formule: "≈ 3 270 m (Dôme C, Antarctique) → 800 000 ans d'histoire",
+            explication: "Les bulles d'air piégées dans la glace permettent de reconstituer l'atmosphère passée sur 800 000 ans."
           }
         ]
       },
