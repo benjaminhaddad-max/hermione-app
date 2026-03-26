@@ -1,6 +1,22 @@
 import { useState } from "react";
 import { METHODE_CHAPITRES } from "../../data/methodeVideos";
 
+const TOTAL_VIDEOS = METHODE_CHAPITRES.reduce((s, c) => s + c.videos.length, 0);
+
+const PILIERS = [
+  { icon: "⏰", label: "Routine", desc: "Construis une journée type efficace" },
+  { icon: "🧠", label: "Mental", desc: "Développe la niaque et la résilience" },
+  { icon: "🎯", label: "Focus", desc: "Élimine la procrastination" },
+  { icon: "📋", label: "Organisation", desc: "Planifie et priorise tes révisions" },
+  { icon: "🧬", label: "Mémorisation", desc: "Retiens tes cours sur le long terme" },
+];
+
+const CHAP_DESCRIPTIONS = {
+  "methode-ch1": "Mets en place les fondations : une routine solide, de bonnes habitudes et un système de progression.",
+  "methode-ch2": "Construis le mindset des étudiants qui réussissent : gestion du stress, motivation et résilience.",
+  "methode-ch3": "Apprends à rester concentré(e) des heures, éliminer la procrastination et gérer ton énergie.",
+};
+
 function VimeoPlayer({ vimeoId, vimeoHash }) {
   return (
     <div className="meth-player-wrap">
@@ -47,12 +63,15 @@ function RecapSection({ recap }) {
   );
 }
 
-function VideoCard({ video, active, onClick }) {
+function VideoCard({ video, index, onClick }) {
   return (
-    <button className={`meth-video-card ${active ? "active" : ""}`} onClick={onClick}>
-      <span className="meth-video-emoji">{video.emoji}</span>
-      <span className="meth-video-titre">{video.titre}</span>
-      <span className="meth-video-play">{active ? "▶" : "›"}</span>
+    <button className="meth-video-card" onClick={onClick}>
+      <span className="meth-vc-index">{index}</span>
+      <div className="meth-vc-info">
+        <span className="meth-vc-titre">{video.emoji} {video.titre}</span>
+        {video.description && <span className="meth-vc-desc">{video.description}</span>}
+      </div>
+      <span className="meth-vc-play">▶</span>
     </button>
   );
 }
@@ -79,40 +98,88 @@ export default function MethodePage() {
   }
 
   return (
-    <div className="page">
-      <div className="page-header">
-        <div>
-          <h1 className="page-title">Méthode</h1>
-          <p className="page-sub">Trouve ta méthode de travail</p>
+    <div className="page meth-landing">
+      {/* Hero */}
+      <div className="meth-hero">
+        <div className="meth-hero-badge">PROGRAMME EXCLUSIF</div>
+        <h1 className="meth-hero-title">Trouve Ta<br /><span className="meth-hero-accent">Méthode</span></h1>
+        <p className="meth-hero-sub">
+          Le programme complet pour construire une méthode de travail qui te mène au succès en PASS/LAS.
+        </p>
+        <div className="meth-hero-stats">
+          <div className="meth-stat">
+            <span className="meth-stat-num">{METHODE_CHAPITRES.length}</span>
+            <span className="meth-stat-label">chapitres</span>
+          </div>
+          <div className="meth-stat-sep" />
+          <div className="meth-stat">
+            <span className="meth-stat-num">{TOTAL_VIDEOS}</span>
+            <span className="meth-stat-label">vidéos</span>
+          </div>
+          <div className="meth-stat-sep" />
+          <div className="meth-stat">
+            <span className="meth-stat-num">∞</span>
+            <span className="meth-stat-label">récaps</span>
+          </div>
         </div>
       </div>
 
-      <div className="meth-intro">
-        <p className="meth-intro-text">
-          Le programme <strong>Trouve Ta Méthode</strong> t'accompagne pour construire une méthode de travail solide. 
-          Des vidéos concrètes pour <strong>organiser tes révisions</strong>, <strong>rester motivé(e)</strong> et <strong>mémoriser efficacement</strong>.
+      {/* Piliers */}
+      <div className="meth-section">
+        <h2 className="meth-section-title">Les 5 piliers de la réussite</h2>
+        <p className="meth-section-sub">Chaque vidéo t'apprend une compétence concrète que les meilleurs étudiants maîtrisent.</p>
+        <div className="meth-piliers">
+          {PILIERS.map((p, i) => (
+            <div key={i} className="meth-pilier">
+              <span className="meth-pilier-icon">{p.icon}</span>
+              <span className="meth-pilier-label">{p.label}</span>
+              <span className="meth-pilier-desc">{p.desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="meth-cta-box">
+        <span className="meth-cta-emoji">🚀</span>
+        <p className="meth-cta-text">
+          Ces vidéos ont aidé <strong>+2 000 étudiants</strong> à trouver leur méthode.<br />
+          Chaque vidéo dure <strong>5 à 15 min</strong> et contient une <strong>fiche récap</strong> intégrée.
         </p>
       </div>
 
-      {METHODE_CHAPITRES.map(chap => (
+      {/* Chapitres */}
+      <div className="meth-section">
+        <h2 className="meth-section-title">Le programme</h2>
+        <p className="meth-section-sub">Avance à ton rythme, chapitre par chapitre.</p>
+      </div>
+
+      {METHODE_CHAPITRES.map((chap, ci) => (
         <div key={chap.id} className="meth-chapitre">
           <button
             className={`meth-chap-header ${openChap === chap.id ? "open" : ""}`}
             onClick={() => setOpenChap(openChap === chap.id ? null : chap.id)}
           >
-            <span className="meth-chap-num">CH. {chap.numero}</span>
-            <span className="meth-chap-titre">{chap.emoji} {chap.titre}</span>
-            <span className="meth-chap-count">{chap.videos.length} vidéos</span>
-            <span className="meth-chap-chevron">{openChap === chap.id ? "▾" : "›"}</span>
+            <div className="meth-chap-left">
+              <span className="meth-chap-num">CH. {chap.numero}</span>
+              <div className="meth-chap-info">
+                <span className="meth-chap-titre">{chap.emoji} {chap.titre}</span>
+                <span className="meth-chap-desc">{CHAP_DESCRIPTIONS[chap.id] || ""}</span>
+              </div>
+            </div>
+            <div className="meth-chap-right">
+              <span className="meth-chap-count">{chap.videos.length} vidéos</span>
+              <span className="meth-chap-chevron">{openChap === chap.id ? "▾" : "›"}</span>
+            </div>
           </button>
 
           {openChap === chap.id && (
             <div className="meth-chap-videos">
-              {chap.videos.map(v => (
+              {chap.videos.map((v, vi) => (
                 <VideoCard
                   key={v.id}
                   video={v}
-                  active={false}
+                  index={vi + 1}
                   onClick={() => setActiveVideo(v)}
                 />
               ))}
@@ -120,6 +187,15 @@ export default function MethodePage() {
           )}
         </div>
       ))}
+
+      {/* Footer motivationnel */}
+      <div className="meth-footer-box">
+        <p className="meth-footer-quote">
+          « Les étudiants qui réussissent ne sont pas les plus intelligents.<br />
+          Ce sont ceux qui ont la meilleure méthode. »
+        </p>
+        <span className="meth-footer-author">— L'équipe Hermione</span>
+      </div>
     </div>
   );
 }
