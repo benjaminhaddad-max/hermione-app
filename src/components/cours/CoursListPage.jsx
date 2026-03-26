@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { MATIERES } from "../../data/content";
 
-export default function CoursListPage({ onSelectMatiere, onGoFlashcards }) {
-  const [mode, setMode] = useState("fiches");
+export default function CoursListPage({ onSelectMatiere }) {
   const anticipation = MATIERES.filter(m => m.categorie === "anticipation");
   const terminale = MATIERES.filter(m => m.categorie === "terminale");
 
@@ -11,17 +9,17 @@ export default function CoursListPage({ onSelectMatiere, onGoFlashcards }) {
       <div className="page-header">
         <div>
           <h1 className="page-title">Réviser</h1>
-          <p className="page-sub">Fiches, QCM & Flashcards</p>
         </div>
       </div>
 
-      {/* Sous-navigation */}
-      <div className="sub-tabs">
-        <button className={`sub-tab ${mode === "fiches" ? "active" : ""}`} onClick={() => setMode("fiches")}>📖 Fiches & QCM</button>
-        <button className={`sub-tab ${mode === "flashcards" ? "active" : ""}`} onClick={() => { setMode("flashcards"); onGoFlashcards?.(); }}>🃏 Flashcards</button>
+      <div className="reviser-intro">
+        <p className="reviser-intro-text">
+          Chaque chapitre contient une <strong>fiche de cours</strong>, des <strong>QCM</strong> et des <strong>flashcards</strong> pour t'entraîner efficacement.
+        </p>
       </div>
 
-      <p className="section-title" style={{ marginTop: 16 }}>Anticipation Programme PASS/LAS</p>
+      <p className="section-title" style={{ marginTop: 16 }}>🎯 Anticiper le programme PASS/LAS</p>
+      <p className="section-desc">Prends de l'avance sur les matières que tu verras en PASS ou en LAS.</p>
       <div className="matiere-grid">
         {anticipation.map(m => (
           <button key={m.id} className="matiere-tile" style={{ background: m.color }} onClick={() => onSelectMatiere(m)}>
@@ -32,7 +30,8 @@ export default function CoursListPage({ onSelectMatiere, onGoFlashcards }) {
         ))}
       </div>
 
-      <p className="section-title" style={{ marginTop: 24 }}>Notions de Terminale utiles pour PASS/LAS</p>
+      <p className="section-title" style={{ marginTop: 24 }}>💪 Consolider ton niveau Terminale</p>
+      <p className="section-desc">Renforce les bases de Terminale indispensables pour réussir en PASS/LAS.</p>
       <div className="matiere-grid">
         {terminale.map(m => (
           <button key={m.id} className="matiere-tile" style={{ background: m.color }} onClick={() => onSelectMatiere(m)}>

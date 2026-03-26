@@ -379,7 +379,7 @@ export default function App() {
     if (matiere) return wrap(
       <MatiereCoursPage matiere={matiere} storage={storage} onSelectCours={setCours} onBack={() => setMatiere(null)} />
     );
-    return wrap(<CoursListPage onSelectMatiere={setMatiere} onGoFlashcards={() => resetTab("flashcards")} />);
+    return wrap(<CoursListPage onSelectMatiere={setMatiere} />);
   }
 
   // Onglet Flashcards (accessible via sous-nav dans Réviser)
