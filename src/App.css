@@ -2532,3 +2532,22 @@ select.ob-input{appearance:none;-webkit-appearance:none}
 .meth-video-emoji{font-size:18px;flex-shrink:0}
 .meth-video-titre{flex:1;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--white)}
 .meth-video-play{font-size:14px;color:var(--gold);flex-shrink:0}
+
+.meth-desc-sub{font-size:13px;color:var(--gray);line-height:1.5;margin:0}
+
+.meth-recap{padding:0 16px 24px}
+.meth-recap-header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.15);border-radius:12px 12px 0 0;margin-bottom:0}
+.meth-recap-icon{font-size:18px}
+.meth-recap-label{font-family:var(--font-display);font-size:13px;font-weight:800;letter-spacing:.8px;color:var(--gold);text-transform:uppercase}
+
+.meth-recap-block{padding:14px;border-left:1px solid rgba(201,168,76,0.15);border-right:1px solid rgba(201,168,76,0.15);background:rgba(255,255,255,0.02)}
+.meth-recap-block:last-child{border-bottom:1px solid rgba(201,168,76,0.15);border-radius:0 0 12px 12px}
+.meth-recap-block+.meth-recap-block{border-top:1px solid rgba(255,255,255,0.04)}
+
+.meth-recap-titre{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--white);margin:0 0 8px}
+.meth-recap-contenu{display:flex;flex-direction:column;gap:6px}
+.meth-recap-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.85);margin:0}
+
+.meth-recap-bullet{display:flex;align-items:baseline;gap:8px}
+.meth-recap-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;position:relative;top:1px}
+.meth-recap-bullet span:last-child{font-size:13px;line-height:1.5;color:rgba(255,255,255,0.85)}

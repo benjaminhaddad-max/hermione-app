@@ -15,6 +15,38 @@ function VimeoPlayer({ vimeoId, vimeoHash }) {
   );
 }
 
+function RecapSection({ recap }) {
+  if (!recap?.length) return null;
+  return (
+    <div className="meth-recap">
+      <div className="meth-recap-header">
+        <span className="meth-recap-icon">📋</span>
+        <span className="meth-recap-label">Fiche Récap</span>
+      </div>
+      {recap.map((sec, i) => (
+        <div key={i} className="meth-recap-block">
+          <h4 className="meth-recap-titre">{sec.titre}</h4>
+          <div className="meth-recap-contenu">
+            {sec.contenu.split("\n").map((line, j) => {
+              const trimmed = line.trim();
+              if (!trimmed) return null;
+              if (trimmed.startsWith("•")) {
+                return (
+                  <div key={j} className="meth-recap-bullet">
+                    <span className="meth-recap-dot" />
+                    <span>{trimmed.replace(/^•\s*/, "")}</span>
+                  </div>
+                );
+              }
+              return <p key={j} className="meth-recap-text">{trimmed}</p>;
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function VideoCard({ video, active, onClick }) {
   return (
     <button className={`meth-video-card ${active ? "active" : ""}`} onClick={onClick}>
@@ -39,7 +71,9 @@ export default function MethodePage() {
         <VimeoPlayer vimeoId={activeVideo.vimeoId} vimeoHash={activeVideo.vimeoHash} />
         <div className="meth-video-desc">
           <h3 className="meth-desc-titre">{activeVideo.titre}</h3>
+          {activeVideo.description && <p className="meth-desc-sub">{activeVideo.description}</p>}
         </div>
+        <RecapSection recap={activeVideo.recap} />
       </div>
     );
   }
