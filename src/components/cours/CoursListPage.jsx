@@ -31,7 +31,7 @@ export default function CoursListPage({ onSelectMatiere }) {
       </div>
 
       <p className="section-title" style={{ marginTop: 24 }}>💪 Consolider ton niveau Terminale</p>
-      <p className="section-desc">Renforce les bases de Terminale indispensables pour réussir en PASS/LAS.</p>
+      <p className="section-desc">Arrive en PASS/LAS avec un niveau scientifique solide grâce aux fondamentaux de Terminale.</p>
       <div className="matiere-grid">
         {terminale.map(m => (
           <button key={m.id} className="matiere-tile" style={{ background: m.color }} onClick={() => onSelectMatiere(m)}>
