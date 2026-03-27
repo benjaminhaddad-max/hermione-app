@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MATIERES } from "../../data/content";
 import { getLevel, getRank } from "../../data/leaderboard";
+import { supabase, SUPABASE_READY } from "../../lib/supabaseClient";
 
 const TUTORIAL_STEPS = [
   { target: "reviser", emoji: "📖", title: "Réviser", desc: "Accède à toutes tes fiches de cours, QCM et flashcards classés par matière. C'est ici que tu apprends !" },
@@ -8,6 +9,105 @@ const TUTORIAL_STEPS = [
   { target: "aventure", emoji: "🗺️", title: "Aventure", desc: "Un mode guidé matière par matière. Termine les mondes pour débloquer des appels avec des tops PASS !" },
   { target: "done", emoji: "🚀", title: "C'est parti !", desc: "Tu es prêt(e) ! Commence par réviser une matière et gagne tes premiers XP." },
 ];
+
+const COACHING_COOLDOWN_MS = 24 * 60 * 60 * 1000;
+
+function CoachingCard({ user, storage }) {
+  const [state, setState] = useState("idle"); // idle | sending | sent | cooldown
+  const [cooldownEnd, setCooldownEnd] = useState(null);
+
+  useEffect(() => {
+    const ts = localStorage.getItem("coaching_request_ts");
+    if (ts) {
+      const end = Number(ts) + COACHING_COOLDOWN_MS;
+      if (Date.now() < end) {
+        setState("cooldown");
+        setCooldownEnd(end);
+      } else {
+        localStorage.removeItem("coaching_request_ts");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (state !== "cooldown" || !cooldownEnd) return;
+    const id = setInterval(() => {
+      if (Date.now() >= cooldownEnd) {
+        setState("idle");
+        setCooldownEnd(null);
+        localStorage.removeItem("coaching_request_ts");
+        clearInterval(id);
+      }
+    }, 60000);
+    return () => clearInterval(id);
+  }, [state, cooldownEnd]);
+
+  async function handleRequest() {
+    setState("sending");
+    if (SUPABASE_READY) {
+      await supabase.from("callback_requests").insert({
+        student_pseudo: storage?.pseudo || "Étudiant",
+        student_name: `${user?.prenom || ""} ${user?.nom || ""}`.trim() || storage?.pseudo || "Étudiant",
+        student_email: user?.email || "",
+        student_tel: user?.tel || "",
+        student_device_id: storage?.device_id || "unknown",
+        mentor_rank: "coach",
+        mentor_name: "Coach Hermione",
+        mentor_id: "coach-general",
+        status: "pending",
+      });
+    }
+    localStorage.setItem("coaching_request_ts", String(Date.now()));
+    setState("sent");
+    setTimeout(() => {
+      setState("cooldown");
+      setCooldownEnd(Date.now() + COACHING_COOLDOWN_MS);
+    }, 4000);
+  }
+
+  if (state === "cooldown") {
+    const h = cooldownEnd ? Math.max(0, Math.ceil((cooldownEnd - Date.now()) / 3600000)) : 24;
+    return (
+      <div className="hp-coaching-card hp-coaching-done">
+        <span style={{ fontSize: 28 }}>✅</span>
+        <div>
+          <div className="hp-coaching-title">Demande envoyée !</div>
+          <div className="hp-coaching-sub">Un coach te rappelle sous 48h. Nouvelle demande possible dans ~{h}h.</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (state === "sent") {
+    return (
+      <div className="hp-coaching-card hp-coaching-done hp-coaching-confirm">
+        <div className="hp-coaching-confirm-icon">📞✅</div>
+        <div className="hp-coaching-title">C'est noté !</div>
+        <p className="hp-coaching-msg">
+          Un étudiant en médecine va te recontacter dans les <strong>48h</strong>. Prépare tes questions !
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <button className="hp-coaching-card hp-coaching-clickable" onClick={handleRequest} disabled={state === "sending"}>
+      <div className="hp-coaching-header">
+        <span style={{ fontSize: 28 }}>🎓</span>
+        <div>
+          <div className="hp-coaching-title">Un coach en 2e année de médecine te rappelle</div>
+          <div className="hp-coaching-sub">Gratuit · Pose toutes tes questions sur PASS/LAS</div>
+        </div>
+      </div>
+      <p className="hp-coaching-msg">
+        Un étudiant en médecine va te recontacter dans les <strong>48h</strong> pour répondre à toutes tes questions et t'aider à préparer ta rentrée.
+      </p>
+      <div className="hp-coaching-cta">
+        {state === "sending" ? "Envoi en cours…" : "📞 Demander un rappel"}
+      </div>
+    </button>
+  );
+}
 
 export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTutorial }) {
   const fichesLues = Object.values(storage.fiches_lues || {}).filter(f => f.lue).length;
@@ -189,18 +289,7 @@ export default function HomePage({ user, storage, onGoTo, onSignOut, onDismissTu
       </button>
 
       {/* ── CTA Coaching ── */}
-      <div className="hp-coaching-card">
-        <div className="hp-coaching-header">
-          <span style={{ fontSize: 28 }}>🎓</span>
-          <div>
-            <div className="hp-coaching-title">Un coach en 2e année de médecine te rappelle</div>
-            <div className="hp-coaching-sub">Gratuit · Pose toutes tes questions sur PASS/LAS</div>
-          </div>
-        </div>
-        <p className="hp-coaching-msg">
-          Un étudiant en médecine va te recontacter dans les <strong>48h</strong> pour répondre à toutes tes questions et t'aider à préparer ta rentrée.
-        </p>
-      </div>
+      <CoachingCard user={user} storage={storage} />
 
       {/* ── Shorts YouTube récents ── */}
       <div className="hp-shorts-section">
