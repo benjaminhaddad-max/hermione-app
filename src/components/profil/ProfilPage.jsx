@@ -136,7 +136,7 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
         <h3 className="profil-section-title">Fac visée</h3>
         <div className="profil-field">
           <label className="profil-label">Département</label>
-          <input className="profil-input" value={form.departement} onChange={e => set("departement", e.target.value)} placeholder="Ex: 75, 69, 13..." />
+          <input className="profil-input" inputMode="numeric" pattern="[0-9]*" value={form.departement} onChange={e => set("departement", e.target.value.replace(/\D/g,"").slice(0,3))} placeholder="Ex: 75, 69, 13..." />
         </div>
         <div className="profil-field">
           <label className="profil-label">Fac</label>

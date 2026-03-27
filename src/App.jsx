@@ -153,7 +153,7 @@ function Onboarding({ onDone }) {
 
         {step === 4 && <>
           <h2>Ta fac visée</h2>
-          <input className="ob-input" placeholder="Département (ex: 75, 69, 13…)" value={form.departement} onChange={e => set("departement",e.target.value)} autoFocus />
+          <input className="ob-input" inputMode="numeric" pattern="[0-9]*" placeholder="Département (ex: 75, 69, 13…)" value={form.departement} onChange={e => set("departement", e.target.value.replace(/\D/g,"").slice(0,3))} autoFocus />
           <input className="ob-input" placeholder="Nom de la fac (ex: Paris Descartes)" value={form.fac} onChange={e => set("fac",e.target.value)} />
           <div style={{flex:1}} />
           <button className="ob-next" onClick={() => setStep(5)}>SUIVANT</button>
