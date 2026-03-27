@@ -170,13 +170,30 @@ function Onboarding({ onDone }) {
           <button className="ob-next" onClick={() => setStep(5)}>SUIVANT</button>
         </>}
 
-        {step === 5 && <>
-          <h2>Choisis un pseudo</h2>
-          <p style={{fontSize:13,color:"var(--gray)",marginBottom:16}}>Visible par les autres étudiants dans le classement</p>
-          <input className="ob-input" placeholder="Ex: emma_med26" value={form.pseudo} onChange={e => set("pseudo",e.target.value)} autoFocus />
-          <div style={{flex:1}} />
-          <button className="ob-next" disabled={!form.pseudo.trim()} onClick={() => setStep(TOTAL_STEPS)}>TERMINER</button>
-        </>}
+        {step === 5 && (() => {
+          const p = form.pseudo.trim();
+          const hasMinLen = p.length >= 5;
+          const hasDigitOrSpecial = /[\d_\-.]/.test(p);
+          const pseudoOk = hasMinLen && hasDigitOrSpecial;
+          return <>
+            <h2>Choisis un pseudo</h2>
+            <p style={{fontSize:13,color:"var(--gray)",marginBottom:4}}>Visible par les autres étudiants dans le classement</p>
+            <p style={{fontSize:12,color:"var(--gold)",marginBottom:16,lineHeight:1.4}}>5 caractères min. avec au moins un chiffre ou un caractère spécial (_, -, .)</p>
+            <input
+              className={`ob-input ${touched.pseudo && !pseudoOk ? "ob-input-error" : ""}`}
+              placeholder="Ex: emma_med26"
+              value={form.pseudo}
+              onChange={e => set("pseudo", e.target.value.replace(/\s/g,""))}
+              onBlur={() => touch("pseudo")}
+              autoFocus
+              maxLength={20}
+            />
+            {touched.pseudo && !hasMinLen && <p className="ob-field-error">5 caractères minimum</p>}
+            {touched.pseudo && hasMinLen && !hasDigitOrSpecial && <p className="ob-field-error">Ajoute au moins un chiffre ou un caractère spécial (_, -, .)</p>}
+            <div style={{flex:1}} />
+            <button className="ob-next" disabled={!pseudoOk} onClick={() => setStep(TOTAL_STEPS)}>TERMINER</button>
+          </>;
+        })()}
       </div>
     </div>
   );

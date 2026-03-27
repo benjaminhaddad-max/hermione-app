@@ -42,7 +42,8 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
 
   const emailOk = EMAIL_RE.test(form.email);
   const phoneOk = isPhoneValid(form.tel);
-  const canSave = emailOk && phoneOk;
+  const pseudoOk = form.pseudo.trim().length >= 5 && /[\d_\-.]/.test(form.pseudo);
+  const canSave = emailOk && phoneOk && pseudoOk;
 
   function handleSave() {
     onUpdate({
@@ -87,7 +88,17 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
         </div>
         <div className="profil-field">
           <label className="profil-label">Pseudo</label>
-          <input className="profil-input" value={form.pseudo} onChange={e => set("pseudo", e.target.value)} placeholder="Visible dans le classement" />
+          <input
+            className={`profil-input ${touched.pseudo && !(form.pseudo.trim().length >= 5 && /[\d_\-.]/.test(form.pseudo)) ? "profil-input-error" : ""}`}
+            value={form.pseudo}
+            onChange={e => set("pseudo", e.target.value.replace(/\s/g,""))}
+            onBlur={() => touch("pseudo")}
+            placeholder="Ex: emma_med26"
+            maxLength={20}
+          />
+          {touched.pseudo && form.pseudo.trim().length < 5 && <p className="profil-field-error">5 caractères min.</p>}
+          {touched.pseudo && form.pseudo.trim().length >= 5 && !/[\d_\-.]/.test(form.pseudo) && <p className="profil-field-error">Ajoute un chiffre ou caractère spécial (_, -, .)</p>}
+          <p style={{fontSize:11,color:"var(--gray)",marginTop:-2}}>5 car. min. avec un chiffre ou _, -, .</p>
         </div>
       </div>
 
