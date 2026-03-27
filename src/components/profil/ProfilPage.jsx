@@ -3,6 +3,15 @@ import { getLevel } from "../../data/leaderboard";
 
 const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function formatPhone(raw) {
+  const digits = raw.replace(/\D/g, "").slice(0, 10);
+  return digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+}
+function isPhoneValid(v) {
+  const d = v.replace(/\D/g, "");
+  return d.length === 0 || (d.length === 10 && /^0[1-9]/.test(d));
+}
 
 export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
   const user = storage.user || {};
@@ -10,7 +19,7 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
     prenom: user.prenom || "",
     nom: user.nom || "",
     email: user.email || "",
-    tel: user.tel || "",
+    tel: user.tel ? formatPhone(user.tel) : "",
     classe: user.classe || "",
     filiere: user.filiere || "",
     departement: user.departement || "",
@@ -18,8 +27,14 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
     pseudo: storage.pseudo || "",
   });
   const [saved, setSaved] = useState(false);
+  const [touched, setTouched] = useState({});
 
   const set = (k, v) => { setForm(f => ({ ...f, [k]: v })); setSaved(false); };
+  const touch = (k) => setTouched(t => ({...t,[k]:true}));
+
+  const emailOk = EMAIL_RE.test(form.email);
+  const phoneOk = isPhoneValid(form.tel);
+  const canSave = emailOk && phoneOk;
 
   function handleSave() {
     onUpdate({
@@ -72,11 +87,28 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
         <h3 className="profil-section-title">Coordonnées</h3>
         <div className="profil-field">
           <label className="profil-label">Email</label>
-          <input className="profil-input" type="email" value={form.email} onChange={e => set("email", e.target.value)} />
+          <input
+            className={`profil-input ${touched.email && !emailOk ? "profil-input-error" : ""}`}
+            type="email"
+            inputMode="email"
+            value={form.email}
+            onChange={e => set("email", e.target.value)}
+            onBlur={() => touch("email")}
+          />
+          {touched.email && !emailOk && <p className="profil-field-error">Format email invalide (ex: nom@mail.com)</p>}
         </div>
         <div className="profil-field">
           <label className="profil-label">Téléphone</label>
-          <input className="profil-input" type="tel" value={form.tel} onChange={e => set("tel", e.target.value)} />
+          <input
+            className={`profil-input ${touched.tel && !phoneOk ? "profil-input-error" : ""}`}
+            type="tel"
+            inputMode="tel"
+            value={form.tel}
+            onChange={e => set("tel", formatPhone(e.target.value))}
+            onBlur={() => touch("tel")}
+            placeholder="06 12 34 56 78"
+          />
+          {touched.tel && !phoneOk && <p className="profil-field-error">10 chiffres commençant par 0 (ex: 06 12 34 56 78)</p>}
         </div>
       </div>
 
@@ -112,7 +144,7 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
         </div>
       </div>
 
-      <button className="profil-save-btn" onClick={handleSave}>
+      <button className="profil-save-btn" onClick={handleSave} disabled={!canSave}>
         {saved ? "✓ Enregistré" : "ENREGISTRER LES MODIFICATIONS"}
       </button>
 

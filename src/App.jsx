@@ -24,10 +24,22 @@ const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
 const ROLES = ["Élève","Parent"];
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function formatPhone(raw) {
+  const digits = raw.replace(/\D/g, "").slice(0, 10);
+  return digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+}
+function isPhoneValid(v) {
+  const d = v.replace(/\D/g, "");
+  return d.length === 0 || (d.length === 10 && /^0[1-9]/.test(d));
+}
+
 function Onboarding({ onDone }) {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({ nom:"", prenom:"", tel:"", email:"", role:"Élève", classe:"", filiere:"", departement:"", fac:"", pseudo:"" });
+  const [touched, setTouched] = useState({});
   const set = (k,v) => setForm(f => ({...f,[k]:v}));
+  const touch = (k) => setTouched(t => ({...t,[k]:true}));
 
   const TOTAL_STEPS = 6;
   const progress = step === 0 ? "0%" : Math.round(step / TOTAL_STEPS * 100) + "%";
@@ -86,14 +98,40 @@ function Onboarding({ onDone }) {
           <button className="ob-next" disabled={!form.prenom.trim() || !form.nom.trim()} onClick={() => setStep(2)}>SUIVANT</button>
         </>}
 
-        {step === 2 && <>
-          <h2>Tes coordonnées</h2>
-          <p style={{fontSize:13,color:"var(--gray)",marginBottom:12}}>Pour te recontacter si besoin (coaching, résultats…)</p>
-          <input className="ob-input" type="email" placeholder="Adresse email" value={form.email} onChange={e => set("email",e.target.value)} autoFocus />
-          <input className="ob-input" type="tel" placeholder="Numéro de téléphone" value={form.tel} onChange={e => set("tel",e.target.value)} />
-          <div style={{flex:1}} />
-          <button className="ob-next" disabled={!form.email.trim()} onClick={() => setStep(3)}>SUIVANT</button>
-        </>}
+        {step === 2 && (() => {
+          const emailOk = EMAIL_RE.test(form.email);
+          const phoneOk = isPhoneValid(form.tel);
+          const canNext = emailOk && phoneOk;
+          return <>
+            <h2>Tes coordonnées</h2>
+            <p style={{fontSize:13,color:"var(--gray)",marginBottom:12}}>Pour te recontacter si besoin (coaching, résultats…)</p>
+            <input
+              className={`ob-input ${touched.email && !emailOk ? "ob-input-error" : ""}`}
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              placeholder="Adresse email"
+              value={form.email}
+              onChange={e => set("email", e.target.value)}
+              onBlur={() => touch("email")}
+              autoFocus
+            />
+            {touched.email && !emailOk && <p className="ob-field-error">Format email invalide (ex: nom@mail.com)</p>}
+            <input
+              className={`ob-input ${touched.tel && !phoneOk ? "ob-input-error" : ""}`}
+              type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              placeholder="Numéro de téléphone (06 12 34 56 78)"
+              value={form.tel}
+              onChange={e => set("tel", formatPhone(e.target.value))}
+              onBlur={() => touch("tel")}
+            />
+            {touched.tel && !phoneOk && <p className="ob-field-error">Format : 10 chiffres commençant par 0 (ex: 06 12 34 56 78)</p>}
+            <div style={{flex:1}} />
+            <button className="ob-next" disabled={!canNext} onClick={() => setStep(3)}>SUIVANT</button>
+          </>;
+        })()}
 
         {step === 3 && <>
           <h2>Ta situation actuelle</h2>
