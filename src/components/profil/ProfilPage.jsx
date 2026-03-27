@@ -3,6 +3,14 @@ import { getLevel } from "../../data/leaderboard";
 
 const CLASSES = ["Seconde","Première","Terminale","PASS/LAS","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
+const FACS = [
+  "Paris Cité (Paris)","Sorbonne Université (Paris)","Paris-Saclay",
+  "Sorbonne Paris-Nord (Bobigny)","Paris-Est Créteil (UPEC)","Versailles Saint-Quentin (UVSQ)",
+  "Lyon Est","Lyon Sud","Bordeaux","Aix-Marseille","Montpellier","Toulouse",
+  "Lille","Strasbourg","Nantes","Rennes","Grenoble Alpes","Amiens","Angers",
+  "Besançon","Caen","Clermont-Ferrand","Dijon","Nancy","Nice","Poitiers",
+  "Reims","Rouen","Tours","Antilles","Autre",
+];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function formatPhone(raw) {
   const digits = raw.replace(/\D/g, "").slice(0, 10);
@@ -140,7 +148,10 @@ export default function ProfilPage({ storage, onBack, onUpdate, onSignOut }) {
         </div>
         <div className="profil-field">
           <label className="profil-label">Fac</label>
-          <input className="profil-input" value={form.fac} onChange={e => set("fac", e.target.value)} placeholder="Ex: Paris Descartes" />
+          <select className="profil-input" value={form.fac} onChange={e => set("fac", e.target.value)}>
+            <option value="">Choisis ta fac…</option>
+            {FACS.map(f => <option key={f} value={f}>{f}</option>)}
+          </select>
         </div>
       </div>
 

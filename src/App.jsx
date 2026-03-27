@@ -23,6 +23,14 @@ import BackofficePage from "./components/admin/BackofficePage";
 const CLASSES = ["Seconde","Première","Terminale","PASS/LAS","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
 const ROLES = ["Élève","Parent"];
+const FACS = [
+  "Paris Cité (Paris)","Sorbonne Université (Paris)","Paris-Saclay",
+  "Sorbonne Paris-Nord (Bobigny)","Paris-Est Créteil (UPEC)","Versailles Saint-Quentin (UVSQ)",
+  "Lyon Est","Lyon Sud","Bordeaux","Aix-Marseille","Montpellier","Toulouse",
+  "Lille","Strasbourg","Nantes","Rennes","Grenoble Alpes","Amiens","Angers",
+  "Besançon","Caen","Clermont-Ferrand","Dijon","Nancy","Nice","Poitiers",
+  "Reims","Rouen","Tours","Antilles","Autre",
+];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function formatPhone(raw) {
@@ -154,7 +162,10 @@ function Onboarding({ onDone }) {
         {step === 4 && <>
           <h2>Ta fac visée</h2>
           <input className="ob-input" inputMode="numeric" pattern="[0-9]*" placeholder="Département (ex: 75, 69, 13…)" value={form.departement} onChange={e => set("departement", e.target.value.replace(/\D/g,"").slice(0,3))} autoFocus />
-          <input className="ob-input" placeholder="Nom de la fac (ex: Paris Descartes)" value={form.fac} onChange={e => set("fac",e.target.value)} />
+          <select className="ob-input" value={form.fac} onChange={e => set("fac",e.target.value)}>
+            <option value="">Choisis ta fac…</option>
+            {FACS.map(f => <option key={f} value={f}>{f}</option>)}
+          </select>
           <div style={{flex:1}} />
           <button className="ob-next" onClick={() => setStep(5)}>SUIVANT</button>
         </>}
