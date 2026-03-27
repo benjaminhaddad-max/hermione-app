@@ -20,7 +20,7 @@ import MethodePage from "./components/methode/MethodePage";
 import ProfilPage from "./components/profil/ProfilPage";
 import BackofficePage from "./components/admin/BackofficePage";
 
-const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
+const CLASSES = ["Seconde","Première","Terminale","PASS/LAS","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
 const ROLES = ["Élève","Parent"];
 

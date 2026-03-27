@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getLevel } from "../../data/leaderboard";
 
-const CLASSES = ["Terminale","Bac+1 (PASS)","Bac+1 (LAS)","Bac+2","Autre"];
+const CLASSES = ["Seconde","Première","Terminale","PASS/LAS","Autre"];
 const FILIERES = ["Scientifique","Littéraire","Économique","Technologique","Autre"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function formatPhone(raw) {
